@@ -91,17 +91,19 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    //return 1;
-    return [[self.fetchedResultsController sections] count];
+    return 1;
+    
+    
+    // return [[self.fetchedResultsController sections] count]; // When I use this code it never returns the sections propperly
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     //return 0;
-    //return [foodList count];
+    return [foodList count];
     
-    return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    //return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects]; // This code does not count the food items alphabetically grrr
 }
 
 
