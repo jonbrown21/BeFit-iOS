@@ -16,6 +16,14 @@
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADF19CF560E0044C06B /* LaunchScreen.xib */; };
 		FC290AED19CF560E0044C06B /* BeFit_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */; };
+		FC290AF819CF56930044C06B /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AF719CF56930044C06B /* BFMasterTableViewController.m */; };
+		FC290AFC19CF57120044C06B /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */; };
+		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
+		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
+		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
+		FC290B0519CF58F70044C06B /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290B0419CF58F70044C06B /* Food.m */; };
+		FC290B0819CF58F80044C06B /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290B0719CF58F80044C06B /* FoodList.m */; };
+		FC290B0A19CF61DE0044C06B /* BeFit2D.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,18 @@
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
+		FC290AF619CF56930044C06B /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMasterTableViewController.h; sourceTree = "<group>"; };
+		FC290AF719CF56930044C06B /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMasterTableViewController.m; sourceTree = "<group>"; };
+		FC290AFA19CF57120044C06B /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
+		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FC290B0319CF58F70044C06B /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		FC290B0419CF58F70044C06B /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		FC290B0619CF58F80044C06B /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodList.h; sourceTree = "<group>"; };
+		FC290B0719CF58F80044C06B /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodList.m; sourceTree = "<group>"; };
+		FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = BeFit2D.sqlite; path = ../BeFit2D.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +72,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
+				FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */,
+				FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +109,16 @@
 		FC290AC919CF560E0044C06B /* BeFit iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */,
+				FC290B0619CF58F80044C06B /* FoodList.h */,
+				FC290B0719CF58F80044C06B /* FoodList.m */,
+				FC290B0319CF58F70044C06B /* Food.h */,
+				FC290B0419CF58F70044C06B /* Food.m */,
 				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
 				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
+				FC290AF619CF56930044C06B /* BFMasterTableViewController.h */,
+				FC290AF719CF56930044C06B /* BFMasterTableViewController.m */,
+				FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */,
 				FC290AD419CF560E0044C06B /* FirstViewController.h */,
 				FC290AD519CF560E0044C06B /* FirstViewController.m */,
 				FC290AD719CF560E0044C06B /* SecondViewController.h */,
@@ -104,6 +135,9 @@
 		FC290ACA19CF560E0044C06B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC290B0119CF57B30044C06B /* CoreData.framework */,
+				FC290AFF19CF57AC0044C06B /* Foundation.framework */,
+				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
 				FC290ACC19CF560E0044C06B /* main.m */,
 			);
@@ -209,6 +243,7 @@
 			files = (
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
 				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
+				FC290B0A19CF61DE0044C06B /* BeFit2D.sqlite in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,11 +262,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC290AFC19CF57120044C06B /* BeFit_DataModel.xcdatamodeld in Sources */,
+				FC290B0519CF58F70044C06B /* Food.m in Sources */,
+				FC290B0819CF58F80044C06B /* FoodList.m in Sources */,
 				FC290AD919CF560E0044C06B /* SecondViewController.m in Sources */,
 				FC290AD319CF560E0044C06B /* BeFit_iOS.xcdatamodeld in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
 				FC290AD619CF560E0044C06B /* FirstViewController.m in Sources */,
+				FC290AF819CF56930044C06B /* BFMasterTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -364,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,6 +463,7 @@
 				FC290AF219CF560E0044C06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC290AF319CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +472,7 @@
 				FC290AF519CF560E0044C06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -441,6 +484,17 @@
 			);
 			currentVersion = FC290AD219CF560E0044C06B /* BeFit_iOS.xcdatamodel */;
 			path = BeFit_iOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC290AFA19CF57120044C06B /* BeFit_DataModel.xcdatamodel */,
+				FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */,
+			);
+			currentVersion = FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */;
+			path = BeFit_DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
