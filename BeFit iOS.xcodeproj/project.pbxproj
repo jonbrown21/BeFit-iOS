@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		FC290ACD19CF560E0044C06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACC19CF560E0044C06B /* main.m */; };
 		FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACF19CF560E0044C06B /* AppDelegate.m */; };
-		FC290AD319CF560E0044C06B /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC290AD119CF560E0044C06B /* BeFit_iOS.xcdatamodeld */; };
-		FC290AD619CF560E0044C06B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AD519CF560E0044C06B /* FirstViewController.m */; };
-		FC290AD919CF560E0044C06B /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AD819CF560E0044C06B /* SecondViewController.m */; };
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADF19CF560E0044C06B /* LaunchScreen.xib */; };
 		FC290AED19CF560E0044C06B /* BeFit_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */; };
-		FC290AF819CF56930044C06B /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AF719CF56930044C06B /* BFMasterTableViewController.m */; };
-		FC290AFC19CF57120044C06B /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC290B0519CF58F70044C06B /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290B0419CF58F70044C06B /* Food.m */; };
-		FC290B0819CF58F80044C06B /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290B0719CF58F80044C06B /* FoodList.m */; };
-		FC290B0A19CF61DE0044C06B /* BeFit2D.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */; };
+		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
+		FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */; };
+		FCBC23B519EB96A600C480B6 /* BeFit2D.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FCBC23AE19EB96A600C480B6 /* BeFit2D.sqlite */; };
+		FCBC23B619EB96A600C480B6 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B019EB96A600C480B6 /* Food.m */; };
+		FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B219EB96A600C480B6 /* FoodList.m */; };
+		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
+		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
+		FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BD19EB96D900C480B6 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,29 +42,29 @@
 		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC290ACE19CF560E0044C06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC290ACF19CF560E0044C06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC290AD219CF560E0044C06B /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
-		FC290AD419CF560E0044C06B /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FC290AD519CF560E0044C06B /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FC290AD719CF560E0044C06B /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FC290AD819CF560E0044C06B /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC290AE019CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
-		FC290AF619CF56930044C06B /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMasterTableViewController.h; sourceTree = "<group>"; };
-		FC290AF719CF56930044C06B /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMasterTableViewController.m; sourceTree = "<group>"; };
-		FC290AFA19CF57120044C06B /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
-		FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC290B0319CF58F70044C06B /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
-		FC290B0419CF58F70044C06B /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
-		FC290B0619CF58F80044C06B /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodList.h; sourceTree = "<group>"; };
-		FC290B0719CF58F80044C06B /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodList.m; sourceTree = "<group>"; };
-		FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = BeFit2D.sqlite; path = ../BeFit2D.sqlite; sourceTree = "<group>"; };
+		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
+		FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
+		FCBC23AE19EB96A600C480B6 /* BeFit2D.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = BeFit2D.sqlite; path = DataModel/BeFit2D.sqlite; sourceTree = "<group>"; };
+		FCBC23AF19EB96A600C480B6 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = DataModel/Food.h; sourceTree = "<group>"; };
+		FCBC23B019EB96A600C480B6 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = DataModel/Food.m; sourceTree = "<group>"; };
+		FCBC23B119EB96A600C480B6 /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodList.h; path = DataModel/FoodList.h; sourceTree = "<group>"; };
+		FCBC23B219EB96A600C480B6 /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodList.m; path = DataModel/FoodList.m; sourceTree = "<group>"; };
+		FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMasterTableViewController.h; path = ViewControllers/BFMasterTableViewController.h; sourceTree = "<group>"; };
+		FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMasterTableViewController.m; path = ViewControllers/BFMasterTableViewController.m; sourceTree = "<group>"; };
+		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
+		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
+		FCBC23BC19EB96D900C480B6 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
+		FCBC23BD19EB96D900C480B6 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,24 +109,11 @@
 		FC290AC919CF560E0044C06B /* BeFit iOS */ = {
 			isa = PBXGroup;
 			children = (
-				FC290B0919CF61DE0044C06B /* BeFit2D.sqlite */,
-				FC290B0619CF58F80044C06B /* FoodList.h */,
-				FC290B0719CF58F80044C06B /* FoodList.m */,
-				FC290B0319CF58F70044C06B /* Food.h */,
-				FC290B0419CF58F70044C06B /* Food.m */,
+				FCBC23A619EB962400C480B6 /* DataModel */,
 				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
 				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
-				FC290AF619CF56930044C06B /* BFMasterTableViewController.h */,
-				FC290AF719CF56930044C06B /* BFMasterTableViewController.m */,
-				FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */,
-				FC290AD419CF560E0044C06B /* FirstViewController.h */,
-				FC290AD519CF560E0044C06B /* FirstViewController.m */,
-				FC290AD719CF560E0044C06B /* SecondViewController.h */,
-				FC290AD819CF560E0044C06B /* SecondViewController.m */,
-				FC290ADA19CF560E0044C06B /* Main.storyboard */,
-				FC290ADD19CF560E0044C06B /* Images.xcassets */,
-				FC290ADF19CF560E0044C06B /* LaunchScreen.xib */,
-				FC290AD119CF560E0044C06B /* BeFit_iOS.xcdatamodeld */,
+				FCBC23A819EB966F00C480B6 /* ViewControllers */,
+				FCBC23A719EB965E00C480B6 /* Resources */,
 				FC290ACA19CF560E0044C06B /* Supporting Files */,
 			);
 			path = "BeFit iOS";
@@ -159,6 +146,43 @@
 				FC290AEB19CF560E0044C06B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FCBC23A619EB962400C480B6 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */,
+				FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */,
+				FCBC23AE19EB96A600C480B6 /* BeFit2D.sqlite */,
+				FCBC23AF19EB96A600C480B6 /* Food.h */,
+				FCBC23B019EB96A600C480B6 /* Food.m */,
+				FCBC23B119EB96A600C480B6 /* FoodList.h */,
+				FCBC23B219EB96A600C480B6 /* FoodList.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		FCBC23A719EB965E00C480B6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC290ADA19CF560E0044C06B /* Main.storyboard */,
+				FC290ADD19CF560E0044C06B /* Images.xcassets */,
+				FC290ADF19CF560E0044C06B /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
+				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
+				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
+				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
+				FCBC23BC19EB96D900C480B6 /* SecondViewController.h */,
+				FCBC23BD19EB96D900C480B6 /* SecondViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +267,7 @@
 			files = (
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
 				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
-				FC290B0A19CF61DE0044C06B /* BeFit2D.sqlite in Resources */,
+				FCBC23B519EB96A600C480B6 /* BeFit2D.sqlite in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,15 +286,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC290AFC19CF57120044C06B /* BeFit_DataModel.xcdatamodeld in Sources */,
-				FC290B0519CF58F70044C06B /* Food.m in Sources */,
-				FC290B0819CF58F80044C06B /* FoodList.m in Sources */,
-				FC290AD919CF560E0044C06B /* SecondViewController.m in Sources */,
-				FC290AD319CF560E0044C06B /* BeFit_iOS.xcdatamodeld in Sources */,
+				FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */,
+				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
+				FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
+				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
-				FC290AD619CF560E0044C06B /* FirstViewController.m in Sources */,
-				FC290AF819CF56930044C06B /* BFMasterTableViewController.m in Sources */,
+				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
+				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
+				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,24 +501,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FC290AD119CF560E0044C06B /* BeFit_iOS.xcdatamodeld */ = {
+		FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FC290AD219CF560E0044C06B /* BeFit_iOS.xcdatamodel */,
+				FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */,
+				FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */,
 			);
-			currentVersion = FC290AD219CF560E0044C06B /* BeFit_iOS.xcdatamodel */;
-			path = BeFit_iOS.xcdatamodeld;
+			currentVersion = FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */;
+			name = BeFit_DataModel.xcdatamodeld;
+			path = DataModel/BeFit_DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
-		FC290AF919CF57120044C06B /* BeFit_DataModel.xcdatamodeld */ = {
+		FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FC290AFA19CF57120044C06B /* BeFit_DataModel.xcdatamodel */,
-				FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */,
+				FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */,
 			);
-			currentVersion = FC290AFB19CF57120044C06B /* BeFit_DataModel2.xcdatamodel */;
-			path = BeFit_DataModel.xcdatamodeld;
+			currentVersion = FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */;
+			name = BeFit_iOS.xcdatamodeld;
+			path = DataModel/BeFit_iOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

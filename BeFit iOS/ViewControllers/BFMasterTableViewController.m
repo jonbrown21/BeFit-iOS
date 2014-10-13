@@ -40,7 +40,7 @@
     self.fetchedResultsController = aFetchedResultsController;
     
     NSError *error;
-    NSArray *ok = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    //NSArray *ok = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     NSArray *okthen = [self.fetchedResultsController sectionIndexTitles];
     
     NSLog(@"%lu",(unsigned long)okthen.count);
