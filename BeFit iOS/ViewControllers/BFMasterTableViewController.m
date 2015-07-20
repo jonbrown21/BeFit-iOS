@@ -17,45 +17,66 @@
 @implementation BFMasterTableViewController
 @synthesize managedObjectContext, foodList;
 
+@synthesize fetchedResultsController = __fetchedResultsController;
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    if (!managedObjectContext)
+    {
+        managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+    }
+    return managedObjectContext;
+    
+}
+
+- (void)setupFetchedResultsController
+
+{
+    
+    // 1 - Decide what Entity you want
+    NSString *entityName = @"FoodObject"; // Put your entity name here
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    
+    // 2 - Request that Entity
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
+    
+    
+    //    NSString *theFrameThatWasTouchedwithTheUsersFinger = [[NSString alloc]init];
+    //    theFrameThatWasTouchedwithTheUsersFinger = note;
+    
+    
+    // 3 - Filter it if you want
+    
+    
+    // 4 - Sort it if you want
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                                                     ascending:YES
+                                                                                      selector:@selector(localizedCaseInsensitiveCompare:)]];
+    
+    // 5 - Fetch it
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:self.managedObjectContext
+                                                                          sectionNameKeyPath:@"uppercaseFirstLetterOfName"
+                                                                                   cacheName:nil];
+    
+    
+    
+    [self.fetchedResultsController performFetch:nil];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setupFetchedResultsController];
+    
+    
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    id delegate = [[UIApplication sharedApplication] delegate];
-    self.managedObjectContext = [delegate managedObjectContext];
-    
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"FoodObject" inManagedObjectContext:managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"uppercaseFirstLetterOfName" cacheName:nil];
-    
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-    NSError *error;
-    //NSArray *ok = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    NSArray *okthen = [self.fetchedResultsController sectionIndexTitles];
-    
-    NSLog(@"%lu",(unsigned long)okthen.count);
-    
-    self.foodList = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    self.title = @"Failed Banks";
-    
-    
-    //[super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,14 +86,13 @@
 
 #pragma mark - Table view data source
 
-- (NSArray *) sectionIndexTitlesForTableView: (UITableView *) tableView
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return [self.fetchedResultsController sectionIndexTitles];
+    return [[UILocalizedIndexedCollation currentCollation] sectionIndexTitles];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-{
-    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -81,17 +101,12 @@
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo name];
     
-    //    if ([self.tableView.dataSource tableView:tableView numberOfRowsInSection:section] == 0) {
-    //        return nil;
-    //    }
-    //    return [animalSectionTitles objectAtIndex:section];
-    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return [[self.fetchedResultsController sections] count];
     
     
     // return [[self.fetchedResultsController sections] count]; // When I use this code it never returns the sections propperly
@@ -101,7 +116,8 @@
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     //return 0;
-    return [foodList count];
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
     
     //return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects]; // This code does not count the food items alphabetically grrr
 }
@@ -112,21 +128,24 @@
     
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell =
-    [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
-    // Set up the cell...
-    Food *info = [foodList objectAtIndex:indexPath.row];
-    cell.textLabel.text = info.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", info.name];
-    
-    return cell;
-    
-   // UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     
-    //return cell;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    Food *info = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.textLabel.text = info.name;
+    
+    
+    return cell;
+
+    
 }
 
 
