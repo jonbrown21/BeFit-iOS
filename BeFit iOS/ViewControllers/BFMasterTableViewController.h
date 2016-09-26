@@ -10,12 +10,13 @@
 #import <CoreData/CoreData.h>
 #import "Food.h"
 
-@interface BFMasterTableViewController : UITableViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface BFMasterTableViewController : UITableViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate, UISearchDisplayDelegate>
 {
     NSString *uppercaseFirstLetterOfName;
 }
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
-@property (nonatomic, strong) NSArray *foodList;
+@property (strong,nonatomic) NSMutableArray *FoodArray;
+@property IBOutlet UISearchBar *foodSearchBar;
 
 @end

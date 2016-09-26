@@ -9,14 +9,18 @@
 #import "BFMasterTableViewController.h"
 #import "Food.h"
 #import "AppDelegate.h"
+#import "DetailViewController.h"
 
 @interface BFMasterTableViewController ()
-
+{
+    NSString *selectedlabel;
+}
 @end
 
 @implementation BFMasterTableViewController
-@synthesize managedObjectContext, foodList;
-
+@synthesize managedObjectContext;
+@synthesize FoodArray;
+@synthesize foodSearchBar;
 @synthesize fetchedResultsController = __fetchedResultsController;
 
 - (NSManagedObjectContext *)managedObjectContext
@@ -63,6 +67,9 @@
     
     [self.fetchedResultsController performFetch:nil];
     
+    self.FoodArray = [NSMutableArray arrayWithCapacity:[self.fetchedResultsController.fetchedObjects count]];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -76,7 +83,10 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
+    
+    CGRect newBounds = self.tableView.bounds;
+    newBounds.origin.y = newBounds.origin.y + foodSearchBar.bounds.size.height;
+    self.tableView.bounds = newBounds;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -104,22 +114,21 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
-    // Return the number of sections.
+
     return [[self.fetchedResultsController sections] count];
     
-    
-    // return [[self.fetchedResultsController sections] count]; // When I use this code it never returns the sections propperly
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    //return 0;
+
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
     
-    //return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects]; // This code does not count the food items alphabetically grrr
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [FoodArray count];
+    } else {
+        return [sectionInfo numberOfObjects];
+    }
+    
 }
 
 
@@ -133,21 +142,37 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    
-    // Configure the cell...
+
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    Food *info = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Food *info = nil;
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        info = [FoodArray objectAtIndex:indexPath.row];
+        
+    } else {
+        
+        info = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+    }
     
     cell.textLabel.text = info.name;
     
-    
     return cell;
 
-    
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+
+    Food *info = [FoodArray objectAtIndex:indexPath.item];
+    
+    selectedlabel = info.name;
+    
+    [self performSegueWithIdentifier:@"detailNews" sender:self];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -184,6 +209,9 @@
 */
 
 
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -191,8 +219,39 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
+    if([segue.identifier isEqualToString:@"detailNews"]) {
+        DetailViewController *detailNews = [segue destinationViewController];
+        detailNews.selectedlabel = selectedlabel;
+    }
+    
     [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
 }
 
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    NSArray *fetchedData = [self.fetchedResultsController fetchedObjects];
+    // Update the filtered array based on the search text and scope.
+    // Remove all objects from the filtered search array
+    [self.FoodArray removeAllObjects];
+    // Filter the array using NSPredicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
+    FoodArray = [NSMutableArray arrayWithArray:[fetchedData filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
 
 @end
