@@ -163,16 +163,6 @@
 
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-
-    Food *info = [FoodArray objectAtIndex:indexPath.item];
-    
-    selectedlabel = info.name;
-    
-    [self performSegueWithIdentifier:@"detailNews" sender:self];
-    
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -219,11 +209,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    if([segue.identifier isEqualToString:@"detailNews"]) {
-        DetailViewController *detailNews = [segue destinationViewController];
-        detailNews.selectedlabel = selectedlabel;
-    }
-    
+   
     [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
 }
 

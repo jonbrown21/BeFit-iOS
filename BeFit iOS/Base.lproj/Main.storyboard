@@ -73,7 +73,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="eNg-hG-AxE"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="candySearchBar" destination="KLG-Gg-u7r" id="XDO-DI-qnz"/>
+                        <outlet property="foodSearchBar" destination="KLG-Gg-u7r" id="Sw5-EL-50P"/>
                         <outlet property="searchDisplayController" destination="3EZ-2K-3vK" id="G5H-AZ-1nW"/>
                         <segue destination="Zur-qt-uzn" kind="push" identifier="detailNews" id="UMW-IL-aTf"/>
                     </connections>
@@ -99,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QNo-l4-oGL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Food Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QNo-l4-oGL">
                                 <frame key="frameInset" minY="136" height="26"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
