@@ -20,6 +20,7 @@
 @implementation BFMasterTableViewController
 @synthesize managedObjectContext;
 @synthesize FoodArray;
+@synthesize searchResults;
 @synthesize foodSearchBar;
 @synthesize fetchedResultsController = __fetchedResultsController;
 
@@ -51,6 +52,9 @@
     
     // 3 - Filter it if you want
     
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@", @"Burger"];
+    
+    //[request setPredicate:predicate];
     
     // 4 - Sort it if you want
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name"
@@ -71,6 +75,8 @@
     
     
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -123,11 +129,7 @@
 
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [FoodArray count];
-    } else {
-        return [sectionInfo numberOfObjects];
-    }
+    return [sectionInfo numberOfObjects];
     
 }
 
@@ -142,23 +144,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-
-    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    Food *info = nil;
+    Food *foodData = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        info = [FoodArray objectAtIndex:indexPath.row];
-        
-    } else {
-        
-        info = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        
-    }
-    
-    cell.textLabel.text = info.name;
-    
+    cell.textLabel.text = foodData.name;
     return cell;
 
 }
@@ -199,45 +189,24 @@
 */
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self performSegueWithIdentifier:@"detailNews" sender:self];
     
-   
-    [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+}
+#pragma mark prepareForSegue Functions
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"detailNews"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *destViewController = segue.destinationViewController;
+        destViewController.foodData = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+    }
+    
 }
 
--(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
-    NSArray *fetchedData = [self.fetchedResultsController fetchedObjects];
-    // Update the filtered array based on the search text and scope.
-    // Remove all objects from the filtered search array
-    [self.FoodArray removeAllObjects];
-    // Filter the array using NSPredicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@",searchText];
-    FoodArray = [NSMutableArray arrayWithArray:[fetchedData filteredArrayUsingPredicate:predicate]];
-}
 
-#pragma mark - UISearchDisplayController Delegate Methods
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    // Tells the table data source to reload when text changes
-    [self filterContentForSearchText:searchString scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    // Tells the table data source to reload when scope bar selection changes
-    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
-    // Return YES to cause the search result table view to be reloaded.
-    return YES;
-}
 
 @end

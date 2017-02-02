@@ -17,6 +17,38 @@
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
+		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
+		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
+		FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD71E38F0BD00619AE6 /* Chart.min.js */; };
+		FCA42E111E38F0BD00619AE6 /* cw.html in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD81E38F0BD00619AE6 /* cw.html */; };
+		FCA42E121E38F0BD00619AE6 /* cw.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD91E38F0BD00619AE6 /* cw.js */; };
+		FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DDA1E38F0BD00619AE6 /* datasets.js */; };
+		FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DDD1E38F0BD00619AE6 /* CWBarChart.m */; };
+		FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DDF1E38F0BD00619AE6 /* CWBarChartData.m */; };
+		FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DE11E38F0BD00619AE6 /* CWBarChartOptions.m */; };
+		FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DE31E38F0BD00619AE6 /* CWBarDataSet.m */; };
+		FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DE51E38F0BD00619AE6 /* CWBoolean.m */; };
+		FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DE71E38F0BD00619AE6 /* CWChart.m */; };
+		FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DE91E38F0BD00619AE6 /* CWColors.m */; };
+		FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DEB1E38F0BD00619AE6 /* CWData.m */; };
+		FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DED1E38F0BD00619AE6 /* CWDataSet.m */; };
+		FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DEF1E38F0BD00619AE6 /* CWDoughnutChart.m */; };
+		FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DF11E38F0BD00619AE6 /* CWGlobalOptions.m */; };
+		FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DF31E38F0BD00619AE6 /* CWLabelledData.m */; };
+		FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DF51E38F0BD00619AE6 /* CWLineChart.m */; };
+		FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DF71E38F0BD00619AE6 /* CWLineChartData.m */; };
+		FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DF91E38F0BD00619AE6 /* CWLineChartOptions.m */; };
+		FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DFB1E38F0BD00619AE6 /* CWObject.m */; };
+		FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DFD1E38F0BD00619AE6 /* CWPieChart.m */; };
+		FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DFF1E38F0BD00619AE6 /* CWPieChartOptions.m */; };
+		FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E011E38F0BD00619AE6 /* CWPointDataSet.m */; };
+		FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E031E38F0BD00619AE6 /* CWPolarAreaChart.m */; };
+		FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E051E38F0BD00619AE6 /* CWPolarAreaChartOptions.m */; };
+		FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E071E38F0BD00619AE6 /* CWRadarChart.m */; };
+		FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E091E38F0BD00619AE6 /* CWRadarChartData.m */; };
+		FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0B1E38F0BD00619AE6 /* CWRadarChartOptions.m */; };
+		FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */; };
+		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
 		FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */; };
 		FCBC23B519EB96A600C480B6 /* BeFit2D.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = FCBC23AE19EB96A600C480B6 /* BeFit2D.sqlite */; };
@@ -54,6 +86,67 @@
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
+		FCA42DAF1E377CD400619AE6 /* CustomProgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomProgView.m; sourceTree = "<group>"; };
+		FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FCA42DD61E38F0BD00619AE6 /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
+		FCA42DD71E38F0BD00619AE6 /* Chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.min.js; sourceTree = "<group>"; };
+		FCA42DD81E38F0BD00619AE6 /* cw.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = cw.html; sourceTree = "<group>"; };
+		FCA42DD91E38F0BD00619AE6 /* cw.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = cw.js; sourceTree = "<group>"; };
+		FCA42DDA1E38F0BD00619AE6 /* datasets.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = datasets.js; sourceTree = "<group>"; };
+		FCA42DDB1E38F0BD00619AE6 /* CW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CW.h; sourceTree = "<group>"; };
+		FCA42DDC1E38F0BD00619AE6 /* CWBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBarChart.h; sourceTree = "<group>"; };
+		FCA42DDD1E38F0BD00619AE6 /* CWBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBarChart.m; sourceTree = "<group>"; };
+		FCA42DDE1E38F0BD00619AE6 /* CWBarChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBarChartData.h; sourceTree = "<group>"; };
+		FCA42DDF1E38F0BD00619AE6 /* CWBarChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBarChartData.m; sourceTree = "<group>"; };
+		FCA42DE01E38F0BD00619AE6 /* CWBarChartOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBarChartOptions.h; sourceTree = "<group>"; };
+		FCA42DE11E38F0BD00619AE6 /* CWBarChartOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBarChartOptions.m; sourceTree = "<group>"; };
+		FCA42DE21E38F0BD00619AE6 /* CWBarDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBarDataSet.h; sourceTree = "<group>"; };
+		FCA42DE31E38F0BD00619AE6 /* CWBarDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBarDataSet.m; sourceTree = "<group>"; };
+		FCA42DE41E38F0BD00619AE6 /* CWBoolean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWBoolean.h; sourceTree = "<group>"; };
+		FCA42DE51E38F0BD00619AE6 /* CWBoolean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWBoolean.m; sourceTree = "<group>"; };
+		FCA42DE61E38F0BD00619AE6 /* CWChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWChart.h; sourceTree = "<group>"; };
+		FCA42DE71E38F0BD00619AE6 /* CWChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWChart.m; sourceTree = "<group>"; };
+		FCA42DE81E38F0BD00619AE6 /* CWColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWColors.h; sourceTree = "<group>"; };
+		FCA42DE91E38F0BD00619AE6 /* CWColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWColors.m; sourceTree = "<group>"; };
+		FCA42DEA1E38F0BD00619AE6 /* CWData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWData.h; sourceTree = "<group>"; };
+		FCA42DEB1E38F0BD00619AE6 /* CWData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWData.m; sourceTree = "<group>"; };
+		FCA42DEC1E38F0BD00619AE6 /* CWDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDataSet.h; sourceTree = "<group>"; };
+		FCA42DED1E38F0BD00619AE6 /* CWDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDataSet.m; sourceTree = "<group>"; };
+		FCA42DEE1E38F0BD00619AE6 /* CWDoughnutChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDoughnutChart.h; sourceTree = "<group>"; };
+		FCA42DEF1E38F0BD00619AE6 /* CWDoughnutChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDoughnutChart.m; sourceTree = "<group>"; };
+		FCA42DF01E38F0BD00619AE6 /* CWGlobalOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGlobalOptions.h; sourceTree = "<group>"; };
+		FCA42DF11E38F0BD00619AE6 /* CWGlobalOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGlobalOptions.m; sourceTree = "<group>"; };
+		FCA42DF21E38F0BD00619AE6 /* CWLabelledData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLabelledData.h; sourceTree = "<group>"; };
+		FCA42DF31E38F0BD00619AE6 /* CWLabelledData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLabelledData.m; sourceTree = "<group>"; };
+		FCA42DF41E38F0BD00619AE6 /* CWLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLineChart.h; sourceTree = "<group>"; };
+		FCA42DF51E38F0BD00619AE6 /* CWLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLineChart.m; sourceTree = "<group>"; };
+		FCA42DF61E38F0BD00619AE6 /* CWLineChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLineChartData.h; sourceTree = "<group>"; };
+		FCA42DF71E38F0BD00619AE6 /* CWLineChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLineChartData.m; sourceTree = "<group>"; };
+		FCA42DF81E38F0BD00619AE6 /* CWLineChartOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWLineChartOptions.h; sourceTree = "<group>"; };
+		FCA42DF91E38F0BD00619AE6 /* CWLineChartOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWLineChartOptions.m; sourceTree = "<group>"; };
+		FCA42DFA1E38F0BD00619AE6 /* CWObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWObject.h; sourceTree = "<group>"; };
+		FCA42DFB1E38F0BD00619AE6 /* CWObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWObject.m; sourceTree = "<group>"; };
+		FCA42DFC1E38F0BD00619AE6 /* CWPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPieChart.h; sourceTree = "<group>"; };
+		FCA42DFD1E38F0BD00619AE6 /* CWPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPieChart.m; sourceTree = "<group>"; };
+		FCA42DFE1E38F0BD00619AE6 /* CWPieChartOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPieChartOptions.h; sourceTree = "<group>"; };
+		FCA42DFF1E38F0BD00619AE6 /* CWPieChartOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPieChartOptions.m; sourceTree = "<group>"; };
+		FCA42E001E38F0BD00619AE6 /* CWPointDataSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPointDataSet.h; sourceTree = "<group>"; };
+		FCA42E011E38F0BD00619AE6 /* CWPointDataSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPointDataSet.m; sourceTree = "<group>"; };
+		FCA42E021E38F0BD00619AE6 /* CWPolarAreaChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPolarAreaChart.h; sourceTree = "<group>"; };
+		FCA42E031E38F0BD00619AE6 /* CWPolarAreaChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPolarAreaChart.m; sourceTree = "<group>"; };
+		FCA42E041E38F0BD00619AE6 /* CWPolarAreaChartOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPolarAreaChartOptions.h; sourceTree = "<group>"; };
+		FCA42E051E38F0BD00619AE6 /* CWPolarAreaChartOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPolarAreaChartOptions.m; sourceTree = "<group>"; };
+		FCA42E061E38F0BD00619AE6 /* CWRadarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRadarChart.h; sourceTree = "<group>"; };
+		FCA42E071E38F0BD00619AE6 /* CWRadarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRadarChart.m; sourceTree = "<group>"; };
+		FCA42E081E38F0BD00619AE6 /* CWRadarChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRadarChartData.h; sourceTree = "<group>"; };
+		FCA42E091E38F0BD00619AE6 /* CWRadarChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRadarChartData.m; sourceTree = "<group>"; };
+		FCA42E0A1E38F0BD00619AE6 /* CWRadarChartOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRadarChartOptions.h; sourceTree = "<group>"; };
+		FCA42E0B1E38F0BD00619AE6 /* CWRadarChartOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRadarChartOptions.m; sourceTree = "<group>"; };
+		FCA42E0C1E38F0BD00619AE6 /* CWSegmentData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSegmentData.h; sourceTree = "<group>"; };
+		FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSegmentData.m; sourceTree = "<group>"; };
+		FCA42E0E1E38F0BD00619AE6 /* CWTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTypes.h; sourceTree = "<group>"; };
+		FCA42E2D1E38F20400619AE6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
@@ -75,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */,
 				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
 				FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */,
 				FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */,
@@ -97,6 +191,7 @@
 				FC290AC919CF560E0044C06B /* BeFit iOS */,
 				FC290AE919CF560E0044C06B /* BeFit iOSTests */,
 				FC290AC819CF560E0044C06B /* Products */,
+				FCA42DD11E38EDAD00619AE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +207,8 @@
 		FC290AC919CF560E0044C06B /* BeFit iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FCA42DD51E38F0BD00619AE6 /* Assets */,
+				FCA42DD41E38F0BD00619AE6 /* CW */,
 				FCBC23A619EB962400C480B6 /* DataModel */,
 				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
 				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
@@ -151,6 +248,87 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCA42E2D1E38F20400619AE6 /* WebKit.framework */,
+				FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCA42DD41E38F0BD00619AE6 /* CW */ = {
+			isa = PBXGroup;
+			children = (
+				FCA42DDB1E38F0BD00619AE6 /* CW.h */,
+				FCA42DDC1E38F0BD00619AE6 /* CWBarChart.h */,
+				FCA42DDD1E38F0BD00619AE6 /* CWBarChart.m */,
+				FCA42DDE1E38F0BD00619AE6 /* CWBarChartData.h */,
+				FCA42DDF1E38F0BD00619AE6 /* CWBarChartData.m */,
+				FCA42DE01E38F0BD00619AE6 /* CWBarChartOptions.h */,
+				FCA42DE11E38F0BD00619AE6 /* CWBarChartOptions.m */,
+				FCA42DE21E38F0BD00619AE6 /* CWBarDataSet.h */,
+				FCA42DE31E38F0BD00619AE6 /* CWBarDataSet.m */,
+				FCA42DE41E38F0BD00619AE6 /* CWBoolean.h */,
+				FCA42DE51E38F0BD00619AE6 /* CWBoolean.m */,
+				FCA42DE61E38F0BD00619AE6 /* CWChart.h */,
+				FCA42DE71E38F0BD00619AE6 /* CWChart.m */,
+				FCA42DE81E38F0BD00619AE6 /* CWColors.h */,
+				FCA42DE91E38F0BD00619AE6 /* CWColors.m */,
+				FCA42DEA1E38F0BD00619AE6 /* CWData.h */,
+				FCA42DEB1E38F0BD00619AE6 /* CWData.m */,
+				FCA42DEC1E38F0BD00619AE6 /* CWDataSet.h */,
+				FCA42DED1E38F0BD00619AE6 /* CWDataSet.m */,
+				FCA42DEE1E38F0BD00619AE6 /* CWDoughnutChart.h */,
+				FCA42DEF1E38F0BD00619AE6 /* CWDoughnutChart.m */,
+				FCA42DF01E38F0BD00619AE6 /* CWGlobalOptions.h */,
+				FCA42DF11E38F0BD00619AE6 /* CWGlobalOptions.m */,
+				FCA42DF21E38F0BD00619AE6 /* CWLabelledData.h */,
+				FCA42DF31E38F0BD00619AE6 /* CWLabelledData.m */,
+				FCA42DF41E38F0BD00619AE6 /* CWLineChart.h */,
+				FCA42DF51E38F0BD00619AE6 /* CWLineChart.m */,
+				FCA42DF61E38F0BD00619AE6 /* CWLineChartData.h */,
+				FCA42DF71E38F0BD00619AE6 /* CWLineChartData.m */,
+				FCA42DF81E38F0BD00619AE6 /* CWLineChartOptions.h */,
+				FCA42DF91E38F0BD00619AE6 /* CWLineChartOptions.m */,
+				FCA42DFA1E38F0BD00619AE6 /* CWObject.h */,
+				FCA42DFB1E38F0BD00619AE6 /* CWObject.m */,
+				FCA42DFC1E38F0BD00619AE6 /* CWPieChart.h */,
+				FCA42DFD1E38F0BD00619AE6 /* CWPieChart.m */,
+				FCA42DFE1E38F0BD00619AE6 /* CWPieChartOptions.h */,
+				FCA42DFF1E38F0BD00619AE6 /* CWPieChartOptions.m */,
+				FCA42E001E38F0BD00619AE6 /* CWPointDataSet.h */,
+				FCA42E011E38F0BD00619AE6 /* CWPointDataSet.m */,
+				FCA42E021E38F0BD00619AE6 /* CWPolarAreaChart.h */,
+				FCA42E031E38F0BD00619AE6 /* CWPolarAreaChart.m */,
+				FCA42E041E38F0BD00619AE6 /* CWPolarAreaChartOptions.h */,
+				FCA42E051E38F0BD00619AE6 /* CWPolarAreaChartOptions.m */,
+				FCA42E061E38F0BD00619AE6 /* CWRadarChart.h */,
+				FCA42E071E38F0BD00619AE6 /* CWRadarChart.m */,
+				FCA42E081E38F0BD00619AE6 /* CWRadarChartData.h */,
+				FCA42E091E38F0BD00619AE6 /* CWRadarChartData.m */,
+				FCA42E0A1E38F0BD00619AE6 /* CWRadarChartOptions.h */,
+				FCA42E0B1E38F0BD00619AE6 /* CWRadarChartOptions.m */,
+				FCA42E0C1E38F0BD00619AE6 /* CWSegmentData.h */,
+				FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */,
+				FCA42E0E1E38F0BD00619AE6 /* CWTypes.h */,
+			);
+			path = CW;
+			sourceTree = "<group>";
+		};
+		FCA42DD51E38F0BD00619AE6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FCA42DD61E38F0BD00619AE6 /* Chart.js */,
+				FCA42DD71E38F0BD00619AE6 /* Chart.min.js */,
+				FCA42DD81E38F0BD00619AE6 /* cw.html */,
+				FCA42DD91E38F0BD00619AE6 /* cw.js */,
+				FCA42DDA1E38F0BD00619AE6 /* datasets.js */,
+			);
+			name = Assets;
+			path = CW/Assets;
+			sourceTree = "<group>";
+		};
 		FCBC23A619EB962400C480B6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +360,8 @@
 				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
 				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
 				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
+				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
+				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
 				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
 				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
 				FCBC23BC19EB96D900C480B6 /* SecondViewController.h */,
@@ -234,7 +414,7 @@
 		FC290ABF19CF560E0044C06B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jon Brown";
 				TargetAttributes = {
 					FC290AC619CF560E0044C06B = {
@@ -270,10 +450,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA42E111E38F0BD00619AE6 /* cw.html in Resources */,
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
+				FCA42E121E38F0BD00619AE6 /* cw.js in Resources */,
 				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
+				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
+				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
 				FCBC23B519EB96A600C480B6 /* BeFit2D.sqlite in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
+				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,16 +476,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */,
 				FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */,
+				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
+				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
+				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
+				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
+				FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */,
+				FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */,
+				FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */,
+				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
+				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
+				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
+				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
+				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */,
+				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
+				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
+				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
+				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
+				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
+				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
+				FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */,
+				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
+				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
+				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
 				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
+				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
+				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
+				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +566,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -365,6 +578,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -397,8 +611,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -406,6 +622,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -425,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,7 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

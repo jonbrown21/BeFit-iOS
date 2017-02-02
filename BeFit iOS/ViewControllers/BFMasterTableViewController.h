@@ -11,12 +11,11 @@
 #import "Food.h"
 
 @interface BFMasterTableViewController : UITableViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate, UISearchDisplayDelegate>
-{
-    NSString *uppercaseFirstLetterOfName;
-}
+
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (strong,nonatomic) NSMutableArray *FoodArray;
+@property (strong,nonatomic) NSArray *searchResults;
 @property IBOutlet UISearchBar *foodSearchBar;
 
 @end
