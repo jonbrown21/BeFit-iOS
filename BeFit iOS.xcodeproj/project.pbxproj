@@ -57,6 +57,7 @@
 		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
 		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
 		FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BD19EB96D900C480B6 /* SecondViewController.m */; };
+		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,8 @@
 		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
 		FCBC23BC19EB96D900C480B6 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		FCBC23BD19EB96D900C480B6 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
+		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
+		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +359,8 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCC792421E45942F00D19056 /* PickerTableView.h */,
+				FCC792431E45942F00D19056 /* PickerTableView.m */,
 				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
 				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
 				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
@@ -498,6 +503,7 @@
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
+				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
