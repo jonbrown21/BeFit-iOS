@@ -16,6 +16,8 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
+		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
+		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -85,6 +87,10 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifestyleTableView.h; sourceTree = "<group>"; };
+		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
+		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
+		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -359,6 +365,10 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */,
+				FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */,
+				FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */,
+				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
 				FCC792421E45942F00D19056 /* PickerTableView.h */,
 				FCC792431E45942F00D19056 /* PickerTableView.m */,
 				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
@@ -495,9 +505,11 @@
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
+				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
+				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,

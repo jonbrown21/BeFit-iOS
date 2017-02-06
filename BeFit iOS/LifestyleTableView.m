@@ -6,17 +6,11 @@
 //  Copyright (c) 2014 Jon Brown. All rights reserved.
 //
 
-#import "PickerTableView.h"
+#import "LifestyleTableView.h"
 
-@implementation PickerTableView
+@implementation LifestyleTableView
 
 #pragma mark - Table view data source
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -48,14 +42,15 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if ([self.delegate respondsToSelector:@selector(itemSelectedatRow:)]) {
-        [self.delegate itemSelectedatRow:indexPath.row];
+    if ([self.delegate respondsToSelector:@selector(itemSelectedLifestyleAtRow:)]) {
+        [self.delegate itemSelectedLifestyleAtRow:indexPath.row];
         [self dismissViewControllerAnimated:YES completion:nil];
         
         NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         NSString *buttonTitle = [NSString stringWithFormat:@"%lu", (unsigned long)indexPath.row];
         
-        [defaults setObject:buttonTitle forKey:@"gender-name"];
+        [defaults setObject:buttonTitle forKey:@"lifestyle-name"];
+        
         
         NSLog(@"row %@ selected", buttonTitle);
         
@@ -63,17 +58,15 @@
     
     
 }
-
-- (void)itemSelectedatRow:(NSInteger)row
-{
-    NSLog(@"row %lu selected", (unsigned long)row);
-   
-
+- (void)itemSelectedLifestyleAtRow:(NSInteger)row {
+        NSLog(@"row %lu selected", (unsigned long)row);
 }
+
 
 - (IBAction)cancelPressed:(id)sender
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 @end
