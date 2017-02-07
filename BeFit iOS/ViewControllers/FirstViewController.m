@@ -257,10 +257,8 @@
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSString*  recomendation = [defaults objectForKey:@"recommended-name"];
-    NSString*  thegoal = [defaults objectForKey:@"thegoal"];
     
     float rec = [recomendation floatValue];
-    float theGoal = [thegoal floatValue];
     
     
     if (_GoalSiwtch.on) {
@@ -274,15 +272,18 @@
         
     } else {
         self.use.text = @"Not Using";
-        _Slider.value = theGoal;
         _Slider.userInteractionEnabled = YES;
-        _SliderLab.text = thegoal;
         
         [defaults setObject:@"no" forKey:@"using"];
         
+        _Slider.value = 500;
+        _SliderLab.text = @"500";
     }
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 -(void)didChangeSwitch:(UISwitch *)sender
 {
@@ -506,11 +507,9 @@
         self.Recommended.text = [NSString stringWithFormat:@"%.0f Calories", BMRGOALS];
         [defaults setObject:[NSString stringWithFormat:@"%.0f", BMRGOALS] forKey:@"recommended-name"];
         
-        NSString*  thegoal = [defaults objectForKey:@"thegoal"];
         NSString*  imUsing = [defaults objectForKey:@"using"];
         NSString*  recomendation = [defaults objectForKey:@"recommended-name"];
         
-        float theGoal = [thegoal floatValue];
         float rec = [recomendation floatValue];
         
         if ([imUsing  isEqual: @"yes"]) {
@@ -637,11 +636,9 @@
         self.Recommended.text = [NSString stringWithFormat:@"%.0f Calories", BMRGOALS];
         [defaults setObject:[NSString stringWithFormat:@"%.0f", BMRGOALS] forKey:@"recommended-name"];
         
-        NSString*  thegoal = [defaults objectForKey:@"thegoal"];
         NSString*  imUsing = [defaults objectForKey:@"using"];
         NSString*  recomendation = [defaults objectForKey:@"recommended-name"];
         
-        float theGoal = [thegoal floatValue];
         float rec = [recomendation floatValue];
         
         if ([imUsing  isEqual: @"yes"]) {

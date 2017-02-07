@@ -12,12 +12,13 @@
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADF19CF560E0044C06B /* LaunchScreen.xib */; };
-		FC290AED19CF560E0044C06B /* BeFit_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
 		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
+		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
+		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -91,6 +92,10 @@
 		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
 		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
 		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
+		FC760C251E484B2800336D75 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceViewController.h; path = ViewControllers/DeviceViewController.h; sourceTree = "<group>"; };
+		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
+		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
+		FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ViewControllers/DeviceDetailViewController.m; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -219,8 +224,6 @@
 				FCA42DD51E38F0BD00619AE6 /* Assets */,
 				FCA42DD41E38F0BD00619AE6 /* CW */,
 				FCBC23A619EB962400C480B6 /* DataModel */,
-				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
-				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				FCBC23A819EB966F00C480B6 /* ViewControllers */,
 				FCBC23A719EB965E00C480B6 /* Resources */,
 				FC290ACA19CF560E0044C06B /* Supporting Files */,
@@ -255,6 +258,45 @@
 				FC290AEB19CF560E0044C06B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC760C2B1E4918A400336D75 /* Food Library */ = {
+			isa = PBXGroup;
+			children = (
+				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
+				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
+				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
+				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
+				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
+				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
+			);
+			name = "Food Library";
+			sourceTree = "<group>";
+		};
+		FC760C2C1E4918B200336D75 /* Food List */ = {
+			isa = PBXGroup;
+			children = (
+				FC760C251E484B2800336D75 /* DeviceViewController.h */,
+				FC760C261E484B2800336D75 /* DeviceViewController.m */,
+				FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */,
+				FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */,
+			);
+			name = "Food List";
+			sourceTree = "<group>";
+		};
+		FC760C2D1E4918BE00336D75 /* BMI Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */,
+				FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */,
+				FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */,
+				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
+				FCC792421E45942F00D19056 /* PickerTableView.h */,
+				FCC792431E45942F00D19056 /* PickerTableView.m */,
+				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
+				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
+			);
+			name = "BMI Calculator";
 			sourceTree = "<group>";
 		};
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
@@ -341,6 +383,8 @@
 		FCBC23A619EB962400C480B6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
+				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */,
 				FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */,
 				FCBC23AE19EB96A600C480B6 /* BeFit2D.sqlite */,
@@ -365,20 +409,9 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */,
-				FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */,
-				FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */,
-				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
-				FCC792421E45942F00D19056 /* PickerTableView.h */,
-				FCC792431E45942F00D19056 /* PickerTableView.m */,
-				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
-				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
-				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
-				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
-				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
-				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
-				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
-				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
+				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
+				FC760C2B1E4918A400336D75 /* Food Library */,
+				FC760C2C1E4918B200336D75 /* Food List */,
 				FCBC23BC19EB96D900C480B6 /* SecondViewController.h */,
 				FCBC23BD19EB96D900C480B6 /* SecondViewController.m */,
 			);
@@ -515,6 +548,7 @@
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
+				FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */,
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
@@ -526,6 +560,7 @@
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
 				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
+				FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
@@ -537,7 +572,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC290AED19CF560E0044C06B /* BeFit_iOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,7 +694,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -672,7 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

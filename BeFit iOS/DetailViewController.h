@@ -31,6 +31,7 @@
 @property(nonatomic,retain) IBOutlet UILabel *viteView;
 @property(nonatomic,retain) IBOutlet UILabel *vitcView;
 @property(nonatomic,retain) IBOutlet UILabel *transView;
+@property (weak, nonatomic) IBOutlet UIButton *Add;
 
 @property(nonatomic,retain) IBOutlet UILabel *calPerc;
 @property(nonatomic,retain) IBOutlet UILabel *tfatPerc;

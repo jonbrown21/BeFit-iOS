@@ -63,7 +63,9 @@
     
     
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 - (void)itemSelectedatRow:(NSInteger)row
 {
     NSLog(@"row %lu selected", (unsigned long)row);

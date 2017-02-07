@@ -57,7 +57,9 @@
     
     
 }
-
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 - (void)itemSelectedGoalAtRow:(NSInteger)row
 {
     NSLog(@"row %lu selected", (unsigned long)row);

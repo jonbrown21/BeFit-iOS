@@ -137,6 +137,11 @@
     [self prog:sfatProg data:foodData.saturatedFatPercentFloat];
     [self prog:calffatProg data:foodData.calfromFatValuePercFloat];
     
+    //UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
+    UIColor *buttColor = [UIColor colorWithRed:0.18 green:0.80 blue:0.44 alpha:1.0];
+    //UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
+    
+    [ self makeButton:_Add color:buttColor ];
     
     CGFloat time1 = 3.49;
     CGFloat time2 = 8.13;
@@ -156,7 +161,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)makeButton: (UIButton*)butz color: (UIColor*)colortouse
+{
+    CALayer * layer = [butz layer];
+    [layer setMasksToBounds:YES];
+    [layer setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
+    [layer setBorderWidth:1.0];
+    [layer setBorderColor:[colortouse CGColor]];
+    butz.backgroundColor = colortouse;
+}
 
 /*
 #pragma mark - Navigation

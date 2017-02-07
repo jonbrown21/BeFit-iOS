@@ -207,6 +207,9 @@
     
 }
 
-
+- (IBAction)OpenModal:(id)sender {
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodList"];
+    [self presentViewController:controller animated:YES completion:nil];
+}
 
 @end
