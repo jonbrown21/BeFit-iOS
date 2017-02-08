@@ -60,6 +60,10 @@
 		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
 		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
 		FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BD19EB96D900C480B6 /* SecondViewController.m */; };
+		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
+		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
+		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
+		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
 		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +177,14 @@
 		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
 		FCBC23BC19EB96D900C480B6 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = ViewControllers/SecondViewController.h; sourceTree = "<group>"; };
 		FCBC23BD19EB96D900C480B6 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = ViewControllers/SecondViewController.m; sourceTree = "<group>"; };
+		FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedButton.h; sourceTree = "<group>"; };
+		FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedButton.m; sourceTree = "<group>"; };
+		FCBECD191E4AC60A0034FACF /* AveBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedView.h; sourceTree = "<group>"; };
+		FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedView.m; sourceTree = "<group>"; };
+		FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseActivityIndicatorView.h; sourceTree = "<group>"; };
+		FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseActivityIndicatorView.m; sourceTree = "<group>"; };
+		FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseButton.h; sourceTree = "<group>"; };
+		FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseButton.m; sourceTree = "<group>"; };
 		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
 		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,6 +421,8 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCBECD161E4AC60A0034FACF /* BorderedButton */,
+				FCBECD1B1E4AC60A0034FACF /* PurchaseButton */,
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
@@ -416,6 +430,28 @@
 				FCBC23BD19EB96D900C480B6 /* SecondViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FCBECD161E4AC60A0034FACF /* BorderedButton */ = {
+			isa = PBXGroup;
+			children = (
+				FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */,
+				FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */,
+				FCBECD191E4AC60A0034FACF /* AveBorderedView.h */,
+				FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */,
+			);
+			path = BorderedButton;
+			sourceTree = "<group>";
+		};
+		FCBECD1B1E4AC60A0034FACF /* PurchaseButton */ = {
+			isa = PBXGroup;
+			children = (
+				FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */,
+				FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */,
+				FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */,
+				FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */,
+			);
+			path = PurchaseButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,7 +572,10 @@
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
+				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
+				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
+				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
@@ -551,6 +590,7 @@
 				FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */,
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
+				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
