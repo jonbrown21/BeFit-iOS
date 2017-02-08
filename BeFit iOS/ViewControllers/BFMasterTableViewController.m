@@ -271,6 +271,7 @@
             // configure the cell
             cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
             cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             // configure the purchase button in state normal
             AvePurchaseButton* button = (AvePurchaseButton*)cell.accessoryView;
@@ -294,7 +295,7 @@
             // configure the cell
             cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
             cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
-            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
     }
