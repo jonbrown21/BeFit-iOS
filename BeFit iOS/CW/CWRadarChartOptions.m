@@ -9,6 +9,9 @@
 #import "CWRadarChartOptions.h"
 
 @implementation CWRadarChartOptions
+@dynamic scaleShowLabels;
+@dynamic scaleBeginAtZero;
+
 - (instancetype) init {
 	return [super init];
 }

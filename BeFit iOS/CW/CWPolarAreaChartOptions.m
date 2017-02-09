@@ -9,6 +9,10 @@
 #import "CWPolarAreaChartOptions.h"
 
 @implementation CWPolarAreaChartOptions
+@dynamic scaleBeginAtZero;
+@dynamic animationSteps;
+@dynamic animationEasing;
+
 - (instancetype) init {
 	self = [super init];
 	return self;
