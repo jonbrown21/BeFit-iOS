@@ -234,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				FCA42DD51E38F0BD00619AE6 /* Assets */,
-				FCA42DD41E38F0BD00619AE6 /* CW */,
 				FCBC23A619EB962400C480B6 /* DataModel */,
 				FCBC23A819EB966F00C480B6 /* ViewControllers */,
 				FCBC23A719EB965E00C480B6 /* Resources */,
@@ -246,6 +245,9 @@
 		FC290ACA19CF560E0044C06B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCA42DD41E38F0BD00619AE6 /* CW */,
+				FCBECD161E4AC60A0034FACF /* BorderedButton */,
+				FCBECD1B1E4AC60A0034FACF /* PurchaseButton */,
 				FC290B0119CF57B30044C06B /* CoreData.framework */,
 				FC290AFF19CF57AC0044C06B /* Foundation.framework */,
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
@@ -421,8 +423,6 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCBECD161E4AC60A0034FACF /* BorderedButton */,
-				FCBECD1B1E4AC60A0034FACF /* PurchaseButton */,
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
