@@ -184,7 +184,7 @@
             return [sectionInfo numberOfObjects];
         }
     }
-    return 0;
+   return [sectionInfo numberOfObjects];
 
     
 }
@@ -301,6 +301,7 @@
     }
     
     if([neededCellType isEqualToString: NormalCellIdentifier]) {
+        
         cell.accessoryView = nil;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
