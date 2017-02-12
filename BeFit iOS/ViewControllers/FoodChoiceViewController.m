@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    igViewController *notifyingInstance = [[igViewController alloc] init];
+    [notifyingInstance setDelegate:self];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -37,11 +41,38 @@
 - (IBAction)cancelPressed:(id)sender
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
 
 - (IBAction)OpenScanner:(id)sender {
-    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodScanner"];
-    [self presentViewController:controller animated:YES completion:nil];
+    
+    [self performSegueWithIdentifier:@"foodScan" sender:self];
+    
+//    
+//    igViewController *vcNotes =  [self.storyboard instantiateViewControllerWithIdentifier:@"foodScan"];
+//    vcNotes.delegate = self;
+//    [self presentViewController:vcNotes animated:YES completion:nil];
+
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"foodScan"]) {
+        
+        igViewController *destinationVC = segue.destinationViewController;
+        destinationVC.delegate = self;
+
+    }
+    
+}
+
+- (void)secondViewController:(igViewController *)secondViewController didEnterText:(NSString *)text
+{
+    _labelView.text = text;
+    
+}
+
+
 
 @end

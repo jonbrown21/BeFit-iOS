@@ -1005,6 +1005,20 @@
                                     <action selector="OpenScanner:" destination="pDL-ty-Q6i" eventType="touchDown" id="75U-h8-Iuj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Barcode Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M09-2S-g60">
+                                <rect key="frame" x="132" y="316" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3FP-ZQ-jg0">
+                                <rect key="frame" x="43" y="356" width="292" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1016,12 +1030,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="7dZ-H0-3aP" kind="modal" identifier="scan" id="1tH-d1-3fY"/>
+                        <outlet property="labelView" destination="3FP-ZQ-jg0" id="WAn-9M-rMj"/>
+                        <segue destination="fiQ-yy-0Af" kind="push" identifier="foodScan" id="m3K-uc-TIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWT-Ik-W0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2909" y="-607"/>
+            <point key="canvasLocation" x="2908.5" y="-607.5"/>
         </scene>
         <!--Ig View Controller-->
         <scene sceneID="E7w-P5-1B0">
@@ -1042,7 +1057,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xxf-Ry-VC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3872" y="-611"/>
+            <point key="canvasLocation" x="3446" y="-610"/>
         </scene>
         <!--Gender-->
         <scene sceneID="4jV-eX-RFX">
@@ -1064,7 +1079,7 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ORj-wz-WCI" id="OOp-gm-ncp"/>
-                            <outlet property="delegate" destination="ORj-wz-WCI" id="EUV-br-y6i"/>
+                            <outlet property="delegate" destination="ORj-wz-WCI" id="ETV-eb-VSf"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Gender" id="QBw-U6-Z30">
@@ -1406,24 +1421,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ky-wQ-p8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2383" y="-608"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wjM-iV-5ZC">
-            <objects>
-                <navigationController storyboardIdentifier="FoodScanner" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7dZ-H0-3aP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fej-P1-BXI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fiQ-yy-0Af" kind="relationship" relationship="rootViewController" id="nZE-Q5-2zf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-Hj-kwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3369.5" y="-610.5"/>
         </scene>
     </scenes>
     <resources>

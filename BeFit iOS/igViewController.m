@@ -23,11 +23,12 @@
 @end
 
 @implementation igViewController
+@synthesize delegate;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
@@ -94,6 +95,8 @@
         if (detectionString != nil)
         {
             _label.text = detectionString;
+            
+            
 //            long myLength = [detectionString length];
             
 //            if (myLength > 1) {
@@ -111,7 +114,18 @@
 
 - (IBAction)cancelPressed:(id)sender
 {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.delegate secondViewController:self didEnterText:_label.text];
+    
+    
+   [self.navigationController popViewControllerAnimated:YES];
+ 
+}
+
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [self.delegate secondViewController:self didEnterText:_label.text];
 }
 
 @end

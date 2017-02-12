@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "igViewController.h"
 
-@interface FoodChoiceViewController : UIViewController
+@interface FoodChoiceViewController : UIViewController <igViewControllerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *labelView;
 
 @end
