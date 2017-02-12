@@ -352,4 +352,9 @@
     [self presentViewController:controller animated:YES completion:nil];
 }
 
+- (IBAction)OpenImport:(id)sender {
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodAdd"];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 @end

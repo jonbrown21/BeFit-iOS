@@ -417,12 +417,17 @@
                                 <action selector="OpenModal:" destination="Z0G-za-ayb" id="1hv-gj-s7T"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Add Food" id="sO6-T0-0Nn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add Food" id="sO6-T0-0Nn">
+                            <connections>
+                                <action selector="OpenImport:" destination="Z0G-za-ayb" id="7qq-EU-Prw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="foodSearchBar" destination="KLG-Gg-u7r" id="Sw5-EL-50P"/>
                         <outlet property="searchDisplayController" destination="3EZ-2K-3vK" id="G5H-AZ-1nW"/>
                         <segue destination="Zur-qt-uzn" kind="push" identifier="detailNews" id="UMW-IL-aTf"/>
+                        <segue destination="dhx-l3-rUF" kind="modal" identifier="foodchoice" id="d0v-RP-rK6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKZ-BR-xWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -982,7 +987,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0f-Yz-r5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1918.5" y="-606.5"/>
+            <point key="canvasLocation" x="1935" y="-609"/>
+        </scene>
+        <!--Food Choice View Controller-->
+        <scene sceneID="kGP-r0-kfr">
+            <objects>
+                <viewController id="pDL-ty-Q6i" customClass="FoodChoiceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tN1-Qg-kne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J9c-be-boX">
+                                <rect key="frame" x="134" y="239" width="107" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan Food Item"/>
+                                <connections>
+                                    <action selector="OpenScanner:" destination="pDL-ty-Q6i" eventType="touchDown" id="75U-h8-Iuj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KFv-ke-ujO">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="cSa-57-p6g">
+                            <connections>
+                                <action selector="cancelPressed:" destination="pDL-ty-Q6i" id="PdH-vu-TWn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="7dZ-H0-3aP" kind="modal" identifier="scan" id="1tH-d1-3fY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kWT-Ik-W0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2909" y="-607"/>
+        </scene>
+        <!--Ig View Controller-->
+        <scene sceneID="E7w-P5-1B0">
+            <objects>
+                <viewController id="fiQ-yy-0Af" customClass="igViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4no-Zd-iZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9rT-fg-OpV">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="K27-hI-Yvm">
+                            <connections>
+                                <action selector="cancelPressed:" destination="fiQ-yy-0Af" id="TrD-de-TnS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxf-Ry-VC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3872" y="-611"/>
         </scene>
         <!--Gender-->
         <scene sceneID="4jV-eX-RFX">
@@ -1328,6 +1388,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mX9-2i-6kJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934" y="-604"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yft-DU-mt1">
+            <objects>
+                <navigationController storyboardIdentifier="FoodAdd" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dhx-l3-rUF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qtN-rV-acU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pDL-ty-Q6i" kind="relationship" relationship="rootViewController" id="Mkb-jw-PXs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ky-wQ-p8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="-608"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wjM-iV-5ZC">
+            <objects>
+                <navigationController storyboardIdentifier="FoodScanner" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7dZ-H0-3aP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fej-P1-BXI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fiQ-yy-0Af" kind="relationship" relationship="rootViewController" id="nZE-Q5-2zf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rcj-Hj-kwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3369.5" y="-610.5"/>
         </scene>
     </scenes>
     <resources>

@@ -19,6 +19,10 @@
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
 		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
 		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
+		FC77B21C1E501E90009DED53 /* FoodChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC77B21B1E501E90009DED53 /* FoodChoiceViewController.m */; };
+		FC77B21F1E501F7A009DED53 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77B21E1E501F7A009DED53 /* AVFoundation.framework */; };
+		FC77B2211E501F87009DED53 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77B2201E501F87009DED53 /* QuartzCore.framework */; };
+		FC77B2241E501FA2009DED53 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC77B2231E501FA2009DED53 /* igViewController.m */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -101,6 +105,12 @@
 		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
 		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
 		FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ViewControllers/DeviceDetailViewController.m; sourceTree = "<group>"; };
+		FC77B21A1E501E90009DED53 /* FoodChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodChoiceViewController.h; path = ViewControllers/FoodChoiceViewController.h; sourceTree = "<group>"; };
+		FC77B21B1E501E90009DED53 /* FoodChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodChoiceViewController.m; path = ViewControllers/FoodChoiceViewController.m; sourceTree = "<group>"; };
+		FC77B21E1E501F7A009DED53 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FC77B2201E501F87009DED53 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC77B2221E501FA2009DED53 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
+		FC77B2231E501FA2009DED53 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -196,6 +206,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC77B2211E501F87009DED53 /* QuartzCore.framework in Frameworks */,
+				FC77B21F1E501F7A009DED53 /* AVFoundation.framework in Frameworks */,
 				FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */,
 				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
 				FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */,
@@ -315,9 +327,22 @@
 			name = "BMI Calculator";
 			sourceTree = "<group>";
 		};
+		FC77B21D1E501F32009DED53 /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				FC77B2221E501FA2009DED53 /* igViewController.h */,
+				FC77B2231E501FA2009DED53 /* igViewController.m */,
+				FC77B21A1E501E90009DED53 /* FoodChoiceViewController.h */,
+				FC77B21B1E501E90009DED53 /* FoodChoiceViewController.m */,
+			);
+			name = Scanner;
+			sourceTree = "<group>";
+		};
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC77B2201E501F87009DED53 /* QuartzCore.framework */,
+				FC77B21E1E501F7A009DED53 /* AVFoundation.framework */,
 				FCA42E2D1E38F20400619AE6 /* WebKit.framework */,
 				FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */,
 			);
@@ -426,6 +451,7 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC77B21D1E501F32009DED53 /* Scanner */,
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
@@ -506,9 +532,13 @@
 				TargetAttributes = {
 					FC290AC619CF560E0044C06B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 2D4Z7WQ7RS;
+						ProvisioningStyle = Automatic;
 					};
 					FC290AE519CF560E0044C06B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 2D4Z7WQ7RS;
+						ProvisioningStyle = Automatic;
 						TestTargetID = FC290AC619CF560E0044C06B;
 					};
 				};
@@ -574,6 +604,7 @@
 				FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */,
 				FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */,
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
+				FC77B2241E501FA2009DED53 /* igViewController.m in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
 				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
@@ -595,6 +626,7 @@
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
+				FC77B21C1E501E90009DED53 /* FoodChoiceViewController.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
@@ -737,11 +769,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -749,11 +785,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -761,6 +801,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -778,6 +820,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "BeFit iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
