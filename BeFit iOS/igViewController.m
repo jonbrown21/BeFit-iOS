@@ -94,6 +94,11 @@
 
         if (detectionString != nil)
         {
+            if([metadata.type isEqualToString:AVMetadataObjectTypeEAN13Code]){
+                if ([detectionString hasPrefix:@"0"] && [detectionString length] > 1)
+                    detectionString = [detectionString substringFromIndex:1];
+            }
+            
             _label.text = detectionString;
             
             
