@@ -224,6 +224,9 @@
     [defaults setObject:resetValue forKey:@"recommended-name"];
     [defaults setObject:resetValue forKey:@"thegoal"];
     [defaults setObject:@"no" forKey:@"using"];
+    
+    [_GoalSiwtch setOn:NO animated:NO];
+    [_MetricSwitch setOn:NO animated:NO];
 }
 
 -(IBAction)sliderValueChanged:(id)sender
