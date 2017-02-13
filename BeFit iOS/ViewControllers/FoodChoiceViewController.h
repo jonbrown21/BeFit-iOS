@@ -38,5 +38,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *VitC;
 @property (weak, nonatomic) IBOutlet UITextField *VitE;
 @property (weak, nonatomic) IBOutlet UITextField *TransFat;
+@property (weak, nonatomic) IBOutlet UIButton *ScanButt;
+@property (weak, nonatomic) IBOutlet UIButton *AddFood;
 
 @end

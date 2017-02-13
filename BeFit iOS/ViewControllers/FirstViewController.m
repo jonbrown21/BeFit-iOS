@@ -22,6 +22,7 @@
     [super viewDidLoad];
     
     [self.Age becomeFirstResponder];
+    self.navigationbar.delegate = self;
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSString*  gendervalue = [defaults objectForKey:@"gender-name"];
@@ -289,7 +290,7 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 -(void)didChangeSwitch:(UISwitch *)sender
@@ -726,7 +727,9 @@
     
 }
 
-
+- (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
+}
 
 - (void)itemSelectedLifestyleAtRow:(NSInteger)row
 {

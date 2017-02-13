@@ -20,7 +20,35 @@
     igViewController *notifyingInstance = [[igViewController alloc] init];
     [notifyingInstance setDelegate:self];
     
+    UIColor *buttColor = [UIColor colorWithRed:0.18 green:0.80 blue:0.44 alpha:1.0];
+    UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
+    UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
     
+    [[UITextField appearance] setTintColor:greyColor];
+    
+    [ self makeButton:_ScanButt color:redcolor ];
+    [ self makeButton:_AddFood color:buttColor ];
+    
+    [ self showKeyboard:_FoodName ];
+    [ self showKeyboard:_Barcode ];
+    [ self showKeyboard:_Calcium ];
+    [ self showKeyboard:_Calories ];
+    [ self showKeyboard:_TotalFat ];
+    [ self showKeyboard:_SatFat ];
+    [ self showKeyboard:_MonoFat ];
+    [ self showKeyboard:_PolyFat ];
+    [ self showKeyboard:_calfromfat ];
+    [ self showKeyboard:_Cholesterol ];
+    [ self showKeyboard:_Sodium ];
+    [ self showKeyboard:_Fiber ];
+    [ self showKeyboard:_Sugars ];
+    [ self showKeyboard:_Protien ];
+    [ self showKeyboard:_Carbs ];
+    [ self showKeyboard:_Iron ];
+    [ self showKeyboard:_VitC ];
+    [ self showKeyboard:_VitA ];
+    [ self showKeyboard:_VitE ];
+    [ self showKeyboard:_TransFat ];
     
     // Do any additional setup after loading the view.
 }
@@ -39,6 +67,49 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)doneWithNumberPad{
+    // NSString *numberFromTheKeyboard = HumanAge.text;
+    [_FoodName resignFirstResponder];
+    [_Barcode resignFirstResponder];
+    [_Calcium resignFirstResponder];
+    [_Calories resignFirstResponder];
+    [_TotalFat resignFirstResponder];
+    [_SatFat resignFirstResponder];
+    [_MonoFat resignFirstResponder];
+    [_PolyFat resignFirstResponder];
+    [_calfromfat resignFirstResponder];
+    [_Cholesterol resignFirstResponder];
+    [_Sodium resignFirstResponder];
+    [_Fiber resignFirstResponder];
+    [_Sugars resignFirstResponder];
+    [_Protien resignFirstResponder];
+    [_Carbs resignFirstResponder];
+    [_Iron resignFirstResponder];
+    [_VitC resignFirstResponder];
+    [_VitA resignFirstResponder];
+    [_VitE resignFirstResponder];
+    [_TransFat resignFirstResponder];
+    
+}
+
+-(void)showKeyboard: (UITextField*)key
+{
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleDefault;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    
+    
+    
+    key.inputAccessoryView = numberToolbar;
+    
+    
+}
 
 - (IBAction)cancelPressed:(id)sender
 {
@@ -77,10 +148,18 @@
 
 - (void)secondViewController:(igViewController *)secondViewController didEnterText:(NSString *)text
 {
-    _labelView.text = text;
-    
     [self ParseDatafromBarcode:text];
     
+}
+
+-(void)makeButton: (UIButton*)butz color: (UIColor*)colortouse
+{
+    CALayer * layer = [butz layer];
+    [layer setMasksToBounds:YES];
+    [layer setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
+    [layer setBorderWidth:1.0];
+    [layer setBorderColor:[colortouse CGColor]];
+    butz.backgroundColor = colortouse;
 }
 
 - (void)ParseDatafromBarcode:(NSString *)barcode

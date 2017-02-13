@@ -46,6 +46,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationbar.delegate = self;
+    
     WKWebView* webview = [[WKWebView alloc] initWithFrame:self.wview.bounds];
     [webview setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.wview addSubview:webview];
@@ -78,9 +80,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
+    return UIBarPositionTopAttached;
 }
 
 @end
