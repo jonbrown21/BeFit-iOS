@@ -77,9 +77,22 @@
 {
     _labelView.text = text;
     
+    [self ParseDatafromBarcode:text];
+    
 }
 
+- (void)ParseDatafromBarcode:(NSString *)barcode
+{
+    
+    NSString *url_string = [[NSString alloc ]initWithFormat:@"https://api.nutritionix.com/v1_1/item?upc=%@&appId=052b363f&appKey=510bfa9d1624d4264cb7fadf42bed4e8",barcode];
 
+    NSError *error;
+    NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
+    NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    NSLog(@"json: %@", json);
+    
+}
 
 - (IBAction)OpenFoodPanel:(id)sender {
     

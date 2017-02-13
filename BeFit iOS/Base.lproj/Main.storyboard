@@ -123,7 +123,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="textColor" red="0.43921568630000002" green="0.4941176471" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                 <connections>
                                                     <action selector="Calculate:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="YYu-aW-aYM"/>
                                                     <outlet property="delegate" destination="9pv-A4-QxB" id="3BT-Kh-XWF"/>
