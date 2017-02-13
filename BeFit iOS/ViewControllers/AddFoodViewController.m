@@ -15,14 +15,33 @@
 @implementation AddFoodViewController
 @synthesize upclabelView, lblTitle;
 
+NSTimer *progressTimer;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationbar.delegate = self;
     [upclabelView setText:lblTitle];
     
+    progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.15f target:self selector:@selector(updateProgressBar) userInfo:nil repeats:YES];
+    [progressTimer fire];
     
+    
+                            
     // Do any additional setup after loading the view.
+}
+
+- (void)updateProgressBar {
+    
+    
+    float newProgress = [self.ProgView progress] + 0.01666; // 1/60
+    [self.ProgView setProgress:newProgress animated:YES];
+    NSLog(@"%f", newProgress);
+    
+    if (newProgress > 1.0) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [progressTimer invalidate];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

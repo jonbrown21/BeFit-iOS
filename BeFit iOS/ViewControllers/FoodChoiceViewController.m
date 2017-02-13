@@ -20,6 +20,8 @@
     igViewController *notifyingInstance = [[igViewController alloc] init];
     [notifyingInstance setDelegate:self];
     
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -88,10 +90,40 @@
 
     NSError *error;
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
-    NSMutableArray *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    NSLog(@"json: %@", json);
+    NSDictionary *Calories = [json objectForKey:@"nf_calories"];
+    NSDictionary *FoodName = [json objectForKey:@"item_name"];
+    NSDictionary *TotalFat = [json objectForKey:@"nf_total_fat"];
+    NSDictionary *SatFat = [json objectForKey:@"nf_saturated_fat"];
+    NSDictionary *CalsfromFat = [json objectForKey:@"nf_calories_from_fat"];
+    NSDictionary *Chols = [json objectForKey:@"nf_cholesterol"];
+    NSDictionary *Sod = [json objectForKey:@"nf_sodium"];
+    NSDictionary *Fib = [json objectForKey:@"nf_dietary_fiber"];
+    NSDictionary *Sug = [json objectForKey:@"nf_sugars"];
+    NSDictionary *Prot = [json objectForKey:@"nf_protein"];
+    NSDictionary *Carb = [json objectForKey:@"nf_total_carbohydrate"];
+    NSDictionary *Calc = [json objectForKey:@"nf_calcium_dv"];
+    NSDictionary *Iorn = [json objectForKey:@"nf_iron_dv"];
+    NSDictionary *A = [json objectForKey:@"nf_vitamin_a_dv"];
+    NSDictionary *C = [json objectForKey:@"nf_vitamin_c_dv"];
     
+    _FoodName.text = [NSString stringWithFormat:@"%@", FoodName];
+    _Calories.text = [NSString stringWithFormat:@"%@", Calories];
+    _Barcode.text = barcode;
+    _TotalFat.text = [NSString stringWithFormat:@"%@", TotalFat];
+    _SatFat.text = [NSString stringWithFormat:@"%@", SatFat];
+    _calfromfat.text = [NSString stringWithFormat:@"%@", CalsfromFat];
+    _Cholesterol.text = [NSString stringWithFormat:@"%@", Chols];
+    _Sodium.text = [NSString stringWithFormat:@"%@", Sod];
+    _Fiber.text = [NSString stringWithFormat:@"%@", Fib];
+    _Sugars.text = [NSString stringWithFormat:@"%@", Sug];
+    _Protien.text = [NSString stringWithFormat:@"%@", Prot];
+    _Carbs.text = [NSString stringWithFormat:@"%@", Carb];
+    _Calcium.text = [NSString stringWithFormat:@"%@", Calc];
+    _Iron.text = [NSString stringWithFormat:@"%@", Iorn];
+    _VitA.text = [NSString stringWithFormat:@"%@", A];
+    _VitC.text = [NSString stringWithFormat:@"%@", C];
 }
 
 - (IBAction)OpenFoodPanel:(id)sender {

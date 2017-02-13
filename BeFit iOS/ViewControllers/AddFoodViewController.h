@@ -17,4 +17,5 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationbar;
 @property (weak, nonatomic) IBOutlet UILabel *upclabelView;
 @property (nonatomic, retain) NSString *lblTitle;
+@property (weak, nonatomic) IBOutlet UIProgressView *ProgView;
 @end

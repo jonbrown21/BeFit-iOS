@@ -97,11 +97,11 @@
             _label.text = detectionString;
             
             
-//            long myLength = [detectionString length];
+            long myLength = [detectionString length];
             
-//            if (myLength > 1) {
-//                [self cancelPressed:self];
-//            }
+            if (myLength > 1) {
+                [self cancelPressed:self];
+            }
             
             break;
         }
@@ -115,17 +115,18 @@
 - (IBAction)cancelPressed:(id)sender
 {
     
-    [self.delegate secondViewController:self didEnterText:_label.text];
-    
+  
+    if ([_label.text  isEqual: @"(none)"]) {
+        
+        
+    } else {
+        
+        [self.delegate secondViewController:self didEnterText:_label.text];
+    }
     
    [self.navigationController popViewControllerAnimated:YES];
  
 }
 
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [self.delegate secondViewController:self didEnterText:_label.text];
-}
 
 @end
