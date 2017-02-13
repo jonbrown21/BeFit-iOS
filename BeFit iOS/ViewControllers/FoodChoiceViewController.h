@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
+
 #import "igViewController.h"
+#import "AddFoodViewController.h"
 
 @interface FoodChoiceViewController : UIViewController <igViewControllerDelegate>
+
+- (IBAction)OpenFoodPanel:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *labelView;
+@property (strong, nonatomic) IBOutlet UIView *manualButt;
 
 @end

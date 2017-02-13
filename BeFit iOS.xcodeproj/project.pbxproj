@@ -23,6 +23,7 @@
 		FC77B21F1E501F7A009DED53 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77B21E1E501F7A009DED53 /* AVFoundation.framework */; };
 		FC77B2211E501F87009DED53 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC77B2201E501F87009DED53 /* QuartzCore.framework */; };
 		FC77B2241E501FA2009DED53 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC77B2231E501FA2009DED53 /* igViewController.m */; };
+		FC77B2271E50E345009DED53 /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC77B2261E50E345009DED53 /* AddFoodViewController.m */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -111,6 +112,8 @@
 		FC77B2201E501F87009DED53 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC77B2221E501FA2009DED53 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
 		FC77B2231E501FA2009DED53 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
+		FC77B2251E50E345009DED53 /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddFoodViewController.h; path = ViewControllers/AddFoodViewController.h; sourceTree = "<group>"; };
+		FC77B2261E50E345009DED53 /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddFoodViewController.m; path = ViewControllers/AddFoodViewController.m; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -338,6 +341,15 @@
 			name = Scanner;
 			sourceTree = "<group>";
 		};
+		FC77B2281E50E352009DED53 /* AddFood */ = {
+			isa = PBXGroup;
+			children = (
+				FC77B2251E50E345009DED53 /* AddFoodViewController.h */,
+				FC77B2261E50E345009DED53 /* AddFoodViewController.m */,
+			);
+			name = AddFood;
+			sourceTree = "<group>";
+		};
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +463,7 @@
 		FCBC23A819EB966F00C480B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC77B2281E50E352009DED53 /* AddFood */,
 				FC77B21D1E501F32009DED53 /* Scanner */,
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
@@ -596,6 +609,7 @@
 			files = (
 				FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */,
 				FCBC23C019EB96D900C480B6 /* SecondViewController.m in Sources */,
+				FC77B2271E50E345009DED53 /* AddFoodViewController.m in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,

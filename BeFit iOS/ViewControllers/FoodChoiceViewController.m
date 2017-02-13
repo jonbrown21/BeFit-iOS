@@ -64,6 +64,12 @@
         destinationVC.delegate = self;
 
     }
+    if ([segue.identifier isEqualToString:@"addfood"]) {
+        
+        AddFoodViewController *destinationVC = segue.destinationViewController;
+        destinationVC.lblTitle = self.labelView.text;
+
+    }
     
 }
 
@@ -75,4 +81,11 @@
 
 
 
+- (IBAction)OpenFoodPanel:(id)sender {
+    
+    
+    [self performSegueWithIdentifier:@"addfood" sender:self];
+    
+    
+}
 @end

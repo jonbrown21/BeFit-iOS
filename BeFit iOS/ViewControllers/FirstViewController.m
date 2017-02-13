@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.Age becomeFirstResponder];
+    
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSString*  gendervalue = [defaults objectForKey:@"gender-name"];
     NSString*  agevalue = [defaults objectForKey:@"age-name"];
@@ -159,6 +161,8 @@
     UIColor *buttColor = [UIColor colorWithRed:0.18 green:0.80 blue:0.44 alpha:1.0];
     UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
     UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
+    
+    [[UITextField appearance] setTintColor:greyColor];
     
     [ self makeButton:_ResetButt color:redcolor ];
     [ self makeButton:_GoalButt color:greyColor ];
@@ -700,13 +704,13 @@
 }
 
 
+
 -(void)showKeyboard: (UITextField*)key
 {
     
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     numberToolbar.barStyle = UIBarStyleDefault;
     numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancelNumberPad)],
                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                            [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
                            nil];
@@ -718,6 +722,8 @@
 
     
 }
+
+
 
 - (void)itemSelectedLifestyleAtRow:(NSInteger)row
 {
