@@ -23,5 +23,9 @@
     __unsafe_unretained id<igViewControllerDelegate> delegate;
 }
 @property(nonatomic,assign)id<igViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIView *highlightView;
+@property (weak, nonatomic) IBOutlet UILabel *barcode_view;
+@property (weak, nonatomic) IBOutlet UILabel *back;
 
 @end

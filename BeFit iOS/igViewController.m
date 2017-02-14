@@ -16,9 +16,6 @@
     AVCaptureDeviceInput *_input;
     AVCaptureMetadataOutput *_output;
     AVCaptureVideoPreviewLayer *_prevLayer;
-
-    UIView *_highlightView;
-    UILabel *_label;
 }
 @end
 
@@ -29,21 +26,11 @@
 {
     [super viewDidLoad];
     
-    _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
     _highlightView.layer.borderColor = [UIColor greenColor].CGColor;
     _highlightView.layer.borderWidth = 3;
-    [self.view addSubview:_highlightView];
-
-    _label = [[UILabel alloc] init];
-    _label.frame = CGRectMake(0, self.view.bounds.size.height - 40, self.view.bounds.size.width, 40);
-    _label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    _label.backgroundColor = [UIColor colorWithWhite:0.15 alpha:0.65];
-    _label.textColor = [UIColor whiteColor];
-    _label.textAlignment = NSTextAlignmentCenter;
     _label.text = @"(none)";
-    [self.view addSubview:_label];
-
+    
     _session = [[AVCaptureSession alloc] init];
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
@@ -68,6 +55,8 @@
 
     [_session startRunning];
 
+    [self.view bringSubviewToFront:_back];
+    [self.view bringSubviewToFront:_barcode_view];
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
 }
@@ -104,12 +93,6 @@
     
             _label.text = detectionString;
 
-            long myLength = [detectionString length];
-            
-            if (myLength > 1) {
-                [self cancelPressed:self];
-            }
-            
             break;
         }
         else
@@ -117,13 +100,14 @@
     }
 
     _highlightView.frame = highlightViewRect;
+
 }
 
 - (IBAction)cancelPressed:(id)sender
 {
     
   
-    if ([_label.text  isEqual: @"(none)"]) {
+    if ([_label.text isEqual: @"(none)"]) {
         
         
     } else {
