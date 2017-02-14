@@ -380,7 +380,7 @@
                         <outlet property="switchLab" destination="fbw-QR-e3p" id="7xi-W1-NOi"/>
                         <outlet property="use" destination="LLu-1V-l8H" id="CRq-R4-Ynu"/>
                         <outlet property="weightMet" destination="Y5T-ik-cQl" id="0SR-kc-GEn"/>
-                        <segue destination="Obo-fC-bC5" kind="modal" identifier="gender" id="1Q1-yO-gy3"/>
+                        <segue destination="Obo-fC-bC5" kind="modal" identifier="gender" modalTransitionStyle="flipHorizontal" id="1Q1-yO-gy3"/>
                         <segue destination="McY-Nu-cyk" kind="modal" identifier="lifestyle" id="zAz-Eq-vp1"/>
                         <segue destination="nQb-RU-3oi" kind="modal" identifier="goals" id="qAH-fY-vgm"/>
                     </connections>
@@ -952,7 +952,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WSm-rk-AkV"/>
+                    <navigationItem key="navigationItem" id="WSm-rk-AkV">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" misplaced="YES" id="UUD-0Z-viA" customClass="CBAutoScrollLabel">
+                            <rect key="frame" x="87" y="6" width="202" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </navigationItem>
                     <connections>
                         <outlet property="Add" destination="YOY-Fw-4Ba" id="tRP-yd-QJX"/>
                         <outlet property="calPerc" destination="F5H-XQ-OQX" id="CT4-gz-FHV"/>
@@ -967,6 +974,7 @@
                         <outlet property="fiberView" destination="wk5-SE-iOk" id="2JR-Tq-9ac"/>
                         <outlet property="ironView" destination="kxG-L2-ChS" id="qvo-zw-SeK"/>
                         <outlet property="monofatView" destination="phb-gu-5lg" id="IA8-vK-RUQ"/>
+                        <outlet property="navigationBarScrollLabel" destination="UUD-0Z-viA" id="rll-mB-Tbx"/>
                         <outlet property="pfatPerc" destination="b6b-ND-WlC" id="YkV-RM-NBq"/>
                         <outlet property="polyfatView" destination="g3r-h0-9HI" id="4K0-rh-MvU"/>
                         <outlet property="protView" destination="2CN-XH-898" id="B0w-J3-2sE"/>
@@ -987,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0f-Yz-r5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1935" y="-609"/>
+            <point key="canvasLocation" x="1934.5" y="-609.5"/>
         </scene>
         <!--Food Choice View Controller-->
         <scene sceneID="kGP-r0-kfr">

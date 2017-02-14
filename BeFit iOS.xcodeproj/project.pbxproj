@@ -13,6 +13,7 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
+		FC2D026A1E52D1D500F706DF /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2D02691E52D1D500F706DF /* CBAutoScrollLabel.m */; };
 		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
 		FC5FAA5F1E52AD8700A55309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5FAA5D1E52AD8700A55309 /* Main.storyboard */; };
@@ -95,6 +96,8 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FC2D02681E52D1D500F706DF /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
+		FC2D02691E52D1D500F706DF /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 		FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifestyleTableView.h; sourceTree = "<group>"; };
 		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
 		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
@@ -289,6 +292,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FC2D026B1E52D1DC00F706DF /* AutoScroll */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D02681E52D1D500F706DF /* CBAutoScrollLabel.h */,
+				FC2D02691E52D1D500F706DF /* CBAutoScrollLabel.m */,
+			);
+			name = AutoScroll;
+			sourceTree = "<group>";
+		};
 		FC760C2B1E4918A400336D75 /* Food Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +463,7 @@
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FC2D026B1E52D1DC00F706DF /* AutoScroll */,
 				FC5FAA5D1E52AD8700A55309 /* Main.storyboard */,
 				FC290ADD19CF560E0044C06B /* Images.xcassets */,
 			);
@@ -649,6 +662,7 @@
 				FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
+				FC2D026A1E52D1D500F706DF /* CBAutoScrollLabel.m in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "CW.h"
+#import "CBAutoScrollLabel.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIView *wview;
@@ -15,6 +16,8 @@
 @property (strong) CWLineChart* lineChart;
 @property (strong) CWBarChart* barChart;
 @property (strong) CWPieChart* pieChart;
+@property (weak, nonatomic) IBOutlet CBAutoScrollLabel *navigationBarScrollLabel;
+
 @end
 
 @implementation DetailViewController
@@ -101,7 +104,14 @@
     webview.scrollView.scrollEnabled = false;
     webview.multipleTouchEnabled = NO;
     
-    self.title = foodData.name;
+    // navigation bar auto scroll label
+    self.navigationBarScrollLabel.text = foodData.name;
+    self.navigationBarScrollLabel.pauseInterval = 3.f;
+    self.navigationBarScrollLabel.font = [UIFont boldSystemFontOfSize:20];
+    self.navigationBarScrollLabel.textColor = [UIColor blackColor];
+    [self.navigationBarScrollLabel observeApplicationNotifications];
+    
+    //self.title = foodData.name;
     
     // Set Data and Titles
     
