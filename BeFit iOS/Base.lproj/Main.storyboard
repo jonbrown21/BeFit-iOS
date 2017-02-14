@@ -1408,18 +1408,18 @@
                                 </connections>
                             </navigationBar>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" id="JNQ-uk-dxB">
-                                <rect key="frame" x="87" y="327" width="221" height="2"/>
+                                <rect key="frame" x="80" y="327" width="221" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Adding food to database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MQK-Db-WeI">
-                                <rect key="frame" x="103" y="282" width="188" height="21"/>
+                                <rect key="frame" x="96" y="282" width="188" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B1u-ap-cbY">
-                                <rect key="frame" x="107" y="114" width="180" height="21"/>
+                                <rect key="frame" x="80" y="112" width="221" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1631,7 +1631,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="PiZ-Os-TF4" kind="modal" identifier="UpdateDevice" id="1Gl-nq-KZW"/>
                     </connections>
@@ -1640,11 +1639,11 @@
             </objects>
             <point key="canvasLocation" x="1447" y="-1382"/>
         </scene>
-        <!--Item-->
+        <!--Food Lists-->
         <scene sceneID="YW8-yd-qD5">
             <objects>
                 <navigationController storyboardIdentifier="FoodList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gn1-c5-CFi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="CC3-Vg-vnu"/>
+                    <tabBarItem key="tabBarItem" title="Food Lists" image="To Do_000000_25" id="CC3-Vg-vnu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2CL-AG-T2J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1713,7 +1712,7 @@
             </objects>
             <point key="canvasLocation" x="1919" y="-1383"/>
         </scene>
-        <!--Second-->
+        <!--Tracker-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -1746,7 +1745,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Tracker" image="Line Chart_000000_25" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="navigationbar" destination="ZUt-HM-DzV" id="jNs-rO-Una"/>
                         <outlet property="wview" destination="hlx-nx-c9l" id="w0s-Uj-oyF"/>
@@ -1768,6 +1767,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Ekh-Q2-lga" kind="relationship" relationship="viewControllers" id="qgM-mW-wt0"/>
+                        <segue destination="gn1-c5-CFi" kind="relationship" relationship="viewControllers" id="Vkn-MD-6hO"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
@@ -1816,8 +1816,9 @@
     </scenes>
     <resources>
         <image name="Goal_000000_100" width="25" height="25"/>
+        <image name="Line Chart_000000_25" width="25" height="25"/>
         <image name="Museum_000000_100" width="25" height="25"/>
-        <image name="second" width="30" height="30"/>
+        <image name="To Do_000000_25" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

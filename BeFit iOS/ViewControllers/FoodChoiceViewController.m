@@ -140,7 +140,7 @@
     if ([segue.identifier isEqualToString:@"addfood"]) {
         
         AddFoodViewController *destinationVC = segue.destinationViewController;
-        destinationVC.lblTitle = self.labelView.text;
+        destinationVC.lblTitle = self.Barcode.text;
 
     }
     

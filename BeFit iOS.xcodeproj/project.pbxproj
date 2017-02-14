@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		FC290ACD19CF560E0044C06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACC19CF560E0044C06B /* main.m */; };
 		FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACF19CF560E0044C06B /* AppDelegate.m */; };
-		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
-		FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADF19CF560E0044C06B /* LaunchScreen.xib */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
 		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
+		FC5FAA5F1E52AD8700A55309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC5FAA5D1E52AD8700A55309 /* Main.storyboard */; };
 		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
 		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
 		FC77B21C1E501E90009DED53 /* FoodChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC77B21B1E501E90009DED53 /* FoodChoiceViewController.m */; };
@@ -89,9 +88,7 @@
 		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC290ACE19CF560E0044C06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FC290ACF19CF560E0044C06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC290AE019CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
@@ -102,6 +99,7 @@
 		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
 		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
 		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
+		FC5FAA5E1E52AD8700A55309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC760C251E484B2800336D75 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceViewController.h; path = ViewControllers/DeviceViewController.h; sourceTree = "<group>"; };
 		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
 		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
@@ -453,9 +451,8 @@
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC290ADA19CF560E0044C06B /* Main.storyboard */,
+				FC5FAA5D1E52AD8700A55309 /* Main.storyboard */,
 				FC290ADD19CF560E0044C06B /* Images.xcassets */,
-				FC290ADF19CF560E0044C06B /* LaunchScreen.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -581,13 +578,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA42E111E38F0BD00619AE6 /* cw.html in Resources */,
-				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
 				FCA42E121E38F0BD00619AE6 /* cw.js in Resources */,
-				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
 				FCBE070D1E4E2E97007519FC /* BeFit2.sqlite in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
 				FCBC23B519EB96A600C480B6 /* BeFit2D.sqlite in Resources */,
+				FC5FAA5F1E52AD8700A55309 /* Main.storyboard in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
 				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
 			);
@@ -676,20 +672,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC290ADA19CF560E0044C06B /* Main.storyboard */ = {
+		FC5FAA5D1E52AD8700A55309 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC290ADB19CF560E0044C06B /* Base */,
+				FC5FAA5E1E52AD8700A55309 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FC290ADF19CF560E0044C06B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC290AE019CF560E0044C06B /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -783,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
@@ -799,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
