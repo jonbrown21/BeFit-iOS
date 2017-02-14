@@ -87,21 +87,23 @@
             {
                 barCodeObject = (AVMetadataMachineReadableCodeObject *)[_prevLayer transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
                 highlightViewRect = barCodeObject.bounds;
+                
+                
                 detectionString = [(AVMetadataMachineReadableCodeObject *)metadata stringValue];
+                
+                if ([detectionString hasPrefix:@"0"] && [detectionString length] > 1) {
+                    detectionString = [detectionString substringFromIndex:1];
+                }
+                
                 break;
             }
         }
 
         if (detectionString != nil)
         {
-            if([metadata.type isEqualToString:AVMetadataObjectTypeEAN13Code]){
-                if ([detectionString hasPrefix:@"0"] && [detectionString length] > 1)
-                    detectionString = [detectionString substringFromIndex:1];
-            }
-            
+    
             _label.text = detectionString;
-            
-            
+
             long myLength = [detectionString length];
             
             if (myLength > 1) {
