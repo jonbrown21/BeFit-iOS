@@ -34,6 +34,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *Add;
 
 @property(nonatomic,retain) IBOutlet UILabel *calPerc;
+@property(nonatomic,retain) IBOutlet UILabel *calPercGr;
 @property(nonatomic,retain) IBOutlet UILabel *tfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *sfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *pfatPerc;

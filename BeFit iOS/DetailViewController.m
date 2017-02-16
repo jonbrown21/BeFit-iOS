@@ -151,6 +151,7 @@
     transView.text = foodData.transFatValue;
     tfatPerc.text = foodData.totalFatPercent;
     calPerc.text = foodData.calfromFatValuePerc;
+    _calPercGr.text = foodData.calfromFatValuePerc;
     sfatPerc.text = foodData.saturatedFatPercent;
     pfatPerc.text = foodData.polyFatValuePerc;
     mfatPerc.text = foodData.monoFatValuePerc;

@@ -1013,7 +1013,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="Add" destination="YOY-Fw-4Ba" id="tRP-yd-QJX"/>
-                        <outlet property="calPerc" destination="IAd-sc-vtc" id="8kW-c1-Ijl"/>
+                        <outlet property="calPerc" destination="F5H-XQ-OQX" id="C61-IB-lmW"/>
+                        <outlet property="calPercGr" destination="IAd-sc-vtc" id="uSK-G8-Uuc"/>
                         <outlet property="calProg" destination="kJf-vd-2t4" id="cJ4-RB-YyA"/>
                         <outlet property="calView" destination="QV6-Cy-Cix" id="WkC-hi-akZ"/>
                         <outlet property="calcView" destination="1Ld-8F-rZo" id="KVL-x0-XSr"/>
