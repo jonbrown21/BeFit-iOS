@@ -21,7 +21,7 @@
 @end
 
 @implementation DetailViewController
-@synthesize lablView, selectedlabel, foodData, calView, servingSize, fatView, satfatView, polyfatView, monofatView, fatCals, cholView, sodView, fiberView, calProg, calProgTxt, progColor, sugarView, protView, carbsView, calcView, ironView, transView, vitaView, vitcView, viteView, tfatProg, tfatPerc, calPerc, sfatPerc, sfatProg, calffatProg, pfatPerc;
+@synthesize lablView, selectedlabel, foodData, calView, servingSize, fatView, satfatView, polyfatView, monofatView, fatCals, cholView, sodView, fiberView, calProg, calProgTxt, progColor, sugarView, protView, carbsView, calcView, ironView, transView, vitaView, vitcView, viteView, tfatProg, tfatPerc, calPerc, sfatPerc, sfatProg, calffatProg, pfatPerc, mfatPerc;
 
 - (NSInteger) random:(NSInteger) max {
     return (NSInteger)arc4random_uniform((u_int32_t)max);
@@ -51,11 +51,25 @@
 
 - (void)addDoughnut {
     
-    NSArray *recipePhotos = [NSArray arrayWithObjects:@"Calories", @"Total Fat", nil];
+    float cfromfat = [foodData.caloriesStringValue floatValue];
+    float cfromfatgr = cfromfat / 100;
     
-    NSArray *recipieData = [NSArray arrayWithObjects:@(foodData.caloriesFloatValuePerc).stringValue, @(foodData.totalFatPercentfloat).stringValue, nil];
+    float tfat = [foodData.totalFatValue floatValue];
+    float tfatgr = tfat / 100;
     
-    NSArray *colorData = [NSArray arrayWithObjects:[CWColors sharedColors].colors[CWCAsbestos], [CWColors sharedColors].colors[CWCPeterRiver], [CWColors sharedColors].colors[CWCMidnightBlue], [CWColors sharedColors].colors[CWCSunFlower], [CWColors sharedColors].colors[CWCOrange], [CWColors sharedColors].colors[CWCAmethyst], [CWColors sharedColors].colors[CWCConcrete], nil];
+    float sfat = [foodData.saturatedFatValue floatValue];
+    float sfatgr = sfat / 100;
+    
+    float chol = [foodData.cholesterolValue floatValue];
+    float cholgr = chol / 100;
+    
+    NSArray *realValues = [NSArray arrayWithObjects:foodData.caloriesStringValue, foodData.totalFatValue, foodData.saturatedFatValue, foodData.cholesterolValue,  nil];
+    
+    NSArray *recipePhotos = [NSArray arrayWithObjects:@"Calories", @"Total Fat", @"Saturated Fat", @"Cholesterol",  nil];
+    
+    NSArray *recipieData = [NSArray arrayWithObjects:@(cfromfatgr).stringValue, @(tfatgr).stringValue, @(sfatgr).stringValue, @(cholgr).stringValue, nil];
+    
+    NSArray *colorData = [NSArray arrayWithObjects:[CWColors sharedColors].colors[CWCAsbestos], [CWColors sharedColors].colors[CWCEmerald], [CWColors sharedColors].colors[CWCSunFlower], [CWColors sharedColors].colors[CWCPomegrante], [CWColors sharedColors].colors[CWCOrange], [CWColors sharedColors].colors[CWCAmethyst], [CWColors sharedColors].colors[CWCConcrete], nil];
     
     NSMutableArray* data = [NSMutableArray array];
     for( int i = 0; i < [recipieData count]; ++i )
@@ -63,15 +77,15 @@
         id object1 = [recipieData objectAtIndex:i];
         id object2 = [recipePhotos objectAtIndex:i];
         id object3 = [colorData objectAtIndex:i];
+        id object4 = [realValues objectAtIndex:i];
         
         CWSegmentData* segment = [[CWSegmentData alloc] init];
         segment.value = object1;
-        segment.label = [NSString stringWithFormat:@"%@", object2];
+        segment.label = [NSString stringWithFormat:@"%@ : %@", object2, object4];
         CWColor* c1 = object3;
         CWColor* c2 = [c1 colorWithAlphaComponent:0.8f];
         segment.color = c2;
         segment.highlight = c1;
-        segment.label = [NSString stringWithFormat:@"%@",segment.label];
         [data addObject:segment];
         
     }
@@ -139,6 +153,8 @@
     calPerc.text = foodData.calfromFatValuePerc;
     sfatPerc.text = foodData.saturatedFatPercent;
     pfatPerc.text = foodData.polyFatValuePerc;
+    mfatPerc.text = foodData.monoFatValuePerc;
+    _cholPerc.text = foodData.cholesterolPercent;
     
     // Progress Bar Code
     
@@ -146,6 +162,8 @@
     [self prog:tfatProg data:foodData.totalFatPercentfloat];
     [self prog:sfatProg data:foodData.saturatedFatPercentFloat];
     [self prog:calffatProg data:foodData.calfromFatValuePercFloat];
+    [self prog:_mfatProg data:foodData.monoSaturatedFatPercentFloat];
+    [self prog:_cholProg data:foodData.cholPercentFloat];
     
     //UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
     UIColor *buttColor = [UIColor colorWithRed:0.18 green:0.80 blue:0.44 alpha:1.0];

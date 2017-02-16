@@ -37,12 +37,16 @@
 @property(nonatomic,retain) IBOutlet UILabel *tfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *sfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *pfatPerc;
+@property(nonatomic,retain) IBOutlet UILabel *mfatPerc;
+@property(nonatomic,retain) IBOutlet UILabel *cholPerc;
 
 @property(nonatomic,retain) IBOutlet UILabel *calProgTxt;
 @property(nonatomic,retain) IBOutlet UIProgressView *calProg;
 @property(nonatomic,retain) IBOutlet UIProgressView *tfatProg;
 @property(nonatomic,retain) IBOutlet UIProgressView *sfatProg;
 @property(nonatomic,retain) IBOutlet UIProgressView *calffatProg;
+@property(nonatomic,retain) IBOutlet UIProgressView *mfatProg;
+@property(nonatomic,retain) IBOutlet UIProgressView *cholProg;
 
 @property (nonatomic, weak) UIColor *progColor;
 @property (nonatomic, strong) NSData *myData;

@@ -159,13 +159,14 @@
             return @"Food Library";
         }
     }
-    return @"";
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo name];
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 2;
+    return [[self.fetchedResultsController sections] count];
     
 }
 
@@ -325,14 +326,13 @@
             NSString *selectedValue = [self tableView:tableView cellForRowAtIndexPath:indexPath].textLabel.text;
             NSLog(@"%@", selectedValue);
 
-        }
-        if (indexPath.section == 1)
+        }       
+        if (indexPath.section >= 1)
         {
             [self performSegueWithIdentifier:@"detailNews" sender:self];
         }
     }
 
-   
 }
 #pragma mark prepareForSegue Functions
 

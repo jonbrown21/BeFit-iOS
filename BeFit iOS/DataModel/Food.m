@@ -621,7 +621,14 @@ long userValue;
 {
     return( [ self CalculateFloat:@"totalFat" divider:65 ] );
 }
-
+- (float)monoSaturatedFatPercentFloat
+{
+    return( [ self CalculateFloat:@"monosaturatedFat" divider:24 ] );
+}
+- (float)cholPercentFloat
+{
+    return( [ self CalculateFloat:@"cholesteral" divider:300 ] );
+}
 
 #pragma mark Food Values -- FUNCTIONS
 
@@ -721,11 +728,14 @@ long userValue;
     
     long QuantityActualValue = 1;
     
-    //double userValue = [[ self valueForKey: key ] doubleValue ] * QuantityActualValue;
+    double userValue = [[ self valueForKey: key ] doubleValue ] * QuantityActualValue;
     double actualValue = (( [[ self valueForKey: key ] doubleValue ] * [ self selectedServingWeight ] ) / 100 ) * QuantityActualValue;
  
-        if ([key  isEqual: @"sodium"] || [key  isEqual: @"cholesteral"] || [key  isEqual: @"calcium"] || [key  isEqual: @"iron"] || [key  isEqual: @"vitaminC"] || [key  isEqual: @"vitaminA"]) {
+        if ([key  isEqual: @"sodium"] || [key  isEqual: @"calcium"] || [key  isEqual: @"iron"] || [key  isEqual: @"vitaminC"] || [key  isEqual: @"vitaminA"]) {
             return [NSString stringWithFormat: @"%.0lfmg", actualValue ];
+        }
+        if ([key  isEqual: @"cholesteral"]) {
+            return [NSString stringWithFormat: @"%.0lfmg", userValue ];
         }
         return [NSString stringWithFormat: @"%.0lfg", actualValue ];
    

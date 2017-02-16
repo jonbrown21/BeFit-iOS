@@ -59,6 +59,7 @@
 -(NSString *)ironValue;
 -(NSString *)ironValuePerc;
 -(NSString *)monounsaturatedFatValue;
+-(NSString *)monoFatValuePerc;
 -(NSString *)nameValue;
 -(NSString *)polyunsaturatedFatValue;
 -(NSString *)proteinValue;
@@ -103,11 +104,12 @@
 -(double)vitaminCValueAsDouble;
 -(double)vitaminEValueAsDouble;
 
-
 -(float)calfromFatValuePercFloat;
 -(float)caloriesFloatValuePerc;
 -(float)saturatedFatPercentFloat;
 -(float)totalFatPercentfloat;
+-(float)monoSaturatedFatPercentFloat;
+-(float)cholPercentFloat;
 
 -(int)servingWeight1Value;
 -(int)indexOfServingBeingDisplayed;
