@@ -1,0 +1,4 @@
+dependencies: \
+  /Volumes/Files-1/Client\ Files/Cocoa\ Projects/Complete\ Projects/BeFit-iOS/BeFit\ iOS/BeFit\ iOS/DataModel/Food.m \
+  /Volumes/Files-1/Client\ Files/Cocoa\ Projects/Complete\ Projects/BeFit-iOS/BeFit\ iOS/BeFit\ iOS/DataModel/Food.h \
+  /Volumes/Files-1/Client\ Files/Cocoa\ Projects/Complete\ Projects/BeFit-iOS/BeFit\ iOS/BeFit\ iOS/DataModel/FoodList.h
