@@ -9,13 +9,23 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "Food.h"
+#import "FoodList.h"
 
-@interface BFMasterTableViewController : UITableViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate, UISearchDisplayDelegate>
+@interface BFMasterTableViewController : UIViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate, UISearchDisplayDelegate>
+{
+    BOOL isUserDefinedFoodDisplay;
+    NSIndexPath* selectedIndexPath;
+}
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (strong,nonatomic) NSMutableArray *FoodArray;
 @property (strong,nonatomic) NSArray *searchResults;
 @property IBOutlet UISearchBar *foodSearchBar;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentController;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+- (IBAction)SegmentControllerValueChanged:(id)sender;
+
+- (IBAction)AddFoodButtonTapped:(id)sender;
 @end

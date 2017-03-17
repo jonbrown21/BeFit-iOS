@@ -22,6 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UINavigationController *moreController = _tabBarController.moreNavigationController;
+    moreController.navigationBar.barTintColor = [UIColor orangeColor];
+    moreController.navigationBar.translucent = NO;
+    moreController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
     
     return YES;
 }
@@ -78,7 +83,7 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"BeFit_iOS.sqlite"];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:[storeURL path]]) {
-        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"BeFit2D" ofType:@"sqlite"]];
+        NSURL *preloadURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"BeFit_iOS" ofType:@"sqlite"]];
         NSError* err = nil;
         
         if (![[NSFileManager defaultManager] copyItemAtURL:preloadURL toURL:storeURL error:&err]) {
@@ -135,5 +140,145 @@
         }
     }
 }
+
+
+//- (void) copyDatabaseIfNeeded {
+//    
+//    //Using NSFileManager we can perform many file system operations.
+//    NSFileManager *fileManager = [NSFileManager defaultManager];
+//    NSError *error;
+//    
+//    NSString *dbPath = [self getDBPath];
+//    BOOL success = [fileManager fileExistsAtPath:dbPath];
+//    
+////    if(!success) {
+//    
+//        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"BeFit2.sqlite"];
+//        success = [fileManager copyItemAtPath:defaultDBPath toPath:dbPath error:&error];
+//        
+//        if (!success)
+//            NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+////    }
+//}
+//
+//- (NSString *) getDBPath
+//{
+//    //Search for standard documents using NSSearchPathForDirectoriesInDomains
+//    //First Param = Searching the documents directory
+//    //Second Param = Searching the Users directory and not the System
+//    //Expand any tildes and identify home directories.
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+//    NSString *documentsDir = [paths objectAtIndex:0];
+//    //NSLog(@"dbpath : %@",documentsDir);
+//    return [documentsDir stringByAppendingPathComponent:@"BeFit_iOS.sqlite"];
+//}
+
++(void)ShowLoader
+{
+    [ProgressHUD show:@"Loading..."];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+}
++(void)ShowLoaderForPurchase
+{
+    
+    [ProgressHUD show:@"Updating database..."];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
+}
++(void)HideLoader
+{
+    
+    [ProgressHUD dismiss];
+    [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    
+}
+
+
++(NSArray*)CheckForDuplicateFoodItem:(NSString*)foodName
+{
+    id appDelegate =(id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context =[appDelegate managedObjectContext];
+    NSEntityDescription* entity=[NSEntityDescription entityForName:@"FoodObject" inManagedObjectContext:context];
+    NSFetchRequest* request=[[NSFetchRequest alloc]init];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] %@",foodName];
+    [request setPredicate:predicate];
+    
+    
+    [request setEntity:entity];
+    NSError* error;
+    NSArray* data=[ context executeFetchRequest:request error:&error];
+    return data;
+}
++(NSArray*)GetfoodListItems
+{
+    id appDelegate =(id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context =[appDelegate managedObjectContext];
+    NSEntityDescription* entity=[NSEntityDescription entityForName:@"FoodListObject" inManagedObjectContext:context];
+    NSFetchRequest* request=[[NSFetchRequest alloc]init];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name != 'Food Library'"];
+    NSPredicate *predicate1 = [NSPredicate predicateWithFormat:@"name != 'User Food Library'"];
+    NSArray* arrayOfPred = [[NSArray alloc ] initWithObjects:predicate,predicate1,nil ];
+    NSPredicate *compoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:arrayOfPred];
+    
+    
+    [request setPredicate:compoundPredicate];
+    
+    
+    [request setEntity:entity];
+    NSError* error;
+    NSArray* data=[ context executeFetchRequest:request error:&error];
+    return data;
+}
+
++(NSArray*)CheckForDuplicateFoodList:(NSString*)foodlist
+{
+    id appDelegate =(id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context =[appDelegate managedObjectContext];
+    NSEntityDescription* entity=[NSEntityDescription entityForName:@"FoodListObject" inManagedObjectContext:context];
+    NSFetchRequest* request=[[NSFetchRequest alloc]init];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] %@",foodlist];
+    [request setPredicate:predicate];
+    
+    
+    [request setEntity:entity];
+    NSError* error;
+    NSArray* data=[ context executeFetchRequest:request error:&error];
+    return data;
+}
+
+
+
++(NSArray*)GetUserFoodLibrary
+{
+    id appDelegate =(id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context =[appDelegate managedObjectContext];
+    NSEntityDescription* entity=[NSEntityDescription entityForName:@"FoodListObject" inManagedObjectContext:context];
+    NSFetchRequest* request=[[NSFetchRequest alloc]init];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name LIKE[c] 'User Food Library'"];
+    
+    [request setPredicate:predicate];
+    
+    
+    [request setEntity:entity];
+    NSError* error;
+    NSArray* data=[ context executeFetchRequest:request error:&error];
+    return data;
+}
+
++(void)setCornerRadiusofUIButton:(UIView*)btn
+{
+    CALayer *layer = [btn layer];
+    [layer setMasksToBounds:YES];
+    [layer setCornerRadius:8.0];
+    [btn setTintColor:[ UIColor blackColor]];
+    
+}
+
 
 @end

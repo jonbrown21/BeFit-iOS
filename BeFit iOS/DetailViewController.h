@@ -8,8 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "Food.h"
+#import "UserFoodRecords+CoreDataProperties.h"
+#import "IQUIView+IQKeyboardToolbar.h"
+#import "AppDelegate.h"
+#import "FoodList.h"
+#import "AddFoodViewController.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
+{
+    NSDateFormatter* format ;
+    NSArray* foodListArray;
+    FoodList* selectedFoodList ;
+   
+}
 @property (nonatomic, retain) NSString *selectedlabel;
 @property(nonatomic,retain) IBOutlet UILabel *lablView;
 @property(nonatomic,retain) IBOutlet UILabel *calView;
@@ -40,6 +51,17 @@
 @property(nonatomic,retain) IBOutlet UILabel *pfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *mfatPerc;
 @property(nonatomic,retain) IBOutlet UILabel *cholPerc;
+@property(nonatomic,retain) IBOutlet UILabel *ffPerc;
+@property(nonatomic,retain) IBOutlet UILabel *sodPerc;
+@property(nonatomic,retain) IBOutlet UILabel *fibPerc;
+@property(nonatomic,retain) IBOutlet UILabel *sugPerc;
+@property(nonatomic,retain) IBOutlet UILabel *protPerc;
+@property(nonatomic,retain) IBOutlet UILabel *carbPerc;
+@property(nonatomic,retain) IBOutlet UILabel *calcPerc;
+@property(nonatomic,retain) IBOutlet UILabel *ironPerc;
+@property(nonatomic,retain) IBOutlet UILabel *vitaPerc;
+@property(nonatomic,retain) IBOutlet UILabel *vitePerc;
+@property(nonatomic,retain) IBOutlet UILabel *vitcPerc;
 
 @property(nonatomic,retain) IBOutlet UILabel *calProgTxt;
 @property(nonatomic,retain) IBOutlet UIProgressView *calProg;
@@ -51,9 +73,19 @@
 
 @property (nonatomic, weak) UIColor *progColor;
 @property (nonatomic, strong) NSData *myData;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (nonatomic, strong) Food *foodData;
+@property (weak, nonatomic) IBOutlet UITextField *txtPicker;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnTodayIntake;
+
+
 
 - (void)prog:(UIProgressView*) val1 data:(double) val2;
+- (IBAction)AddFoodButtonTapped:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnEdit;
+- (IBAction)EditFood:(id)sender;
+- (IBAction)TodaysFoodIntake:(id)sender;
 
 @end

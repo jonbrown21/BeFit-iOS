@@ -78,6 +78,10 @@
 -(NSString *)vitaminAValue;
 -(NSString *)vitaminCValue;
 -(NSString *)vitaminCValuePerc;
+-(NSString *)totalValuePerc;
+-(NSString *)vitaminAValuePerc;
+-(NSString *)vitaminEValuePerc;
+
 
 -(NSString *)transFatValue;
 -(NSString *)viteValue;

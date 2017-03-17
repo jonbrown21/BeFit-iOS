@@ -21,13 +21,21 @@
 @end
 
 @implementation DetailViewController
-@synthesize lablView, selectedlabel, foodData, calView, servingSize, fatView, satfatView, polyfatView, monofatView, fatCals, cholView, sodView, fiberView, calProg, calProgTxt, progColor, sugarView, protView, carbsView, calcView, ironView, transView, vitaView, vitcView, viteView, tfatProg, tfatPerc, calPerc, sfatPerc, sfatProg, calffatProg, pfatPerc, mfatPerc;
+@synthesize lablView, selectedlabel, foodData, calView, servingSize, fatView, satfatView, polyfatView, monofatView, fatCals, cholView, sodView, fiberView, calProg, calProgTxt, progColor, sugarView, protView, carbsView, calcView, ironView, transView, vitaView, vitcView, viteView, tfatProg, tfatPerc, calPerc, sfatPerc, sfatProg, calffatProg, pfatPerc, mfatPerc, sodPerc;
+
 
 - (NSInteger) random:(NSInteger) max {
     return (NSInteger)arc4random_uniform((u_int32_t)max);
 }
 
-
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
 /* Progress Bars */
 - (void) prog:(UIProgressView*) val1 data:(double) val2
 {
@@ -45,6 +53,12 @@
         val1.progressTintColor = [UIColor colorWithRed:0.75 green:0.22 blue:0.17 alpha:1.0];;
     }
     
+    
+}
+
+- (IBAction)AddFoodButtonTapped:(id)sender
+{
+    [_txtPicker becomeFirstResponder];
     
 }
 
@@ -92,6 +106,8 @@
     
     //	id win = [self.webview windowScriptObject];
     CWDoughnutChart* pc = [[CWDoughnutChart alloc] initWithWebView:self.webview name:@"Doughnut1" width:200 height:200 data:data options:nil];
+    
+    
     [pc addChart];
 }
 
@@ -101,12 +117,13 @@
     
     WKWebView* webview = [[WKWebView alloc] initWithFrame:self.wview.bounds];
     [webview setTranslatesAutoresizingMaskIntoConstraints:NO];
+    webview.center = self.wview.center ;
     [self.wview addSubview:webview];
     
     NSDictionary *viewsDictionary = NSDictionaryOfVariableBindings(webview);
     [self.wview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[webview]|" options:0 metrics:nil views:viewsDictionary]];
     [self.wview addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[webview]|" options:0 metrics:nil views:viewsDictionary]];
-    
+//    [_wview setBackgroundColor:[UIColor redColor]];
     
     self.webview = webview;
     NSString *resourcesPath = [[NSBundle mainBundle] resourcePath];
@@ -118,14 +135,21 @@
     webview.scrollView.scrollEnabled = false;
     webview.multipleTouchEnabled = NO;
     
+    [self.scrollView setContentSize:CGSizeMake(self.view.frame.size.width, (self.wview.frame.origin.y + self.wview.frame.size.height))];
+
+    
+    format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"MM/dd/yyyy"];
+   
     // navigation bar auto scroll label
     self.navigationBarScrollLabel.text = foodData.name;
     self.navigationBarScrollLabel.pauseInterval = 3.f;
     self.navigationBarScrollLabel.font = [UIFont boldSystemFontOfSize:20];
-    self.navigationBarScrollLabel.textColor = [UIColor blackColor];
+    self.navigationBarScrollLabel.textColor = [UIColor whiteColor];
     [self.navigationBarScrollLabel observeApplicationNotifications];
     
-    //self.title = foodData.name;
+    
+   // self.title = foodData.name;
     
     // Set Data and Titles
     
@@ -156,6 +180,17 @@
     pfatPerc.text = foodData.polyFatValuePerc;
     mfatPerc.text = foodData.monoFatValuePerc;
     _cholPerc.text = foodData.cholesterolPercent;
+    _ffPerc.text = foodData.totalValuePerc;
+    sodPerc.text = foodData.sodiumPercent;
+    _fibPerc.text = foodData.dietaryFiberPercent;
+    _sugPerc.text = foodData.sugarsValuePerc;
+    _protPerc.text = foodData.proteinValuePerc;
+    _carbPerc.text = foodData.carbsPercent;
+    _calcPerc.text = foodData.calciumValuePerc;
+    _ironPerc.text = foodData.ironValuePerc;
+    _vitaPerc.text = foodData.vitaminAValuePerc;
+    _vitcPerc.text = foodData.vitaminCValuePerc;
+    _vitePerc.text = foodData.vitaminEValuePerc;
     
     // Progress Bar Code
     
@@ -171,6 +206,7 @@
     //UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
     
     [ self makeButton:_Add color:buttColor ];
+    [ self makeButton:_btnTodayIntake color:buttColor ];
     
     CGFloat time1 = 3.49;
     CGFloat time2 = 8.13;
@@ -182,9 +218,77 @@
         [self addDoughnut];
     });
     
+    
+    foodListArray = [AppDelegate GetfoodListItems];
+    selectedFoodList = foodListArray[0] ;
+    
+    UIPickerView* picker = [UIPickerView new];
+    picker.delegate = self;
+    picker.dataSource = self;
+    picker.showsSelectionIndicator = YES;
+    _txtPicker.inputView = picker ;
+    
+    [_txtPicker addDoneOnKeyboardWithTarget:self action:@selector(doneAction)];
+    
+    if (!self.foodData.userDefined.boolValue)
+    {
+        [self.btnEdit setEnabled:NO];
+        [self.btnEdit setTintColor:[UIColor clearColor]];
+    }
+    
     // Do any additional setup after loading the view.
 }
-
+-(void)doneAction
+{
+    [_txtPicker resignFirstResponder];
+    
+    [self performSelector:@selector(CallAfterDelay) withObject:nil afterDelay:0.7];
+    
+    
+}
+-(void)CallAfterDelay
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSMutableSet* foodSet = self.foodData.foodListsBelongTo.mutableCopy;
+    if (![foodSet containsObject:selectedFoodList])
+    {
+        FoodList* list = [AppDelegate GetUserFoodLibrary][0] ;
+        if (![foodSet containsObject:list] && self.foodData.userDefined.boolValue)
+        {
+            [foodSet addObject: list] ;
+        }
+        [foodSet addObject: selectedFoodList];
+        self.foodData.foodListsBelongTo = foodSet ;
+        NSError *error;
+        if (![context save:&error])
+        {
+            NSLog(@"errror while saving : %@",error.description);
+        }
+        else
+        {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Success" message:@"Food Item added successfully" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+            [alertController addAction:ok];
+            
+            [self presentViewController:alertController animated:YES completion:nil];
+            
+           // [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Food Item added successfully" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
+        }
+    }
+    else
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Food Item already exists" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        //[[[UIAlertView alloc] initWithTitle:@"Error" message:@"Food Item already exists" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -200,14 +304,257 @@
     butz.backgroundColor = colortouse;
 }
 
-/*
+-(NSArray*)CheckForDuplicateFoodItem
+{
+    id appDelegate =(id)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context =[appDelegate managedObjectContext];
+    NSEntityDescription* entity=[NSEntityDescription entityForName:@"UserFoodRecords" inManagedObjectContext:context];
+    NSFetchRequest* request=[[NSFetchRequest alloc]init];
+    
+    
+   NSString* dateStr = [format stringFromDate:[NSDate new]] ;
+    
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date LIKE[c] %@",dateStr];
+    [request setPredicate:predicate];
+    
+    
+    [request setEntity:entity];
+    NSError* error;
+    NSArray* data=[ context executeFetchRequest:request error:&error];
+    return data;
+}
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return foodListArray.count ;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    
+    FoodList* list = [foodListArray objectAtIndex:row];
+    
+    return list.name;
+}
+- (void)pickerView:(UIPickerView *)pV didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    selectedFoodList = [foodListArray objectAtIndex:row];
+//    _txtPicker.text = selectedFoodList.name ;
+    
+}
+
+- (IBAction)EditFood:(id)sender
+{
+    [self performSegueWithIdentifier:@"segue_edit" sender:self];
+}
+
+- (IBAction)TodaysFoodIntake:(id)sender
+{
+    
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Befit"
+                                          message:@"Please enter servings"
+                                          preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+     {
+         textField.placeholder = NSLocalizedString(@"Qty", @"Qty");
+     }];
+    
+    UITextField *txtServings = alertController.textFields.firstObject;
+    txtServings.keyboardType = UIKeyboardTypePhonePad ;
+    alertController.view.tag = 100;
+    
+    UIAlertAction* ok = [UIAlertAction
+                         actionWithTitle:@"Cancel"
+                         style:UIAlertActionStyleDefault
+                         handler:^(UIAlertAction * action)
+                         {
+                             [alertController dismissViewControllerAnimated:YES completion:nil];
+                             
+                         }];
+    UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Done"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 
+                                 UITextField *txtServings = alertController.textFields.firstObject;
+                                 
+                                 if (txtServings.text.length == 0)
+                                 {
+                                     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:@"Please enter servings" preferredStyle:UIAlertControllerStyleAlert];
+                                     
+                                     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+                                     [alertController addAction:ok];
+                                     
+                                     [self presentViewController:alertController animated:YES completion:nil];
+                                     
+                                     
+                                     //            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter servings" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil] ;
+                                     //            [alert show];
+                                     return ;
+                                 }
+                                 NSManagedObjectContext *context = [self managedObjectContext];
+                                 UserFoodRecords* record = [NSEntityDescription insertNewObjectForEntityForName:@"UserFoodRecords" inManagedObjectContext:context];
+                                 NSString* dateStr = [format stringFromDate:[NSDate new]] ;
+                                 NSInteger servings = txtServings.text.integerValue ;
+                                 NSMutableSet* newfood = [NSMutableSet setWithObject:foodData];
+                                 NSArray* recordArray = [self CheckForDuplicateFoodItem] ;
+                                 
+                                 for (int iCount = 0; iCount < recordArray.count; iCount++)
+                                 {
+                                     UserFoodRecords* newRecord = [recordArray objectAtIndex:iCount];
+                                     NSMutableArray* foodArray = [[NSMutableArray alloc] initWithArray:[newRecord.foodIntake allObjects]];
+                                     if ([foodArray containsObject:foodData])
+                                     {
+                                         servings = servings + newRecord.servings.integerValue ;
+                                         record = newRecord ;
+                                     }
+                                 }
+                                 
+                                 
+                                 
+                                 
+                                 //        if ([recordArray count] > 0)
+                                 //        {
+                                 //            record = recordArray[0] ;
+                                 //            newfood = record.foodIntake.mutableCopy ;
+                                 //            [newfood addObject:foodData];
+                                 //        }
+                                 record.date = dateStr ;
+                                 record.servings = [NSNumber numberWithInteger:servings] ;
+                                 record.foodIntake = newfood ;
+                                 
+                                 
+                                 NSError *error;
+                                 if (![context save:&error])
+                                 {
+                                     NSLog(@"errror while saving : %@",error.description);
+                                 }
+                                 else
+                                 {
+                                     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Success" message:@"Food successfully added to Today's Intake list" preferredStyle:UIAlertControllerStyleAlert];
+                                     
+                                     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+                                     [alertController addAction:ok];
+                                     
+                                     [self presentViewController:alertController animated:YES completion:nil];
+                                     
+                                     // [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Food successfully added to Today's Intake list" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
+                                 }
+
+                    
+                             }];
+    [alertController addAction:ok];
+    [alertController addAction:cancel];
+    
+    
+    
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    //UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Befit" message:@"Please enter servings" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Done", nil];
+    //[alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    //UITextField *txtServings = [alertController textFieldAtIndex:0];
+    
+
+    //alert.tag = 100;
+    //[alert show];
+    
+    
+    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Befit" message:@"Please enter servings" preferredStyle:UIAlertControllerStyleAlert];
+//    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+//        textField.placeholder = @"Servings";
+//    }];
+//    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"Done" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        
+//        UITextField *txtServings = [alertController textFields][0];
+//        if (txtServings.text.length == 0)
+//        {
+//            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter servings" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil] ;
+//            [alert show];
+//            return ;
+//        }
+//        NSManagedObjectContext *context = [self managedObjectContext];
+//        UserFoodRecords* record = [NSEntityDescription insertNewObjectForEntityForName:@"UserFoodRecords" inManagedObjectContext:context];
+//        NSString* dateStr = [format stringFromDate:[NSDate new]] ;
+//        NSInteger servings = txtServings.text.integerValue ;
+//        NSMutableSet* newfood = [NSMutableSet setWithObject:foodData];
+//        NSArray* recordArray = [self CheckForDuplicateFoodItem] ;
+//        
+//        for (int iCount = 0; iCount < recordArray.count; iCount++)
+//        {
+//            UserFoodRecords* newRecord = [recordArray objectAtIndex:iCount];
+//            NSMutableArray* foodArray = [[NSMutableArray alloc] initWithArray:[newRecord.foodIntake allObjects]];
+//            if ([foodArray containsObject:foodData])
+//            {
+//                servings = servings + newRecord.servings.integerValue ;
+//                record = newRecord ;
+//            }
+//        }
+//        
+//        
+//        
+//        
+//        //        if ([recordArray count] > 0)
+//        //        {
+//        //            record = recordArray[0] ;
+//        //            newfood = record.foodIntake.mutableCopy ;
+//        //            [newfood addObject:foodData];
+//        //        }
+//        record.date = dateStr ;
+//        record.servings = [NSNumber numberWithInteger:servings] ;
+//        record.foodIntake = newfood ;
+//        
+//        
+//        NSError *error;
+//        if (![context save:&error])
+//        {
+//            NSLog(@"errror while saving : %@",error.description);
+//        }
+//        else
+//        {
+//            [[[UIAlertView alloc] initWithTitle:@"Success" message:@"Food successfully added to Today's Intake list" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
+//        }
+//    }];
+//    [alertController addAction:confirmAction];
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        
+//    }];
+//    [alertController addAction:cancelAction];
+//    [self presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+
+
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    if (buttonIndex == 1)
+//    {
+//    }
+//}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+    AddFoodViewController *destViewController = segue.destinationViewController;
+    destViewController.foodListObject = self.foodData ;
+    destViewController.isForEditing = TRUE ;
 }
-*/
+
+
 
 @end

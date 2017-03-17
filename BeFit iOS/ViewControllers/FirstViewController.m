@@ -141,7 +141,7 @@
     } else {
         _weightMet.text = @"";
     }
-
+    
     
     // Automatically Call Gender Value
     
@@ -154,11 +154,11 @@
     }
     
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"whitey.png"]];
-       
+    
     self.genderArray = @[ @"Male", @"Female"];
     self.goalArray = @[ @"Loose Weight", @"Gain Weight", @"Maintain Weight"];
     self.lifestyleArray = @[ @"Sedentary", @"Lightly Active", @"Moderately Active", @"Very Active", @"Extra Active"];
-
+    
     UIColor *buttColor = [UIColor colorWithRed:0.18 green:0.80 blue:0.44 alpha:1.0];
     UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
     UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
@@ -184,7 +184,7 @@
     _cmLab.hidden = YES;
     _weightMet.hidden = YES;
     
-    [[UISwitch appearance] setTintColor:[UIColor colorWithRed:0.66 green:0.70 blue:0.73 alpha:1.0]];    
+    [[UISwitch appearance] setTintColor:[UIColor colorWithRed:0.66 green:0.70 blue:0.73 alpha:1.0]];
     [_MetricSwitch addTarget:self action:@selector(didChangeSwitch:) forControlEvents:UIControlEventValueChanged];
     [_MetricSwitch addTarget:self action:@selector(setState:) forControlEvents:UIControlEventValueChanged];
     [_GoalSiwtch addTarget:self action:@selector(didGoalSwitch:) forControlEvents:UIControlEventValueChanged];
@@ -403,7 +403,7 @@
     
     if (_MetricSwitch.on) {
         //Convert IN Input Values to Metric
-
+        
         if (_Weight.text.length > 0) {
             float lbs;
             float kg;
@@ -552,7 +552,7 @@
             NSInteger numInches = (NSInteger) roundf(cm / INCH_IN_CM);
             NSInteger feet = numInches / 12;
             NSInteger inches = numInches % 12;
-
+            
             self.Hfeet.text = [NSString stringWithFormat:@"%@", @(feet)];
             self.Hinches.text = [NSString stringWithFormat:@"%@", @(inches)];
         }
@@ -656,7 +656,7 @@
             _Slider.userInteractionEnabled = NO;
             self.use.text = @"Using";
             
-        } 
+        }
     }
     
 }
@@ -678,7 +678,7 @@
     tableViewController.delegate = self;
     [self.navigationController popToRootViewControllerAnimated:YES];
     [self presentViewController:navigationController animated:YES completion:nil];
-
+    
 }
 
 - (IBAction)selectAnimalPressed:(id)sender
@@ -691,7 +691,7 @@
     tableViewController.delegate = self;
     [self.navigationController popToRootViewControllerAnimated:YES];
     [self presentViewController:navigationController animated:YES completion:nil];
-
+    
 }
 
 - (IBAction)selectGoalPressed:(id)sender
@@ -723,7 +723,7 @@
     
     
     key.inputAccessoryView = numberToolbar;
-
+    
     
 }
 

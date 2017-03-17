@@ -91,7 +91,7 @@ long userValue;
 }
 - (NSString *)cholesterolPercent
 {
-    return( [ self CalculatePercent: @"cholesteral" divider: 3 ] );
+    return( [ self CalculatePercent: @"cholesteral" divider: 3.0 ] );
 }
 - (NSString *)cholesterolValue
 {
@@ -232,6 +232,7 @@ long userValue;
     }
     
     double actualValue = round((( transfat * [ self selectedServingWeight ] ) / 100 ) * QuantityActualValue);
+    double userValue = round(transfat * QuantityActualValue);
     
     if (actualValue < 0) {
         actualValue = 0;
@@ -239,7 +240,13 @@ long userValue;
         actualValue = 0;
     }
     
-    return [NSString stringWithFormat: @"%.0lfg", actualValue ];
+    user = (int)[ self valueForKey: @"userDefined" ];
+    
+    if (user == 0) {
+        return [NSString stringWithFormat: @"%.0lfg", userValue ];
+    } else {
+        return [NSString stringWithFormat: @"%.0lfg", actualValue ];
+    }
     
 }
 
@@ -286,7 +293,7 @@ long userValue;
 - (NSString *)totalFatPercent
 {
     return( [ self CalculatePerc:@"totalfat" divider:65 long:0] );
-
+    
 }
 - (NSString *)totalValuePerc
 {
@@ -430,7 +437,13 @@ long userValue;
     valueToDisplay = round( calculatedFat );
     userResult = round( totalFat );
     
-    return( userResult );
+    user = (int)[ self valueForKey: @"userDefined" ];
+    
+    if (user == 0) {
+        return( valueToDisplay );
+    } else {
+        return( userResult );
+    }
 }
 -(double)selectedServingWeightAsDouble
 {
@@ -730,7 +743,11 @@ long userValue;
     
     double userValue = [[ self valueForKey: key ] doubleValue ] * QuantityActualValue;
     double actualValue = (( [[ self valueForKey: key ] doubleValue ] * [ self selectedServingWeight ] ) / 100 ) * QuantityActualValue;
- 
+    
+    user = (int)[ self valueForKey: @"userDefined" ];
+    
+    if (user == 0) {
+        
         if ([key  isEqual: @"sodium"] || [key  isEqual: @"calcium"] || [key  isEqual: @"iron"] || [key  isEqual: @"vitaminC"] || [key  isEqual: @"vitaminA"]) {
             return [NSString stringWithFormat: @"%.0lfmg", actualValue ];
         }
@@ -738,7 +755,20 @@ long userValue;
             return [NSString stringWithFormat: @"%.0lfmg", userValue ];
         }
         return [NSString stringWithFormat: @"%.0lfg", actualValue ];
-   
+        
+        
+        
+    } else {
+        
+        
+        if ([key  isEqual: @"sodium"] || [key  isEqual: @"cholesteral"] || [key  isEqual: @"calcium"] || [key  isEqual: @"iron"] || [key  isEqual: @"vitaminC"] || [key  isEqual: @"vitaminA"]) {
+            return [NSString stringWithFormat: @"%.0lfmg", userValue ];
+        }
+        return [NSString stringWithFormat: @"%.0lfg", userValue ];
+        
+    }
+    
+    
 }
 
 
@@ -751,7 +781,7 @@ long userValue;
         [ [self valueForKey: @"polyFat"] doubleValue ];
         double intermediateValue = ( totalFat * 9 );
         double endingValue = (( intermediateValue * [ self selectedServingWeightAsDouble ] ) / 100 ) * QuantityActualValue;
-    
+        
         double finalValue = endingValue / diverToUse;
         if (finalValue > 1) {
             float result = 0.99;
@@ -799,11 +829,21 @@ long userValue;
 -(NSString*)CalculatePerc: (NSString*)key divider: (double)diverToUse long: (long)longtouse
 {
     if ([key  isEqual: @"totalfat"]) {
+        
         double totalFat = [ [self valueForKey: @"saturatedFat"] doubleValue ] + [ [self valueForKey: @"monosaturatedFat"] doubleValue ] +
         [ [self valueForKey: @"polyFat"] doubleValue ];
-        double userResult = round( (totalFat / diverToUse) * 100 );
+        double result = round( (totalFat / diverToUse) * 100 );
+        double userResult = round( totalFat );
         
-        return [NSString stringWithFormat: @"%.0lf%%", userResult ];
+        user = (int)[ self valueForKey: @"userDefined" ];
+        
+        if (user == 1) {
+            return [NSString stringWithFormat: @"%.0lf%%", userResult ];
+        } else {
+            return [NSString stringWithFormat: @"%.0lf%%", result ];
+        }
+        
+        
     }
     
     double ValueForCalculation = longtouse;

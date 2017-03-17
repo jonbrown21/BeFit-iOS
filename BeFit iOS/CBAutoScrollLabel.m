@@ -69,7 +69,8 @@ static void each_object(NSArray *objects, void (^block)(id object)) {
     }
 
     self.labels = [labelSet.allObjects copy];
-
+   
+    
     // default values
     _scrollDirection = CBAutoScrollDirectionLeft;
     _scrollSpeed = kDefaultPixelsPerSecond;
