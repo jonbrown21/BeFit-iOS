@@ -31,6 +31,7 @@
     NSArray *app_names;
     NSArray *dev_names;
     
+    
     NSArray *app_prices;
     NSArray *app_icons;
     NSArray *app_ids;
