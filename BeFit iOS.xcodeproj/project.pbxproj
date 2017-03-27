@@ -57,6 +57,9 @@
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
 		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
 		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
+		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
+		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
+		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -101,6 +104,8 @@
 		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
 		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
 		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
+		FCD699A41E89CBAB00D4ED3C /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCD699A31E89CBAB00D4ED3C /* iRate.bundle */; };
+		FCD699A71E89CBB500D4ED3C /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD699A61E89CBB500D4ED3C /* iRate.m */; };
 		FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -206,6 +211,10 @@
 		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
 		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
 		FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ViewControllers/DeviceDetailViewController.m; sourceTree = "<group>"; };
+		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
+		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeFit Tracker.entitlements"; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -290,6 +299,9 @@
 		FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseButton.m; sourceTree = "<group>"; };
 		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
 		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
+		FCD699A31E89CBAB00D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		FCD699A51E89CBB500D4ED3C /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		FCD699A61E89CBB500D4ED3C /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		FCE5B9E21E7264D400324083 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -299,6 +311,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */,
+				FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */,
+				FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */,
 				FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */,
 				FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */,
 				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
@@ -364,6 +379,7 @@
 		FC290ABE19CF560E0044C06B = {
 			isa = PBXGroup;
 			children = (
+				FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */,
 				FC290AC919CF560E0044C06B /* BeFit iOS */,
 				FC290AE919CF560E0044C06B /* BeFit iOSTests */,
 				FC290AC819CF560E0044C06B /* Products */,
@@ -585,6 +601,10 @@
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCD699A31E89CBAB00D4ED3C /* iRate.bundle */,
+				FC790D251E899DB600A57DA7 /* libstdc++.tbd */,
+				FC790D231E899DA800A57DA7 /* libz.tbd */,
+				FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */,
 				FC29F1721E71153400251B34 /* QuartzCore.framework */,
 				512609051E5D934E009BA829 /* StoreKit.framework */,
 				FCA42E2D1E38F20400619AE6 /* WebKit.framework */,
@@ -691,6 +711,7 @@
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FCD699A81E89CBBC00D4ED3C /* iRate */,
 				FCE5B9E51E7264D900324083 /* ScrollLabel */,
 				FC29F1791E7119BF00251B34 /* Progress */,
 				51E44C461E5C452A007E91C1 /* SimpleBarChart */,
@@ -738,6 +759,15 @@
 				FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */,
 			);
 			path = PurchaseButton;
+			sourceTree = "<group>";
+		};
+		FCD699A81E89CBBC00D4ED3C /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				FCD699A51E89CBB500D4ED3C /* iRate.h */,
+				FCD699A61E89CBB500D4ED3C /* iRate.m */,
+			);
+			name = iRate;
 			sourceTree = "<group>";
 		};
 		FCE5B9E51E7264D900324083 /* ScrollLabel */ = {
@@ -801,7 +831,13 @@
 						DevelopmentTeam = 2D4Z7WQ7RS;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -847,6 +883,7 @@
 				51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */,
 				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
 				FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */,
+				FCD699A41E89CBAB00D4ED3C /* iRate.bundle in Resources */,
 				510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
@@ -876,6 +913,7 @@
 				511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
 				FC3EFA851E71EF7A00D6F979 /* IQTextView.m in Sources */,
+				FCD699A71E89CBB500D4ED3C /* iRate.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
@@ -1079,9 +1117,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				IBC_WARNINGS = NO;
 				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
@@ -1100,9 +1143,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				IBC_WARNINGS = NO;
 				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";

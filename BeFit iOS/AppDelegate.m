@@ -9,24 +9,80 @@
 #import "AppDelegate.h"
 #import "Food.h"
 #import "FoodList.h"
+#import "StoreViewController.h"
+#import "iRate.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
++ (void)initialize
+{
+    //set the bundle ID. normally you wouldn't need to do this
+    //as it is picked up automatically from your Info.plist file
+    //but we want to test with an app that's actually on the store
+    [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
+    
+    //enable preview mode
+    
+    [iRate sharedInstance].remindPeriod = 0;
+    [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
+    [iRate sharedInstance].promptAtLaunch = YES;
+    [iRate sharedInstance].previewMode = NO;
+}
+
+
+// system push notification registration success callback, delegate to pushManager
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    [[PushNotificationManager pushManager] handlePushRegistration:deviceToken];
+}
+
+// system push notification registration error callback, delegate to pushManager
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    [[PushNotificationManager pushManager] handlePushRegistrationFailure:error];
+}
+
+// system push notifications callback, delegate to pushManager
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [[PushNotificationManager pushManager] handlePushReceived:userInfo];
+}
+
+
+- (void) onPushAccepted:(PushNotificationManager *)pushManager withNotification:(NSDictionary *)pushNotification onStart:(BOOL)onStart {
+    NSLog(@"Push notification accepted");
+}
+
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // set custom delegate for push handling, in our case AppDelegate
+    PushNotificationManager * pushManager = [PushNotificationManager pushManager];
+    pushManager.delegate = self;
+    
+    // set default Pushwoosh delegate for iOS10 foreground push handling
+    [UNUserNotificationCenter currentNotificationCenter].delegate = [PushNotificationManager pushManager].notificationCenterDelegate;
+    
+    // handling push on app start
+    [[PushNotificationManager pushManager] handlePushReceived:launchOptions];
+    
+    // track application open statistics
+    [[PushNotificationManager pushManager] sendAppOpen];
+    
+    // register for push notifications!
+    [[PushNotificationManager pushManager] registerForPushNotifications];
+    
+    
     // Override point for customization after application launch.
     UINavigationController *moreController = _tabBarController.moreNavigationController;
     moreController.navigationBar.barTintColor = [UIColor orangeColor];
     moreController.navigationBar.translucent = NO;
     moreController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
     
     return YES;
 }
