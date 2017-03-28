@@ -10,6 +10,7 @@
 #import "PickerTableView.h"
 #import "LifestyleTableView.h"
 #import "GoalTableView.h"
+#import "ProgressHUD.h"
 
 @interface FirstViewController : UIViewController <GenderPickerControllerDelegate, LifePickerControllerDelegate, GoalPickerControllerDelegate, UIActionSheetDelegate, UITextFieldDelegate, UIBarPositioningDelegate, UINavigationBarDelegate>
 

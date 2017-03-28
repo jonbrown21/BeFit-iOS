@@ -173,12 +173,7 @@
     
 #pragma mark - Set Done Button on Number Pad
     
-    [ self showKeyboard:_Age ];
-    [ self showKeyboard:_Weight ];
-    [ self showKeyboard:_Hinches ];
-    [ self showKeyboard:_Hfeet ];
-    [ self showKeyboard:_weightMet ];
-    [ self showKeyboard:_HCM ];
+
     
     _HCM.hidden = YES;
     _cmLab.hidden = YES;
@@ -320,15 +315,7 @@
     [self Calculate:self];
 }
 
--(void)doneWithNumberPad{
-    // NSString *numberFromTheKeyboard = HumanAge.text;
-    [_Age resignFirstResponder];
-    [_Weight resignFirstResponder];
-    [_Hfeet resignFirstResponder];
-    [_Hinches resignFirstResponder];
-    [_weightMet resignFirstResponder];
-    [_HCM resignFirstResponder];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -336,6 +323,8 @@
 }
 
 - (IBAction)Calculate:(id)sender {
+    
+    [ProgressHUD show:@"Saving..."];
     
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSString*  gendervalue = [defaults objectForKey:@"gender-name"];
@@ -658,7 +647,7 @@
             
         }
     }
-    
+    [ProgressHUD dismiss];
 }
 
 
@@ -709,23 +698,7 @@
 
 
 
--(void)showKeyboard: (UITextField*)key
-{
-    
-    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
-    numberToolbar.barStyle = UIBarStyleDefault;
-    numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
-                           nil];
-    [numberToolbar sizeToFit];
-    
-    
-    
-    key.inputAccessoryView = numberToolbar;
-    
-    
-}
+
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
