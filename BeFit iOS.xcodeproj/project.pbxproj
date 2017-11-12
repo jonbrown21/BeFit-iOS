@@ -25,7 +25,6 @@
 		FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACF19CF560E0044C06B /* AppDelegate.m */; };
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
-		FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADF19CF560E0044C06B /* LaunchScreen.xib */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
@@ -60,6 +59,16 @@
 		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
+		FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */; };
+		FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */; };
+		FC8F8CAB1FB8E33C0015E5E8 /* star-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */; };
+		FC8F8CAC1FB8E33C0015E5E8 /* SARate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA01FB8E33B0015E5E8 /* SARate.m */; };
+		FC8F8CAD1FB8E33C0015E5E8 /* SARateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */; };
+		FC8F8CAE1FB8E33C0015E5E8 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */; };
+		FC8F8CAF1FB8E33C0015E5E8 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA41FB8E33B0015E5E8 /* iRate.m */; };
+		FC8F8CB01FB8E33C0015E5E8 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */; };
+		FC8F8CB11FB8E33C0015E5E8 /* star-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */; };
+		FC8F8CB21FB8E33C0015E5E8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CAA1FB8E33B0015E5E8 /* star.png */; };
 		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
@@ -104,8 +113,6 @@
 		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
 		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
 		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
-		FCD699A41E89CBAB00D4ED3C /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCD699A31E89CBAB00D4ED3C /* iRate.bundle */; };
-		FCD699A71E89CBB500D4ED3C /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD699A61E89CBB500D4ED3C /* iRate.m */; };
 		FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -150,7 +157,6 @@
 		FC290ACF19CF560E0044C06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC290AE019CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
@@ -215,6 +221,21 @@
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeFit Tracker.entitlements"; sourceTree = "<group>"; };
+		FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerINavigationBar.h; sourceTree = "<group>"; };
+		FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerINavigationBar.m; sourceTree = "<group>"; };
+		FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray@2x.png"; sourceTree = "<group>"; };
+		FC8F8CA01FB8E33B0015E5E8 /* SARate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARate.m; sourceTree = "<group>"; };
+		FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARateViewController.m; sourceTree = "<group>"; };
+		FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		FC8F8CA41FB8E33B0015E5E8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		FC8F8CA51FB8E33B0015E5E8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
+		FC8F8CA71FB8E33B0015E5E8 /* SARate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARate.h; sourceTree = "<group>"; };
+		FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray.png"; sourceTree = "<group>"; };
+		FC8F8CA91FB8E33B0015E5E8 /* SARateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARateViewController.h; sourceTree = "<group>"; };
+		FC8F8CAA1FB8E33B0015E5E8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		FC8F8CB31FB8E3770015E5E8 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
@@ -300,8 +321,6 @@
 		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
 		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
 		FCD699A31E89CBAB00D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		FCD699A51E89CBB500D4ED3C /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		FCD699A61E89CBB500D4ED3C /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		FCE5B9E21E7264D400324083 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -452,6 +471,8 @@
 		FC29F1531E70F9E800251B34 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */,
+				FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */,
 				51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */,
 				51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */,
 			);
@@ -598,6 +619,33 @@
 			name = "BMI Calculator";
 			sourceTree = "<group>";
 		};
+		FC8F8C9E1FB8E33B0015E5E8 /* SARate */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */,
+				FC8F8CA01FB8E33B0015E5E8 /* SARate.m */,
+				FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */,
+				FC8F8CA21FB8E33B0015E5E8 /* iRate */,
+				FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */,
+				FC8F8CA71FB8E33B0015E5E8 /* SARate.h */,
+				FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */,
+				FC8F8CA91FB8E33B0015E5E8 /* SARateViewController.h */,
+				FC8F8CAA1FB8E33B0015E5E8 /* star.png */,
+			);
+			path = SARate;
+			sourceTree = "<group>";
+		};
+		FC8F8CA21FB8E33B0015E5E8 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */,
+				FC8F8CB31FB8E3770015E5E8 /* iRate.bundle */,
+				FC8F8CA41FB8E33B0015E5E8 /* iRate.m */,
+				FC8F8CA51FB8E33B0015E5E8 /* iRate.h */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -711,15 +759,15 @@
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FCD699A81E89CBBC00D4ED3C /* iRate */,
+				FC8F8C9E1FB8E33B0015E5E8 /* SARate */,
 				FCE5B9E51E7264D900324083 /* ScrollLabel */,
 				FC29F1791E7119BF00251B34 /* Progress */,
 				51E44C461E5C452A007E91C1 /* SimpleBarChart */,
 				5107F8371E543D3600E1EEBD /* BarCodeScanner */,
 				5107F8171E542F4A00E1EEBD /* IQKeyBoardManager */,
 				FC290ADA19CF560E0044C06B /* Main.storyboard */,
+				FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */,
 				FC290ADD19CF560E0044C06B /* Images.xcassets */,
-				FC290ADF19CF560E0044C06B /* LaunchScreen.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -759,15 +807,6 @@
 				FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */,
 			);
 			path = PurchaseButton;
-			sourceTree = "<group>";
-		};
-		FCD699A81E89CBBC00D4ED3C /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				FCD699A51E89CBB500D4ED3C /* iRate.h */,
-				FCD699A61E89CBB500D4ED3C /* iRate.m */,
-			);
-			name = iRate;
 			sourceTree = "<group>";
 		};
 		FCE5B9E51E7264D900324083 /* ScrollLabel */ = {
@@ -823,7 +862,7 @@
 		FC290ABF19CF560E0044C06B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jon Brown";
 				TargetAttributes = {
 					FC290AC619CF560E0044C06B = {
@@ -875,20 +914,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */,
+				FC8F8CB01FB8E33C0015E5E8 /* star@2x.png in Resources */,
 				FCA42E111E38F0BD00619AE6 /* cw.html in Resources */,
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
+				FC8F8CAB1FB8E33C0015E5E8 /* star-gray@2x.png in Resources */,
 				51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */,
+				FC8F8CAE1FB8E33C0015E5E8 /* iRate.bundle in Resources */,
 				FCA42E121E38F0BD00619AE6 /* cw.js in Resources */,
 				FC3EFA8B1E71EF7A00D6F979 /* IQKeyboardManager.bundle in Resources */,
 				51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */,
-				FC290AE119CF560E0044C06B /* LaunchScreen.xib in Resources */,
 				FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */,
-				FCD699A41E89CBAB00D4ED3C /* iRate.bundle in Resources */,
+				FC8F8CB21FB8E33C0015E5E8 /* star.png in Resources */,
+				FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */,
 				510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
 				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
+				FC8F8CB11FB8E33C0015E5E8 /* star-gray.png in Resources */,
 				51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,7 +956,6 @@
 				511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
 				FC3EFA851E71EF7A00D6F979 /* IQTextView.m in Sources */,
-				FCD699A71E89CBB500D4ED3C /* iRate.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
@@ -927,6 +969,7 @@
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
 				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
 				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
+				FC8F8CAC1FB8E33C0015E5E8 /* SARate.m in Sources */,
 				FC3EFA7E1E71EF7A00D6F979 /* IQUIScrollView+Additions.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
 				511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */,
@@ -955,6 +998,7 @@
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				51FB9A1F1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m in Sources */,
+				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */,
 				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
@@ -966,6 +1010,7 @@
 				FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */,
 				FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */,
 				5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */,
+				FC8F8CAD1FB8E33C0015E5E8 /* SARateViewController.m in Sources */,
 				FC3EFA8A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
@@ -974,6 +1019,7 @@
 				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
 				FC3EFA881E71EF7A00D6F979 /* IQTitleBarButtonItem.m in Sources */,
 				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
+				FC8F8CAF1FB8E33C0015E5E8 /* iRate.m in Sources */,
 				FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */,
 				FC3EFA811E71EF7A00D6F979 /* IQUIViewController+Additions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
@@ -1011,14 +1057,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FC290ADF19CF560E0044C06B /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC290AE019CF560E0044C06B /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1030,14 +1068,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1062,7 +1106,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "9c0c2981-ffb3-432a-9ce1-8f4e6b02f8d6";
@@ -1078,14 +1122,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1103,7 +1153,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "9c0c2981-ffb3-432a-9ce1-8f4e6b02f8d6";
@@ -1116,7 +1166,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1128,7 +1177,7 @@
 				IBC_WARNINGS = NO;
 				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
@@ -1142,7 +1191,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1154,7 +1202,7 @@
 				IBC_WARNINGS = NO;
 				IBSC_WARNINGS = NO;
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";

@@ -65,6 +65,11 @@
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
 }
+
+- (UIBarPosition)barPosition {
+    return UIBarPositionTopAttached;
+}
+
 - (void)changeClicked
 {
     NSMutableArray *valuesCopy = _values.mutableCopy;
@@ -113,6 +118,31 @@
     [_btn3M setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [_btn6M setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
     [_btn1Yr setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted];
+    
+    
+    // Set Background Color of UIStatusBar
+    UIApplication *app = [UIApplication sharedApplication];
+    CGFloat statusBarHeight = app.statusBarFrame.size.height;
+    
+    UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, statusBarHeight)];
+    statusBarView.backgroundColor  =  [UIColor colorWithRed:0.32 green:0.66 blue:0.82 alpha:1.0];
+    [self.view addSubview:statusBarView];
+    
+    if (@available(iOS 11, *)) {
+        UIEdgeInsets insets = [UIApplication sharedApplication].delegate.window.safeAreaInsets;
+        if (insets.top > 0) {
+            // We're running on an iPhone with a notch.
+
+            // Set Background Color of UIStatusBar
+            UIApplication *app = [UIApplication sharedApplication];
+            CGFloat statusBarHeight = app.statusBarFrame.size.height;
+            
+            UIView *statusBarView =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, statusBarHeight)];
+            statusBarView.backgroundColor  = [UIColor colorWithRed:0.32 green:0.66 blue:0.82 alpha:1.0];
+            [self.view addSubview:statusBarView];
+            
+        }
+    }
     
 }
 

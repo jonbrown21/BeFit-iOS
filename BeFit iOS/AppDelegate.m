@@ -10,7 +10,7 @@
 #import "Food.h"
 #import "FoodList.h"
 #import "StoreViewController.h"
-#import "iRate.h"
+#import "SARate.h"
 
 @interface AppDelegate ()
 
@@ -23,14 +23,31 @@
     //set the bundle ID. normally you wouldn't need to do this
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
-    [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
-    
+    //configure
+    [SARate sharedInstance].daysUntilPrompt = 5;
+    [SARate sharedInstance].usesUntilPrompt = 5;
+    [SARate sharedInstance].remindPeriod = 30;
+    [SARate sharedInstance].promptForNewVersionIfUserRated = YES;
     //enable preview mode
+    [SARate sharedInstance].previewMode = YES;
     
-    [iRate sharedInstance].remindPeriod = 0;
-    [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
-    [iRate sharedInstance].promptAtLaunch = YES;
-    [iRate sharedInstance].previewMode = NO;
+    [SARate sharedInstance].email = @"jonbrown2@mac.com";
+    // 4 and 5 stars
+    [SARate sharedInstance].minAppStoreRaiting = 4;
+    [SARate sharedInstance].emailSubject = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
+    [SARate sharedInstance].emailText = @"Disadvantages: ";
+    [SARate sharedInstance].headerLabelText = @"Like app?";
+    [SARate sharedInstance].descriptionLabelText = @"Touch the star to rate.";
+    [SARate sharedInstance].rateButtonLabelText = @"Rate";
+    [SARate sharedInstance].cancelButtonLabelText = @"Not Now";
+    [SARate sharedInstance].setRaitingAlertTitle = @"Rate";
+    [SARate sharedInstance].setRaitingAlertMessage = @"Touch the star to rate.";
+    [SARate sharedInstance].appstoreRaitingAlertTitle = @"Write a review on the AppStore";
+    [SARate sharedInstance].appstoreRaitingAlertMessage = @"Would you mind taking a moment to rate it on the AppStore? It won’t take more than a minute. Thanks for your support!";
+    [SARate sharedInstance].appstoreRaitingCancel = @"Cancel";
+    [SARate sharedInstance].appstoreRaitingButton = @"Rate It Now";
+    [SARate sharedInstance].disadvantagesAlertTitle = @"Disadvantages";
+    [SARate sharedInstance].disadvantagesAlertMessage = @"Please specify the deficiencies in the application. We will try to fix it!";
 }
 
 
