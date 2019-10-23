@@ -7,6 +7,7 @@
 //
 
 #import "StoreViewController.h"
+#import "BeFitTracker-Swift.h"
 
 @interface StoreViewController ()
 {

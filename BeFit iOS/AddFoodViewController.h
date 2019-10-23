@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Food.h"
-#import "FoodList.h"
 #import "AppDelegate.h"
 #import "DeviceViewController.h"
 #import "ScannerViewController.h"
 #import "FoodObjectsViewController.h"
+
+@class Food;
+@class FoodList;
 
 @interface AddFoodViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource,ScannedDataDelegate>
 {

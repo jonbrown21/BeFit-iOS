@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Food.h"
-#import "UserFoodRecords+CoreDataProperties.h"
 #import "IQUIView+IQKeyboardToolbar.h"
 #import "AppDelegate.h"
-#import "FoodList.h"
 #import "AddFoodViewController.h"
+
+@class Food;
+@class FoodList;
+@class UserFoodRecords;
 
 @interface DetailViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 {

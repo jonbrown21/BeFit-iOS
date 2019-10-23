@@ -8,6 +8,7 @@
 
 
 #import "ScannerViewController.h"
+#import "BeFitTracker-Swift.h"
 
 @import AVFoundation;   // iOS7 only import style
 

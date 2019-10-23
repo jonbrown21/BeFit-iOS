@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SimpleBarChart.h"
 #import <CoreData/CoreData.h>
-#import "UserFoodRecords+CoreDataProperties.h"
 #import "AppDelegate.h"
 
 @interface FoodTrackCell : UITableViewCell

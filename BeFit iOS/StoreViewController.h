@@ -10,7 +10,8 @@
 #import "AvePurchaseButton.h"
 #import <StoreKit/StoreKit.h>
 #import "AppDelegate.h"
-#import "Food.h"
+
+@class Food;
 
 #define productID1 @"com.befit.dev.food"
 #define productID2 @"food_0171"

@@ -7,10 +7,10 @@
 //
 
 #import "BFMasterTableViewController.h"
-#import "Food.h"
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "AvePurchaseButton.h"
+#import "BeFitTracker-Swift.h"
 
 @interface BFMasterTableViewController ()
 {

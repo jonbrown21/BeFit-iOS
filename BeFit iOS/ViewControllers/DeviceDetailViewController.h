@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "Food.h"
-#import "FoodList.h"
+
+@class Food;
+@class FoodList;
 
 @interface DeviceDetailViewController : UIViewController <UIBarPositioningDelegate, UINavigationBarDelegate>
 

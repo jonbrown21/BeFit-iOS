@@ -8,6 +8,7 @@
 
 #import "DeviceDetailViewController.h"
 #import "AppDelegate.h"
+#import "BeFitTracker-Swift.h"
 
 @interface DeviceDetailViewController ()
 

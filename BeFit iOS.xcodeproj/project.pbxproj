@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */; };
+		439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */; };
+		439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */; };
+		439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */; };
+		439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */; };
+		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
+		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
 		5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8151E541D7700E1EEBD /* AddFoodViewController.m */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */; };
@@ -16,8 +23,6 @@
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
 		51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */; };
 		51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C481E5C452A007E91C1 /* SimpleBarChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		51FB9A1F1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */; };
-		51FB9A201E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */; };
 		51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */; };
 		51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */; };
 		51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */; };
@@ -96,8 +101,6 @@
 		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
 		FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */; };
-		FCBC23B619EB96A600C480B6 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B019EB96A600C480B6 /* Food.m */; };
-		FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B219EB96A600C480B6 /* FoodList.m */; };
 		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
 		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
 		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
@@ -119,6 +122,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "DataModel/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataClass.swift"; path = "DataModel/UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataProperties.swift"; path = "DataModel/UserFoodRecords+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FoodList+CoreDataClass.swift"; path = "DataModel/FoodList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FoodList+CoreDataProperties.swift"; path = "DataModel/FoodList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataClass.swift"; path = "DataModel/Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
 		5107F8141E541D7700E1EEBD /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
 		5107F8151E541D7700E1EEBD /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
@@ -135,14 +146,10 @@
 		51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTrackViewController.m; sourceTree = "<group>"; };
 		51E44C471E5C452A007E91C1 /* SimpleBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBarChart.h; sourceTree = "<group>"; };
 		51E44C481E5C452A007E91C1 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
-		51FB9A1B1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserFoodRecords+CoreDataClass.h"; path = "DataModel/UserFoodRecords+CoreDataClass.h"; sourceTree = "<group>"; };
-		51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserFoodRecords+CoreDataClass.m"; path = "DataModel/UserFoodRecords+CoreDataClass.m"; sourceTree = "<group>"; };
-		51FB9A1D1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserFoodRecords+CoreDataProperties.h"; path = "DataModel/UserFoodRecords+CoreDataProperties.h"; sourceTree = "<group>"; };
-		51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserFoodRecords+CoreDataProperties.m"; path = "DataModel/UserFoodRecords+CoreDataProperties.m"; sourceTree = "<group>"; };
 		51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeFit_iOS.sqlite; sourceTree = "<group>"; };
 		51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-shm"; sourceTree = "<group>"; };
 		51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-wal"; sourceTree = "<group>"; };
-		FC290AC719CF560E0044C06B /* BeFit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeFit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC290AC719CF560E0044C06B /* BeFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290ACB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC290ACE19CF560E0044C06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -282,10 +289,6 @@
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23AF19EB96A600C480B6 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = DataModel/Food.h; sourceTree = "<group>"; };
-		FCBC23B019EB96A600C480B6 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = DataModel/Food.m; sourceTree = "<group>"; };
-		FCBC23B119EB96A600C480B6 /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodList.h; path = DataModel/FoodList.h; sourceTree = "<group>"; };
-		FCBC23B219EB96A600C480B6 /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodList.m; path = DataModel/FoodList.m; sourceTree = "<group>"; };
 		FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMasterTableViewController.h; path = ViewControllers/BFMasterTableViewController.h; sourceTree = "<group>"; };
 		FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMasterTableViewController.m; path = ViewControllers/BFMasterTableViewController.m; sourceTree = "<group>"; };
 		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
@@ -388,7 +391,7 @@
 		FC290AC819CF560E0044C06B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC290AC719CF560E0044C06B /* BeFit Tracker.app */,
+				FC290AC719CF560E0044C06B /* BeFitTracker.app */,
 				FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */,
 			);
 			name = Products;
@@ -417,6 +420,7 @@
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
 				FC290ACC19CF560E0044C06B /* main.m */,
+				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -687,10 +691,13 @@
 		FCBC23A619EB962400C480B6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				51FB9A1B1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.h */,
-				51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */,
-				51FB9A1D1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.h */,
-				51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */,
+				439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */,
+				439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */,
+				439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */,
+				439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */,
+				439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */,
+				439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */,
+				439DE72A23603D9B00CC8543 /* Food+UI.swift */,
 				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
 				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */,
@@ -699,10 +706,6 @@
 				51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */,
 				51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */,
 				510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */,
-				FCBC23AF19EB96A600C480B6 /* Food.h */,
-				FCBC23B019EB96A600C480B6 /* Food.m */,
-				FCBC23B119EB96A600C480B6 /* FoodList.h */,
-				FCBC23B219EB96A600C480B6 /* FoodList.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -771,9 +774,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC290AC619CF560E0044C06B /* BeFit Tracker */ = {
+		FC290AC619CF560E0044C06B /* BeFitTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit Tracker" */;
+			buildConfigurationList = FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFitTracker" */;
 			buildPhases = (
 				FC290AC319CF560E0044C06B /* Sources */,
 				FC290AC419CF560E0044C06B /* Frameworks */,
@@ -783,9 +786,9 @@
 			);
 			dependencies = (
 			);
-			name = "BeFit Tracker";
+			name = BeFitTracker;
 			productName = "BeFit iOS";
-			productReference = FC290AC719CF560E0044C06B /* BeFit Tracker.app */;
+			productReference = FC290AC719CF560E0044C06B /* BeFitTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FC290AE519CF560E0044C06B /* BeFit iOSTests */ = {
@@ -818,6 +821,7 @@
 					FC290AC619CF560E0044C06B = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = 2D4Z7WQ7RS;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -844,6 +848,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -852,7 +857,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC290AC619CF560E0044C06B /* BeFit Tracker */,
+				FC290AC619CF560E0044C06B /* BeFitTracker */,
 				FC290AE519CF560E0044C06B /* BeFit iOSTests */,
 			);
 		};
@@ -896,7 +901,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */,
-				51FB9A201E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m in Sources */,
+				439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */,
+				439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */,
 				FC3EFA821E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m in Sources */,
 				511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
@@ -913,11 +919,14 @@
 				FC3EFA841E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
 				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
+				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,
 				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
 				FC3EFA7E1E71EF7A00D6F979 /* IQUIScrollView+Additions.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
+				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
 				511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */,
 				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
+				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
 				5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */,
@@ -926,8 +935,8 @@
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FC3EFA7D1E71EF7A00D6F979 /* IQNSArray+Sort.m in Sources */,
-				FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
+				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,
 				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
@@ -941,7 +950,6 @@
 				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
-				51FB9A1F1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m in Sources */,
 				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */,
@@ -958,8 +966,8 @@
 				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
 				FC3EFA891E71EF7A00D6F979 /* IQToolbar.m in Sources */,
+				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
-				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
 				FC3EFA881E71EF7A00D6F979 /* IQTitleBarButtonItem.m in Sources */,
 				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
 				FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */,
@@ -985,7 +993,7 @@
 /* Begin PBXTargetDependency section */
 		FC290AE819CF560E0044C06B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC290AC619CF560E0044C06B /* BeFit Tracker */;
+			target = FC290AC619CF560E0044C06B /* BeFitTracker */;
 			targetProxy = FC290AE719CF560E0044C06B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1108,6 +1116,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1126,6 +1135,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeFit iOS/BeFit Tracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1133,6 +1145,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1151,12 +1164,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeFit iOS/BeFit Tracker-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		FC290AF419CF560E0044C06B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1179,6 +1195,7 @@
 		FC290AF519CF560E0044C06B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1206,7 +1223,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit Tracker" */ = {
+		FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFitTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC290AF119CF560E0044C06B /* Debug */,

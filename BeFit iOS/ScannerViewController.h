@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Barcode.h"
-#import "Food.h"
-#import "FoodList.h"
 #import "IQUIView+IQKeyboardToolbar.h"
 #import "AppDelegate.h"
+
+@class Food;
+@class FoodList;
 
 @interface ScannerViewController : UIViewController<UIAlertViewDelegate,UIPickerViewDataSource,UIPickerViewDelegate,AVCaptureMetadataOutputObjectsDelegate>
 {

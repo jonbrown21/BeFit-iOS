@@ -7,6 +7,7 @@
 //
 
 #import "FoodTrackViewController.h"
+#import "BeFitTracker-Swift.h"
 
 @implementation FoodTrackCell
 @end

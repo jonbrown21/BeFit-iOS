@@ -7,6 +7,7 @@
 //
 
 #import "FoodObjectsViewController.h"
+#import "BeFitTracker-Swift.h"
 
 @interface FoodObjectsViewController ()
 

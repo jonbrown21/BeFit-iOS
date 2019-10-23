@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-#import "Food.h"
-#import "FoodList.h"
+
+@class Food;
+@class FoodList;
 
 @interface BFMasterTableViewController : UIViewController <NSFetchedResultsControllerDelegate,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate, UISearchDisplayDelegate>
 {

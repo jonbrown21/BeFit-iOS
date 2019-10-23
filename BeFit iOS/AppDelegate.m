@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Food.h"
-#import "FoodList.h"
 #import "StoreViewController.h"
+#import "BeFitTracker-Swift.h"
 
 @interface AppDelegate ()
 

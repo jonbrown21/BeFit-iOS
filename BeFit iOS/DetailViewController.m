@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "CW.h"
 #import "CBAutoScrollLabel.h"
+#import "BeFitTracker-Swift.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIView *wview;
