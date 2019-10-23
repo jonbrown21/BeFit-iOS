@@ -10,7 +10,6 @@
 #import "Food.h"
 #import "FoodList.h"
 #import "StoreViewController.h"
-#import "SARate.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +23,7 @@
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
     //configure
-    
+  /*
     [SARate sharedInstance].daysUntilPrompt = 5;
     [SARate sharedInstance].usesUntilPrompt = 5;
     [SARate sharedInstance].remindPeriod = 30;
@@ -38,6 +37,7 @@
     [SARate sharedInstance].emailSubject = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
     [SARate sharedInstance].emailText = @"Disadvantages: ";
     [SARate sharedInstance].headerLabelText = @"Like app?";
+   
     [SARate sharedInstance].descriptionLabelText = @"Touch the star to rate.";
     [SARate sharedInstance].rateButtonLabelText = @"Rate";
     [SARate sharedInstance].cancelButtonLabelText = @"Not Now";
@@ -49,6 +49,7 @@
     [SARate sharedInstance].appstoreRaitingButton = @"Rate It Now";
     [SARate sharedInstance].disadvantagesAlertTitle = @"Disadvantages";
     [SARate sharedInstance].disadvantagesAlertMessage = @"Please specify the deficiencies in the application. We will try to fix it!";
+   */
 }
 
 
