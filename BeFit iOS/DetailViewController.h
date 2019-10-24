@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "IQUIView+IQKeyboardToolbar.h"
 #import "AppDelegate.h"
-#import "AddFoodViewController.h"
 
 @class Food;
 @class FoodList;
 @class UserFoodRecords;
+@class AddFoodViewController;
 
 @interface DetailViewController : UIViewController<UIPickerViewDelegate,UIPickerViewDataSource>
 {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */; };
 		439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */; };
 		439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */; };
@@ -14,7 +15,6 @@
 		439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */; };
 		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
 		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
-		5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8151E541D7700E1EEBD /* AddFoodViewController.m */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */; };
 		510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */; };
@@ -108,6 +108,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "DataModel/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataClass.swift"; path = "DataModel/UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -117,8 +118,6 @@
 		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataClass.swift"; path = "DataModel/Food+CoreDataClass.swift"; sourceTree = "<group>"; };
 		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5107F8141E541D7700E1EEBD /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
-		5107F8151E541D7700E1EEBD /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
 		5107F83B1E543D5E00E1EEBD /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
@@ -296,8 +295,7 @@
 		5107F8131E541D3E00E1EEBD /* Add Food */ = {
 			isa = PBXGroup;
 			children = (
-				5107F8141E541D7700E1EEBD /* AddFoodViewController.h */,
-				5107F8151E541D7700E1EEBD /* AddFoodViewController.m */,
+				435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */,
 			);
 			name = "Add Food";
 			sourceTree = "<group>";
@@ -860,11 +858,11 @@
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
-				5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
+				435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */,
 				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,
 				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,

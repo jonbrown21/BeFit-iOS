@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AddFoodViewController.h"
+#import <CoreData/CoreData.h>
 
 @class Food;
 @class FoodList;
+@class AddFoodViewController;
 
 @interface FoodObjectsViewController : UITableViewController
 {
