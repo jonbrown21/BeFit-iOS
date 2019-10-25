@@ -3,6 +3,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DeviceViewController.h"
 #import "ScannerViewController.h"
 #import "FoodObjectsViewController.h"
+#import "DeviceDetailViewController.h"

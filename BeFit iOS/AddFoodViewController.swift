@@ -12,7 +12,8 @@ import UIKit
 class AddFoodViewController: UIViewController,
 UIPickerViewDelegate,
 UIPickerViewDataSource,
-ScannedDataDelegate {
+ScannedDataDelegate,
+DeviceViewControllerDelegate {
     //MARK: - Properties
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -246,15 +247,6 @@ ScannedDataDelegate {
         }
     }
     
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*
-    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     // MARK: - Private
     
     private func makeButton(_ butz: UIButton, color colortouse: UIColor) {
@@ -395,10 +387,10 @@ ScannedDataDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "segue_foodList":
-            // TODO: Implement reflecting selection changes when popping back here.
             if let destViewController = segue.destination as? DeviceViewController {
-                destViewController.selectedFoodLists = NSMutableArray(array: selectedListArray ?? [])
+                destViewController.selectedFoodLists = selectedListArray ?? []
                 destViewController.isFromAddFoodScreen = true
+                destViewController.delegate = self
             }
             
         case "segue_scan":
@@ -412,5 +404,11 @@ ScannedDataDelegate {
         }
         
         super.prepare(for: segue, sender: sender)
+    }
+    
+    //MARK: DeviceViewControllerDelegate
+    
+    func valueChanged(selectedFoodLists: [FoodList]) {
+        selectedListArray = selectedFoodLists
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
+		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */; };
 		439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */; };
 		439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */; };
@@ -45,7 +46,6 @@
 		FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1761E7118F500251B34 /* ProgressHUD.m */; };
 		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
 		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
-		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
 		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
 		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
@@ -109,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = ViewControllers/DeviceViewController.swift; sourceTree = "<group>"; };
 		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "DataModel/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataClass.swift"; path = "DataModel/UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -169,8 +170,6 @@
 		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
 		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
 		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
-		FC760C251E484B2800336D75 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceViewController.h; path = ViewControllers/DeviceViewController.h; sourceTree = "<group>"; };
-		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
 		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
 		FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ViewControllers/DeviceDetailViewController.m; sourceTree = "<group>"; };
 		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
@@ -466,8 +465,7 @@
 		FC760C2C1E4918B200336D75 /* Food List */ = {
 			isa = PBXGroup;
 			children = (
-				FC760C251E484B2800336D75 /* DeviceViewController.h */,
-				FC760C261E484B2800336D75 /* DeviceViewController.m */,
+				437ECCA12362DE8900573D52 /* DeviceViewController.swift */,
 				FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */,
 				FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */,
 				511DB0E91E57073A0061F5CF /* FoodObjectsViewController.h */,
@@ -855,6 +853,7 @@
 				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
 				511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */,
 				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
+				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
@@ -871,7 +870,6 @@
 				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
-				FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */,
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,

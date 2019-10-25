@@ -1151,7 +1151,7 @@
         <!--Food Lists-->
         <scene sceneID="RB8-aI-QMh">
             <objects>
-                <tableViewController id="XrN-2k-QF0" customClass="DeviceViewController" sceneMemberID="viewController">
+                <tableViewController id="XrN-2k-QF0" customClass="DeviceViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hZi-kW-Djh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2485,7 +2485,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="iT5-co-WLe"/>
                                     <barButtonItem style="plain" id="dXN-Tv-Yht">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ccA-LX-o10">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="ccA-LX-o10">
                                             <rect key="frame" x="294" y="10" width="25" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal">
