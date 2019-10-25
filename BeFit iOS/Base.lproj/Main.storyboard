@@ -1436,13 +1436,13 @@
         <!--Detail-->
         <scene sceneID="yXa-34-EyF">
             <objects>
-                <viewController storyboardIdentifier="ListView" title="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PiZ-Os-TF4" customClass="DeviceDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListView" title="Detail" modalPresentationStyle="currentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PiZ-Os-TF4" customClass="DeviceDetailViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ImN-zt-HJ0"/>
                         <viewControllerLayoutGuide type="bottom" id="gA5-aI-jB6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="837-gV-7Xd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHe-IZ-fm4">
@@ -1475,14 +1475,14 @@
                                 </connections>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTt-TN-etV">
-                                <rect key="frame" x="8" y="105" width="122" height="20"/>
+                                <rect key="frame" x="8" y="108" width="122" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q62-ea-5j2">
-                                <rect key="frame" x="138" y="100" width="221" height="30"/>
+                                <rect key="frame" x="138" y="103" width="221" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1497,7 +1497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ev-FN-Py3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780.434782608696" y="-926.45089285714278"/>
+            <point key="canvasLocation" x="2780" y="-940"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

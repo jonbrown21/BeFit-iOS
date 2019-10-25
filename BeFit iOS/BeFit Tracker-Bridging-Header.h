@@ -5,4 +5,3 @@
 #import "AppDelegate.h"
 #import "ScannerViewController.h"
 #import "FoodObjectsViewController.h"
-#import "DeviceDetailViewController.h"
