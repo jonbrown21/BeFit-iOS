@@ -10,6 +10,7 @@
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
+		437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA92363115900573D52 /* FoodObjectsViewController.swift */; };
 		439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */; };
 		439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */; };
 		439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */; };
@@ -21,7 +22,6 @@
 		5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */; };
 		510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */; };
 		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
-		511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
 		51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */; };
 		51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C481E5C452A007E91C1 /* SimpleBarChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -111,6 +111,7 @@
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = ViewControllers/DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceDetailViewController.swift; path = ViewControllers/DeviceDetailViewController.swift; sourceTree = "<group>"; };
+		437ECCA92363115900573D52 /* FoodObjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodObjectsViewController.swift; path = ViewControllers/FoodObjectsViewController.swift; sourceTree = "<group>"; };
 		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "DataModel/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataClass.swift"; path = "DataModel/UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -127,8 +128,6 @@
 		510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		511DB0E61E56E2FC0061F5CF /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		511DB0E71E56E2FC0061F5CF /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		511DB0E91E57073A0061F5CF /* FoodObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodObjectsViewController.h; sourceTree = "<group>"; };
-		511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodObjectsViewController.m; sourceTree = "<group>"; };
 		512609051E5D934E009BA829 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTrackViewController.h; sourceTree = "<group>"; };
 		51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTrackViewController.m; sourceTree = "<group>"; };
@@ -464,10 +463,9 @@
 		FC760C2C1E4918B200336D75 /* Food List */ = {
 			isa = PBXGroup;
 			children = (
+				437ECCA92363115900573D52 /* FoodObjectsViewController.swift */,
 				437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */,
 				437ECCA12362DE8900573D52 /* DeviceViewController.swift */,
-				511DB0E91E57073A0061F5CF /* FoodObjectsViewController.h */,
-				511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */,
 			);
 			name = "Food List";
 			sourceTree = "<group>";
@@ -832,7 +830,6 @@
 				FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */,
 				439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */,
 				439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */,
-				511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
@@ -867,6 +864,7 @@
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
 				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
+				437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */,
 				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
