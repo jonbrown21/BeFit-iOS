@@ -92,7 +92,7 @@ class FoodObjectsViewController: UITableViewController {
         do {
             try context.save()
         } catch let error {
-            print("Can't Delete! %@", error.localizedDescription)
+            print("Can't Delete!", error.localizedDescription)
             return
         }
     }
@@ -161,7 +161,7 @@ class FoodObjectsViewController: UITableViewController {
                 do {
                     try context.save()
                 } catch let error {
-                    print("Can't Delete! %@", error.localizedDescription)
+                    print("Can't Delete!", error.localizedDescription)
                     return
                 }
                 

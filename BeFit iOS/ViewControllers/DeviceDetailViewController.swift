@@ -89,7 +89,7 @@ UINavigationBarDelegate {
         do {
             try context.save()
         } catch let error {
-            print("Can't Save! %@", error.localizedDescription)
+            print("Can't Save!", error.localizedDescription)
         }
         
         dismiss(animated: true, completion: nil)
@@ -122,11 +122,11 @@ UINavigationBarDelegate {
             }
             
             let maximumValue = firstResult.orderIndex?.intValue ?? 0
-            print("The max value is for request is :%d", maximumValue)
+            print("The max value is for request is:", maximumValue)
             
             return maximumValue
         } catch let error {
-            print("Failed to fetch: %@", error.localizedDescription)
+            print("Failed to fetch:", error.localizedDescription)
             return 0
         }
     }

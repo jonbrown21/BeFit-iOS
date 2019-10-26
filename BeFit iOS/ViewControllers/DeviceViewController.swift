@@ -161,7 +161,7 @@ class DeviceViewController: UITableViewController {
             do {
                 try context.save()
             } catch let error {
-                print("Can't Delete! %@", error.localizedDescription)
+                print("Can't Delete!", error.localizedDescription)
                 return
             }
             
