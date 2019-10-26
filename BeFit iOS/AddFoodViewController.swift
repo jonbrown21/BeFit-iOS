@@ -53,7 +53,6 @@ DeviceViewControllerDelegate {
     private var selectedFoodList: FoodList?
     private var selectedListArray: [FoodList]?
     @objc var foodListObject: Food?
-    @objc var scannedObject: NSMutableDictionary = NSMutableDictionary()
     @objc var isForEditing: Bool = false
     
     private var managedObjectContext: NSManagedObjectContext? {
@@ -323,44 +322,46 @@ DeviceViewControllerDelegate {
         return true
     }
     
-    /*
-    - (void)ShowScannedFoodData:(NSDictionary*)foodData
+    private func showScannedFoodData(_ foodData: [String: Any])
     {
+        func toNSNumber(_ key: String) -> NSNumber {
+            return (foodData[key] as? NSNumber) ?? NSNumber(value: 0)
+        }
         
-        _txtName.text = foodData[@"item_name"] ;
-        _txtSugar.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_sugars"] isEqual: [NSNull null]]? [NSNumber numberWithInt:[foodData[@"nf_sugars"] intValue]]: [NSNumber numberWithInteger:0 ]];
-         _txtSodium.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_sodium"] isEqual: [NSNull null]] ? [NSNumber numberWithInt:[foodData[@"nf_sodium"] intValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtSaturatedFat.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_saturated_fat"] isEqual: [NSNull null]]?[NSNumber numberWithDouble:[foodData[@"nf_saturated_fat"] doubleValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtSelectedServing.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_serving_size_qty"] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@"nf_serving_size_qty"] intValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtDietaryFiber.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_dietary_fiber"] isEqual: [NSNull null]] ? [NSNumber numberWithInt:[foodData[@"nf_dietary_fiber"] intValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtMonoSaturatedFat.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_monounsaturated_fat"] isEqual: [NSNull null]]? [NSNumber numberWithDouble:[foodData[@"nf_monounsaturated_fat"] doubleValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtVitaminA.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_vitamin_a_dv"] isEqual: [NSNull null]] ? [NSNumber numberWithDouble:[foodData[@"nf_vitamin_a_dv"] doubleValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtCalories.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_calories"] isEqual: [NSNull null]] ? [NSNumber numberWithInt:[foodData[@"nf_calories"] intValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtServWeight2.text = [NSString stringWithFormat:@"%@",![foodData[@""] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@""] intValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtVitaminE.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_vitamin_e_dv"] isEqual: [NSNull null]] ? [NSNumber numberWithDouble:[foodData[@"nf_vitamin_e_dv"] doubleValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtServingDescription2.text = @"" ;// foodData[@""];
-        _txtCalcium.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_calcium_dv"] isEqual: [NSNull null]]? [NSNumber numberWithDouble:[foodData[@"nf_calcium_dv"] doubleValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtQuantity.text = [NSString stringWithFormat:@"%@",[NSNumber numberWithInteger:0]]  ; // ![foodData[@"nf_serving_size_qty"] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@"nf_serving_size_qty"] intValue]]:[NSNumber numberWithInteger:0 ];
-         _txtPolyFat.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_polyunsaturated_fat"] isEqual: [NSNull null]]? [NSNumber numberWithDouble:[foodData[@"nf_polyunsaturated_fat"] doubleValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtServWeight1.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_serving_weight_grams"] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@"nf_serving_weight_grams"] intValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtProteins.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_protein"] isEqual: [NSNull null]] ? [NSNumber numberWithInt:[foodData[@"nf_protein"] intValue]]:[NSNumber numberWithInteger:0 ]] ;
-         _txtCholesterol.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_cholesterol"] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@"nf_cholesterol"] intValue]]:[NSNumber numberWithInteger:0 ]] ;
-        _txtServingDescription1.text = [NSString stringWithFormat:@"%@",![foodData[@"item_description"] isEqual: [NSNull null]]?foodData[@"item_description"]:@""];
-        _txtVitaminC.text = [NSString stringWithFormat:@"%@", ![foodData[@"nf_vitamin_c_dv"] isEqual: [NSNull null]] ? [NSNumber numberWithDouble:[foodData[@"nf_vitamin_c_dv"] doubleValue]]:[NSNumber numberWithInteger:0 ]];
-         _txtIron.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_iron_dv"] isEqual: [NSNull null]]?[NSNumber numberWithDouble:[foodData[@"nf_iron_dv"] doubleValue]]: [NSNumber numberWithInteger:0 ]] ;
-         _txtCarbohydrates.text = [NSString stringWithFormat:@"%@",![foodData[@"nf_total_carbohydrate"] isEqual: [NSNull null]]?[NSNumber numberWithInt:[foodData[@"nf_total_carbohydrate"] intValue]]:[NSNumber numberWithInteger:0 ]] ;
+        func toString(_ key: String) -> String {
+            return (foodData[key] as? String) ?? ""
+        }
         
-        
+        txtName.text = toString("item_name")
+        txtSugar.text = String(format: "%@", toNSNumber("nf_sugars")) // Int
+        txtSodium.text = String(format: "%@", toNSNumber("nf_sodium")) // Int
+        txtSaturatedFat.text = String(format: "%@", toNSNumber("nf_saturated_fat")) // Double
+        txtSelectedServing.text = String(format: "%@", toNSNumber("nf_serving_size_qty")) // Int
+        txtDietaryFiber.text = String(format: "%@", toNSNumber("nf_dietary_fiber")) // Int
+        txtMonoSaturatedFat.text = String(format: "%@", toNSNumber("nf_monounsaturated_fat")) // Double
+        txtVitaminA.text = String(format: "%@", toNSNumber("nf_vitamin_a_dv")) // Double
+        txtCalories.text = String(format: "%@", toNSNumber("nf_calories")) // Int
+        txtServWeight2.text = String(format: "%@", toNSNumber("")) // Int
+        txtVitaminE.text = String(format: "%@", toNSNumber("nf_vitamin_e_dv")) // Double
+        txtServingDescription2.text = ""
+        txtCalcium.text = String(format: "%@", toNSNumber("nf_calcium_dv")) // Double
+        txtQuantity.text = String(format: "%@", NSNumber(value: 0)) // toNSNumber("nf_serving_size_qty")
+        txtPolyFat.text = String(format: "%@", toNSNumber("nf_polyunsaturated_fat")) // Double
+        txtServWeight1.text = String(format: "%@", toNSNumber("nf_serving_weight_grams")) // Int
+        txtProteins.text = String(format: "%@", toNSNumber("nf_protein")) // Int
+        txtCholesterol.text = String(format: "%@", toNSNumber("nf_cholesterol")) // Int
+        txtServingDescription1.text = toString("item_description")
+        txtVitaminC.text = String(format: "%@", toNSNumber("nf_vitamin_c_dv")) // Double
+        txtIron.text = String(format: "%@", toNSNumber("nf_iron_dv")) // Double
+        txtCarbohydrates.text = String(format: "%@", toNSNumber("nf_total_carbohydrate")) // Int
     }
- */
     
     //MARK: - ScannedDataDelegate
     
-    func setScannedDataInFields() {
-        if scannedObject.count > 0 {
-            print(scannedObject)
-            // TODO: showScannedFoodData
-            //showScannedFoodData(scannedObject)
+    func setScannedDataInFields(data: [String: Any]) {
+        if data.count > 0 {
+            print(data)
+            showScannedFoodData(data)
         }
     }
     
@@ -395,7 +396,6 @@ DeviceViewControllerDelegate {
             
         case "segue_scan":
             if let destViewController = segue.destination as? ScannerViewController {
-                destViewController.scannedObject = scannedObject
                 destViewController.delegate = self
             }
             

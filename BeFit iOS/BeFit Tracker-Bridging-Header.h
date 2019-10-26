@@ -3,4 +3,5 @@
 //
 
 #import "AppDelegate.h"
-#import "ScannerViewController.h"
+#import "Barcode.h"
+#import "IQUIView+IQKeyboardToolbar.h"
