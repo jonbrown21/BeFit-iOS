@@ -405,7 +405,7 @@
         <!--Library-->
         <scene sceneID="We8-HZ-4Y1">
             <objects>
-                <tableViewController storyboardIdentifier="SecondTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z0G-za-ayb" customClass="BFMasterTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SecondTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z0G-za-ayb" customClass="BFMasterTableViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OMM-W1-Lw6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2314,7 +2314,7 @@
         <!--Library-->
         <scene sceneID="s4K-fW-FD0">
             <objects>
-                <viewController id="oYB-0d-bgc" customClass="BFMasterTableViewController" sceneMemberID="viewController">
+                <viewController id="oYB-0d-bgc" customClass="BFMasterTableViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zd4-jd-xsl"/>
                         <viewControllerLayoutGuide type="bottom" id="JOp-JU-JSb"/>

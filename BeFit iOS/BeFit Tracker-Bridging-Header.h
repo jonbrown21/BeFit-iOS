@@ -5,3 +5,5 @@
 #import "AppDelegate.h"
 #import "Barcode.h"
 #import "IQUIView+IQKeyboardToolbar.h"
+#import "DetailViewController.h"
+#import "AvePurchaseButton.h"

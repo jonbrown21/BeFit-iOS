@@ -21,9 +21,9 @@
 		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
 		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
 		43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DA2366D0B3008B4F7F /* UISnapNav.swift */; };
-		43F051DE2366D1CD008B4F7F /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */; };
 		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
 		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
+		43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
@@ -123,10 +123,9 @@
 		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
 		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
 		43F051DA2366D0B3008B4F7F /* UISnapNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISnapNav.swift; sourceTree = "<group>"; };
-		43F051DC2366D1CD008B4F7F /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMasterTableViewController.h; sourceTree = "<group>"; };
-		43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMasterTableViewController.m; sourceTree = "<group>"; };
 		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
+		43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMasterTableViewController.swift; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
@@ -448,11 +447,10 @@
 			isa = PBXGroup;
 			children = (
 				43F051DA2366D0B3008B4F7F /* UISnapNav.swift */,
-				43F051DC2366D1CD008B4F7F /* BFMasterTableViewController.h */,
-				43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */,
 				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
 				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
 				43F051E12366DE80008B4F7F /* CustomProgView.swift */,
+				43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */,
 			);
 			name = "Food Library";
 			sourceTree = "<group>";
@@ -856,8 +854,8 @@
 				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
-				43F051DE2366D1CD008B4F7F /* BFMasterTableViewController.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
+				43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */,
 				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */,
