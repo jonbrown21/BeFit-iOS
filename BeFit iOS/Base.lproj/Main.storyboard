@@ -1524,7 +1524,7 @@
         <!--Library-->
         <scene sceneID="rdk-xb-fA8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ekh-Q2-lga" customClass="UISnapNav" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ekh-Q2-lga" customClass="UISnapNav" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Library" image="Restaurant Menu_000000_25" selectedImage="Restaurant Menu_000000_25" id="uTx-gp-WjB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Wbt-hE-q2c" customClass="NavBar">

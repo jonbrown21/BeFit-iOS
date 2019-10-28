@@ -39,7 +39,6 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC29F1511E70BA4800251B34 /* UISnapNav.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1501E70BA4800251B34 /* UISnapNav.m */; };
 		FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1551E70FA5300251B34 /* AppGalleryView.m */; };
 		FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */; };
 		FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1591E70FA5300251B34 /* CustomCell.m */; };
@@ -155,8 +154,6 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC29F14F1E70BA4800251B34 /* UISnapNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapNav.h; sourceTree = "<group>"; };
-		FC29F1501E70BA4800251B34 /* UISnapNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapNav.m; sourceTree = "<group>"; };
 		FC29F1541E70FA5300251B34 /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
 		FC29F1551E70FA5300251B34 /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
 		FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
@@ -452,8 +449,6 @@
 			isa = PBXGroup;
 			children = (
 				43F051DA2366D0B3008B4F7F /* UISnapNav.swift */,
-				FC29F14F1E70BA4800251B34 /* UISnapNav.h */,
-				FC29F1501E70BA4800251B34 /* UISnapNav.m */,
 				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
 				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
 				43F051DC2366D1CD008B4F7F /* BFMasterTableViewController.h */,
@@ -889,7 +884,6 @@
 				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
-				FC29F1511E70BA4800251B34 /* UISnapNav.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
