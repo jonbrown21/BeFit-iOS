@@ -20,8 +20,10 @@
 		439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */; };
 		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
 		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
+		43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DA2366D0B3008B4F7F /* UISnapNav.swift */; };
+		43F051DE2366D1CD008B4F7F /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */; };
+		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
-		510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */; };
 		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
 		51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */; };
@@ -87,8 +89,6 @@
 		FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */; };
 		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
-		FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */; };
-		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
 		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
 		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
 		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
@@ -110,23 +110,26 @@
 
 /* Begin PBXFileReference section */
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
-		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = ViewControllers/DeviceViewController.swift; sourceTree = "<group>"; };
-		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceDetailViewController.swift; path = ViewControllers/DeviceDetailViewController.swift; sourceTree = "<group>"; };
-		437ECCA92363115900573D52 /* FoodObjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodObjectsViewController.swift; path = ViewControllers/FoodObjectsViewController.swift; sourceTree = "<group>"; };
-		437ECCAD23631EB000573D52 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = ViewControllers/ScannerViewController.swift; sourceTree = "<group>"; };
+		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
+		437ECCA92363115900573D52 /* FoodObjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodObjectsViewController.swift; sourceTree = "<group>"; };
+		437ECCAD23631EB000573D52 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		437ECCAF236436FB00573D52 /* SwiftCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCommon.swift; sourceTree = "<group>"; };
 		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
-		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataProperties.swift"; path = "DataModel/Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataClass.swift"; path = "DataModel/UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
-		439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserFoodRecords+CoreDataProperties.swift"; path = "DataModel/UserFoodRecords+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FoodList+CoreDataClass.swift"; path = "DataModel/FoodList+CoreDataClass.swift"; sourceTree = "<group>"; };
-		439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FoodList+CoreDataProperties.swift"; path = "DataModel/FoodList+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Food+CoreDataClass.swift"; path = "DataModel/Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserFoodRecords+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
 		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
+		43F051DA2366D0B3008B4F7F /* UISnapNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISnapNav.swift; sourceTree = "<group>"; };
+		43F051DC2366D1CD008B4F7F /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFMasterTableViewController.h; sourceTree = "<group>"; };
+		43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFMasterTableViewController.m; sourceTree = "<group>"; };
+		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
-		510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		511DB0E61E56E2FC0061F5CF /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
 		511DB0E71E56E2FC0061F5CF /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
 		512609051E5D934E009BA829 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -243,11 +246,8 @@
 		FCA42E2D1E38F20400619AE6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMasterTableViewController.h; path = ViewControllers/BFMasterTableViewController.h; sourceTree = "<group>"; };
-		FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMasterTableViewController.m; path = ViewControllers/BFMasterTableViewController.m; sourceTree = "<group>"; };
-		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
-		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
+		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedButton.h; sourceTree = "<group>"; };
 		FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedButton.m; sourceTree = "<group>"; };
 		FCBECD191E4AC60A0034FACF /* AveBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedView.h; sourceTree = "<group>"; };
@@ -354,7 +354,6 @@
 				FCBC23A819EB966F00C480B6 /* ViewControllers */,
 				FCBC23A719EB965E00C480B6 /* Resources */,
 				FC290ACA19CF560E0044C06B /* Supporting Files */,
-				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
 			);
 			path = "BeFit iOS";
 			sourceTree = "<group>";
@@ -370,7 +369,10 @@
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
 				FC290ACC19CF560E0044C06B /* main.m */,
+				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
+				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
+				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -449,12 +451,13 @@
 		FC760C2B1E4918A400336D75 /* Food Library */ = {
 			isa = PBXGroup;
 			children = (
+				43F051DA2366D0B3008B4F7F /* UISnapNav.swift */,
 				FC29F14F1E70BA4800251B34 /* UISnapNav.h */,
 				FC29F1501E70BA4800251B34 /* UISnapNav.m */,
 				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
 				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
-				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
-				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
+				43F051DC2366D1CD008B4F7F /* BFMasterTableViewController.h */,
+				43F051DD2366D1CD008B4F7F /* BFMasterTableViewController.m */,
 				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
 				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
 			);
@@ -583,16 +586,13 @@
 				439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */,
 				439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */,
 				439DE72A23603D9B00CC8543 /* Food+UI.swift */,
-				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
-				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */,
-				FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */,
 				51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */,
 				51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */,
 				51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */,
-				510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */,
+				43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */,
 			);
-			name = DataModel;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
@@ -621,7 +621,7 @@
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FCBECD161E4AC60A0034FACF /* BorderedButton */ = {
@@ -762,10 +762,10 @@
 				51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */,
 				FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */,
 				FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */,
-				510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
+				43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */,
 				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
 				51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */,
 			);
@@ -863,14 +863,15 @@
 				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
+				43F051DE2366D1CD008B4F7F /* BFMasterTableViewController.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
 				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */,
-				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
 				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
 				437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */,
+				43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
@@ -887,7 +888,6 @@
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
 				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
-				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FC29F1511E70BA4800251B34 /* UISnapNav.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
@@ -1166,19 +1166,7 @@
 				FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */,
 			);
 			currentVersion = FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */;
-			name = BeFit_DataModel.xcdatamodeld;
-			path = DataModel/BeFit_DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */,
-			);
-			currentVersion = FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */;
-			name = BeFit_iOS.xcdatamodeld;
-			path = DataModel/BeFit_iOS.xcdatamodeld;
+			path = BeFit_DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
