@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 class BFMasterTableViewController: UIViewController,
-NSFetchedResultsControllerDelegate,
-UITableViewDelegate,
-UITableViewDataSource,
+    NSFetchedResultsControllerDelegate,
+    UITableViewDelegate,
+    UITableViewDataSource,
 UISearchBarDelegate {
     //MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
@@ -44,16 +44,16 @@ UISearchBarDelegate {
         // handle taps on the purchase button by
         switch button.buttonState {
         case .normal:
-                // progress -> confirmation
+            // progress -> confirmation
             button.setButtonState(.confirmation, animated: true)
-                
+            
         case .confirmation:
-                // confirmation -> "purchase" progress
+            // confirmation -> "purchase" progress
             busyIndexes.insert(index)
             button.setButtonState(.progress, animated: true)
-                
+            
         case .progress:
-                // progress -> back to normal
+            // progress -> back to normal
             busyIndexes.remove(index)
             button.setButtonState(.normal, animated: true)
             
@@ -271,7 +271,7 @@ UISearchBarDelegate {
             alert.addAction(UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
                 guard let context = self?.managedObjectContext,
                     let fetchedResultsController = self?.fetchedResultsController else {
-                    return
+                        return
                 }
                 
                 context.delete(fetchedResultsController.object(at: indexPath))
@@ -392,7 +392,7 @@ UISearchBarDelegate {
         case "detailNews":
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let fetchedResultsController = fetchedResultsController else {
-                break
+                    break
             }
             
             if let destViewController = segue.destination as? DetailViewController {
