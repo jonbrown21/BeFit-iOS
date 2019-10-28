@@ -2106,27 +2106,27 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.43921568630000002" green="0.4941176471" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-R1-L3V" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="C4f-R1-L3V" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="5" y="1144" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adf-w0-zfV" userLabel="TotalFat Prog" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Adf-w0-zfV" userLabel="TotalFat Prog" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="1211" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q2d-dN-fbm" userLabel="SatFat Prog" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Q2d-dN-fbm" userLabel="SatFat Prog" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="1278" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YX6-Ae-ulk" userLabel="FromFat Prog" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YX6-Ae-ulk" userLabel="FromFat Prog" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="1345" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1GB-V4-aL3" userLabel="Mono Prog" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1GB-V4-aL3" userLabel="Mono Prog" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="1412" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-vY-d99" userLabel="Chol Prog" customClass="CustomProgView">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-vY-d99" userLabel="Chol Prog" customClass="CustomProgView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="6" y="1479" width="362" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             </progressView>
