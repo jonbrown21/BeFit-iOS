@@ -220,7 +220,7 @@ DeviceViewControllerDelegate {
             do {
                 try context.save()
             } catch let error {
-                print("error while saving : %@", error.localizedDescription)
+                print("error while saving:", error.localizedDescription)
                 return
             }
             
