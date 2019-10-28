@@ -24,6 +24,7 @@
 		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
 		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
 		43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */; };
+		43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E52366F459008B4F7F /* DetailViewController.swift */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
@@ -55,7 +56,6 @@
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
 		FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */; };
 		FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */; };
-		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
 		FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD71E38F0BD00619AE6 /* Chart.min.js */; };
 		FCA42E111E38F0BD00619AE6 /* cw.html in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD81E38F0BD00619AE6 /* cw.html */; };
@@ -126,6 +126,7 @@
 		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
 		43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMasterTableViewController.swift; sourceTree = "<group>"; };
+		43F051E52366F459008B4F7F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
@@ -178,8 +179,6 @@
 		FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerINavigationBar.h; sourceTree = "<group>"; };
 		FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerINavigationBar.m; sourceTree = "<group>"; };
-		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FCA42DD61E38F0BD00619AE6 /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
 		FCA42DD71E38F0BD00619AE6 /* Chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.min.js; sourceTree = "<group>"; };
@@ -447,10 +446,9 @@
 			isa = PBXGroup;
 			children = (
 				43F051DA2366D0B3008B4F7F /* UISnapNav.swift */,
-				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
-				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
 				43F051E12366DE80008B4F7F /* CustomProgView.swift */,
 				43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */,
+				43F051E52366F459008B4F7F /* DetailViewController.swift */,
 			);
 			name = "Food Library";
 			sourceTree = "<group>";
@@ -867,10 +865,10 @@
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
-				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
 				51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
+				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
 				437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */,
 				FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */,
 				FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */,

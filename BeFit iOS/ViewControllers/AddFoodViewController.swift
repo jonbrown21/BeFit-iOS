@@ -52,8 +52,8 @@ DeviceViewControllerDelegate {
     
     private var selectedFoodList: FoodList?
     private var selectedListArray: [FoodList]?
-    @objc var foodListObject: Food?
-    @objc var isForEditing: Bool = false
+    var foodListObject: Food?
+    var isForEditing: Bool = false
     
     private var managedObjectContext: NSManagedObjectContext? {
         return (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext

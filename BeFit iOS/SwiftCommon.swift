@@ -13,3 +13,9 @@ enum CustomError: Error {
     case requiredObjectNil
     case invalidURL
 }
+
+extension CWColors {
+    func color(forKey: String) -> UIColor {
+        return (colors[forKey] as? UIColor) ?? .black
+    }
+}
