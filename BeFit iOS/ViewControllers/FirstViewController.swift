@@ -715,7 +715,7 @@ UINavigationBarDelegate {
         GoalButt.setTitle(goalArray[row], for: .normal)
     }
     
-    func itemSelectedatRow(_ row: Int) {
+    func itemSelectedGender(atRow row: Int) {
         GenderButt.setTitle(genderArray[row], for: .normal)
     }
 }

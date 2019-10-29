@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F164236828AD00EBA3B1 /* PickerTableView.swift */; };
+		4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */; };
+		4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1682368300100EBA3B1 /* GoalTableView.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -50,8 +53,6 @@
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
 		FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC29F1741E7118F500251B34 /* ProgressHUD.bundle */; };
 		FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1761E7118F500251B34 /* ProgressHUD.m */; };
-		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
-		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
 		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
@@ -93,7 +94,6 @@
 		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
 		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
 		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
-		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
 		FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +108,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4303F164236828AD00EBA3B1 /* PickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableView.swift; sourceTree = "<group>"; };
+		4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleTableView.swift; sourceTree = "<group>"; };
+		4303F1682368300100EBA3B1 /* GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableView.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -169,10 +172,6 @@
 		FC29F1741E7118F500251B34 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		FC29F1751E7118F500251B34 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
 		FC29F1761E7118F500251B34 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
-		FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifestyleTableView.h; sourceTree = "<group>"; };
-		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
-		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
-		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
 		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -249,8 +248,6 @@
 		FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseActivityIndicatorView.m; sourceTree = "<group>"; };
 		FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseButton.h; sourceTree = "<group>"; };
 		FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseButton.m; sourceTree = "<group>"; };
-		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
-		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
 		FCE5B9E21E7264D400324083 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -465,13 +462,10 @@
 		FC760C2D1E4918BE00336D75 /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */,
-				FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */,
-				FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */,
-				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
-				FCC792421E45942F00D19056 /* PickerTableView.h */,
-				FCC792431E45942F00D19056 /* PickerTableView.m */,
 				43F051E72367243B008B4F7F /* FirstViewController.swift */,
+				4303F164236828AD00EBA3B1 /* PickerTableView.swift */,
+				4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */,
+				4303F1682368300100EBA3B1 /* GoalTableView.swift */,
 			);
 			name = "BMI Calculator";
 			sourceTree = "<group>";
@@ -822,11 +816,13 @@
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
 				43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
+				4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */,
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
 				FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */,
 				FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */,
 				FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */,
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
+				4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
 				43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */,
 				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
@@ -840,14 +836,12 @@
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
-				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
 				435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */,
 				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,
-				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
 				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
@@ -855,7 +849,6 @@
 				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
 				437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */,
-				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
 				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
 				437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */,
 				43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */,
@@ -874,6 +867,7 @@
 				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
 				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
+				4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,

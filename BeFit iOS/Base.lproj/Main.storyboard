@@ -464,7 +464,7 @@
         <!--Gender-->
         <scene sceneID="4jV-eX-RFX">
             <objects>
-                <tableViewController id="ORj-wz-WCI" customClass="PickerTableView" sceneMemberID="viewController">
+                <tableViewController id="ORj-wz-WCI" customClass="PickerTableView" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zHM-Yt-Q5N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -500,7 +500,7 @@
         <!--Lifestyle-->
         <scene sceneID="zEV-p7-NW9">
             <objects>
-                <tableViewController id="RPS-Lr-x34" customClass="LifestyleTableView" sceneMemberID="viewController">
+                <tableViewController id="RPS-Lr-x34" customClass="LifestyleTableView" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cxg-vd-H3m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -535,7 +535,7 @@
         <!--Goal-->
         <scene sceneID="6hm-2R-iAk">
             <objects>
-                <tableViewController id="Wc8-K2-zAk" customClass="GoalTableView" sceneMemberID="viewController">
+                <tableViewController id="Wc8-K2-zAk" customClass="GoalTableView" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hnI-fd-djQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

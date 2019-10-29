@@ -8,7 +8,4 @@
 #import "AvePurchaseButton.h"
 #import "CW.h"
 #import "CBAutoScrollLabel.h"
-#import "PickerTableView.h"
-#import "LifestyleTableView.h"
-#import "GoalTableView.h"
 #import "ProgressHUD.h"
