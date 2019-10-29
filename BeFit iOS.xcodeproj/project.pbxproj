@@ -11,6 +11,7 @@
 		4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */; };
 		4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1682368300100EBA3B1 /* GoalTableView.swift */; };
 		4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16A236832FB00EBA3B1 /* StoreViewController.swift */; };
+		4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -32,7 +33,6 @@
 		43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E72367243B008B4F7F /* FirstViewController.swift */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
-		51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */; };
 		51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C481E5C452A007E91C1 /* SimpleBarChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */; };
 		51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */; };
@@ -112,6 +112,7 @@
 		4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleTableView.swift; sourceTree = "<group>"; };
 		4303F1682368300100EBA3B1 /* GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableView.swift; sourceTree = "<group>"; };
 		4303F16A236832FB00EBA3B1 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackViewController.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -136,8 +137,6 @@
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
 		512609051E5D934E009BA829 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTrackViewController.h; sourceTree = "<group>"; };
-		51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTrackViewController.m; sourceTree = "<group>"; };
 		51E44C471E5C452A007E91C1 /* SimpleBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBarChart.h; sourceTree = "<group>"; };
 		51E44C481E5C452A007E91C1 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
 		51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeFit_iOS.sqlite; sourceTree = "<group>"; };
@@ -396,8 +395,7 @@
 			children = (
 				FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */,
 				FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */,
-				51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */,
-				51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */,
+				4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -852,9 +850,9 @@
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
+				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
 				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
-				51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,
 				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,

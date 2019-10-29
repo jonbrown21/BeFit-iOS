@@ -16,6 +16,11 @@ enum CustomError: Error {
     case noManagedObjectContext
 }
 
+struct Constants {
+    static let secondsPerHour: TimeInterval = 60 * 60
+    static let secondsPerDay: TimeInterval = secondsPerHour * 24
+}
+
 extension CWColors {
     func color(forKey: String) -> UIColor {
         return (colors[forKey] as? UIColor) ?? .black

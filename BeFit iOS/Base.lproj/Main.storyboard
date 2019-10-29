@@ -1200,7 +1200,7 @@
         <!--Tracker-->
         <scene sceneID="LEw-Xt-orp">
             <objects>
-                <viewController id="Kaq-Ct-CSd" customClass="FoodTrackViewController" sceneMemberID="viewController">
+                <viewController id="Kaq-Ct-CSd" customClass="FoodTrackViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IgF-4V-7Md"/>
                         <viewControllerLayoutGuide type="bottom" id="wkd-yh-yJn"/>
