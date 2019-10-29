@@ -12,6 +12,8 @@ enum CustomError: Error {
     case unknownType
     case requiredObjectNil
     case invalidURL
+    case fileNotFound
+    case noManagedObjectContext
 }
 
 extension CWColors {

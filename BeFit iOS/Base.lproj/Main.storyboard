@@ -660,7 +660,7 @@
         <!--Befit Store-->
         <scene sceneID="cgb-Ik-1ro">
             <objects>
-                <tableViewController id="c7q-LN-qAe" customClass="StoreViewController" sceneMemberID="viewController">
+                <tableViewController id="c7q-LN-qAe" customClass="StoreViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nFb-3D-MLA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

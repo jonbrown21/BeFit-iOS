@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "StoreViewController.h"
 #import "BeFitTracker-Swift.h"
 
 @interface AppDelegate ()
