@@ -25,6 +25,7 @@
 		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
 		43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */; };
 		43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E52366F459008B4F7F /* DetailViewController.swift */; };
+		43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E72367243B008B4F7F /* FirstViewController.swift */; };
 		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
 		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
@@ -88,7 +89,6 @@
 		FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */; };
 		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
-		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
 		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
 		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
 		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
@@ -127,6 +127,7 @@
 		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
 		43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMasterTableViewController.swift; sourceTree = "<group>"; };
 		43F051E52366F459008B4F7F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		43F051E72367243B008B4F7F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
 		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
@@ -240,8 +241,6 @@
 		FCA42E2D1E38F20400619AE6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedButton.h; sourceTree = "<group>"; };
 		FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedButton.m; sourceTree = "<group>"; };
 		FCBECD191E4AC60A0034FACF /* AveBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedView.h; sourceTree = "<group>"; };
@@ -472,8 +471,7 @@
 				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
 				FCC792421E45942F00D19056 /* PickerTableView.h */,
 				FCC792431E45942F00D19056 /* PickerTableView.m */,
-				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
-				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
+				43F051E72367243B008B4F7F /* FirstViewController.swift */,
 			);
 			name = "BMI Calculator";
 			sourceTree = "<group>";
@@ -822,6 +820,7 @@
 				439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
+				43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
 				FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */,
@@ -829,7 +828,6 @@
 				FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */,
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
-				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
 				43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */,
 				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
 				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,

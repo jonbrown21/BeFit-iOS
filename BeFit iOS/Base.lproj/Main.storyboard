@@ -10,7 +10,7 @@
         <!--Goals-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cLi-mX-Hxt"/>
                         <viewControllerLayoutGuide type="bottom" id="yL6-xx-lUM"/>
