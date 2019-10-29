@@ -12,6 +12,7 @@
 		4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1682368300100EBA3B1 /* GoalTableView.swift */; };
 		4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16A236832FB00EBA3B1 /* StoreViewController.swift */; };
 		4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */; };
+		4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -57,7 +58,6 @@
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
 		FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */; };
-		FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
 		FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD71E38F0BD00619AE6 /* Chart.min.js */; };
 		FCA42E111E38F0BD00619AE6 /* cw.html in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD81E38F0BD00619AE6 /* cw.html */; };
@@ -113,6 +113,7 @@
 		4303F1682368300100EBA3B1 /* GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableView.swift; sourceTree = "<group>"; };
 		4303F16A236832FB00EBA3B1 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackViewController.swift; sourceTree = "<group>"; };
+		4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerINavigationBar.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -175,8 +176,6 @@
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeFit Tracker.entitlements"; sourceTree = "<group>"; };
 		FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerINavigationBar.h; sourceTree = "<group>"; };
-		FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerINavigationBar.m; sourceTree = "<group>"; };
 		FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FCA42DD61E38F0BD00619AE6 /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
 		FCA42DD71E38F0BD00619AE6 /* Chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.min.js; sourceTree = "<group>"; };
@@ -393,9 +392,8 @@
 		FC29F1531E70F9E800251B34 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */,
-				FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */,
 				4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */,
+				4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -830,6 +828,7 @@
 				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
+				4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
@@ -851,7 +850,6 @@
 				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
 				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
-				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				FC290ACD19CF560E0044C06B /* main.m in Sources */,

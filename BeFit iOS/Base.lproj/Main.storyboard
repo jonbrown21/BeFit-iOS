@@ -1322,7 +1322,7 @@
                                     <action selector="TimeFrameValueChanged:" destination="Kaq-Ct-CSd" eventType="touchUpInside" id="n3I-N9-GN2"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-sp-tnk" customClass="TrackerINavigationBar">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-sp-tnk" customClass="TrackerINavigationBar" customModule="BeFitTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="29" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.59607843140000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
