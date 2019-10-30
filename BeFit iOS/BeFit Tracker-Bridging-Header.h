@@ -3,7 +3,6 @@
 //
 
 #import "Barcode.h"
-#import "IQUIView+IQKeyboardToolbar.h"
 #import "AvePurchaseButton.h"
 #import "CW.h"
 #import "CBAutoScrollLabel.h"

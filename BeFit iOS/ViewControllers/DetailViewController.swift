@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import IQKeyboardManager
 
 class DetailViewController: UIViewController,
     UIPickerViewDelegate,

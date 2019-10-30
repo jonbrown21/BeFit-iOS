@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import IQKeyboardManager
 //import CoreData
 
 protocol ScannedDataDelegate: class {
