@@ -47,7 +47,6 @@
 		51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */; };
 		51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */; };
 		906D18D57FE3B691EAA65E5D /* Pods_BeFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */; };
-		FC290ACD19CF560E0044C06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACC19CF560E0044C06B /* main.m */; };
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
@@ -158,7 +157,6 @@
 		C093CFF90A16C23A8ED3BFA6 /* Pods-BeFitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeFitTracker.release.xcconfig"; path = "Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker.release.xcconfig"; sourceTree = "<group>"; };
 		FC290AC719CF560E0044C06B /* BeFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290ACB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,7 +354,6 @@
 				FC290AFF19CF57AC0044C06B /* Foundation.framework */,
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
-				FC290ACC19CF560E0044C06B /* main.m */,
 				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
 				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
 				4303F17E2369D59300EBA3B1 /* AppDelegate.swift */,
@@ -852,7 +849,6 @@
 				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
 				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
-				FC290ACD19CF560E0044C06B /* main.m in Sources */,
 				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
 				437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */,
 				FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */,

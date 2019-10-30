@@ -15,14 +15,13 @@ private let API_Key = "46ed6b62ac0d3c08c949c6ef20a9cb93"
 private let API_URL = "https://api.nutritionix.com/v1_1/item?upc=%@&appId=ac7e3b7b&appKey=46ed6b62ac0d3c08c949c6ef20a9cb93"
 private let APP_ID = "ac7e3b7b"
 
+@UIApplicationMain
 class AppDelegate: UIResponder,
 UIApplicationDelegate,
 PushNotificationDelegate {
     //MARK: - Properties
     
     var window: UIWindow?
-    
-    private var discount: Int = 0
     
     private var applicationDocumentsDirectory: URL {
         return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
