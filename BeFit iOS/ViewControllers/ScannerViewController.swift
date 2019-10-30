@@ -44,12 +44,12 @@ AVCaptureMetadataOutputObjectsDelegate {
     private var foundBarcodes: [Barcode] = []
     private var allowedBarcodeTypes: [String] = []
     
-    private var captureSession: AVCaptureSession!
-    private var videoDevice: AVCaptureDevice!
-    private var videoInput: AVCaptureDeviceInput!
-    private var previewLayer: AVCaptureVideoPreviewLayer!
+    private var captureSession: AVCaptureSession?
+    private var videoDevice: AVCaptureDevice?
+    private var videoInput: AVCaptureDeviceInput?
+    private var previewLayer: AVCaptureVideoPreviewLayer?
     private var running: Bool = false
-    private var metadataOutput: AVCaptureMetadataOutput!
+    private var metadataOutput: AVCaptureMetadataOutput?
     
     //private var managedObjectContext: NSManagedObjectContext? {
     //    return (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext
@@ -63,9 +63,6 @@ AVCaptureMetadataOutputObjectsDelegate {
         super.viewDidLoad()
         
         setupCaptureSession()
-        
-        previewLayer.frame = previewView.bounds
-        previewView.layer.addSublayer(previewLayer)
         
         // listen for going into the background and stop the session
         NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
@@ -189,19 +186,20 @@ AVCaptureMetadataOutputObjectsDelegate {
     
     private func setupCaptureSession() {
         // 1
-        guard captureSession == nil else {
+        guard self.captureSession == nil else {
             return
         }
         
         // 2
-        videoDevice = AVCaptureDevice.default(for: .video)
+        let videoDevice: AVCaptureDevice! = AVCaptureDevice.default(for: .video)
         guard videoDevice != nil else {
             print("No video camera on this device!")
             return
         }
         
         // 3
-        captureSession = AVCaptureSession()
+        let captureSession = AVCaptureSession()
+        let videoInput: AVCaptureDeviceInput
         
         // 4
         do {
@@ -217,11 +215,11 @@ AVCaptureMetadataOutputObjectsDelegate {
         }
         
         // 6
-        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.videoGravity = .resizeAspectFill
         
         // capture and process the metadata
-        metadataOutput = AVCaptureMetadataOutput()
+        let metadataOutput = AVCaptureMetadataOutput()
         let metadataQueue = DispatchQueue(label: "com.1337labz.featurebuild.metadata")
         //dispatch_queue_t metadataQueue =
         //dispatch_queue_create("com.1337labz.featurebuild.metadata", 0);
@@ -229,6 +227,15 @@ AVCaptureMetadataOutputObjectsDelegate {
         if captureSession.canAddOutput(metadataOutput) {
             captureSession.addOutput(metadataOutput)
         }
+        
+        self.captureSession = captureSession
+        self.videoDevice = videoDevice
+        self.videoInput = videoInput
+        self.previewLayer = previewLayer
+        self.metadataOutput = metadataOutput
+        
+        previewLayer.frame = previewView.bounds
+        previewView.layer.addSublayer(previewLayer)
     }
     
     private func startRunning() {
@@ -236,10 +243,17 @@ AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
-        captureSession.startRunning()
+        if captureSession == nil {
+            setupCaptureSession()
+        }
         
-        metadataOutput.metadataObjectTypes = metadataOutput.availableMetadataObjectTypes
-        running = true
+        captureSession?.startRunning()
+        
+        if let metadataOutput = metadataOutput {
+            metadataOutput.metadataObjectTypes = metadataOutput.availableMetadataObjectTypes
+        }
+        
+        running = captureSession != nil
     }
     
     private func stopRunning() {
@@ -247,7 +261,7 @@ AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
-        captureSession.stopRunning()
+        captureSession?.stopRunning()
         running = false
     }
     
@@ -270,7 +284,7 @@ AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         for obj in metadataObjects {
             if obj is AVMetadataMachineReadableCodeObject {
-                if let code = previewLayer.transformedMetadataObject(for: obj) as? AVMetadataMachineReadableCodeObject {
+                if let code = previewLayer?.transformedMetadataObject(for: obj) as? AVMetadataMachineReadableCodeObject {
                     if let barcode = Barcode.processMetadataObject(code) {
                         if allowedBarcodeTypes.contains(barcode.getType()) {
                             validBarcodeFound(barcode)
