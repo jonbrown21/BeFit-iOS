@@ -2398,7 +2398,7 @@
         <!--More Apps-->
         <scene sceneID="Q5k-mh-2Db">
             <objects>
-                <viewController id="xDp-Gl-tLw" customClass="AppGalleryView" sceneMemberID="viewController">
+                <viewController id="xDp-Gl-tLw" customClass="AppGalleryView" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gvk-TW-kSM"/>
                         <viewControllerLayoutGuide type="bottom" id="pxa-mj-tbX"/>

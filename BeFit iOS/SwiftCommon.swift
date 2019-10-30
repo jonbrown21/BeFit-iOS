@@ -12,8 +12,11 @@ enum CustomError: Error {
     case unknownType
     case requiredObjectNil
     case invalidURL
+    case invalidResponse
+    case invalidHttpResponse(statusCode: Int)
     case fileNotFound
     case noManagedObjectContext
+    case unableToDecodeImage
 }
 
 struct Constants {

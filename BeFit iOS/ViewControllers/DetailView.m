@@ -200,10 +200,7 @@
     NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
     
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSUInteger integerFromPrefsLingo = [defaults integerForKey:@"cellIndex"];
-    
-    for (NSString *singleImageFilename in [input_screenshot objectAtIndex:integerFromPrefsLingo]) {
+    for (NSString *singleImageFilename in input_screenshot) {
         
         NSURL *imageURL = [NSURL URLWithString:singleImageFilename];
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];

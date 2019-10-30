@@ -13,6 +13,8 @@
 		4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16A236832FB00EBA3B1 /* StoreViewController.swift */; };
 		4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */; };
 		4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */; };
+		4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1702368883B00EBA3B1 /* AppGalleryView.swift */; };
+		4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -46,7 +48,6 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1551E70FA5300251B34 /* AppGalleryView.m */; };
 		FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */; };
 		FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1591E70FA5300251B34 /* CustomCell.m */; };
 		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
@@ -114,6 +115,8 @@
 		4303F16A236832FB00EBA3B1 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackViewController.swift; sourceTree = "<group>"; };
 		4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerINavigationBar.swift; sourceTree = "<group>"; };
+		4303F1702368883B00EBA3B1 /* AppGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryView.swift; sourceTree = "<group>"; };
+		4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryResponse.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -158,8 +161,6 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC29F1541E70FA5300251B34 /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
-		FC29F1551E70FA5300251B34 /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
 		FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
 		FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScrollViewEnhancer.m; sourceTree = "<group>"; };
 		FC29F1581E70FA5300251B34 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -401,8 +402,6 @@
 		FC29F1621E70FA5900251B34 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				FC29F1541E70FA5300251B34 /* AppGalleryView.h */,
-				FC29F1551E70FA5300251B34 /* AppGalleryView.m */,
 				FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */,
 				FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */,
 				FC29F1581E70FA5300251B34 /* CustomCell.h */,
@@ -410,6 +409,8 @@
 				FC29F15A1E70FA5300251B34 /* CustomCell.xib */,
 				FC29F15B1E70FA5300251B34 /* DetailView.h */,
 				FC29F15C1E70FA5300251B34 /* DetailView.m */,
+				4303F1702368883B00EBA3B1 /* AppGalleryView.swift */,
+				4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -814,7 +815,6 @@
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
 				FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */,
 				FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */,
-				FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */,
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
 				4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
@@ -823,6 +823,7 @@
 				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,
 				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
+				4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */,
 				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
 				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
 				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
@@ -865,6 +866,7 @@
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
+				4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
 			);
