@@ -28,9 +28,9 @@ let SHARE_MESS_EMAIL = "Check out %@ app by %@ - %@"
 let APP_LINK_FORMAT = "http://itunes.apple.com/app/id%@"
 
 class DetailView: UIViewController,
-UIActionSheetDelegate,
-MFMessageComposeViewControllerDelegate,
-MFMailComposeViewControllerDelegate,
+    UIActionSheetDelegate,
+    MFMessageComposeViewControllerDelegate,
+    MFMailComposeViewControllerDelegate,
 UINavigationControllerDelegate {
     //MARK: - Properties
     
@@ -159,7 +159,7 @@ UINavigationControllerDelegate {
         
         actionSheet.addAction(UIAlertAction(title: button_4, style: .default) { [weak self] _ in
             // Copy Link button tapped.
-
+            
             UIPasteboard.general.string = String(format: APP_LINK_FORMAT, self?.input_id ?? "")
         })
         
@@ -182,8 +182,8 @@ UINavigationControllerDelegate {
         })
         
         present(alert, animated: true, completion: nil)
-    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Info" message:input_description delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    //    [alert show];
+        //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Info" message:input_description delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        //    [alert show];
     }
     
     override func viewDidLoad() {
@@ -309,13 +309,13 @@ UINavigationControllerDelegate {
         // on the main queue.
         fbSheet.completionHandler = { result in
             switch result {
-                    // This means the user cancelled without sending the FB.
+            // This means the user cancelled without sending the FB.
             case .cancelled:
-                    break
-                    
-                    // This means the user hit 'Send'.
+                break
+                
+            // This means the user hit 'Send'.
             case .done:
-                    break
+                break
                 
             @unknown default:
                 break
@@ -343,13 +343,13 @@ UINavigationControllerDelegate {
         // on the main queue.
         tweetSheet.completionHandler = { result in
             switch result {
-                    // This means the user cancelled without sending the Tweet.
+            // This means the user cancelled without sending the Tweet.
             case .cancelled:
-                    break
-                    
-                    // This means the user hit 'Send'.
+                break
+                
+            // This means the user hit 'Send'.
             case .done:
-                    break
+                break
                 
             @unknown default:
                 break
@@ -378,8 +378,8 @@ UINavigationControllerDelegate {
             })
             
             present(alert, animated: true, completion: nil)
-    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Error" message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    //        [alert show];
+            //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Error" message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+            //        [alert show];
         }
     }
     

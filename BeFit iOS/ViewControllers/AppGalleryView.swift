@@ -14,7 +14,7 @@ private let DEV_NAME2 = "thearcoftheunitedstates"
 private let GALLERY_URL_FORMAT = "https://itunes.apple.com/search?term=%@&country=us&entity=software"
 
 class AppGalleryView: UIViewController,
-UITableViewDataSource,
+    UITableViewDataSource,
 UITableViewDelegate {
     //MARK: - Properties
     // TableView - show the logo, labels, etc...
@@ -114,8 +114,8 @@ UITableViewDelegate {
         
         guard let url1 = URL(string: link1),
             let url2 = URL(string: link2) else {
-            assertionFailure()
-            return
+                assertionFailure()
+                return
         }
         
         let dispatchGroup = DispatchGroup()
