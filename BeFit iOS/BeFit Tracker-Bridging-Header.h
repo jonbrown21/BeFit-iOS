@@ -10,5 +10,4 @@
 #import "CBAutoScrollLabel.h"
 #import "ProgressHUD.h"
 #import "SimpleBarChart.h"
-#import "CustomCell.h"
 #import "DetailView.h"

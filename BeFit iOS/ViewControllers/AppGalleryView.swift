@@ -26,9 +26,7 @@ UITableViewDelegate {
     private var appItems2: [AppGalleryItem] = []
     
     // Detail view - pass data on.
-    private var cached_images: [URL: UIImage] = [:]
     private var isRefreshing = false
-    private let imageDownloadQueue = DispatchQueue(label: "image downloader", qos: .utility, attributes: .concurrent, autoreleaseFrequency: .inherit, target: .global())
     
     override var prefersStatusBarHidden: Bool {
         return false
@@ -49,7 +47,7 @@ UITableViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        // Initilise the app logo image cache.
+        app_table.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
         app_table.delegate = self
         app_table.dataSource = self
         
@@ -276,55 +274,7 @@ UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Delegate call back for cell at index path.
-        let CellIdentifier = String(format: "%d_%d", indexPath.section, indexPath.row)
-        var cell: CustomCell! = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) as? CustomCell
-        
-        if cell == nil {
-            cell = Bundle.main.loadNibNamed("CustomCell", owner: self, options: nil)?.first as? CustomCell
-        }
-        
-        if cell == nil {
-            assertionFailure()
-            cell = CustomCell()
-        }
-        
-        cell.logo_image.image = nil
-        cell.logo_active.stopAnimating()
-        
-        func setLogoImage(_ imagePath: String?) {
-            // Set the app logo in the imageview. We will also be caching
-            // the images in asynchronously so that there is no image
-            // flickering issues and so the UITableView uns smoothly
-            // while being scrolled.
-            
-            if let imageUrl = imagePath.flatMap({ URL(string: $0) }) {
-                cell.logo_active.startAnimating()
-                
-                imageDownloadQueue.async { [weak self, weak cell] in
-                    do {
-                        let data = try Data(contentsOf: imageUrl)
-                        guard let image = UIImage(data: data) else {
-                            throw CustomError.unableToDecodeImage
-                        }
-                        
-                        DispatchQueue.main.async {
-                            // Content has been loaded into the cell, so stop
-                            // the activity indicator from spinning.
-                            
-                            cell?.logo_active.stopAnimating()
-                            cell?.logo_image.image = image
-                            self?.cached_images[imageUrl] = image
-                        }
-                    } catch let error {
-                        print("Failed loading of image: \(imageUrl) due:/n\(error.localizedDescription)")
-                        DispatchQueue.main.async {
-                            cell?.logo_active.stopAnimating()
-                        }
-                    }
-                }
-            }
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomCell
         
         func setupCell(with item: AppGalleryItem, dev_name: String) {
             let item = appItems[indexPath.row]
@@ -339,7 +289,7 @@ UITableViewDelegate {
             cell.star_4.alpha = rating >= 4 ? 1 : 0
             cell.star_5.alpha = rating >= 5 ? 1 : 0
             
-            setLogoImage(item.artworkUrl512)
+            cell.setLogoImage(item.artworkUrl512)
         }
         
         switch indexPath.section {
@@ -357,18 +307,12 @@ UITableViewDelegate {
         cell.contentView.isHidden = isHidden
         cell.accessoryType = isHidden ? .none : .disclosureIndicator
         
-        // Apply image boarder effects. It looks
-        // much nicer with rounded corners. You can
-        // also apply other effect too if you wish.
-        cell.logo_image.layer.cornerRadius = 16.0
-        
         // Set the cell background colour.
         cell.backgroundColor = .white
         
         // Set the content restraints. Keep things in place
         // otherwise the image/labels dont seem to appear in
         // the correct position on the cell.
-        cell.logo_image.clipsToBounds = true
         cell.name_label.clipsToBounds = true
         cell.dev_label.clipsToBounds = true
         cell.star_1.clipsToBounds = true
@@ -376,7 +320,6 @@ UITableViewDelegate {
         cell.star_3.clipsToBounds = true
         cell.star_4.clipsToBounds = true
         cell.star_5.clipsToBounds = true
-        cell.logo_active.clipsToBounds = true
         cell.contentView.clipsToBounds = false
         
         return cell
