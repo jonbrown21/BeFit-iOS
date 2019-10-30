@@ -19,6 +19,7 @@
 		4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */; };
 		4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1782369B98B00EBA3B1 /* DetailView.swift */; };
 		4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */; };
+		4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -52,7 +53,6 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */; };
 		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
 		FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC29F1741E7118F500251B34 /* ProgressHUD.bundle */; };
@@ -123,6 +123,7 @@
 		4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		4303F1782369B98B00EBA3B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScrollViewEnhancer.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -167,8 +168,6 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
-		FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScrollViewEnhancer.m; sourceTree = "<group>"; };
 		FC29F15A1E70FA5300251B34 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FC29F1721E71153400251B34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC29F1741E7118F500251B34 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
@@ -404,8 +403,6 @@
 		FC29F1621E70FA5900251B34 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */,
-				FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */,
 				FC29F15A1E70FA5300251B34 /* CustomCell.xib */,
 				4303F1702368883B00EBA3B1 /* AppGalleryView.swift */,
 				4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */,
@@ -413,6 +410,7 @@
 				4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */,
 				4303F1782369B98B00EBA3B1 /* DetailView.swift */,
 				4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */,
+				4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */,
 			);
 			name = More;
 			sourceTree = "<group>";
@@ -832,6 +830,7 @@
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
 				4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */,
+				4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */,
 				4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
 				4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */,
@@ -850,7 +849,6 @@
 				437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */,
 				43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
-				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
 				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
 				4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */,
 				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,

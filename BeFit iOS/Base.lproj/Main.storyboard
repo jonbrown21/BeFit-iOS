@@ -2603,12 +2603,12 @@
                                                 <rect key="frame" x="13" y="162" width="184" height="292"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </scrollView>
-                                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-rC-hs4" customClass="ARScrollViewEnhancer">
+                                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eJw-rC-hs4" customClass="ARScrollViewEnhancer" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="145" width="375" height="331"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <outlet property="_scrollView" destination="azY-5J-4V8" id="y8W-di-V8I"/>
+                                                    <outlet property="scrollView" destination="azY-5J-4V8" id="ggc-BU-WtX"/>
                                                 </connections>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H12-gg-Dwg">
