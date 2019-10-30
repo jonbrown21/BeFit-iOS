@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class FoodObjectsViewController: UITableViewController {
     //MARK: Properties
@@ -65,7 +66,7 @@ class FoodObjectsViewController: UITableViewController {
         
         let foodName = foodObjectArray[indexPath.row].name
         
-        guard let foodObject = AppDelegate.check(forDuplicateFoodItem: foodName)?.first as? Food else {
+        guard let foodObject = AppDelegate.check(forDuplicateFoodItem: foodName ?? "").first else {
             assertionFailure()
             return
         }

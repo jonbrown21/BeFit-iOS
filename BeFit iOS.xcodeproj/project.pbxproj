@@ -20,6 +20,7 @@
 		4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1782369B98B00EBA3B1 /* DetailView.swift */; };
 		4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */; };
 		4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */; };
+		4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17E2369D59300EBA3B1 /* AppDelegate.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -47,7 +48,6 @@
 		51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */; };
 		906D18D57FE3B691EAA65E5D /* Pods_BeFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */; };
 		FC290ACD19CF560E0044C06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACC19CF560E0044C06B /* main.m */; };
-		FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACF19CF560E0044C06B /* AppDelegate.m */; };
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
@@ -124,6 +124,7 @@
 		4303F1782369B98B00EBA3B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScrollViewEnhancer.swift; sourceTree = "<group>"; };
+		4303F17E2369D59300EBA3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -158,8 +159,6 @@
 		FC290AC719CF560E0044C06B /* BeFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290ACB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC290ACE19CF560E0044C06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FC290ACF19CF560E0044C06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,10 +357,9 @@
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
 				FC290ACC19CF560E0044C06B /* main.m */,
-				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
-				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
 				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
 				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
+				4303F17E2369D59300EBA3B1 /* AppDelegate.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -836,12 +834,12 @@
 				4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
+				4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */,
 				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
 				435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */,
 				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
-				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
 				43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,

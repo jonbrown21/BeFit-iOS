@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol DeviceViewControllerDelegate: class {
     func valueChanged(selectedFoodLists: [FoodList])
@@ -43,12 +44,12 @@ class DeviceViewController: UITableViewController {
             fetchRequest.predicate = NSPredicate(format: "name != 'Food Library'")
             devices = try? managedObjectContext.fetch(fetchRequest)
             
-            devices = AppDelegate.getfoodListItems() as? [FoodList]
+            devices = AppDelegate.getfoodListItems()
             btnCancel.title = "Back"
             
             tableView.reloadData()
         } else {
-            finalDisplayArray = [AppDelegate.getUserFoodLibrary() as! [FoodList]]
+            finalDisplayArray = [AppDelegate.getUserFoodLibrary()]
             
             let fetchRequest = FoodList.fetchRequest() as NSFetchRequest<FoodList>
             let predicate1 = NSPredicate(format: "name != 'Food Library'")

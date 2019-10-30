@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+//import CoreData
 
 protocol ScannedDataDelegate: class {
     func setScannedDataInFields(data: [String: Any])
@@ -49,9 +50,9 @@ AVCaptureMetadataOutputObjectsDelegate {
     private var running: Bool = false
     private var metadataOutput: AVCaptureMetadataOutput!
     
-    private var managedObjectContext: NSManagedObjectContext? {
-        return (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext
-    }
+    //private var managedObjectContext: NSManagedObjectContext? {
+    //    return (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext
+    //}
     
     weak var delegate: ScannedDataDelegate?
     
@@ -82,7 +83,7 @@ AVCaptureMetadataOutputObjectsDelegate {
             "org.iso.Code128"
         ]
         
-        foodListArray = AppDelegate.getfoodListItems() as! [FoodList]
+        foodListArray = AppDelegate.getfoodListItems()
         selectedFoodList = foodListArray.first
         
         let picker = UIPickerView()

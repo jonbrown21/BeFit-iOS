@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController,
     UIPickerViewDelegate,
@@ -275,7 +276,7 @@ UIPickerViewDataSource {
             self?.addDoughnut()
         }
         
-        foodListArray = AppDelegate.getfoodListItems() as! [FoodList]
+        foodListArray = AppDelegate.getfoodListItems()
         selectedFoodList = foodListArray.first
         
         let picker = UIPickerView()
@@ -310,7 +311,7 @@ UIPickerViewDataSource {
         let foodSet = (foodData?.foodListsBelongTo?.mutableCopy() as? NSMutableSet) ?? NSMutableSet()
         if !foodSet.contains(selectedFoodList)
         {
-            if let list = AppDelegate.getUserFoodLibrary()?.first as? FoodList {
+            if let list = AppDelegate.getUserFoodLibrary().first {
                 if !foodSet.contains(list) && foodData?.userDefined?.intValue == 1 {
                     foodSet.add(list)
                 }

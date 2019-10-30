@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AddFoodViewController: UIViewController,
 UIPickerViewDelegate,
@@ -47,7 +48,7 @@ DeviceViewControllerDelegate {
     @IBOutlet weak var btnCancel: UIBarButtonItem!
     
     private var foodListArray: [FoodList] {
-        return AppDelegate.getfoodListItems() as! [FoodList]
+        return AppDelegate.getfoodListItems()
     }
     
     private var selectedFoodList: FoodList?
@@ -201,7 +202,7 @@ DeviceViewControllerDelegate {
             list.iron = toDouble(txtIron.text)
             list.carbs = toInt(txtCarbohydrates.text)
             
-            if let listObj = AppDelegate.getUserFoodLibrary()?.first as? FoodList {
+            if let listObj = AppDelegate.getUserFoodLibrary().first {
                 if selectedListArray == nil {
                     selectedListArray = []
                 }
