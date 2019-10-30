@@ -2465,7 +2465,7 @@
         <!--Detail View-->
         <scene sceneID="kDQ-cC-cfl">
             <objects>
-                <viewController storyboardIdentifier="more_detailview" id="lPi-8U-WMa" customClass="DetailView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="more_detailview" id="lPi-8U-WMa" customClass="DetailView" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yKw-YX-l41"/>
                         <viewControllerLayoutGuide type="bottom" id="dDU-u8-EuU"/>
@@ -2546,7 +2546,7 @@
                                                 <rect key="frame" x="159" y="73" width="12" height="12"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1XM-dc-gOC">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1XM-dc-gOC" customClass="AsyncImageView" customModule="BeFitTracker" customModuleProvider="target">
                                                 <rect key="frame" x="13" y="14" width="84" height="84"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -2650,7 +2650,6 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="_scrollView" destination="azY-5J-4V8" id="q9W-mL-SxQ"/>
                         <outlet property="app_logo" destination="1XM-dc-gOC" id="U4z-GV-4fb"/>
                         <outlet property="description_text" destination="H12-gg-Dwg" id="zxj-3R-cRc"/>
                         <outlet property="label_age" destination="wS2-g7-8gW" id="HAc-VC-XAB"/>
@@ -2660,6 +2659,7 @@
                         <outlet property="label_size" destination="oMi-eJ-ARS" id="Aqp-0W-70x"/>
                         <outlet property="label_version" destination="UWC-fT-dua" id="u4V-wp-6lu"/>
                         <outlet property="scroll" destination="R8a-In-4zQ" id="0Ma-Fa-kHv"/>
+                        <outlet property="scrollView" destination="azY-5J-4V8" id="Vs1-L7-yZj"/>
                         <outlet property="star_1" destination="2oP-Mk-WVF" id="Qib-UU-cD1"/>
                         <outlet property="star_2" destination="Nmu-ew-fzR" id="BoE-bW-fh2"/>
                         <outlet property="star_3" destination="qHP-Qd-dUY" id="Lc8-TT-6Xf"/>

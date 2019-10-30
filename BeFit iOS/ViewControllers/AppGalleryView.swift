@@ -185,7 +185,6 @@ UITableViewDelegate {
         firstvc.input_id = String(format: "%d", item.trackId ?? 0)
         firstvc.input_rating = String(format: "%d", rating)
         firstvc.input_logo_link = item.artworkUrl512 ?? ""
-        firstvc.input_choice = "0" // TODO: Remove
         firstvc.input_description = item.description ?? ""
         
         // Pass the screenshot array. We will show the
