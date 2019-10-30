@@ -41,7 +41,7 @@ SKProductsRequestDelegate {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        NotificationCenter.default.addObserver(self, selector: #selector(SetButtonStateManually), name: setButtonStateNotificationName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setButtonStateManually), name: setButtonStateNotificationName, object: nil)
         CellTitles = ["54,000 Food Database", "Restore Purchase"]
         CellSubTitles = ["Larger Database of Food Items", ""]
         
@@ -56,7 +56,7 @@ SKProductsRequestDelegate {
         productsRequest = nil
     }
     
-    @objc private func SetButtonStateManually(_ notification: Notification) {
+    @objc private func setButtonStateManually(_ notification: Notification) {
         busyIndexes = IndexSet()
         tableView.reloadData()
     }

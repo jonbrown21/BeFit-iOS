@@ -34,123 +34,123 @@ extension Food {
     
     // MARK: - Bool
     
-    @objc var hideServing: Bool {
+    var hideServing: Bool {
         return servingDescription1?.lowercased() == "1 item"
     }
     
-    @objc var changableColumnIsEditable: Bool {
+    var changableColumnIsEditable: Bool {
         return false
     }
     
     // MARK: - STRINGS
     
-    @objc var calciumValue: String {
+    var calciumValue: String {
         return CalculateValues("calcium")
     }
-    @objc var calciumValuePerc: String {
+    var calciumValuePerc: String {
         return CalculatePercent("calcium", divider: 10)
     }
-    @objc var carbsPercent: String {
+    var carbsPercent: String {
         return CalculatePercent("carbs", divider: 3.0)
     }
-    @objc var carbsValue: String {
+    var carbsValue: String {
         return CalculateValues("carbs")
     }
-    @objc var cholesterolPercent: String {
+    var cholesterolPercent: String {
         return CalculatePercent("cholesteral", divider: 3.0)
     }
-    @objc var cholesterolValue: String {
+    var cholesterolValue: String {
         return CalculateValues("cholesteral")
     }
-    @objc var dietaryFiberPercent: String {
+    var dietaryFiberPercent: String {
         return CalculatePercent("dietaryFiber", divider: 0.25)
     }
-    @objc var dietaryFiberValue: String {
+    var dietaryFiberValue: String {
         return CalculateValues("dietaryFiber")
     }
-    @objc var ironValue: String {
+    var ironValue: String {
         return CalculateValues("iron")
     }
-    @objc var ironValuePerc: String {
+    var ironValuePerc: String {
         return CalculatePercent("iron", divider: 1.8)
     }
-    @objc var monounsaturatedFatValue: String {
+    var monounsaturatedFatValue: String {
         return CalculateValues("monosaturatedFat")
     }
-    @objc var nameValue: String {
+    var nameValue: String {
         return name ?? ""
     }
-    @objc var polyunsaturatedFatValue: String {
+    var polyunsaturatedFatValue: String {
         return CalculateValues("polyFat")
     }
-    @objc var proteinValue: String {
+    var proteinValue: String {
         return CalculateValues("protein")
     }
-    @objc var saturatedFatPercent: String {
+    var saturatedFatPercent: String {
         return CalculatePercent("saturatedFat", divider: 0.20)
     }
-    @objc var saturatedFatValue: String {
+    var saturatedFatValue: String {
         return CalculateValues("saturatedFat")
     }
-    @objc var sodiumPercent: String {
+    var sodiumPercent: String {
         return CalculatePercent("sodium", divider: 24)
     }
-    @objc var sodiumValue: String {
+    var sodiumValue: String {
         return CalculateValues("sodium")
     }
-    @objc var sugarsValue: String {
+    var sugarsValue: String {
         return CalculateValues("sugars")
     }
-    @objc var vitaminAValue: String {
+    var vitaminAValue: String {
         return CalculateValues("vitaminA")
     }
-    @objc var vitaminCValue: String {
+    var vitaminCValue: String {
         return CalculateValues("vitaminC")
     }
-    @objc var vitaminCValuePerc: String {
+    var vitaminCValuePerc: String {
         return CalculatePercent("vitaminC", divider: 6)
     }
-    @objc var servingAmount1Value: String {
+    var servingAmount1Value: String {
         return servingDescription1 ?? ""
     }
-    @objc var caloriesLongValueTip: String {
+    var caloriesLongValueTip: String {
         return String(format: "%ld", caloriesLongValue)
     }
-    @objc var viteValue: String {
+    var viteValue: String {
         return CalculateValues("vitaminE")
     }
-    @objc var vitaminEValuePerc: String {
+    var vitaminEValuePerc: String {
         return CalculatePercent("vitaminE", divider: 9.5)
     }
-    @objc var vitaminAValuePerc: String {
+    var vitaminAValuePerc: String {
         return CalculatePercent("vitaminA", divider: 50)
     }
-    @objc var polyFatValuePerc: String {
+    var polyFatValuePerc: String {
         return CalculatePercent("polyFat", divider: 9)
     }
-    @objc var monoFatValuePerc: String {
+    var monoFatValuePerc: String {
         return CalculatePercent("monosaturatedFat", divider: 11)
     }
-    @objc var CarbsPrint: String {
+    var CarbsPrint: String {
         return String(format: "%@ / 300mg", carbsValue)
     }
-    @objc var CholPrint: String {
+    var CholPrint: String {
         return String(format: "%ld / 300mg", cholesterolValueAsLong)
     }
-    @objc var protPrint: String {
+    var protPrint: String {
         return String(format: "%@ / 50g", proteinValue)
     }
-    @objc var sodPrint: String {
+    var sodPrint: String {
         return String(format: "%@ / 2400mg", sodiumValue)
     }
-    @objc var fibPrint: String {
+    var fibPrint: String {
         return String(format: "%@ / 25g", dietaryFiberValue)
     }
-    @objc var tfatPrint: String {
+    var tfatPrint: String {
         return String(format: "%ld / 50g", sugarsValueAsLong)
     }
     
-    @objc var transFatValue: String {
+    var transFatValue: String {
         let ValueToDisplay = totalFatValueAsDouble
         let totalFat = saturatedFat?.doubleValue ?? 0
         let transfat = ValueToDisplay - totalFat
@@ -179,11 +179,11 @@ extension Food {
         }
     }
     
-    @objc var caloriesStringValue: String {
+    var caloriesStringValue: String {
         return String(format: "%ldg", calories?.int64Value ?? 0)
     }
     
-    @objc var CalsPrint: String
+    var CalsPrint: String
     {
         let defaults = UserDefaults.standard
         var lbsprefint = defaults.double(forKey: "goal-name")
@@ -195,7 +195,7 @@ extension Food {
         return String(format: "%ld / %.f", caloriesLongValue, round(lbsprefint))
     }
     
-    @objc var caloriesFromFatValue: String
+    var caloriesFromFatValue: String
     {
         var QuantityActualValue: Int64 = 1
         
@@ -212,7 +212,7 @@ extension Food {
         return String(format: "%.0lf", endingValue)
     }
     
-    @objc var totalFatValueAsDouble: Double {
+    var totalFatValueAsDouble: Double {
         let QuantityActualValue: Int64 = 1
         let totalFat = (saturatedFat?.doubleValue ?? 0.0) + (monosaturatedFat?.doubleValue ?? 0.0) + (polyFat?.doubleValue ?? 0.0)
         let servingWeight = selectedServingWeight.int64Value * QuantityActualValue
@@ -225,21 +225,21 @@ extension Food {
         }
     }
     
-    @objc var totalFatValue: String {
+    var totalFatValue: String {
         let QuantityActualValue: Double = 1
         let valueToDisplay = totalFatValueAsDouble * QuantityActualValue
         return String(format: "%.0lfg", valueToDisplay)
     }
     
-    @objc var calfromFatValuePerc: String {
+    var calfromFatValuePerc: String {
         return CalculatePerc(nil, divider:2000, long: caloriesLongValue)
     }
     
-    @objc var totalFatPercent: String {
+    var totalFatPercent: String {
         return CalculatePerc("totalfat", divider:65, long:0)
     }
     
-    @objc var totalValuePerc: String {
+    var totalValuePerc: String {
         let totalFat = (saturatedFat?.doubleValue ?? 0) + (monosaturatedFat?.doubleValue ?? 0) + (polyFat?.doubleValue ?? 0)
         let intermediateValue = totalFat * 9
         
@@ -252,7 +252,7 @@ extension Food {
         return String(format: "%.0lf%%", valueForDisplay)
     }
     
-    @objc var proteinValuePerc: String {
+    var proteinValuePerc: String {
         let totalProt = protein?.doubleValue ?? 0
         let totalCals = calories?.doubleValue ?? 0
         
@@ -273,7 +273,7 @@ extension Food {
         return String(format: "%.0lf%%", valueForDisplay)
     }
     
-    @objc var sugarsValuePerc: String {
+    var sugarsValuePerc: String {
         let totalSugar = sugars?.doubleValue ?? 0
         
     #if USEDTOBE
@@ -285,11 +285,11 @@ extension Food {
         return String(format: "%.0lf%%", valueForDisplay)
     }
     
-    @objc var servingAmount2Value: String? {
+    var servingAmount2Value: String? {
         return servingDescription2
     }
     
-    @objc var servingAmountValue: String? {
+    var servingAmountValue: String? {
         let indexOfItem = selectedServing?.intValue ?? 0
         
         if indexOfItem == 1 {
@@ -301,34 +301,34 @@ extension Food {
     
     // MARK: - DOUBLES
     
-    @objc var calciumValueAsDouble: Double {
+    var calciumValueAsDouble: Double {
         return CalculateDouble("calcium")
     }
-    @objc var ironValueAsDouble: Double {
+    var ironValueAsDouble: Double {
         return CalculateDouble("iron")
     }
-    @objc var monounsaturatedFatValueAsDouble: Double {
+    var monounsaturatedFatValueAsDouble: Double {
         return CalculateDouble("monosaturatedFat")
     }
-    @objc var polyunsaturatedFatValueAsDouble: Double {
+    var polyunsaturatedFatValueAsDouble: Double {
         return CalculateDouble("polyFat")
     }
-    @objc var saturatedFatValueAsDouble: Double {
+    var saturatedFatValueAsDouble: Double {
         return CalculateDouble("saturatedFat")
     }
-    @objc var vitaminCValueAsDouble: Double {
+    var vitaminCValueAsDouble: Double {
         return CalculateDouble("vitaminC")
     }
-    @objc var vitaminAValueAsDouble: Double {
+    var vitaminAValueAsDouble: Double {
         return CalculateDouble("vitaminA")
     }
-    @objc var vitaminEValueAsDouble: Double {
+    var vitaminEValueAsDouble: Double {
         return CalculateDouble("vitaminE")
     }
     
     // MARK: - LONG
     
-    @objc var selectedServingWeight: NSNumber {
+    var selectedServingWeight: NSNumber {
         let indexOfItem = selectedServing?.intValue ?? 0
         if selectedServing == nil {
             print("selectedServing should never be null")
@@ -341,35 +341,35 @@ extension Food {
         }
     }
     
-    @objc var sodiumValueAsLong: Int64 {
+    var sodiumValueAsLong: Int64 {
         return CalculateLong("sodium")
     }
-    @objc var proteinValueAsLong: Int64 {
+    var proteinValueAsLong: Int64 {
         return CalculateLong("protein")
     }
-    @objc var sugarsValueAsLong: Int64 {
+    var sugarsValueAsLong: Int64 {
         return CalculateLong("sugars")
     }
-    @objc var caloriesValue: Int64 {
+    var caloriesValue: Int64 {
         return calories?.int64Value ?? 0
     }
-    @objc var dietaryFiberValueAsLong: Int64 {
+    var dietaryFiberValueAsLong: Int64 {
         return CalculateLongAdj("dietaryFiber")
     }
-    @objc var cholesterolValueAsLong: Int64 {
+    var cholesterolValueAsLong: Int64 {
         return  CalculateLongAdj("cholesteral")
     }
-    @objc var carbsValueAsLong: Int64 {
+    var carbsValueAsLong: Int64 {
         return CalculateLongAdj("carbs")
     }
     
-    @objc var caloriesLongValue: Int64 {
+    var caloriesLongValue: Int64 {
         let originalCalorieValue = calories?.int64Value ?? 0
         
         return originalCalorieValue
     }
     
-    @objc var quantityLongValue: Int64 {
+    var quantityLongValue: Int64 {
         var actualValue: Int64 = 1
         
         if let quantityNumber = quantity {
@@ -382,7 +382,7 @@ extension Food {
         return actualValue
     }
     
-    @objc var calFromDiet: Int64 {
+    var calFromDiet: Int64 {
         //NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
         //NSString*  lbspref = [defaults objectForKey:@"goal-name"];
         //long yourLong = [lbspref longLongValue];
@@ -395,7 +395,7 @@ extension Food {
         return originalCalorieRatingValue
     }
     
-    @objc var ratingLongValue: Int64 {
+    var ratingLongValue: Int64 {
         let ValueForCalculation = Double(caloriesLongValue)
         let Result = (ValueForCalculation / 2000) * 100
         
@@ -421,32 +421,32 @@ extension Food {
     
     // MARK: - INT
     
-    @objc var servingWeight1Value: Int64 {
+    var servingWeight1Value: Int64 {
         return servingWeight1?.int64Value ?? 0
     }
     
-    @objc var indexOfServingBeingDisplayed: Int64 {
+    var indexOfServingBeingDisplayed: Int64 {
         return selectedServing?.int64Value ?? 0
     }
     
     // MARK: - Food Values FLOATS
     
-    @objc var caloriesFloatValuePerc: Float {
+    var caloriesFloatValuePerc: Float {
         return CalculateFloat("calories", divider: 2000)
     }
-    @objc var calfromFatValuePercFloat: Float {
+    var calfromFatValuePercFloat: Float {
         return CalculateFloat("calfromfat", divider: 80)
     }
-    @objc var saturatedFatPercentFloat: Float {
+    var saturatedFatPercentFloat: Float {
         return CalculateFloat("saturatedFat", divider: 25)
     }
-    @objc var totalFatPercentfloat: Float {
+    var totalFatPercentfloat: Float {
         return CalculateFloat("totalFat", divider: 65)
     }
-    @objc var monoSaturatedFatPercentFloat: Float {
+    var monoSaturatedFatPercentFloat: Float {
         return CalculateFloat("monosaturatedFat", divider: 24)
     }
-    @objc var cholPercentFloat: Float {
+    var cholPercentFloat: Float {
         return CalculateFloat("cholesteral", divider: 300)
     }
     
