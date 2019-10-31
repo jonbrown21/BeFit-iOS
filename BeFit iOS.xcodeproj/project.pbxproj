@@ -21,6 +21,7 @@
 		4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */; };
 		4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */; };
 		4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17E2369D59300EBA3B1 /* AppDelegate.swift */; };
+		4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
 		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
 		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
@@ -124,6 +125,7 @@
 		4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScrollViewEnhancer.swift; sourceTree = "<group>"; };
 		4303F17E2369D59300EBA3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackCell.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
 		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
 		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 			children = (
 				4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */,
 				4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */,
+				4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 				4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */,
 				4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
+				4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

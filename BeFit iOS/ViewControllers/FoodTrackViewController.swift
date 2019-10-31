@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 
-class FoodTrackCell: UITableViewCell {
-    @IBOutlet weak var lblFoodName: UILabel!
-    @IBOutlet weak var lblCal: UILabel!
-    @IBOutlet weak var lblServings: UILabel!
-    @IBOutlet weak var lblTotalCals: UILabel!
-}
-
 class FoodTrackViewController: UIViewController,
     SimpleBarChartDataSource,
     SimpleBarChartDelegate,
@@ -397,7 +390,7 @@ UITableViewDelegate {
             }
             
             if iCount == 0 {
-                lblTotalCal.text = String(format: "Today\n%ld Cal", totalCal)
+                lblTotalCal.text = String(format: "Today\n%d Cal", totalCal)
             }
             
             grossCal = grossCal + totalCal
@@ -486,7 +479,7 @@ UITableViewDelegate {
             //        }
         }
         
-        lblAverageCal.text = String(format: "Average\n%ld Cal", grossCal / totalNumberOfDays)
+        lblAverageCal.text = String(format: "Average\n%d Cal", grossCal / totalNumberOfDays)
         
         x_values.reverse()
         values.reverse()
@@ -503,7 +496,7 @@ UITableViewDelegate {
     }
     
     func barChart(_ barChart: SimpleBarChart!, textForBarAt index: UInt) -> String! {
-        return String(format: "%f", values[Int(index)])
+        return String(format: "%d", Int(round(values[Int(index)])))
     }
     
     func barChart(_ barChart: SimpleBarChart!, xLabelForBarAt index: UInt) -> String! {
@@ -565,9 +558,9 @@ UITableViewDelegate {
         cell.lblFoodName.text = food.name
         let rec = ServingsArr[indexPath.row]
         let totalCals = rec.servings?.intValue ?? 0
-        cell.lblCal.text = String(format: "%ld Cal", food.calories?.intValue ?? 0)
-        cell.lblTotalCals.text = String(format: "Total Calories: %ld Cals", (food.calories?.intValue ?? 0) * totalCals)
-        cell.lblServings.text = String(format: "Total Servings: %ld", rec.servings?.intValue ?? 0)
+        cell.lblCal.text = String(format: "%d Cal", food.calories?.intValue ?? 0)
+        cell.lblTotalCals.text = String(format: "Total Calories: %d Cals", (food.calories?.intValue ?? 0) * totalCals)
+        cell.lblServings.text = String(format: "Total Servings: %d", rec.servings?.intValue ?? 0)
         
         return cell
     }
@@ -586,6 +579,9 @@ UITableViewDelegate {
             return
         }
         
+        let foodArr = finalServingsArray[indexPath.section]
+        let record = foodArr[indexPath.row]
+        
         if gestureRecognizer.state == .began {
             let actionSheet = UIAlertController(title: "Befit", message: "What would you like to do?", preferredStyle: .actionSheet)
             actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in
@@ -596,17 +592,17 @@ UITableViewDelegate {
                 let alert = UIAlertController(title: "Befit", message: "Please enter servings", preferredStyle: .alert)
                 alert.addTextField(configurationHandler: {
                     $0.placeholder = NSLocalizedString("Qty", comment: "Qty")
+                    $0.keyboardType = .numberPad
                 })
                 
                 alert.addAction(UIAlertAction(title: "Cancel", style: .default) { [weak alert] _ in
                     alert?.dismiss(animated: true)
                 })
                 
-                alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
-                    let txtServings = alert.textFields?.first
-                    txtServings?.keyboardType = .numberPad
+                alert.addAction(UIAlertAction(title: "Done", style: .default) { [weak alert] _ in
+                    let txtServings = alert?.textFields?.first
                     
-                    guard let text = txtServings?.text, !text.isEmpty else {
+                    guard let text = txtServings?.text, let value = Int(text) else {
                         let alertController = UIAlertController(title: "Error", message: "Please enter servings", preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
                         self?.present(alertController, animated: true)
@@ -620,9 +616,7 @@ UITableViewDelegate {
                         return
                     }
                     
-                    let foodArr = me.finalServingsArray[indexPath.section]
-                    let record = foodArr[indexPath.row]
-                    record.servings = NSNumber(value: Int(text) ?? 0)
+                    record.servings = NSNumber(value: value)
                     
                     do {
                         try context.save()
@@ -653,8 +647,6 @@ UITableViewDelegate {
                     return
                 }
                 
-                let foodArr = me.finalServingsArray[indexPath.section]
-                let record = foodArr[indexPath.row]
                 context.delete(record)
                 
                 do {
