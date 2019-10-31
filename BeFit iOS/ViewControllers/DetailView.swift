@@ -10,26 +10,24 @@ import Foundation
 import UIKit
 import MessageUI
 import Social
-import Accounts
 
 // You cam change the message to whatever you want.
 // However, make sure you leave the two '%@' symbols
 // in the message, as they are automatically replaced
 // by the 'app name' and 'developer name' respectively.
 // The app url link is also attatched to the share sheet.
-let SHARE_MESS = "Check out %@ #app by %@"
+private let SHARE_MESS = "Check out %@ #app by %@"
 
 // Once again you can edit the email message but make
 // sure you leave the three '%@' signs. The email string
 // contains an extra '%@' symbol which is automatically
 // replaced with the app url link.
-let SHARE_MESS_EMAIL = "Check out %@ app by %@ - %@"
+private let SHARE_MESS_EMAIL = "Check out %@ app by %@ - %@"
 
-let APP_LINK_FORMAT = "http://itunes.apple.com/app/id%@"
+private let APP_LINK_FORMAT = "http://itunes.apple.com/app/id%@"
 
 class DetailView: UIViewController,
     UIActionSheetDelegate,
-    MFMessageComposeViewControllerDelegate,
     MFMailComposeViewControllerDelegate,
 UINavigationControllerDelegate {
     //MARK: - Properties
@@ -103,63 +101,39 @@ UINavigationControllerDelegate {
         let button_4 = "Copy Link"
         let cancelTitle = "Cancel"
         
-        //UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherButtonTitles:button_1, button_2, button_3, button_4, nil];
+        let actionSheet = UIAlertController(title: actionSheetTitle, message: nil, preferredStyle: .actionSheet)
         
-        //[actionSheet showInView:self.view];
+        actionSheet.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: nil))
         
-        let actionSheet = UIAlertController(title: actionSheetTitle, message: "", preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: cancelTitle, style: .cancel) { [weak self] _ in
-            self?.dismiss(animated: true)
-        })
         actionSheet.addAction(UIAlertAction(title: button_1, style: .default) { [weak self] _ in
             // Facebook button tapped.
-            
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                self?.send_fb_post()
-            } else {
-                let alert = UIAlertController(title: "Info", message: "You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: .default) { _ in
-                    self?.presentedViewController?.dismiss(animated: false, completion: nil)
-                })
-                
-                self?.present(alert, animated: true, completion: nil)
-            }
+            self?.send_fb_post()
         })
         
         actionSheet.addAction(UIAlertAction(title: button_2, style: .default) { [weak self] _ in
             // Twitter button tapped.
-            
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                self?.send_tweet()
-            } else {
-                let alert = UIAlertController(title: "Info", message: "You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Dismiss", style: .default) { _ in
-                    self?.presentedViewController?.dismiss(animated: false, completion: nil)
-                })
-                
-                self?.present(alert, animated: true, completion: nil)
-            }
+            self?.send_tweet()
         })
         
-        actionSheet.addAction(UIAlertAction(title: button_3, style: .default) { [weak self] _ in
-            // Email button tapped.
-            
-            if MFMailComposeViewController.canSendMail(),
-                let me = self {
-                let composer = MFMailComposeViewController()
-                composer.mailComposeDelegate = self
-                composer.setToRecipients([""])
-                composer.setSubject("")
-                let link = String(format: APP_LINK_FORMAT, me.input_id ?? "")
-                composer.setMessageBody(String(format: SHARE_MESS_EMAIL, me.input_name ?? "", me.input_dev_name ?? "", link), isHTML: false)
+        if MFMailComposeViewController.canSendMail() {
+            actionSheet.addAction(UIAlertAction(title: button_3, style: .default) { [weak self] _ in
+                // Email button tapped.
                 
-                me.present(composer, animated: true, completion: nil)
-            }
-        })
+                if let me = self {
+                    let composer = MFMailComposeViewController()
+                    composer.mailComposeDelegate = self
+                    composer.setToRecipients([""])
+                    composer.setSubject("")
+                    let link = String(format: APP_LINK_FORMAT, me.input_id ?? "")
+                    composer.setMessageBody(String(format: SHARE_MESS_EMAIL, me.input_name ?? "", me.input_dev_name ?? "", link), isHTML: false)
+                    
+                    me.present(composer, animated: true, completion: nil)
+                }
+            })
+        }
         
         actionSheet.addAction(UIAlertAction(title: button_4, style: .default) { [weak self] _ in
             // Copy Link button tapped.
-            
             UIPasteboard.general.string = String(format: APP_LINK_FORMAT, self?.input_id ?? "")
         })
         
@@ -189,6 +163,7 @@ UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        description_text.isEditable = false
         scrollView.clipsToBounds = false
         scrollView.isPagingEnabled = true
         scrollView.showsHorizontalScrollIndicator = false
@@ -300,7 +275,10 @@ UINavigationControllerDelegate {
     private func send_fb_post() {
         // Create an instance of the FB Sheet.
         guard let fbSheet = SLComposeViewController(forServiceType: SLServiceTypeFacebook) else {
-            assertionFailure()
+            let alert = UIAlertController(title: "Info", message: "You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+            
+            present(alert, animated: true, completion: nil)
             return
         }
         
@@ -334,7 +312,12 @@ UINavigationControllerDelegate {
     private func send_tweet() {
         // Create an instance of the Tweet Sheet.
         guard let tweetSheet = SLComposeViewController(forServiceType: SLServiceTypeTwitter) else {
-            assertionFailure()
+            let alert = UIAlertController(title: "Info", message: "You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .default) { [weak self] _ in
+                self?.presentedViewController?.dismiss(animated: false, completion: nil)
+            })
+            
+            present(alert, animated: true, completion: nil)
             return
         }
         
@@ -369,7 +352,7 @@ UINavigationControllerDelegate {
     //MARK: - Mail sending methods
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        dismiss(animated: false, completion: nil)
+        controller.dismiss(animated: true)
         
         if result == .failed {
             let alert = UIAlertController(title: "Message Error", message: "Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again.", preferredStyle: .alert)
@@ -380,15 +363,6 @@ UINavigationControllerDelegate {
             present(alert, animated: true, completion: nil)
             //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Error" message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
             //        [alert show];
-        }
-    }
-    
-    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        switch result {
-        case .cancelled, .failed, .sent:
-            dismiss(animated: true, completion: nil)
-        default:
-            break
         }
     }
 }
