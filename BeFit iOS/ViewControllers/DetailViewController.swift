@@ -116,6 +116,10 @@ UIPickerViewDataSource {
         txtPicker.becomeFirstResponder()
     }
     
+    @objc private func viewTapped() {
+        view.endEditing(false)
+    }
+    
     private func addDoughnut() {
         guard let foodData = foodData else {
             assertionFailure()
@@ -176,6 +180,9 @@ UIPickerViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        view.addGestureRecognizer(gestureRecognizer)
         
         let webview = WKWebView(frame: wview.bounds)
         webview.translatesAutoresizingMaskIntoConstraints = false
