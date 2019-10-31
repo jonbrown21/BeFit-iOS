@@ -89,6 +89,15 @@ DeviceViewControllerDelegate {
         //selectedFoodList = foodListArray.first
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if parent?.parent is UITabBarController {
+            btnCancel.isEnabled = false
+            btnCancel.tintColor = .clear
+        }
+    }
+    
     func setData() {
         txtName.text = foodListObject?.name
         txtSugar.text = (foodListObject?.sugars).flatMap { String(format: "%@", $0) }
