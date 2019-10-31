@@ -73,7 +73,7 @@ UIPickerViewDataSource {
     @IBOutlet weak var wview: UIView!
     @IBOutlet weak var navigationBarScrollLabel: CBAutoScrollLabel!
     
-    private var format: DateFormatter!
+    private let format: DateFormatter = DateFormatter()
     private var foodListArray: [FoodList] = []
     private var selectedFoodList: FoodList?
     //private var selectedlabel: String?
@@ -199,7 +199,6 @@ UIPickerViewDataSource {
         webview.isMultipleTouchEnabled = false
         
         scrollView.contentSize = CGSize(width: view.frame.size.width, height: wview.frame.origin.y + wview.frame.size.height)
-        format = DateFormatter()
         format.dateFormat = "MM/dd/yyyy"
         
         // navigation bar auto scroll label
@@ -390,11 +389,10 @@ UIPickerViewDataSource {
     @IBAction func TodaysFoodIntake(_ sender: AnyObject) {
         let alertController = UIAlertController(title: "Befit", message: "Please enter servings", preferredStyle: .alert)
         
-        alertController.addTextField(configurationHandler: { $0.placeholder = NSLocalizedString("Qty", comment: "Qty") })
-        
-        if let txtServings = alertController.textFields?.first {
-            txtServings.keyboardType = .phonePad
-        }
+        alertController.addTextField(configurationHandler: {
+            $0.placeholder = NSLocalizedString("Qty", comment: "Qty")
+            $0.keyboardType = .numberPad
+        })
         
         alertController.view.tag = 100
         alertController.addAction(UIAlertAction(title: "Cancel", style: .default) { [weak alertController] _ in
@@ -404,7 +402,7 @@ UIPickerViewDataSource {
         alertController.addAction(UIAlertAction(title: "Done", style: .default) { [weak self, weak alertController] _ in
             let txtServings = alertController?.textFields?.first
             
-            if txtServings?.text?.isEmpty ?? true {
+            guard let text = txtServings?.text, let value = Int(text) else {
                 let alertController = UIAlertController(title: "Error", message: "Please enter servings", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
                 
@@ -422,29 +420,26 @@ UIPickerViewDataSource {
                     return
             }
             
-            var record = NSEntityDescription.insertNewObject(forEntityName: "UserFoodRecords", into: context) as! UserFoodRecords
+            var record: UserFoodRecords!
             let dateStr = me.format.string(from: Date())
-            var servings = (txtServings?.text).flatMap { Int($0) } ?? 0
-            let newfood = NSMutableSet(object: foodData)
+            var servings = value
             let recordArray = me.checkForDuplicateFoodItem()
             
-            for newRecord in recordArray {
-                let foodArray = newRecord.foodIntake
-                if foodArray?.contains(foodData) ?? false {
-                    servings = servings + (newRecord.servings?.intValue ?? 0)
-                    record = newRecord
+            for existingRecord in recordArray {
+                if existingRecord.foodIntake?.contains(foodData) ?? false {
+                    servings = servings + (existingRecord.servings?.intValue ?? 0)
+                    record = existingRecord
+                    break
                 }
             }
             
-            //        if ([recordArray count] > 0)
-            //        {
-            //            record = recordArray[0] ;
-            //            newfood = record.foodIntake.mutableCopy ;
-            //            [newfood addObject:foodData];
-            //        }
+            if record == nil {
+                record = (NSEntityDescription.insertNewObject(forEntityName: "UserFoodRecords", into: context) as! UserFoodRecords)
+            }
+            
             record.date = dateStr
             record.servings = NSNumber(value: servings)
-            record.foodIntake = newfood
+            record.addToFoodIntake(foodData)
             
             do {
                 try context.save()
