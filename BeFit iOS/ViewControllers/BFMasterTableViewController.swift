@@ -14,14 +14,14 @@ class BFMasterTableViewController: UIViewController,
     NSFetchedResultsControllerDelegate,
     UITableViewDelegate,
     UITableViewDataSource,
-UISearchBarDelegate {
+    UISearchBarDelegate,
+    UIViewControllerTransitioningDelegate {
     //MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     private var isUserDefinedFoodDisplay: Bool = false
-    private var selectedIndexPath: IndexPath?
     private var selectedlabel: String?
     private var busyIndexes: IndexSet = IndexSet()
     
@@ -77,16 +77,6 @@ UISearchBarDelegate {
     }
     
     func setupFetchedResultsController(_ searchedText: String) {
-        //    NSManagedObjectContext *context = [self managedObjectContext];
-        //
-        //    Food* list = [NSEntityDescription insertNewObjectForEntityForName:@"FoodObject" inManagedObjectContext:context];
-        //    list.name = @"BA Test" ;
-        //    list.userDefined = [NSNumber numberWithBool:YES] ;
-        //    NSError *error;
-        //    [context save:&error];
-        //
-        //    self.FoodArray = [NSMutableArray arrayWithArray:[self GetAllFoodItems]] ;
-        
         guard let context = managedObjectContext else {
             assertionFailure()
             return
@@ -103,16 +93,6 @@ UISearchBarDelegate {
         } else {
             request.predicate = testForTrue
         }
-        
-        //    NSString *theFrameThatWasTouchedwithTheUsersFinger = [[NSString alloc]init];
-        //    theFrameThatWasTouchedwithTheUsersFinger = note;
-        
-        
-        // 3 - Filter it if you want
-        
-        //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name BEGINSWITH[cd] %@", @"Burger"];
-        
-        //[request setPredicate:predicate];
         
         // 4 - Sort it if you want
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare))]
@@ -206,34 +186,12 @@ UISearchBarDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         let sectionCount = fetchedResultsController?.sections?.count ?? 0
-        print("sectionCount:", sectionCount)
-        
         return sectionCount
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-        
-        //    if (section == 0)
-        //    {
-        //        return 2;
-        //    }
         let sectionInfo = fetchedResultsController?.sections?[section]
         return sectionInfo?.numberOfObjects ?? 0
-        
-        //    if (tableView.tag==2)
-        //    {
-        //        if (section == 0)
-        //        {
-        //            return 2;
-        //        }
-        //        if (section == 1)
-        //        {
-        ////            return [sectionInfo numberOfObjects];
-        //            return  self.FoodArray.count ;
-        //        }
-        //    }
-        //   return self.FoodArray.count;
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -261,15 +219,9 @@ UISearchBarDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         switch editingStyle {
         case .delete:
-            selectedIndexPath = indexPath
-            
             let alert = UIAlertController(title: "Befit", message: "Food item deleted from User Food Library will remove it from all other libraries. Would you like to continue?", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "No", style: .default) { [weak alert] _ in
-                alert?.dismiss(animated: true)
-            })
-            
-            alert.addAction(UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
+            alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
                 guard let context = self?.managedObjectContext,
                     let fetchedResultsController = self?.fetchedResultsController else {
                         return
@@ -290,6 +242,8 @@ UISearchBarDelegate {
                 self?.setupFetchedResultsController(self?.foodSearchBar.text ?? "")
             })
             
+            alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+            
             present(alert, animated: true)
             
             //[[[UIAlertView alloc] initWithTitle:@"Befit" message:@"Food item deleted from User Food Library will remove it from all other libraries. Would you like to continue?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil]show];
@@ -301,11 +255,6 @@ UISearchBarDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let NormalCellIdentifier = "NormalCell"
-        //    static NSString *TitleCellIdentifier = @"TitleCell";
-        //    static NSString *RestoreCellIdentifier = @"RestoreButton";
-        
-        let neededCellType = NormalCellIdentifier
         //    NSArray *CellTitles = [NSArray arrayWithObjects:@"25,000 Food Database", @"Restore Purchase", nil];
         //    NSArray *CellSubTitles = [NSArray arrayWithObjects:@"Larger Database of Food Items", @"", nil];
         //
@@ -315,104 +264,80 @@ UISearchBarDelegate {
         //        neededCellType = RestoreCellIdentifier;
         //    }
         
-        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: neededCellType)
+        //        // add a buttons as an accessory and let it respond to touches
+        //        AvePurchaseButton* button = [[AvePurchaseButton alloc] initWithFrame:CGRectZero];
+        //        [button addTarget:self action:@selector(purchaseButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        //        cell.accessoryView = button;
+        //
+        //
+        //        //Only add content to cell if it is new
+        //        if([neededCellType isEqualToString: TitleCellIdentifier]) {
+        //
+        //            // configure the cell
+        //            cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
+        //            cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
+        //            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //
+        //            // configure the purchase button in state normal
+        //            AvePurchaseButton* button = (AvePurchaseButton*)cell.accessoryView;
+        //            button.buttonState = AvePurchaseButtonStateNormal;
+        //            button.normalTitle = @"$ 2.99";
+        //            button.confirmationTitle = @"BUY";
+        //            [button sizeToFit];
+        //
+        //            // if the item at this indexPath is being "busy" with purchasing, update the purchase
+        //            // button's state to reflect so.
+        //            if([_busyIndexes containsIndex:indexPath.row] == YES)
+        //            {
+        //                button.buttonState = AvePurchaseButtonStateProgress;
+        //            }
+        //
+        //        }
+        //
+        //        //Only add content to cell if it is new
+        //        if([neededCellType isEqualToString: RestoreCellIdentifier]) {
+        //
+        //            // configure the cell
+        //            cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
+        //            cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
+        //            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        //        }
         
-        if cell == nil {
-            // create  a cell with some nice defaults
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: neededCellType)
-            cell.layoutMargins = .zero
-            cell.separatorInset = .zero
-            cell.detailTextLabel?.textColor = UIColor.gray
-            
-            //        // add a buttons as an accessory and let it respond to touches
-            //        AvePurchaseButton* button = [[AvePurchaseButton alloc] initWithFrame:CGRectZero];
-            //        [button addTarget:self action:@selector(purchaseButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-            //        cell.accessoryView = button;
-            //
-            //
-            //        //Only add content to cell if it is new
-            //        if([neededCellType isEqualToString: TitleCellIdentifier]) {
-            //
-            //            // configure the cell
-            //            cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
-            //            cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
-            //            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            //
-            //            // configure the purchase button in state normal
-            //            AvePurchaseButton* button = (AvePurchaseButton*)cell.accessoryView;
-            //            button.buttonState = AvePurchaseButtonStateNormal;
-            //            button.normalTitle = @"$ 2.99";
-            //            button.confirmationTitle = @"BUY";
-            //            [button sizeToFit];
-            //
-            //            // if the item at this indexPath is being "busy" with purchasing, update the purchase
-            //            // button's state to reflect so.
-            //            if([_busyIndexes containsIndex:indexPath.row] == YES)
-            //            {
-            //                button.buttonState = AvePurchaseButtonStateProgress;
-            //            }
-            //
-            //        }
-            //
-            //        //Only add content to cell if it is new
-            //        if([neededCellType isEqualToString: RestoreCellIdentifier]) {
-            //
-            //            // configure the cell
-            //            cell.textLabel.text = [CellTitles objectAtIndex:indexPath.row];
-            //            cell.detailTextLabel.text = [CellSubTitles objectAtIndex:indexPath.row];
-            //            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-            //        }
-            
-        }
-        
-        switch neededCellType {
-        case NormalCellIdentifier:
-            cell.accessoryView = nil
-            cell.accessoryType = .disclosureIndicator
-            
-            //        Food *foodData = [self.FoodArray objectAtIndex:indexPath.row];
-            //        NSLog(@"indexPath : %ld  ===== %ld",(long)indexPath.section,(long)indexPath.row);
-            let foodData = fetchedResultsController?.object(at: indexPath)
-            cell.textLabel?.text = foodData?.name
-            
-        default:
-            break
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let foodData = fetchedResultsController?.object(at: indexPath)
+        cell.layoutMargins = .zero
+        cell.separatorInset = .zero
+        cell.detailTextLabel?.textColor = UIColor.gray
+        cell.accessoryView = nil
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = foodData?.name
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailNews", sender: self)
+        guard let controller = fetchedResultsController else {
+            return
+        }
+        
+        performSegue(withIdentifier: "detailNews", sender: controller.object(at: indexPath))
     }
     
     //MARK: - prepareForSegue Functions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "detailNews":
-            guard let indexPath = tableView.indexPathForSelectedRow,
-                let fetchedResultsController = fetchedResultsController else {
-                    break
-            }
+        switch segue.destination {
+        case let detailViewController as DetailViewController:
+            detailViewController.foodData = sender as? Food
             
-            if let destViewController = segue.destination as? DetailViewController {
-                destViewController.foodData = fetchedResultsController.object(at: indexPath)
-            }
-            
+        case let navigationController as UINavigationController:
+            navigationController.transitioningDelegate = self
+        
         default:
             break
         }
         
         super.prepare(for: segue, sender: sender)
-    }
-    
-    @IBAction func OpenModal(_ sender: AnyObject) {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "FoodList") else {
-            return
-        }
-        
-        present(controller, animated: true)
     }
     
     @IBAction func SegmentControllerValueChanged(_ sender: AnyObject) {
@@ -433,19 +358,10 @@ UISearchBarDelegate {
         setupFetchedResultsController(foodSearchBar.text ?? "")
     }
     
-    @IBAction func AddFoodButtonTapped(_ sender: AnyObject) {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "AddFood") else {
-            return
-        }
-        
-        present(controller, animated: true)
-    }
+    //MARK: - UIViewControllerTransitioningDelegate
     
-    @IBAction func OpenStore(_ sender: AnyObject) {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "BefitStore") else {
-            return
-        }
-        
-        present(controller, animated: true)
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        setupFetchedResultsController(foodSearchBar.text ?? "")
+        return nil
     }
 }

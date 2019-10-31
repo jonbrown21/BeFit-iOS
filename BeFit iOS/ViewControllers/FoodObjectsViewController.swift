@@ -129,7 +129,7 @@ class FoodObjectsViewController: UITableViewController {
             
             if foodListObject?.name == "User Food Library" {
                 let alertController = UIAlertController(title: "Befit", message: "Food item deleted from User Food Library will remove it from all other libraries. Would you like to continue?", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
+                alertController.addAction(UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
                     self?.deleteFoodItem(at: indexPath)
                 })
                 

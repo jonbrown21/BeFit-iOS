@@ -201,13 +201,15 @@ DeviceDetailViewControllerDelegate {
             
             actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
-            actionSheet.addAction(UIAlertAction(title: "View Food Items", style: .destructive) { [weak self] _ in
+            actionSheet.addAction(UIAlertAction(title: "View Food Items", style: .default) { [weak self] _ in
                 self?.performSegue(withIdentifier: "segue_foodObjects", sender: foodList)
             })
             
-            actionSheet.addAction(UIAlertAction(title: "Edit food list", style: .default) { [weak self] _ in
-                self?.performSegue(withIdentifier: "UpdateDevice", sender: foodList)
-            })
+            if foodList.name != "User Food Library" {
+                actionSheet.addAction(UIAlertAction(title: "Edit food list", style: .default) { [weak self] _ in
+                    self?.performSegue(withIdentifier: "UpdateDevice", sender: foodList)
+                })
+            }
             
             // Present action sheet.
             actionSheet.view.tag = 1;
