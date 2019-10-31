@@ -65,6 +65,9 @@ DeviceViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        view.addGestureRecognizer(gestureRecognizer)
+        
         let buttColor = UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1.0)
         makeButton(btnAdd, color: buttColor)
         scrollView.contentSize = CGSize(width: view.frame.size.width, height: (btnAdd.frame.origin.y - btnAdd.frame.size.height))
@@ -92,7 +95,7 @@ DeviceViewControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if parent?.parent is UITabBarController {
+        if parent?.parent is UITabBarController && navigationController?.viewControllers.count ?? 0 == 1 {
             btnCancel.isEnabled = false
             btnCancel.tintColor = .clear
         }
@@ -134,7 +137,7 @@ DeviceViewControllerDelegate {
     // MARK: - IBAction
     
     @IBAction func cancel(_ sender: AnyObject) {
-        popViewController(false)
+        popViewController()
     }
     
     @IBAction func ScanButtonTapped(_ sender: AnyObject) {
@@ -146,6 +149,8 @@ DeviceViewControllerDelegate {
     }
     
     @IBAction func AddButtonTapped(_ sender: AnyObject) {
+        view.endEditing(false)
+        
         guard checkForEmptyTextfield() else {
             return
         }
@@ -157,8 +162,6 @@ DeviceViewControllerDelegate {
                 alertController.addAction(ok)
                 
                 present(alertController, animated: true)
-                
-                //            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Selected servings can not be more than 12" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
                 return
             }
             
@@ -231,14 +234,15 @@ DeviceViewControllerDelegate {
                 return
             }
             
-            popViewController(true)
-            
-            /*
             let alertController = UIAlertController(title: "Success", message: msg, preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
             alertController.addAction(ok)
             
-            present(alertController, animated: true)*/
+            if popViewController() {
+                navigationController?.present(alertController, animated: true, completion: nil)
+            } else {
+                (presentingViewController ?? self).present(alertController, animated: true)
+            }
         } else {
             let alertController = UIAlertController(title: "Error", message: "Food item already exists", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
@@ -250,6 +254,10 @@ DeviceViewControllerDelegate {
     
     // MARK: - Private
     
+    @objc private func viewTapped() {
+        view.endEditing(false)
+    }
+    
     private func makeButton(_ butz: UIButton, color colortouse: UIColor) {
         let layer = butz.layer
         layer.masksToBounds = true
@@ -259,11 +267,14 @@ DeviceViewControllerDelegate {
         butz.backgroundColor = colortouse
     }
     
-    private func popViewController(_ isFoodAdded: Bool) {
+    @discardableResult
+    private func popViewController() -> Bool {
         if navigationController?.viewControllers.count ?? 0 > 1 {
             navigationController?.popViewController(animated: true)
+            return true
         } else {
-            dismiss(animated: true)
+            dismiss(animated: true, completion: nil)
+            return false
         }
     }
     

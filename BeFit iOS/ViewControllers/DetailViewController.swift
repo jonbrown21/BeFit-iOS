@@ -82,6 +82,8 @@ UIPickerViewDataSource {
     var foodData: Food?
     
     private var webview: WKWebView!
+    private var doughnutChart: CWDoughnutChart?
+    private var isFirstAppear = true
     //private var lineChart: CWLineChart!
     //private var barChart: CWBarChart!
     //private var pieChart: CWPieChart!
@@ -174,7 +176,7 @@ UIPickerViewDataSource {
         
         //    id win = [self.webview windowScriptObject];
         let pc = CWDoughnutChart(webView: webview, name: "Doughnut1", width: 200, height: 200, data: data, options: nil)
-        
+        doughnutChart = pc
         pc?.add()
     }
     
@@ -209,15 +211,54 @@ UIPickerViewDataSource {
         format.dateFormat = "MM/dd/yyyy"
         
         // navigation bar auto scroll label
-        navigationBarScrollLabel.text = foodData?.name
         navigationBarScrollLabel.pauseInterval = 3
         navigationBarScrollLabel.font = UIFont.boldSystemFont(ofSize: 20)
         navigationBarScrollLabel.textColor = .white
         navigationBarScrollLabel.observeApplicationNotifications()
         
-        // self.title = foodData.name;
+        //UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
+        let buttColor = UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1)
+        //UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
         
-        // Set Data and Titles
+        makeButton(Add, color: buttColor)
+        makeButton(btnTodayIntake, color: buttColor)
+        
+        foodListArray = AppDelegate.getfoodListItems()
+        selectedFoodList = foodListArray.first
+        
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        picker.showsSelectionIndicator = true
+        txtPicker.inputView = picker
+        
+        txtPicker.addDoneOnKeyboard(withTarget: self, action: #selector(doneAction))
+        
+        if (foodData?.userDefined?.intValue ?? 0) == 0 {
+            btnEdit.isEnabled = false
+            btnEdit.tintColor = .clear
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        doughnutChart?.remove()
+        reload()
+        
+        if isFirstAppear {
+            isFirstAppear = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
+                self?.addDoughnut()
+            }
+        } else {
+            addDoughnut()
+        }
+    }
+    
+    private func reload() {
+        //self.title = foodData.name;
+        navigationBarScrollLabel.text = foodData?.name
         
         //lablView.text = foodData?.name
         calView.text = foodData?.caloriesStringValue
@@ -266,50 +307,11 @@ UIPickerViewDataSource {
         prog(calffatProg, data: Double(foodData?.calfromFatValuePercFloat ?? 0))
         prog(mfatProg, data: Double(foodData?.monoSaturatedFatPercentFloat ?? 0))
         prog(cholProg, data: Double(foodData?.cholPercentFloat ?? 0))
-        
-        //UIColor *redcolor = [UIColor colorWithRed:0.91 green:0.30 blue:0.24 alpha:1.0];
-        let buttColor = UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1)
-        //UIColor *greyColor = [UIColor colorWithRed:0.74 green:0.76 blue:0.78 alpha:1.0];
-        
-        makeButton(Add, color: buttColor)
-        makeButton(btnTodayIntake, color: buttColor)
-        
-        let time1: CGFloat = 3.49
-        let time2: CGFloat = 8.13
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) { [weak self] in
-            let newTime = time1 + time2
-            print("New time:", newTime)
-            self?.addDoughnut()
-        }
-        
-        foodListArray = AppDelegate.getfoodListItems()
-        selectedFoodList = foodListArray.first
-        
-        let picker = UIPickerView()
-        picker.delegate = self
-        picker.dataSource = self
-        picker.showsSelectionIndicator = true
-        txtPicker.inputView = picker
-        
-        txtPicker.addDoneOnKeyboard(withTarget: self, action: #selector(doneAction))
-        
-        if (foodData?.userDefined?.intValue ?? 0) == 0 {
-            btnEdit.isEnabled = false
-            btnEdit.tintColor = .clear
-        }
     }
     
     @objc private func doneAction() {
-        txtPicker.resignFirstResponder()
+        view.endEditing(true)
         
-        //[self performSelector:@selector(CallAfterDelay) withObject:nil afterDelay:0.7];
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
-            self?.callAfterDelay()
-        }
-    }
-    
-    private func callAfterDelay() {
         guard let context = managedObjectContext, let selectedFoodList = selectedFoodList else {
             assertionFailure()
             return
