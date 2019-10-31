@@ -10,13 +10,16 @@ import Foundation
 import UIKit
 import CoreData
 
+protocol DeviceDetailViewControllerDelegate: class {
+    func deviceDetailViewControllerDidSave()
+}
+
 class DeviceDetailViewController: UIViewController,
-UIBarPositioningDelegate,
 UINavigationBarDelegate {
     //MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var navigationbar: UINavigationBar!
+    @IBOutlet private weak var nameTextField: UITextField!
     
+    weak var delegate: DeviceDetailViewControllerDelegate?
     var device: FoodList?
     
     private var managedObjectContext: NSManagedObjectContext? {
@@ -28,22 +31,18 @@ UINavigationBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationbar.delegate = self
-        
         if let device = device {
             nameTextField.text = device.name
         }
-        
-        // Do any additional setup after loading the view.
     }
     
     //MARK: - Actions
     
-    @IBAction func cancel(_ sender: AnyObject) {
+    @IBAction private func cancel(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func save(_ sender: AnyObject) {
+    @IBAction private func save(_ sender: AnyObject) {
         if nameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true {
             let alertController = UIAlertController(title: "Error", message: "Please enter food list name", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
@@ -78,9 +77,7 @@ UINavigationBarDelegate {
             // Update existing device
             device.name = nameTextField.text ?? ""
             device.orderIndex = NSNumber(value: maxID)
-            
         } else {
-            // Create a new managed object
             let list = NSEntityDescription.insertNewObject(forEntityName: "FoodListObject", into: context) as! FoodList
             list.name = nameTextField.text ?? ""
             list.orderIndex = NSNumber(value: maxID)
@@ -93,13 +90,8 @@ UINavigationBarDelegate {
             print("Can't Save!", error.localizedDescription)
         }
         
+        delegate?.deviceDetailViewControllerDidSave()
         dismiss(animated: true, completion: nil)
-    }
-    
-    //MARK: - UIBarPositioningDelegate
-    
-    func position(for bar: UIBarPositioning) -> UIBarPosition {
-        return .topAttached
     }
     
     //MARK: - Private

@@ -14,7 +14,8 @@ protocol DeviceViewControllerDelegate: class {
     func valueChanged(selectedFoodLists: [FoodList])
 }
 
-class DeviceViewController: UITableViewController {
+class DeviceViewController: UITableViewController,
+DeviceDetailViewControllerDelegate {
     @IBOutlet weak var btnCancel: UIBarButtonItem!
     
     private var finalDisplayArray: [[FoodList]] = []
@@ -34,6 +35,20 @@ class DeviceViewController: UITableViewController {
         
         // Fetch the devices from persistent data store
         
+        reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Uncomment the following line to preserve selection between presentations.
+        // self.clearsSelectionOnViewWillAppear = NO;
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    }
+    
+    private func reloadData() {
         guard let managedObjectContext = managedObjectContext else {
             assertionFailure()
             return
@@ -49,6 +64,7 @@ class DeviceViewController: UITableViewController {
             
             tableView.reloadData()
         } else {
+            sectionNameArray = ["User Food Library", "Custom Food Library"]
             finalDisplayArray = [AppDelegate.getUserFoodLibrary()]
             
             let fetchRequest = FoodList.fetchRequest() as NSFetchRequest<FoodList>
@@ -57,26 +73,13 @@ class DeviceViewController: UITableViewController {
             let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate1, predicate2])
             
             fetchRequest.predicate = compoundPredicate
-            devices = try? managedObjectContext.fetch(fetchRequest)
+            let devices = try? managedObjectContext.fetch(fetchRequest)
             
             if let dev = devices {
                 finalDisplayArray.append(dev)
             }
             
             tableView.reloadData()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations.
-        // self.clearsSelectionOnViewWillAppear = NO;
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        if !isFromAddFoodScreen {
-            sectionNameArray = ["User Food Library", "Custom Food Library"]
         }
     }
     
@@ -102,7 +105,6 @@ class DeviceViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        // Configure the cell...
         if isFromAddFoodScreen {
             guard let devices = devices else {
                 return cell
@@ -110,7 +112,7 @@ class DeviceViewController: UITableViewController {
             
             // Configure the cell...
             let device = devices[indexPath.row]
-            cell.textLabel?.text = String(format: "%@", device.name ?? "")
+            cell.textLabel?.text = device.name ?? ""
             
             if selectedFoodLists.contains(device) {
                 cell.accessoryType = .checkmark
@@ -122,7 +124,7 @@ class DeviceViewController: UITableViewController {
         } else {
             let arr = finalDisplayArray[indexPath.section]
             let device = arr[indexPath.row]
-            cell.textLabel?.text = String(format: "%@", device.name ?? "")
+            cell.textLabel?.text = device.name ?? ""
             
             return cell
         }
@@ -133,13 +135,16 @@ class DeviceViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        guard let devices = devices else {
-            return
+        let lists: [FoodList]
+        if let dev = devices {
+            lists = dev
+        } else {
+            lists = finalDisplayArray[indexPath.section]
         }
         
-        let device = devices[indexPath.row]
+        let list = lists[indexPath.row]
         
-        if device.name == "User Food Library" {
+        if list.name == "User Food Library" {
             let alertController = UIAlertController(title: "Error", message: "User Food Library cannot be deleted", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
             alertController.addAction(ok)
@@ -157,7 +162,7 @@ class DeviceViewController: UITableViewController {
         
         switch editingStyle {
         case .delete:
-            context.delete(device)
+            context.delete(list)
             
             do {
                 try context.save()
@@ -166,14 +171,21 @@ class DeviceViewController: UITableViewController {
                 return
             }
             
-            self.devices?.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            if devices != nil {
+                devices?.remove(at: indexPath.row)
+            } else {
+                finalDisplayArray[indexPath.section].remove(at: indexPath.row)
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
         default:
             break
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if isFromAddFoodScreen {
             guard let devices = devices else {
                 return
@@ -189,18 +201,18 @@ class DeviceViewController: UITableViewController {
             delegate?.valueChanged(selectedFoodLists: selectedFoodLists)
             tableView.reloadData()
         } else {
+            let foodList = finalDisplayArray[indexPath.section][indexPath.row]
+            
             let actionSheet = UIAlertController(title: "Food List", message: "What would you like to do?", preferredStyle: .actionSheet)
             
-            actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in
-                self?.dismiss(animated: true, completion: nil)
-            })
+            actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
             actionSheet.addAction(UIAlertAction(title: "View Food Items", style: .destructive) { [weak self] _ in
-                self?.performSegue(withIdentifier: "segue_foodObjects", sender: self)
+                self?.performSegue(withIdentifier: "segue_foodObjects", sender: foodList)
             })
             
             actionSheet.addAction(UIAlertAction(title: "Edit food list", style: .default) { [weak self] _ in
-                self?.performSegue(withIdentifier: "UpdateDevice", sender: self)
+                self?.performSegue(withIdentifier: "UpdateDevice", sender: foodList)
             })
             
             // Present action sheet.
@@ -225,30 +237,15 @@ class DeviceViewController: UITableViewController {
     //MARK: - Private
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let index = tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0)
-        
-        guard index.section < finalDisplayArray.count else {
-            return
-        }
-        
-        let arr = finalDisplayArray[index.section]
-        
-        guard index.row < arr.count else {
-            return
-        }
-        
-        let selectedDevice = arr[index.row]
-        
-        switch segue.identifier {
-        case "UpdateDevice":
-            if let destViewController = segue.destination as? DeviceDetailViewController {
-                destViewController.device = selectedDevice
+        switch segue.destination {
+        case let navigationController as UINavigationController:
+            if let deviceDetail = navigationController.topViewController as? DeviceDetailViewController {
+                deviceDetail.device = sender as? FoodList
+                deviceDetail.delegate = self
             }
             
-        case "segue_foodObjects":
-            if let destViewController = segue.destination as? FoodObjectsViewController {
-                destViewController.foodListObject = selectedDevice
-            }
+        case let foodObjects as FoodObjectsViewController:
+            foodObjects.foodListObject = sender as? FoodList
             
         default:
             break
@@ -303,5 +300,11 @@ class DeviceViewController: UITableViewController {
         if let controller = storyboard?.instantiateViewController(withIdentifier: "ListView") {
             present(controller, animated: true)
         }
+    }
+    
+    //MARK: - DeviceDetailViewControllerDelegate
+    
+    func deviceDetailViewControllerDidSave() {
+        reloadData()
     }
 }
