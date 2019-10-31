@@ -14,10 +14,7 @@ class FoodObjectsViewController: UITableViewController {
     //MARK: Properties
     @IBOutlet weak var btnAdd: UIBarButtonItem!
     
-    private var items: NSSet?
     private var foodObjectArray: [Food] = []
-    private var isForEditing: Bool = false
-    private var selectedIndexPath: IndexPath?
     
     var foodListObject: FoodList?
     
@@ -35,7 +32,7 @@ class FoodObjectsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-        title =  foodListObject?.name
+        title = foodListObject?.name
         
         if foodListObject?.name == "User Food Library" {
             btnAdd.isEnabled = false
@@ -46,9 +43,7 @@ class FoodObjectsViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        isForEditing = false
-        items = foodListObject?.foods
-        foodObjectArray = (items?.allObjects as? [Food]) ?? []
+        foodObjectArray = (foodListObject?.foods?.allObjects as? [Food]) ?? []
         tableView.reloadData()
     }
     
@@ -73,8 +68,7 @@ class FoodObjectsViewController: UITableViewController {
         
         if foodObject.userDefined?.intValue == 1 {
             foodObjectArray.remove(at: indexPath.row)
-            
-            foodListObject?.foods = NSSet(array: foodObjectArray)
+            foodListObject?.removeFromFoods(foodObject)
             
             context.delete(foodObject)
         } else {
@@ -134,16 +128,12 @@ class FoodObjectsViewController: UITableViewController {
             // Delete object from database
             
             if foodListObject?.name == "User Food Library" {
-                selectedIndexPath = indexPath
-                
                 let alertController = UIAlertController(title: "Befit", message: "Food item deleted from User Food Library will remove it from all other libraries. Would you like to continue?", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Yes", style: .default) { [weak self] _ in
                     self?.deleteFoodItem(at: indexPath)
                 })
                 
-                alertController.addAction(UIAlertAction(title: "No", style: .default, handler: { [weak self] _ in
-                    self?.closeAlertview()
-                }))
+                alertController.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
                 
                 DispatchQueue.main.async {
                     self.present(alertController, animated: true)
@@ -151,10 +141,8 @@ class FoodObjectsViewController: UITableViewController {
                 
                 // [[[UIAlertView alloc] initWithTitle:@"Befit" message:@"Food item deleted from User Food Library will remove it from all other libraries. Would you like to continue?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil]show];
             } else {
-                foodObjectArray.remove(at: indexPath.row)
-                foodListObject?.foods = NSSet(array: foodObjectArray)
-                
-                //        [context deleteObject: [foodObjectArray objectAtIndex:indexPath.row]];
+                let food = foodObjectArray.remove(at: indexPath.row)
+                foodListObject?.removeFromFoods(food)
                 
                 // Remove device from table view
                 tableView.deleteRows(at: [indexPath], with: .fade)
@@ -165,96 +153,40 @@ class FoodObjectsViewController: UITableViewController {
                     print("Can't Delete!", error.localizedDescription)
                     return
                 }
-                
-                //            Food* foodObject = [foodObjectArray objectAtIndex:indexPath.row] ;
-                //
-                //            NSString* foodName = foodObject.name ;
-                //
-                //            [foodObjectArray removeObjectAtIndex:indexPath.row];
-                //
-                //            NSSet *distinctSet = [NSSet setWithArray:foodObjectArray];
-                //
-                //            [self.foodListObject setValue:distinctSet forKey:@"foods"];
-                //            //        [context deleteObject: [foodObjectArray objectAtIndex:indexPath.row]];
-                //
-                //            foodObject = [AppDelegate CheckForDuplicateFoodItem:foodName][0];
-                //
-                //            NSSet* newFoodSet = foodObject.foodListsBelongTo ;
-                //
-                //            NSArray* newFoodListArray = [NSArray arrayWithArray:[newFoodSet allObjects]];
-                //
-                //            BOOL isItemFound = FALSE ;
-                //            FoodList* defaultLibrary ;
-                //
-                //            for (int iCount = 0 ; iCount < newFoodListArray.count; iCount++)
-                //            {
-                //                FoodList* new_list = [newFoodListArray objectAtIndex:iCount] ;
-                //                if ([new_list.name isEqualToString:@"User Food Library"])
-                //                {
-                //                    isItemFound = true ;
-                //                }
-                //                else if ([new_list.name isEqualToString:@"Food Library"])
-                //                {
-                //                    isItemFound = true ;
-                //                    defaultLibrary = new_list ;
-                //                }
-                //            }
-                //            if (newFoodListArray.count == 1 && isItemFound == TRUE)
-                //            {
-                //                foodObject.foodListsBelongTo = [NSSet new] ;
-                //            }
-                //            else if ((defaultLibrary && isItemFound == TRUE) && newFoodListArray.count == 2)
-                //            {
-                //                foodObject.foodListsBelongTo = [NSSet setWithObject:defaultLibrary] ;
-                //            }
-                //
-                //            NSError *error = nil;
-                //            if (![context save:&error]) {
-                //                NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
-                //                return;
-                //            }
-                //
-                //            // Remove device from table view
-                //
-                //            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-                
             }
         }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let food = foodObjectArray[indexPath.row]
-            
+        
         if food.userDefined?.intValue == 1 {
-                isForEditing = true
-                performSegue(withIdentifier: "segue_edit", sender: self)
-            } else {
+            performSegue(withIdentifier: "segue_edit", sender: food)
+        } else {
             let alertController = UIAlertController(title: "Befit", message: "Default food item cannot be edited", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-                
+            
             present(alertController, animated: true)
             
-        //        [[[UIAlertView alloc] initWithTitle:@"Befit" message:@"Default food item cannot be edited" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
-            }
+            //        [[[UIAlertView alloc] initWithTitle:@"Befit" message:@"Default food item cannot be edited" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
+        }
     }
     
-    @IBAction func AddNewFood(_ sender: AnyObject) {
+    @IBAction private func AddNewFood(_ sender: AnyObject) {
         performSegue(withIdentifier: "segue_edit", sender: self)
     }
     
     //MARK: - prepareForSegue Functions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier {
-        case "segue_edit":
-            let indexPath = tableView.indexPathForSelectedRow ?? IndexPath(row: 0, section: 0)
-            if let destViewController = segue.destination as? AddFoodViewController {
-                if indexPath.row < foodObjectArray.count {
-                    destViewController.foodListObject = foodObjectArray[indexPath.row]
-                }
-                
-                destViewController.isForEditing = isForEditing
-            }
+        switch segue.destination {
+        case let addFoodViewController as AddFoodViewController:
+            let food = sender as? Food
+            addFoodViewController.foodListObject = food
+            addFoodViewController.selectedListArray = [foodListObject].compactMap { $0 }
+            addFoodViewController.isForEditing = food?.userDefined?.intValue == 1
+            
         default:
             break
         }
@@ -263,16 +195,16 @@ class FoodObjectsViewController: UITableViewController {
     }
     
     /*
-    // Override to support rearranging the table view.
-    - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-    }
-    */
-
+     // Override to support rearranging the table view.
+     - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-        // Return NO if you do not want the item to be re-orderable.
-        return YES;
-    }
-    */
+     // Override to support conditional rearranging of the table view.
+     - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+     // Return NO if you do not want the item to be re-orderable.
+     return YES;
+     }
+     */
 }

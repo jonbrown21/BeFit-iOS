@@ -51,8 +51,8 @@ DeviceViewControllerDelegate {
         return AppDelegate.getfoodListItems()
     }
     
-    private var selectedFoodList: FoodList?
-    private var selectedListArray: [FoodList]?
+    //private var selectedFoodList: FoodList?
+    var selectedListArray: [FoodList]?
     var foodListObject: Food?
     var isForEditing: Bool = false
     
@@ -86,11 +86,10 @@ DeviceViewControllerDelegate {
         picker.showsSelectionIndicator = true
         txtChooseFoodList.inputView = picker
         
-        selectedFoodList = foodListArray.first
+        //selectedFoodList = foodListArray.first
     }
     
-    func setData()
-    {
+    func setData() {
         txtName.text = foodListObject?.name
         txtSugar.text = (foodListObject?.sugars).flatMap { String(format: "%@", $0) }
         txtSodium.text = (foodListObject?.sodium).flatMap { String(format: "%@", $0) }
@@ -113,8 +112,6 @@ DeviceViewControllerDelegate {
         txtVitaminC.text = (foodListObject?.vitaminC).flatMap { String(format: "%@", $0) }
         txtIron.text = (foodListObject?.iron).flatMap { String(format: "%@", $0) }
         txtCarbohydrates.text = (foodListObject?.carbs).flatMap { String(format: "%@", $0) }
-        
-    //    NSMutableArray* foodArray = [NSMutableArray arrayWithArray:[self.foodListObject.foodListsBelongTo allObjects]];
         
         selectedListArray = foodListObject?.foodListsBelongTo?.allObjects as? [FoodList]
         
@@ -227,23 +224,18 @@ DeviceViewControllerDelegate {
             
             popViewController(true)
             
+            /*
             let alertController = UIAlertController(title: "Success", message: msg, preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
             alertController.addAction(ok)
             
-            present(alertController, animated: true)
-            
-            // [[[UIAlertView alloc] initWithTitle:@"Success" message:msg delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
-        }
-        else
-        {
+            present(alertController, animated: true)*/
+        } else {
             let alertController = UIAlertController(title: "Error", message: "Food item already exists", preferredStyle: .alert)
             let ok = UIAlertAction(title: "Okay", style: .default, handler: nil)
             alertController.addAction(ok)
             
             present(alertController, animated: true)
-            
-            // [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Food item already exists" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles: nil]show];
         }
     }
     
@@ -259,33 +251,14 @@ DeviceViewControllerDelegate {
     }
     
     private func popViewController(_ isFoodAdded: Bool) {
-        if isForEditing && foodListObject != nil {
-            if isFoodAdded
-            {
-                var navigationArray = navigationController?.viewControllers ?? []
-                var idx: Int?
-                for (i, controller) in navigationArray.enumerated() {
-                    if controller is FoodObjectsViewController {
-                        idx = i
-                    }
-                }
-                
-                if let i = idx {
-                    navigationArray.remove(at: i)
-                    navigationController?.viewControllers = navigationArray
-                }
-            }
-            
-            navigationController?.popViewController(animated: true)
-        } else if foodListObject != nil {
+        if navigationController?.viewControllers.count ?? 0 > 1 {
             navigationController?.popViewController(animated: true)
         } else {
             dismiss(animated: true)
         }
     }
     
-    private func checkForEmptyTextfield() -> Bool
-    {
+    private func checkForEmptyTextfield() -> Bool {
         if txtName.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Error", message: "Please enter food name", preferredStyle: .alert)
             
@@ -323,8 +296,7 @@ DeviceViewControllerDelegate {
         return true
     }
     
-    private func showScannedFoodData(_ foodData: [String: Any])
-    {
+    private func showScannedFoodData(_ foodData: [String: Any]) {
         func toNSNumber(_ key: String) -> NSNumber {
             return (foodData[key] as? NSNumber) ?? NSNumber(value: 0)
         }
@@ -382,8 +354,8 @@ DeviceViewControllerDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedFoodList = foodListArray[row]
-        txtChooseFoodList.text = selectedFoodList?.name
+        //selectedFoodList = foodListArray[row]
+        //txtChooseFoodList.text = selectedFoodList?.name
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

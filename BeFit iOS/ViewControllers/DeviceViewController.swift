@@ -55,14 +55,8 @@ DeviceDetailViewControllerDelegate {
         }
         
         if isFromAddFoodScreen {
-            let fetchRequest = FoodList.fetchRequest() as NSFetchRequest<FoodList>
-            fetchRequest.predicate = NSPredicate(format: "name != 'Food Library'")
-            devices = try? managedObjectContext.fetch(fetchRequest)
-            
             devices = AppDelegate.getfoodListItems()
             btnCancel.title = "Back"
-            
-            tableView.reloadData()
         } else {
             sectionNameArray = ["User Food Library", "Custom Food Library"]
             finalDisplayArray = [AppDelegate.getUserFoodLibrary()]
@@ -78,9 +72,9 @@ DeviceDetailViewControllerDelegate {
             if let dev = devices {
                 finalDisplayArray.append(dev)
             }
-            
-            tableView.reloadData()
         }
+        
+        tableView.reloadData()
     }
     
     //MARK: - Table view data source
