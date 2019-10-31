@@ -52,11 +52,19 @@ UINavigationBarDelegate {
     private var lifestyleArray: [String] = []
     private var goalArray: [String] = []
     
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+    
+    //MARK: Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Age.becomeFirstResponder()
         navigationbar.delegate = self
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(cancelNumberPad))
+        view.addGestureRecognizer(tapGestureRecognizer)
         
         let defaults = UserDefaults.standard
         let gendervalue = defaults.string(forKey: "gender-name")
@@ -71,6 +79,7 @@ UINavigationBarDelegate {
         let thegoal = defaults.string(forKey: "thegoal")
         let imUsing = defaults.string(forKey: "using")
         let recomendation = defaults.string(forKey: "recommended-name")
+        let useMetric = defaults.bool(forKey: "use-metric")
         
         let rec = recomendation.flatMap { Float($0) } ?? 0
         let age = agevalue.flatMap { Float($0) } ?? 0
@@ -191,7 +200,6 @@ UINavigationBarDelegate {
         goalArray = ["Loose Weight", "Gain Weight", "Maintain Weight"]
         lifestyleArray = ["Sedentary", "Lightly Active", "Moderately Active", "Very Active", "Extra Active"]
         
-        
         let buttColor = UIColor(red: 0.18, green: 0.80, blue: 0.44, alpha: 1)
         let greyColor = UIColor(red: 0.74, green: 0.76, blue: 0.78, alpha: 1)
         //let redcolor = UIColor(red: 0.91, green: 0.30, blue: 0.24, alpha: 1)
@@ -204,17 +212,14 @@ UINavigationBarDelegate {
         makeButton(CalcButt, color: buttColor)
         makeButton(GenderButt, color: greyColor)
         
-        //MARK: Set Done Button on Number Pad
-        
-        HCM.isHidden = true
-        cmLab.isHidden = true
-        weightMet.isHidden = true
+        MetricSwitch.isOn = useMetric
+        didChangeSwitch(MetricSwitch)
         
         UISwitch.appearance().tintColor = UIColor(red: 0.66, green: 0.70, blue: 0.73, alpha: 1)
         MetricSwitch.addTarget(self, action: #selector(didChangeSwitch), for: .valueChanged)
         MetricSwitch.addTarget(self, action: #selector(setState), for: .valueChanged)
         GoalSiwtch.addTarget(self, action: #selector(didGoalSwitch), for: .valueChanged)
-
+        
         Calculate(self)
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -227,13 +232,13 @@ UINavigationBarDelegate {
         
         let insets = UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
         if insets.top > 0 {
-                // We're running on an iPhone with a notch.
-                
-                // Set Background Color of UIStatusBar
-                let statusBarHeight = UIApplication.shared.statusBarFrame.height
-                let statusBarView =  UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: statusBarHeight))
-                statusBarView.backgroundColor  = UIColor(red: 0.32, green: 0.66, blue: 0.82, alpha: 1)
-                view.addSubview(statusBarView)
+            // We're running on an iPhone with a notch.
+            
+            // Set Background Color of UIStatusBar
+            let statusBarHeight = UIApplication.shared.statusBarFrame.height
+            let statusBarView =  UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: statusBarHeight))
+            statusBarView.backgroundColor  = UIColor(red: 0.32, green: 0.66, blue: 0.82, alpha: 1)
+            view.addSubview(statusBarView)
         }
     }
     
@@ -245,7 +250,7 @@ UINavigationBarDelegate {
         Weight.text = ""
         Age.text = ""
         Recommended.text = ""
-        self.Total.text = ""
+        Total.text = ""
         Slider.value = 500
         SliderLab.text = "500"
         
@@ -267,6 +272,7 @@ UINavigationBarDelegate {
         defaults.set(resetValue, forKey: "recommended-name")
         defaults.set(resetValue, forKey: "thegoal")
         defaults.set("no", forKey: "using")
+        defaults.set(false, forKey: "use-metric")
         
         GoalSiwtch.setOn(false, animated: false)
         MetricSwitch.setOn(false, animated: false)
@@ -288,13 +294,8 @@ UINavigationBarDelegate {
         butz.backgroundColor = colortouse
     }
     
-    private func cancelNumberPad() {
-        Age.resignFirstResponder()
-        Weight.resignFirstResponder()
-        Hfeet.resignFirstResponder()
-        Hinches.resignFirstResponder()
-        weightMet.resignFirstResponder()
-        HCM.resignFirstResponder()
+    @objc private func cancelNumberPad() {
+        view.endEditing(false)
     }
     
     @objc private func didGoalSwitch(_ sender: UISwitch) {
@@ -321,10 +322,6 @@ UINavigationBarDelegate {
         }
     }
     
-    func prefersStatusBarHidden() -> Bool {
-        return false
-    }
-    
     @objc private func didChangeSwitch(_ sender: UISwitch) {
         Hfeet.isHidden = MetricSwitch.isOn
         Hinches.isHidden = MetricSwitch.isOn
@@ -346,6 +343,8 @@ UINavigationBarDelegate {
     
     @objc private func setState(_ sender: UISwitch) {
         let state = sender.isOn
+        UserDefaults.standard.set(state, forKey: "use-metric")
+        
         let rez = state ? "YES" : "NO"
         print(rez)
         Calculate(self)
@@ -512,7 +511,6 @@ UINavigationBarDelegate {
                 BMRGOALS = BMRLIFESTYLE
                 
             }
-            
             
             Recommended.text = String(format: "%.0f Calories", BMRGOALS)
             defaults.set(String(format: "%.0f", BMRGOALS), forKey: "recommended-name")
