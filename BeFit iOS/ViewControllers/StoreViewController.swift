@@ -114,7 +114,9 @@ SKProductsRequestDelegate {
     }
     
     private func purchase(_ product: SKProduct) {
-        let payment = SKPayment(product: product)
+        let payment = SKMutablePayment(product: product)
+        payment.quantity = 1
+        payment.simulatesAskToBuyInSandbox = true
         SKPaymentQueue.default().add(self)
         SKPaymentQueue.default().add(payment)
     }
@@ -147,6 +149,16 @@ SKProductsRequestDelegate {
                 break;
             }
         }
+    }
+    
+    func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
+        AppDelegate.hideLoader()
+        print("restoreCompletedTransactionsFailedWithError: \(error)")
+        
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+        
+        present(alertController, animated: true)
     }
     
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
@@ -188,72 +200,19 @@ SKProductsRequestDelegate {
                 NotificationCenter.default.post(name: setButtonStateNotificationName, object: self)
                 SKPaymentQueue.default().finishTransaction(transaction)
                 
+                if let error = transaction.error {
+                    print("Transaction state -> Failed/n\(error)")
+                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Close", style: .default, handler: nil))
+                    
+                    present(alertController, animated: true)
+                }
+                
             default:
                 break
             }
         }
     }
-    
-    //-(void)fetchAvailableProducts{
-    //    NSSet *productIdentifiers = [NSSet setWithObjects:@"food_0171",nil];
-    //    productsRequest = [[SKProductsRequest alloc]
-    //                       initWithProductIdentifiers:productIdentifiers];
-    //    productsRequest.delegate = self;
-    //    [productsRequest start];
-    //}
-    //
-    //- (BOOL)canMakePurchases
-    //{
-    //    return [SKPaymentQueue canMakePayments];
-    //}
-    //- (void)purchaseMyProduct:(SKProduct*)product{
-    //    if([SKPaymentQueue canMakePayments]){
-    //        NSLog(@"User can make payments");
-    //
-    //        //If you have more than one in-app purchase, and would like
-    //        //to have the user purchase a different product, simply define
-    //        //another function and replace kRemoveAdsProductIdentifier with
-    //        //the identifier for the other product
-    //
-    //        SKProductsRequest *products_Request = [[SKProductsRequest alloc] initWithProductIdentifiers:[NSSet setWithObject:@"food_0171"]];
-    //        products_Request.delegate = self;
-    //        [products_Request start];
-    //
-    //    }
-    //    else{
-    //        NSLog(@"User cannot make payments due to parental controls");
-    //        //this is called the user cannot make payments, most likely due to parental controls
-    //    }
-    //}
-    //
-    //#pragma mark StoreKit Delegate
-    //
-    //
-    //-(void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
-    //{
-    //    SKProduct *validProduct = nil;
-    //    int count = [response.products count];
-    //    if (count>0) {
-    //        validProducts = response.products;
-    //        validProduct = [response.products objectAtIndex:0];
-    //        if ([validProduct.productIdentifier
-    //             isEqualToString:@"food_0171"]) {
-    //
-    //        }
-    //    } else {
-    //        UIAlertView *tmp = [[UIAlertView alloc]
-    //                            initWithTitle:@"Not Available"
-    //                            message:@"No products to purchase"
-    //                            delegate:self
-    //                            cancelButtonTitle:nil
-    //                            otherButtonTitles:@"Ok", nil];
-    //        [tmp show];
-    //
-    //
-    //
-    //    }
-    //
-    //}
     
     @objc private func purchaseButtonTapped(_ button: AvePurchaseButton) {
         guard let indexPath = (button.superview as? UITableViewCell).flatMap({ tableView.indexPath(for: $0) }) else {
@@ -354,79 +313,6 @@ SKProductsRequestDelegate {
         }
     }
     
-    //- (void)purchase:(SKProduct *)product{
-    //    SKPayment *payment = [SKPayment paymentWithProduct:product];
-    //
-    //    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    //    [[SKPaymentQueue defaultQueue] addPayment:payment];
-    //}
-    //
-    //- (IBAction) restore{
-    //    //this is called when the user restores purchases, you should hook this up to a button
-    //    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    //    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-    //}
-    //
-    //- (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
-    //{
-    //    NSLog(@"received restored transactions: %i", queue.transactions.count);
-    //    for(SKPaymentTransaction *transaction in queue.transactions){
-    //        if(transaction.transactionState == SKPaymentTransactionStateRestored){
-    //            //called when the user successfully restores a purchase
-    //            NSLog(@"Transaction state -> Restored");
-    //
-    //            //if you have more than one in-app purchase product,
-    //            //you restore the correct product for the identifier.
-    //            //For example, you could use
-    //            //if(productID == kRemoveAdsProductIdentifier)
-    //            //to get the product identifier for the
-    //            //restored purchases, you can use
-    //            //
-    //            //NSString *productID = transaction.payment.productIdentifier;
-    //
-    //            [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    //            break;
-    //        }
-    //    }
-    //}
-    //
-    //- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions{
-    //    for(SKPaymentTransaction *transaction in transactions){
-    //        //if you have multiple in app purchases in your app,
-    //        //you can get the product identifier of this transaction
-    //        //by using transaction.payment.productIdentifier
-    //        //
-    //        //then, check the identifier against the product IDs
-    //        //that you have defined to check which product the user
-    //        //just purchased
-    //
-    //        switch(transaction.transactionState){
-    //            case SKPaymentTransactionStatePurchasing: NSLog(@"Transaction state -> Purchasing");
-    //                //called when the user is in the process of purchasing, do not add any of your own code here.
-    //                break;
-    //            case SKPaymentTransactionStatePurchased:
-    //                //this is called when the user has successfully purchased the package (Cha-Ching!)
-    //                 //you can add your code for what you want to happen when the user buys the purchase here, for this tutorial we use removing ads
-    //                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    //                NSLog(@"Transaction state -> Purchased");
-    //                break;
-    //            case SKPaymentTransactionStateRestored:
-    //                NSLog(@"Transaction state -> Restored");
-    //                //add the same code as you did from SKPaymentTransactionStatePurchased here
-    //                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    //                break;
-    //            case SKPaymentTransactionStateFailed:
-    //                //called when the transaction does not finish
-    //                if(transaction.error.code == SKErrorPaymentCancelled){
-    //                    NSLog(@"Transaction state -> Cancelled");
-    //                    //the user cancelled the payment ;(
-    //                }
-    //                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
-    //                break;
-    //        }
-    //    }
-    //}
-    
     @IBAction func cancel(_ sender: AnyObject) {
         dismiss(animated: true)
     }
@@ -440,8 +326,8 @@ SKProductsRequestDelegate {
             AppDelegate.showLoaderForPurchase()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) { [weak self] in
-            self?.callAfterSomeDelay()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+            self.callAfterSomeDelay()
         }
     }
     
@@ -509,38 +395,4 @@ SKProductsRequestDelegate {
         
         AppDelegate.hideLoader()
     }
-    
-    /*
-    // Override to support conditional editing of the table view.
-    - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-        // Return NO if you do not want the specified item to be editable.
-        return YES;
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-        if (editingStyle == UITableViewCellEditingStyleDelete) {
-            // Delete the row from the data source
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-        // Return NO if you do not want the item to be re-orderable.
-        return YES;
-    }
-    */
 }
