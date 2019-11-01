@@ -637,7 +637,7 @@
         <!--Scanner-->
         <scene sceneID="nZN-5B-PzO">
             <objects>
-                <navigationController storyboardIdentifier="AddFood" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GXk-rF-T8D" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AddFood" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GXk-rF-T8D" customClass="PresentingNavigationController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Scanner" image="Barcode Scanner_000000_25" selectedImage="Barcode Scanner_000000_25" id="nZ9-cD-hLp"/>
                     <navigationItem key="navigationItem" id="1xK-Qj-cN6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="UoL-rz-4yg">
@@ -734,7 +734,7 @@
         <!--Store-->
         <scene sceneID="XIG-6C-w0I">
             <objects>
-                <navigationController storyboardIdentifier="BefitStore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VYC-IX-7Qi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="BefitStore" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VYC-IX-7Qi" customClass="PresentingNavigationController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Store" image="Apple App Store_000000_25" selectedImage="Apple App Store_000000_25" id="wjk-Tp-JHR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="th8-wQ-ROx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
@@ -1421,7 +1421,7 @@
         <!--Item-->
         <scene sceneID="YW8-yd-qD5">
             <objects>
-                <navigationController storyboardIdentifier="FoodList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gn1-c5-CFi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FoodList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gn1-c5-CFi" customClass="PresentingNavigationController" customModule="BeFitTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="CC3-Vg-vnu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2CL-AG-T2J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>

@@ -36,6 +36,8 @@
 		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
 		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
 		43CA92EE236C59C00090D9A3 /* BeFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */; };
+		43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */; };
+		43CA92FA236C95600090D9A3 /* PresentingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */; };
 		43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DA2366D0B3008B4F7F /* UISnapNav.swift */; };
 		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
 		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
@@ -144,6 +146,8 @@
 		43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeFitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitTrackerTests.swift; sourceTree = "<group>"; };
 		43CA92EF236C59C00090D9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNavigationListener.swift; sourceTree = "<group>"; };
+		43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingNavigationController.swift; sourceTree = "<group>"; };
 		43F051DA2366D0B3008B4F7F /* UISnapNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISnapNav.swift; sourceTree = "<group>"; };
 		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
@@ -587,6 +591,8 @@
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
+				43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */,
+				43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -835,6 +841,7 @@
 				4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
+				43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */,
 				4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */,
 				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
@@ -862,6 +869,7 @@
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
 				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
 				4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */,
+				43CA92FA236C95600090D9A3 /* PresentingNavigationController.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,

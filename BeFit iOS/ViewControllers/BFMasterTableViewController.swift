@@ -15,7 +15,7 @@ class BFMasterTableViewController: UIViewController,
     UITableViewDelegate,
     UITableViewDataSource,
     UISearchBarDelegate,
-    UIViewControllerTransitioningDelegate {
+    VCNavigationListener {
     //MARK: Properties
     @IBOutlet weak var foodSearchBar: UISearchBar!
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -330,9 +330,9 @@ class BFMasterTableViewController: UIViewController,
         case let detailViewController as DetailViewController:
             detailViewController.foodData = sender as? Food
             
-        case let navigationController as UINavigationController:
-            navigationController.transitioningDelegate = self
-        
+        case let navigationController as PresentingNavigationController:
+            navigationController.navigationListener = self
+            
         default:
             break
         }
@@ -358,10 +358,9 @@ class BFMasterTableViewController: UIViewController,
         setupFetchedResultsController(foodSearchBar.text ?? "")
     }
     
-    //MARK: - UIViewControllerTransitioningDelegate
+    //MARK: - VCNavigationListener
     
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    func didDisappear(viewController: UIViewController) {
         setupFetchedResultsController(foodSearchBar.text ?? "")
-        return nil
     }
 }
