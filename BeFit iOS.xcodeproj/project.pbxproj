@@ -35,6 +35,7 @@
 		439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */; };
 		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
 		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
+		43CA92EE236C59C00090D9A3 /* BeFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */; };
 		43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DA2366D0B3008B4F7F /* UISnapNav.swift */; };
 		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
 		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
@@ -101,12 +102,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC290AE719CF560E0044C06B /* PBXContainerItemProxy */ = {
+		43CA92F0236C59C00090D9A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC290ABF19CF560E0044C06B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FC290AC619CF560E0044C06B;
-			remoteInfo = "BeFit iOS";
+			remoteInfo = BeFitTracker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -140,6 +141,9 @@
 		439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
 		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
+		43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeFitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitTrackerTests.swift; sourceTree = "<group>"; };
+		43CA92EF236C59C00090D9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F051DA2366D0B3008B4F7F /* UISnapNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISnapNav.swift; sourceTree = "<group>"; };
 		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
 		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
@@ -161,9 +165,6 @@
 		FC290ACB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -251,6 +252,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43CA92E8236C59C00090D9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC419CF560E0044C06B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,16 +276,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC290AE319CF560E0044C06B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43CA92EC236C59C00090D9A3 /* BeFitTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */,
+				43CA92EF236C59C00090D9A3 /* Info.plist */,
+			);
+			path = BeFitTrackerTests;
+			sourceTree = "<group>";
+		};
 		5107F8131E541D3E00E1EEBD /* Add Food */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +328,7 @@
 			children = (
 				FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */,
 				FC290AC919CF560E0044C06B /* BeFit iOS */,
-				FC290AE919CF560E0044C06B /* BeFit iOSTests */,
+				43CA92EC236C59C00090D9A3 /* BeFitTrackerTests */,
 				FC290AC819CF560E0044C06B /* Products */,
 				FCA42DD11E38EDAD00619AE6 /* Frameworks */,
 				8C1556D3F11BA15E5DFC6B0D /* Pods */,
@@ -329,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				FC290AC719CF560E0044C06B /* BeFitTracker.app */,
-				FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */,
+				43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,23 +369,6 @@
 				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
 				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
 				4303F17E2369D59300EBA3B1 /* AppDelegate.swift */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FC290AE919CF560E0044C06B /* BeFit iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */,
-				FC290AEA19CF560E0044C06B /* Supporting Files */,
-			);
-			path = "BeFit iOSTests";
-			sourceTree = "<group>";
-		};
-		FC290AEA19CF560E0044C06B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC290AEB19CF560E0044C06B /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -632,6 +625,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		43CA92EA236C59C00090D9A3 /* BeFitTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43CA92F2236C59C00090D9A3 /* Build configuration list for PBXNativeTarget "BeFitTrackerTests" */;
+			buildPhases = (
+				43CA92E7236C59C00090D9A3 /* Sources */,
+				43CA92E8236C59C00090D9A3 /* Frameworks */,
+				43CA92E9236C59C00090D9A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43CA92F1236C59C00090D9A3 /* PBXTargetDependency */,
+			);
+			name = BeFitTrackerTests;
+			productName = BeFitTrackerTests;
+			productReference = 43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FC290AC619CF560E0044C06B /* BeFitTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFitTracker" */;
@@ -651,33 +662,21 @@
 			productReference = FC290AC719CF560E0044C06B /* BeFitTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC290AE519CF560E0044C06B /* BeFit iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC290AF319CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit iOSTests" */;
-			buildPhases = (
-				FC290AE219CF560E0044C06B /* Sources */,
-				FC290AE319CF560E0044C06B /* Frameworks */,
-				FC290AE419CF560E0044C06B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC290AE819CF560E0044C06B /* PBXTargetDependency */,
-			);
-			name = "BeFit iOSTests";
-			productName = "BeFit iOSTests";
-			productReference = FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		FC290ABF19CF560E0044C06B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jon Brown";
 				TargetAttributes = {
+					43CA92EA236C59C00090D9A3 = {
+						CreatedOnToolsVersion = 11.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = FC290AC619CF560E0044C06B;
+					};
 					FC290AC619CF560E0044C06B = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = 2D4Z7WQ7RS;
@@ -694,12 +693,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					FC290AE519CF560E0044C06B = {
-						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 2D4Z7WQ7RS;
-						ProvisioningStyle = Manual;
-						TestTargetID = FC290AC619CF560E0044C06B;
 					};
 				};
 			};
@@ -718,12 +711,19 @@
 			projectRoot = "";
 			targets = (
 				FC290AC619CF560E0044C06B /* BeFitTracker */,
-				FC290AE519CF560E0044C06B /* BeFit iOSTests */,
+				43CA92EA236C59C00090D9A3 /* BeFitTrackerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43CA92E9236C59C00090D9A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC519CF560E0044C06B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,13 +742,6 @@
 				43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */,
 				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
 				51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC290AE419CF560E0044C06B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,6 +791,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43CA92E7236C59C00090D9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43CA92EE236C59C00090D9A3 /* BeFitTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC319CF560E0044C06B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -872,20 +873,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC290AE219CF560E0044C06B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC290AE819CF560E0044C06B /* PBXTargetDependency */ = {
+		43CA92F1236C59C00090D9A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FC290AC619CF560E0044C06B /* BeFitTracker */;
-			targetProxy = FC290AE719CF560E0044C06B /* PBXContainerItemProxy */;
+			targetProxy = 43CA92F0236C59C00090D9A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -901,6 +895,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		43CA92F3236C59C00090D9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BeFitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFitTracker.app/BeFitTracker";
+			};
+			name = Debug;
+		};
+		43CA92F4236C59C00090D9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BeFitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFitTracker.app/BeFitTracker";
+			};
+			name = Release;
+		};
 		FC290AEE19CF560E0044C06B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1060,51 +1119,18 @@
 			};
 			name = Release;
 		};
-		FC290AF419CF560E0044C06B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BeFit iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFit Tracker.app/BeFit Tracker";
-			};
-			name = Debug;
-		};
-		FC290AF519CF560E0044C06B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "BeFit iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFit Tracker.app/BeFit Tracker";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43CA92F2236C59C00090D9A3 /* Build configuration list for PBXNativeTarget "BeFitTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CA92F3236C59C00090D9A3 /* Debug */,
+				43CA92F4236C59C00090D9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC290AC219CF560E0044C06B /* Build configuration list for PBXProject "BeFit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1119,15 +1145,6 @@
 			buildConfigurations = (
 				FC290AF119CF560E0044C06B /* Debug */,
 				FC290AF219CF560E0044C06B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC290AF319CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC290AF419CF560E0044C06B /* Debug */,
-				FC290AF519CF560E0044C06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
