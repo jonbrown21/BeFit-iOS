@@ -92,15 +92,6 @@ DeviceViewControllerDelegate {
         //selectedFoodList = foodListArray.first
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        if parent?.parent is UITabBarController && navigationController?.viewControllers.count ?? 0 == 1 {
-            btnCancel.isEnabled = false
-            btnCancel.tintColor = .clear
-        }
-    }
-    
     func setData() {
         txtName.text = foodListObject?.name
         txtSugar.text = (foodListObject?.sugars).flatMap { String(format: "%@", $0) }
@@ -137,7 +128,11 @@ DeviceViewControllerDelegate {
     // MARK: - IBAction
     
     @IBAction func cancel(_ sender: AnyObject) {
-        popViewController()
+        if parent?.parent is UITabBarController && navigationController?.viewControllers.count ?? 0 == 1 {
+            setData()
+        } else {
+            popViewController()
+        }
     }
     
     @IBAction func ScanButtonTapped(_ sender: AnyObject) {
