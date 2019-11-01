@@ -53,6 +53,7 @@ SKProductsRequestDelegate {
         
         SKPaymentQueue.default().remove(self)
         productsRequest?.delegate = nil
+        productsRequest?.cancel()
         productsRequest = nil
     }
     
@@ -353,7 +354,11 @@ SKProductsRequestDelegate {
                 let list = NSEntityDescription.insertNewObject(forEntityName: "FoodObject", into: context) as! Food
                 
                 func toNSNumber(_ key: String) -> NSNumber {
-                    return (dict[key] as? NSNumber) ?? NSNumber(value: 0)
+                    guard let str = dict[key] as? String else {
+                        return NSNumber(value: 0)
+                    }
+                    
+                    return NSNumber(value: Float(str) ?? 0)
                 }
                 
                 list.name = dict["ZNAME"] as? String
