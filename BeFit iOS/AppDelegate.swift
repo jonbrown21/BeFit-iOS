@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import Pushwoosh
 import UserNotifications
+import StoreKit
 
 private let API_Key = "46ed6b62ac0d3c08c949c6ef20a9cb93"
 private let API_URL = "https://api.nutritionix.com/v1_1/item?upc=%@&appId=ac7e3b7b&appKey=46ed6b62ac0d3c08c949c6ef20a9cb93"
@@ -20,6 +21,11 @@ class AppDelegate: UIResponder,
 UIApplicationDelegate,
 PushNotificationDelegate {
     //MARK: - Properties
+    
+    private let firstStartDateKey = "firstStartDate"
+    private let numberOfLaunchesKey = "numberOfLaunches"
+    private let secondsUntilRatingPrompt = Constants.secondsPerDay * 5
+    private let launchesUntilRatingPrompt = 5
     
     var window: UIWindow?
     
@@ -70,38 +76,6 @@ PushNotificationDelegate {
     //MARK: - UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        //set the bundle ID. normally you wouldn't need to do this
-          //as it is picked up automatically from your Info.plist file
-          //but we want to test with an app that's actually on the store
-          //configure
-        /*
-          [SARate sharedInstance].daysUntilPrompt = 5;
-          [SARate sharedInstance].usesUntilPrompt = 5;
-          [SARate sharedInstance].remindPeriod = 30;
-          [SARate sharedInstance].promptForNewVersionIfUserRated = YES;
-          //enable preview mode
-          [SARate sharedInstance].previewMode = NO;
-          
-          [SARate sharedInstance].email = @"jonbrown2@mac.com";
-          // 4 and 5 stars
-          [SARate sharedInstance].minAppStoreRaiting = 4;
-          [SARate sharedInstance].emailSubject = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-          [SARate sharedInstance].emailText = @"Disadvantages: ";
-          [SARate sharedInstance].headerLabelText = @"Like app?";
-         
-          [SARate sharedInstance].descriptionLabelText = @"Touch the star to rate.";
-          [SARate sharedInstance].rateButtonLabelText = @"Rate";
-          [SARate sharedInstance].cancelButtonLabelText = @"Not Now";
-          [SARate sharedInstance].setRaitingAlertTitle = @"Rate";
-          [SARate sharedInstance].setRaitingAlertMessage = @"Touch the star to rate.";
-          [SARate sharedInstance].appstoreRaitingAlertTitle = @"Write a review on the AppStore";
-          [SARate sharedInstance].appstoreRaitingAlertMessage = @"Would you mind taking a moment to rate it on the AppStore? It won’t take more than a minute. Thanks for your support!";
-          [SARate sharedInstance].appstoreRaitingCancel = @"Cancel";
-          [SARate sharedInstance].appstoreRaitingButton = @"Rate It Now";
-          [SARate sharedInstance].disadvantagesAlertTitle = @"Disadvantages";
-          [SARate sharedInstance].disadvantagesAlertMessage = @"Please specify the deficiencies in the application. We will try to fix it!";
-         */
-        
         // set custom delegate for push handling, in our case AppDelegate
         PushNotificationManager.push().delegate = self
         
@@ -116,6 +90,21 @@ PushNotificationDelegate {
         
         // register for push notifications!
         PushNotificationManager.push().registerForPushNotifications()
+        
+        // Number of application launches since install
+        let numOfLaunches = UserDefaults.standard.integer(forKey: numberOfLaunchesKey) + 1
+        UserDefaults.standard.set(numOfLaunches, forKey: numberOfLaunchesKey)
+        
+        if let firstStartDate = UserDefaults.standard.value(forKey: firstStartDateKey) as? Date {
+            if Date().timeIntervalSince(firstStartDate) > secondsUntilRatingPrompt &&
+                numOfLaunches >= launchesUntilRatingPrompt {
+                // Not guaranteed to show the rating popup, refer to the documentation for details
+                // https://developer.apple.com/documentation/storekit/skstorereviewcontroller/2851536-requestreview
+                SKStoreReviewController.requestReview()
+            }
+        } else {
+            UserDefaults.standard.set(Date(), forKey: firstStartDateKey)
+        }
         
         return true
     }
