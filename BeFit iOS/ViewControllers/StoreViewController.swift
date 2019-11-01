@@ -388,6 +388,8 @@ SKProductsRequestDelegate {
                 list.userDefined = NSNumber(value: 0)
             }
             
+            try context.save()
+            
             let alertController = UIAlertController(title: "Success", message: "Database updated successfully", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
             
