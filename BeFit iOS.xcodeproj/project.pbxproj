@@ -57,7 +57,6 @@
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
 		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
-		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
 		FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */; };
@@ -165,7 +164,6 @@
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC29F15A1E70FA5300251B34 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FC29F1721E71153400251B34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeFit Tracker.entitlements"; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 			files = (
 				FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */,
 				FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */,
-				FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */,
 				FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */,
 				FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */,
 				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
@@ -424,7 +421,6 @@
 			children = (
 				FC790D251E899DB600A57DA7 /* libstdc++.tbd */,
 				FC790D231E899DA800A57DA7 /* libz.tbd */,
-				FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */,
 				FC29F1721E71153400251B34 /* QuartzCore.framework */,
 				512609051E5D934E009BA829 /* StoreKit.framework */,
 				FCA42E2D1E38F20400619AE6 /* WebKit.framework */,
