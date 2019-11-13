@@ -351,7 +351,7 @@ UINavigationBarDelegate {
     }
     
     @IBAction func Calculate(_ sender: AnyObject) {
-        ProgressHUD.show("Saving...")
+        AppDelegate.showLoader(text: "Saving...")
         
         let defaults = UserDefaults.standard
         let gendervalue = defaults.string(forKey: "gender-name")
@@ -642,7 +642,7 @@ UINavigationBarDelegate {
             }
         }
         
-        ProgressHUD.dismiss()
+        AppDelegate.hideLoader()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

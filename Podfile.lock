@@ -1,16 +1,20 @@
 PODS:
   - IQKeyboardManager (6.5.0)
+  - JGProgressHUD (2.1)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - JGProgressHUD
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - JGProgressHUD
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
 
-PODFILE CHECKSUM: 38c730ec3ff937ba635173e792085b72fddb3def
+PODFILE CHECKSUM: afae44a57c48068504700cceb85a80ed5f188909
 
 COCOAPODS: 1.8.4

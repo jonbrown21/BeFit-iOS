@@ -57,8 +57,6 @@
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
 		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
-		FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC29F1741E7118F500251B34 /* ProgressHUD.bundle */; };
-		FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1761E7118F500251B34 /* ProgressHUD.m */; };
 		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
@@ -171,9 +169,6 @@
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FC29F15A1E70FA5300251B34 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FC29F1721E71153400251B34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FC29F1741E7118F500251B34 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
-		FC29F1751E7118F500251B34 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		FC29F1761E7118F500251B34 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -398,16 +393,6 @@
 			name = More;
 			sourceTree = "<group>";
 		};
-		FC29F1791E7119BF00251B34 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				FC29F1741E7118F500251B34 /* ProgressHUD.bundle */,
-				FC29F1751E7118F500251B34 /* ProgressHUD.h */,
-				FC29F1761E7118F500251B34 /* ProgressHUD.m */,
-			);
-			name = Progress;
-			sourceTree = "<group>";
-		};
 		FC3EFA8C1E71FE7A00D6F979 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,7 +543,6 @@
 			isa = PBXGroup;
 			children = (
 				FCE5B9E51E7264D900324083 /* ScrollLabel */,
-				FC29F1791E7119BF00251B34 /* Progress */,
 				51E44C461E5C452A007E91C1 /* SimpleBarChart */,
 				FC290ADA19CF560E0044C06B /* Main.storyboard */,
 				FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */,
@@ -727,7 +711,6 @@
 				51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */,
 				FCA42E121E38F0BD00619AE6 /* cw.js in Resources */,
 				51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */,
-				FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */,
 				FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
@@ -749,10 +732,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -849,7 +834,6 @@
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
 				437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */,
-				FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */,
 				FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */,
 				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,

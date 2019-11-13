@@ -5,5 +5,4 @@
 #import "AvePurchaseButton.h"
 #import "CW.h"
 #import "CBAutoScrollLabel.h"
-#import "ProgressHUD.h"
 #import "SimpleBarChart.h"

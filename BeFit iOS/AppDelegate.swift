@@ -11,6 +11,7 @@ import CoreData
 import Pushwoosh
 import UserNotifications
 import StoreKit
+import JGProgressHUD
 
 private let API_Key = "46ed6b62ac0d3c08c949c6ef20a9cb93"
 private let API_URL = "https://api.nutritionix.com/v1_1/item?upc=%@&appId=ac7e3b7b&appKey=46ed6b62ac0d3c08c949c6ef20a9cb93"
@@ -200,18 +201,40 @@ PushNotificationDelegate {
     
     //MARK: - Static Methods
     
-    static func showLoader() {
-        ProgressHUD.show("Loading...")
+    private static var activeProgressHUD: JGProgressHUD?
+    
+    static func showLoader(text: String) {
         UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        
+        guard text != activeProgressHUD?.textLabel.text else {
+            return
+        }
+        
+        activeProgressHUD?.dismiss(animated: true)
+        
+        let hud = JGProgressHUD(style: .extraLight)
+        hud.textLabel.text = text
+        activeProgressHUD = hud
+        
+        hud.show(in: window)
+    }
+    
+    static func showLoader() {
+        showLoader(text: "Loading...")
     }
     
     static func showLoaderForPurchase() {
-        ProgressHUD.show("Updating database...")
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        showLoader(text: "Updating database...")
     }
     
     static func hideLoader() {
-        ProgressHUD.dismiss()
+        activeProgressHUD?.dismiss(animated: true)
+        activeProgressHUD = nil
+        
         UIApplication.shared.endIgnoringInteractionEvents()
     }
     

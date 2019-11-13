@@ -138,14 +138,12 @@ UITableViewDelegate {
             dispatchGroup.leave()
         }
         
-        DispatchQueue.main.async {
-            ProgressHUD.show("Please wait...")
-        }
+        AppDelegate.showLoader(text: "Please wait...")
         
         isRefreshing = true
         
         dispatchGroup.notify(queue: .main) { [weak self] in
-            ProgressHUD.dismiss()
+            AppDelegate.hideLoader()
             self?.isRefreshing = false
             //self?.active.stopAnimating()
             
