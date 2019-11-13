@@ -1240,7 +1240,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-H0-RM9" customClass="SimpleBarChart">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-H0-RM9" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="6" y="181" width="361" height="223"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1401,6 +1401,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Tracker" image="Electrical Threshold_000000_25" selectedImage="Electrical Threshold_000000_25" id="4hq-X6-qWQ"/>
                     <connections>
+                        <outlet property="barChart" destination="GK3-H0-RM9" id="QoU-7X-Gw3"/>
                         <outlet property="btn1M" destination="kAq-DD-g3t" id="C9O-gI-Qck"/>
                         <outlet property="btn1Wk" destination="JOn-hZ-uvr" id="KCP-si-RGJ"/>
                         <outlet property="btn1Yr" destination="qch-Ms-uD9" id="rEF-fT-iXg"/>
@@ -1410,7 +1411,6 @@
                         <outlet property="lblGoalCal" destination="3UG-Ck-LiO" id="QLY-ZN-3f3"/>
                         <outlet property="lblTotalCal" destination="wje-g3-1Wj" id="Ury-iQ-a9S"/>
                         <outlet property="navigationbar" destination="qAT-sp-tnk" id="tN1-Du-RyM"/>
-                        <outlet property="simplechart" destination="GK3-H0-RM9" id="klL-bE-ImY"/>
                         <outlet property="tableView" destination="tTW-5z-fgt" id="vSt-v0-0AC"/>
                     </connections>
                 </viewController>

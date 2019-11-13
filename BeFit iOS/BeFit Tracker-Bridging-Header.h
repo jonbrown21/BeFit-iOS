@@ -4,4 +4,3 @@
 
 #import "CW.h"
 #import "CBAutoScrollLabel.h"
-#import "SimpleBarChart.h"

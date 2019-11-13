@@ -1,5 +1,8 @@
 PODS:
   - AvePurchaseButton (1.0.6)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
   - IQKeyboardManager (6.5.0)
   - JGProgressHUD (2.1)
   - Pushwoosh (5.19.2):
@@ -8,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - AvePurchaseButton
+  - Charts
   - IQKeyboardManager
   - JGProgressHUD
   - Pushwoosh
@@ -15,16 +19,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AvePurchaseButton
+    - Charts
     - IQKeyboardManager
     - JGProgressHUD
     - Pushwoosh
 
 SPEC CHECKSUMS:
   AvePurchaseButton: 2f14b225134ce005b77e83fbe0b431ad2d924830
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   Pushwoosh: 2e89d12b1f36bfd4d38fabd7b0fce8cfa6e17573
 
-PODFILE CHECKSUM: dad62daea855dbcd3d6195752ae21510849cc004
+PODFILE CHECKSUM: ad71ec7b66c8c9c2e85acd9a3afc01940ef9b14d
 
 COCOAPODS: 1.8.4

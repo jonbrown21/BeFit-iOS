@@ -45,7 +45,6 @@
 		43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E52366F459008B4F7F /* DetailViewController.swift */; };
 		43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E72367243B008B4F7F /* FirstViewController.swift */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
-		51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C481E5C452A007E91C1 /* SimpleBarChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */; };
 		51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */; };
 		51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */; };
@@ -148,8 +147,6 @@
 		43F051E72367243B008B4F7F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		512609051E5D934E009BA829 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		51E44C471E5C452A007E91C1 /* SimpleBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBarChart.h; sourceTree = "<group>"; };
-		51E44C481E5C452A007E91C1 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
 		51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeFit_iOS.sqlite; sourceTree = "<group>"; };
 		51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-shm"; sourceTree = "<group>"; };
 		51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-wal"; sourceTree = "<group>"; };
@@ -275,15 +272,6 @@
 				435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */,
 			);
 			name = "Add Food";
-			sourceTree = "<group>";
-		};
-		51E44C461E5C452A007E91C1 /* SimpleBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				51E44C471E5C452A007E91C1 /* SimpleBarChart.h */,
-				51E44C481E5C452A007E91C1 /* SimpleBarChart.m */,
-			);
-			path = SimpleBarChart;
 			sourceTree = "<group>";
 		};
 		8C1556D3F11BA15E5DFC6B0D /* Pods */ = {
@@ -525,7 +513,6 @@
 			isa = PBXGroup;
 			children = (
 				FCE5B9E51E7264D900324083 /* ScrollLabel */,
-				51E44C461E5C452A007E91C1 /* SimpleBarChart */,
 				FC290ADA19CF560E0044C06B /* Main.storyboard */,
 				FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */,
 				FC290ADD19CF560E0044C06B /* Images.xcassets */,
@@ -692,12 +679,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AvePurchaseButton/AvePurchaseButton.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvePurchaseButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
@@ -774,7 +763,6 @@
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */,
 				4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */,
-				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
 				435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */,
 				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,

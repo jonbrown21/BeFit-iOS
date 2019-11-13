@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 import CoreData
+import Charts
 
 class FoodTrackViewController: UIViewController,
-    SimpleBarChartDataSource,
-    SimpleBarChartDelegate,
-    UIActionSheetDelegate,
     UINavigationBarDelegate,
     UITableViewDataSource,
 UITableViewDelegate {
@@ -22,7 +20,6 @@ UITableViewDelegate {
     @IBOutlet weak var lblTotalCal: UILabel!
     @IBOutlet weak var lblGoalCal: UILabel!
     @IBOutlet weak var lblAverageCal: UILabel!
-    @IBOutlet weak var simplechart: SimpleBarChart!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationbar: UINavigationBar!
     @IBOutlet weak var btn1Wk: UIButton!
@@ -30,14 +27,9 @@ UITableViewDelegate {
     @IBOutlet weak var btn3M: UIButton!
     @IBOutlet weak var btn6M: UIButton!
     @IBOutlet weak var btn1Yr: UIButton!
-    
-    private var values: [CGFloat] = []
-    private var x_values: [String] = []
+    @IBOutlet weak var barChart: BarChartView!
     
     private var barColors: [UIColor]!
-    private var currentBarColor: Int = 0
-    private var chart: SimpleBarChart!
-    private var thresholdValue: Bool = false
     private var foodObjectArray: [Food] = []
     private var servingsArray: [UserFoodRecords] = []
     private var timeFrames: Int = 0
@@ -64,49 +56,10 @@ UITableViewDelegate {
             UIColor(red: 0.61, green: 0.35, blue: 0.71, alpha: 1),
             UIColor(red: 0.90, green: 0.49, blue: 0.13, alpha: 1)
         ]
-        currentBarColor = 0
-        
-        //    CGRect chartFrame                = CGRectMake(0.0,
-        //                                                 0.0,
-        //                                                 300.0,
-        //                                                 300.0);
-        
-        chart = SimpleBarChart(frame: simplechart.frame)
-        
-        chart.delegate = self
-        chart.dataSource = self
-        chart.barShadowOffset = CGSize(width: 2, height: 1)
-        chart.animationDuration = 0
-        chart.barShadowColor = UIColor.gray
-        chart.barShadowAlpha = 0.1
-        chart.barShadowRadius = 1.0
-        chart.barWidth = 28.0
-        chart.chartBorderColor = chartBorderColor
-        chart.xLabelType = SimpleBarChartXLabelTypeAngled
-        chart.incrementValue = 400
-        chart.barTextType = SimpleBarChartBarTextTypeRoof
-        chart.barTextColor = UIColor.black
-        chart.gridColor = UIColor.gray
-        chart.yLabelColor = UIColor(red: 0.74, green: 0.76, blue: 0.78, alpha: 1)
-        chart.xLabelColor = UIColor(red: 0.74, green: 0.76, blue: 0.78, alpha: 1)
-        chart.barTextColor = UIColor(red: 0.50, green: 0.55, blue: 0.55, alpha: 1)
-        
-        view.addSubview(chart)
     }
     
     func position(for bar: UIBarPositioning) -> UIBarPosition {
         return .topAttached
-    }
-    
-    private func changeClicked() {
-        if chart.xLabelType == SimpleBarChartXLabelTypeVerticle {
-            chart.xLabelType = SimpleBarChartXLabelTypeHorizontal
-        } else {
-            chart.xLabelType = SimpleBarChartXLabelTypeVerticle
-        }
-        
-        currentBarColor = (currentBarColor + 1) % barColors.count
-        chart.reloadData()
     }
     
     override func viewDidLoad() {
@@ -153,6 +106,19 @@ UITableViewDelegate {
             statusBarView.backgroundColor = UIColor(red: 0.32, green: 0.66, blue: 0.82, alpha: 1)
             view.addSubview(statusBarView)
         }
+        
+        barChart.resetZoom()
+        barChart.pinchZoomEnabled = false
+        barChart.doubleTapToZoomEnabled = false
+        barChart.xAxis.labelPosition = .bottom
+        barChart.xAxis.granularity = 1
+        barChart.xAxis.drawGridLinesEnabled = false
+        barChart.xAxis.labelRotationAngle = -45
+        barChart.xAxis.labelRotatedHeight = 100
+        barChart.rightAxis.enabled = false
+        barChart.legend.enabled = false
+        barChart.highlightPerTapEnabled = false
+        barChart.highlightPerDragEnabled = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,7 +132,6 @@ UITableViewDelegate {
         
         setData()
         
-        chart.reloadData()
         tableView.reloadData()
         AppDelegate.hideLoader()
     }
@@ -290,8 +255,8 @@ UITableViewDelegate {
         let recommended = UserDefaults.standard.string(forKey: "recommended-name").flatMap { Float($0) } ?? 0
         lblGoalCal.text = String(format: "Goal\n%ld Cal", Int(recommended))
         lblTotalCal.text = "Today\n0 Cal"
-        x_values.removeAll(keepingCapacity: true)
-        values.removeAll(keepingCapacity: true)
+        var x_values = [String]()
+        var values = [CGFloat]()
         
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "MM/dd/yyyy-EEEE"
@@ -479,51 +444,62 @@ UITableViewDelegate {
             //        }
         }
         
-        lblAverageCal.text = String(format: "Average\n%d Cal", grossCal / totalNumberOfDays)
+        let averageCal = grossCal / totalNumberOfDays
+        lblAverageCal.text = String(format: "Average\n%d Cal", averageCal)
         
         x_values.reverse()
         values.reverse()
-    }
-    
-    //MARK: - SimpleBarChartDataSource
-    
-    func numberOfBars(in barChart: SimpleBarChart!) -> UInt {
-        return UInt(values.count)
-    }
-    
-    func barChart(_ barChart: SimpleBarChart!, valueForBarAt index: UInt) -> CGFloat {
-        return values[Int(index)]
-    }
-    
-    func barChart(_ barChart: SimpleBarChart!, textForBarAt index: UInt) -> String! {
-        return String(format: "%d", Int(round(values[Int(index)])))
-    }
-    
-    func barChart(_ barChart: SimpleBarChart!, xLabelForBarAt index: UInt) -> String! {
-        return x_values[Int(index)]
-    }
-    
-    func barChart(_ barChart: SimpleBarChart!, colorForBarAt index: UInt) -> UIColor! {
-        let recommended = UserDefaults.standard.string(forKey: "recommended-name").flatMap { Float($0) } ?? 0
         
-        switch timeFrames {
-        case 7:
-            if Int(values[Int(index)]) < Int(recommended) {
-                currentBarColor = 1
-            } else {
-                currentBarColor = 0
+        var entries = [BarChartDataEntry]()
+        var colors = [UIColor]()
+        
+        for (i, val) in values.enumerated() {
+            entries.append(BarChartDataEntry(x: Double(i), y: Double(val)))
+            let colorIdx: Int
+            
+            switch timeFrames {
+            case 7:
+                if Int(val) < Int(recommended) {
+                    colorIdx = 1
+                } else {
+                    colorIdx = 0
+                }
+                
+            default:
+                if averageCal < Int(recommended) {
+                    colorIdx = 1
+                } else {
+                    colorIdx = 0
+                }
             }
             
-        default:
-            let averageCal = lblAverageCal.text.flatMap { Float($0) } ?? 0
-            if Int(averageCal) < Int(recommended) {
-                currentBarColor = 1
-            } else {
-                currentBarColor = 0
-            }
+            colors.append(barColors[colorIdx])
         }
         
-        return barColors[currentBarColor]
+        barChart.xAxis.valueFormatter = DefaultAxisValueFormatter { (val, axis) in
+            let idx = Int(val)
+            guard idx < x_values.count else {
+                return ""
+            }
+            
+            return x_values[idx]
+        }
+        
+        var maxY = Double(ceil(values.max() ?? 0))
+        let dataSet = BarChartDataSet(entries: entries)
+        maxY += 100 - maxY.truncatingRemainder(dividingBy: 100)
+        
+        dataSet.colors = colors
+        dataSet.valueFormatter = DefaultValueFormatter { (val, entry, idx, vpIdx) in
+            return String(format: "%d", Int(round(val)))
+        }
+        
+        dataSet.valueFont = UIFont.systemFont(ofSize: 12)
+        
+        barChart.leftAxis.axisMaximum = maxY
+        barChart.leftAxis.granularity = maxY / 3 // so we always have 3 lines
+        
+        barChart.data = BarChartData(dataSet: dataSet)
     }
     
     private func getFoodItem(_ dateStr: String) -> [UserFoodRecords] {

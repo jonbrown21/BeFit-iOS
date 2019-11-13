@@ -10,4 +10,5 @@ target 'BeFitTracker' do
   pod 'JGProgressHUD'
   pod 'AvePurchaseButton'
   pod 'Pushwoosh'
+  pod 'Charts'
 end
