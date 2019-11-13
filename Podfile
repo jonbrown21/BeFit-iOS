@@ -8,4 +8,5 @@ target 'BeFitTracker' do
   # Pods for BeFitTracker
   pod 'IQKeyboardManager'
   pod 'JGProgressHUD'
+  pod 'AvePurchaseButton'
 end

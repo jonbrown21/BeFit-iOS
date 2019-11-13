@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import StoreKit
 import CoreData
+import AvePurchaseButton
 
 class StoreViewController: UITableViewController,
     SKPaymentTransactionObserver,

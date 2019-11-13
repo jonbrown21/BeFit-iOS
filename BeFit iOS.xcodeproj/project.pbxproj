@@ -93,10 +93,6 @@
 		FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */; };
 		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
-		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
-		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
-		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
-		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
 		FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */; };
 /* End PBXBuildFile section */
 
@@ -235,14 +231,6 @@
 		FCA42E2D1E38F20400619AE6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
-		FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedButton.h; sourceTree = "<group>"; };
-		FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedButton.m; sourceTree = "<group>"; };
-		FCBECD191E4AC60A0034FACF /* AveBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedView.h; sourceTree = "<group>"; };
-		FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedView.m; sourceTree = "<group>"; };
-		FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseActivityIndicatorView.h; sourceTree = "<group>"; };
-		FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseActivityIndicatorView.m; sourceTree = "<group>"; };
-		FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseButton.h; sourceTree = "<group>"; };
-		FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseButton.m; sourceTree = "<group>"; };
 		FCE5B9E21E7264D400324083 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,8 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				FCA42DD41E38F0BD00619AE6 /* CW */,
-				FCBECD161E4AC60A0034FACF /* BorderedButton */,
-				FCBECD1B1E4AC60A0034FACF /* PurchaseButton */,
 				FC290B0119CF57B30044C06B /* CoreData.framework */,
 				FC290AFF19CF57AC0044C06B /* Foundation.framework */,
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
@@ -568,28 +554,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		FCBECD161E4AC60A0034FACF /* BorderedButton */ = {
-			isa = PBXGroup;
-			children = (
-				FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */,
-				FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */,
-				FCBECD191E4AC60A0034FACF /* AveBorderedView.h */,
-				FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */,
-			);
-			path = BorderedButton;
-			sourceTree = "<group>";
-		};
-		FCBECD1B1E4AC60A0034FACF /* PurchaseButton */ = {
-			isa = PBXGroup;
-			children = (
-				FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */,
-				FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */,
-				FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */,
-				FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */,
-			);
-			path = PurchaseButton;
-			sourceTree = "<group>";
-		};
 		FCE5B9E51E7264D900324083 /* ScrollLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,11 +695,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AvePurchaseButton/AvePurchaseButton.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvePurchaseButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 			);
@@ -796,13 +762,10 @@
 				4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
 				43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */,
-				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
 				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,
-				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
 				4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */,
 				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
-				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
 				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
@@ -830,7 +793,6 @@
 				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
 				4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */,
 				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
-				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
 				437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */,

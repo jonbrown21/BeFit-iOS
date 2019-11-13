@@ -35,6 +35,7 @@ class BFMasterTableViewController: UIViewController,
     
     //MARK: Methods
     
+    /*
     func purchaseButtonTapped(_ button: AvePurchaseButton) {
         guard let indexPath = (button.superview as? UITableViewCell).flatMap({ tableView.indexPath(for: $0) }) else {
             return
@@ -62,6 +63,7 @@ class BFMasterTableViewController: UIViewController,
             break
         }
     }
+     */
     
     func getAllFoodItems() -> [Food] {
         guard let context = managedObjectContext else {
