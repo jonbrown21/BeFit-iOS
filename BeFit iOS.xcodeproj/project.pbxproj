@@ -7,70 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8151E541D7700E1EEBD /* AddFoodViewController.m */; };
-		5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F8391E543D4600E1EEBD /* Barcode.m */; };
-		5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */; };
-		510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */; };
-		511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0E71E56E2FC0061F5CF /* StoreViewController.m */; };
-		511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */; };
+		4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F164236828AD00EBA3B1 /* PickerTableView.swift */; };
+		4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */; };
+		4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1682368300100EBA3B1 /* GoalTableView.swift */; };
+		4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16A236832FB00EBA3B1 /* StoreViewController.swift */; };
+		4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */; };
+		4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */; };
+		4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1702368883B00EBA3B1 /* AppGalleryView.swift */; };
+		4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */; };
+		4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1742369940400EBA3B1 /* CustomCell.swift */; };
+		4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */; };
+		4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1782369B98B00EBA3B1 /* DetailView.swift */; };
+		4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */; };
+		4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */; };
+		4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17E2369D59300EBA3B1 /* AppDelegate.swift */; };
+		4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */; };
+		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
+		437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA12362DE8900573D52 /* DeviceViewController.swift */; };
+		437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */; };
+		437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCA92363115900573D52 /* FoodObjectsViewController.swift */; };
+		437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCAD23631EB000573D52 /* ScannerViewController.swift */; };
+		437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437ECCAF236436FB00573D52 /* SwiftCommon.swift */; };
+		439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */; };
+		439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */; };
+		439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */; };
+		439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */; };
+		439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */; };
+		439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */; };
+		439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DE72A23603D9B00CC8543 /* Food+UI.swift */; };
+		43CA92EE236C59C00090D9A3 /* BeFitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */; };
+		43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */; };
+		43CA92FA236C95600090D9A3 /* PresentingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */; };
+		43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051DA2366D0B3008B4F7F /* UISnapNav.swift */; };
+		43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */ = {isa = PBXBuildFile; fileRef = 43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */; };
+		43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E12366DE80008B4F7F /* CustomProgView.swift */; };
+		43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */; };
+		43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E52366F459008B4F7F /* DetailViewController.swift */; };
+		43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F051E72367243B008B4F7F /* FirstViewController.swift */; };
 		512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512609051E5D934E009BA829 /* StoreKit.framework */; };
-		51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */; };
-		51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E44C481E5C452A007E91C1 /* SimpleBarChart.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		51FB9A1F1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */; };
-		51FB9A201E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */; };
 		51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */; };
 		51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */; };
 		51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */; };
-		FC290ACD19CF560E0044C06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACC19CF560E0044C06B /* main.m */; };
-		FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC290ACF19CF560E0044C06B /* AppDelegate.m */; };
+		906D18D57FE3B691EAA65E5D /* Pods_BeFitTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */; };
 		FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADA19CF560E0044C06B /* Main.storyboard */; };
 		FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC290ADD19CF560E0044C06B /* Images.xcassets */; };
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC29F1511E70BA4800251B34 /* UISnapNav.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1501E70BA4800251B34 /* UISnapNav.m */; };
-		FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1551E70FA5300251B34 /* AppGalleryView.m */; };
-		FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */; };
-		FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1591E70FA5300251B34 /* CustomCell.m */; };
 		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
-		FC29F1611E70FA5300251B34 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F15C1E70FA5300251B34 /* DetailView.m */; };
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
-		FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC29F1741E7118F500251B34 /* ProgressHUD.bundle */; };
-		FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC29F1761E7118F500251B34 /* ProgressHUD.m */; };
-		FC3EFA7D1E71EF7A00D6F979 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA5B1E71EF7A00D6F979 /* IQNSArray+Sort.m */; };
-		FC3EFA7E1E71EF7A00D6F979 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA5D1E71EF7A00D6F979 /* IQUIScrollView+Additions.m */; };
-		FC3EFA7F1E71EF7A00D6F979 /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA5F1E71EF7A00D6F979 /* IQUITextFieldView+Additions.m */; };
-		FC3EFA801E71EF7A00D6F979 /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA611E71EF7A00D6F979 /* IQUIView+Hierarchy.m */; };
-		FC3EFA811E71EF7A00D6F979 /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA631E71EF7A00D6F979 /* IQUIViewController+Additions.m */; };
-		FC3EFA821E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA651E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m */; };
-		FC3EFA831E71EF7A00D6F979 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA6A1E71EF7A00D6F979 /* IQKeyboardManager.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC3EFA841E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA6C1E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC3EFA851E71EF7A00D6F979 /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA6F1E71EF7A00D6F979 /* IQTextView.m */; };
-		FC3EFA861E71EF7A00D6F979 /* IQBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA721E71EF7A00D6F979 /* IQBarButtonItem.m */; };
-		FC3EFA871E71EF7A00D6F979 /* IQPreviousNextView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA741E71EF7A00D6F979 /* IQPreviousNextView.m */; };
-		FC3EFA881E71EF7A00D6F979 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA761E71EF7A00D6F979 /* IQTitleBarButtonItem.m */; };
-		FC3EFA891E71EF7A00D6F979 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA781E71EF7A00D6F979 /* IQToolbar.m */; };
-		FC3EFA8A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3EFA7A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC3EFA8B1E71EF7A00D6F979 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC3EFA7C1E71EF7A00D6F979 /* IQKeyboardManager.bundle */; };
-		FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */; };
-		FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */; };
-		FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C261E484B2800336D75 /* DeviceViewController.m */; };
-		FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */; };
-		FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
 		FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */; };
-		FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */; };
-		FC8F8CAB1FB8E33C0015E5E8 /* star-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */; };
-		FC8F8CAC1FB8E33C0015E5E8 /* SARate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA01FB8E33B0015E5E8 /* SARate.m */; };
-		FC8F8CAD1FB8E33C0015E5E8 /* SARateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */; };
-		FC8F8CAE1FB8E33C0015E5E8 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */; };
-		FC8F8CAF1FB8E33C0015E5E8 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8CA41FB8E33B0015E5E8 /* iRate.m */; };
-		FC8F8CB01FB8E33C0015E5E8 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */; };
-		FC8F8CB11FB8E33C0015E5E8 /* star-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */; };
-		FC8F8CB21FB8E33C0015E5E8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8CAA1FB8E33B0015E5E8 /* star.png */; };
-		FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9EA5421D98C8210013D96A /* DetailViewController.m */; };
-		FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42DAF1E377CD400619AE6 /* CustomProgView.m */; };
 		FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD61E38F0BD00619AE6 /* Chart.js */; };
 		FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD71E38F0BD00619AE6 /* Chart.min.js */; };
 		FCA42E111E38F0BD00619AE6 /* cw.html in Resources */ = {isa = PBXBuildFile; fileRef = FCA42DD81E38F0BD00619AE6 /* cw.html */; };
@@ -103,143 +91,80 @@
 		FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA42E0D1E38F0BD00619AE6 /* CWSegmentData.m */; };
 		FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA42E2D1E38F20400619AE6 /* WebKit.framework */; };
 		FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */; };
-		FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */; };
-		FCBC23B619EB96A600C480B6 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B019EB96A600C480B6 /* Food.m */; };
-		FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B219EB96A600C480B6 /* FoodList.m */; };
-		FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */; };
-		FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBC23BB19EB96D900C480B6 /* FirstViewController.m */; };
-		FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */; };
-		FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */; };
-		FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */; };
-		FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */; };
-		FCC792441E45942F00D19056 /* PickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC792431E45942F00D19056 /* PickerTableView.m */; };
 		FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FC290AE719CF560E0044C06B /* PBXContainerItemProxy */ = {
+		43CA92F0236C59C00090D9A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FC290ABF19CF560E0044C06B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FC290AC619CF560E0044C06B;
-			remoteInfo = "BeFit iOS";
+			remoteInfo = BeFitTracker;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5107F8141E541D7700E1EEBD /* AddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFoodViewController.h; sourceTree = "<group>"; };
-		5107F8151E541D7700E1EEBD /* AddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFoodViewController.m; sourceTree = "<group>"; };
-		5107F8381E543D4600E1EEBD /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
-		5107F8391E543D4600E1EEBD /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
-		5107F83B1E543D5E00E1EEBD /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
-		5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
-		510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
-		511DB0E61E56E2FC0061F5CF /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
-		511DB0E71E56E2FC0061F5CF /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
-		511DB0E91E57073A0061F5CF /* FoodObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodObjectsViewController.h; sourceTree = "<group>"; };
-		511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodObjectsViewController.m; sourceTree = "<group>"; };
+		4303F164236828AD00EBA3B1 /* PickerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTableView.swift; sourceTree = "<group>"; };
+		4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifestyleTableView.swift; sourceTree = "<group>"; };
+		4303F1682368300100EBA3B1 /* GoalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableView.swift; sourceTree = "<group>"; };
+		4303F16A236832FB00EBA3B1 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackViewController.swift; sourceTree = "<group>"; };
+		4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerINavigationBar.swift; sourceTree = "<group>"; };
+		4303F1702368883B00EBA3B1 /* AppGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryView.swift; sourceTree = "<group>"; };
+		4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryResponse.swift; sourceTree = "<group>"; };
+		4303F1742369940400EBA3B1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		4303F1782369B98B00EBA3B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScrollViewEnhancer.swift; sourceTree = "<group>"; };
+		4303F17E2369D59300EBA3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackCell.swift; sourceTree = "<group>"; };
+		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		437ECCA12362DE8900573D52 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceViewController.swift; sourceTree = "<group>"; };
+		437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailViewController.swift; sourceTree = "<group>"; };
+		437ECCA92363115900573D52 /* FoodObjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodObjectsViewController.swift; sourceTree = "<group>"; };
+		437ECCAD23631EB000573D52 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		437ECCAF236436FB00573D52 /* SwiftCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCommon.swift; sourceTree = "<group>"; };
+		439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeFit Tracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserFoodRecords+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserFoodRecords+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodList+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FoodList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Food+CoreDataClass.swift"; sourceTree = "<group>"; };
+		439DE72A23603D9B00CC8543 /* Food+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Food+UI.swift"; sourceTree = "<group>"; };
+		43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeFitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFitTrackerTests.swift; sourceTree = "<group>"; };
+		43CA92EF236C59C00090D9A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNavigationListener.swift; sourceTree = "<group>"; };
+		43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingNavigationController.swift; sourceTree = "<group>"; };
+		43F051DA2366D0B3008B4F7F /* UISnapNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISnapNav.swift; sourceTree = "<group>"; };
+		43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ZFOODOBJECT.json; sourceTree = "<group>"; };
+		43F051E12366DE80008B4F7F /* CustomProgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgView.swift; sourceTree = "<group>"; };
+		43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFMasterTableViewController.swift; sourceTree = "<group>"; };
+		43F051E52366F459008B4F7F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		43F051E72367243B008B4F7F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeFitTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		512609051E5D934E009BA829 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTrackViewController.h; sourceTree = "<group>"; };
-		51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTrackViewController.m; sourceTree = "<group>"; };
-		51E44C471E5C452A007E91C1 /* SimpleBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBarChart.h; sourceTree = "<group>"; };
-		51E44C481E5C452A007E91C1 /* SimpleBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBarChart.m; sourceTree = "<group>"; };
-		51FB9A1B1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserFoodRecords+CoreDataClass.h"; path = "DataModel/UserFoodRecords+CoreDataClass.h"; sourceTree = "<group>"; };
-		51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserFoodRecords+CoreDataClass.m"; path = "DataModel/UserFoodRecords+CoreDataClass.m"; sourceTree = "<group>"; };
-		51FB9A1D1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UserFoodRecords+CoreDataProperties.h"; path = "DataModel/UserFoodRecords+CoreDataProperties.h"; sourceTree = "<group>"; };
-		51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UserFoodRecords+CoreDataProperties.m"; path = "DataModel/UserFoodRecords+CoreDataProperties.m"; sourceTree = "<group>"; };
 		51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeFit_iOS.sqlite; sourceTree = "<group>"; };
 		51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-shm"; sourceTree = "<group>"; };
 		51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BeFit_iOS.sqlite-wal"; sourceTree = "<group>"; };
-		FC290AC719CF560E0044C06B /* BeFit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BeFit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F90FCDC6999BB93B0C27536 /* Pods-BeFitTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeFitTracker.debug.xcconfig"; path = "Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		C093CFF90A16C23A8ED3BFA6 /* Pods-BeFitTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeFitTracker.release.xcconfig"; path = "Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker.release.xcconfig"; sourceTree = "<group>"; };
+		FC290AC719CF560E0044C06B /* BeFitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC290ACB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC290ACC19CF560E0044C06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FC290ACE19CF560E0044C06B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FC290ACF19CF560E0044C06B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FC290ADB19CF560E0044C06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC290ADD19CF560E0044C06B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BeFit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC290AEB19CF560E0044C06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeFit_iOSTests.m; sourceTree = "<group>"; };
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC29F14F1E70BA4800251B34 /* UISnapNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISnapNav.h; sourceTree = "<group>"; };
-		FC29F1501E70BA4800251B34 /* UISnapNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISnapNav.m; sourceTree = "<group>"; };
-		FC29F1541E70FA5300251B34 /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
-		FC29F1551E70FA5300251B34 /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
-		FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
-		FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScrollViewEnhancer.m; sourceTree = "<group>"; };
-		FC29F1581E70FA5300251B34 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		FC29F1591E70FA5300251B34 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		FC29F15A1E70FA5300251B34 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		FC29F15B1E70FA5300251B34 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		FC29F15C1E70FA5300251B34 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		FC29F1721E71153400251B34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FC29F1741E7118F500251B34 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
-		FC29F1751E7118F500251B34 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
-		FC29F1761E7118F500251B34 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
-		FC3EFA5A1E71EF7A00D6F979 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
-		FC3EFA5B1E71EF7A00D6F979 /* IQNSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQNSArray+Sort.m"; sourceTree = "<group>"; };
-		FC3EFA5C1E71EF7A00D6F979 /* IQUIScrollView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIScrollView+Additions.h"; sourceTree = "<group>"; };
-		FC3EFA5D1E71EF7A00D6F979 /* IQUIScrollView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIScrollView+Additions.m"; sourceTree = "<group>"; };
-		FC3EFA5E1E71EF7A00D6F979 /* IQUITextFieldView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUITextFieldView+Additions.h"; sourceTree = "<group>"; };
-		FC3EFA5F1E71EF7A00D6F979 /* IQUITextFieldView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUITextFieldView+Additions.m"; sourceTree = "<group>"; };
-		FC3EFA601E71EF7A00D6F979 /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
-		FC3EFA611E71EF7A00D6F979 /* IQUIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+Hierarchy.m"; sourceTree = "<group>"; };
-		FC3EFA621E71EF7A00D6F979 /* IQUIViewController+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIViewController+Additions.h"; sourceTree = "<group>"; };
-		FC3EFA631E71EF7A00D6F979 /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
-		FC3EFA641E71EF7A00D6F979 /* IQUIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIWindow+Hierarchy.h"; sourceTree = "<group>"; };
-		FC3EFA651E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIWindow+Hierarchy.m"; sourceTree = "<group>"; };
-		FC3EFA671E71EF7A00D6F979 /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
-		FC3EFA681E71EF7A00D6F979 /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
-		FC3EFA691E71EF7A00D6F979 /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
-		FC3EFA6A1E71EF7A00D6F979 /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
-		FC3EFA6B1E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardReturnKeyHandler.h; sourceTree = "<group>"; };
-		FC3EFA6C1E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
-		FC3EFA6E1E71EF7A00D6F979 /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
-		FC3EFA6F1E71EF7A00D6F979 /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
-		FC3EFA711E71EF7A00D6F979 /* IQBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQBarButtonItem.h; sourceTree = "<group>"; };
-		FC3EFA721E71EF7A00D6F979 /* IQBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQBarButtonItem.m; sourceTree = "<group>"; };
-		FC3EFA731E71EF7A00D6F979 /* IQPreviousNextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQPreviousNextView.h; sourceTree = "<group>"; };
-		FC3EFA741E71EF7A00D6F979 /* IQPreviousNextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQPreviousNextView.m; sourceTree = "<group>"; };
-		FC3EFA751E71EF7A00D6F979 /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
-		FC3EFA761E71EF7A00D6F979 /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
-		FC3EFA771E71EF7A00D6F979 /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
-		FC3EFA781E71EF7A00D6F979 /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
-		FC3EFA791E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
-		FC3EFA7A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
-		FC3EFA7C1E71EF7A00D6F979 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifestyleTableView.h; sourceTree = "<group>"; };
-		FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifestyleTableView.m; sourceTree = "<group>"; };
-		FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalTableView.h; sourceTree = "<group>"; };
-		FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTableView.m; sourceTree = "<group>"; };
-		FC760C251E484B2800336D75 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceViewController.h; path = ViewControllers/DeviceViewController.h; sourceTree = "<group>"; };
-		FC760C261E484B2800336D75 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceViewController.m; path = ViewControllers/DeviceViewController.m; sourceTree = "<group>"; };
-		FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ViewControllers/DeviceDetailViewController.h; sourceTree = "<group>"; };
-		FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ViewControllers/DeviceDetailViewController.m; sourceTree = "<group>"; };
-		FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Pushwoosh.framework; sourceTree = "<group>"; };
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BeFit Tracker.entitlements"; sourceTree = "<group>"; };
 		FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackerINavigationBar.h; sourceTree = "<group>"; };
-		FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackerINavigationBar.m; sourceTree = "<group>"; };
-		FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray@2x.png"; sourceTree = "<group>"; };
-		FC8F8CA01FB8E33B0015E5E8 /* SARate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARate.m; sourceTree = "<group>"; };
-		FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARateViewController.m; sourceTree = "<group>"; };
-		FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		FC8F8CA41FB8E33B0015E5E8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		FC8F8CA51FB8E33B0015E5E8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		FC8F8CA71FB8E33B0015E5E8 /* SARate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARate.h; sourceTree = "<group>"; };
-		FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray.png"; sourceTree = "<group>"; };
-		FC8F8CA91FB8E33B0015E5E8 /* SARateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARateViewController.h; sourceTree = "<group>"; };
-		FC8F8CAA1FB8E33B0015E5E8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		FC8F8CB31FB8E3770015E5E8 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		FC9EA5411D98C8210013D96A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		FC9EA5421D98C8210013D96A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		FCA42DAE1E377CD400619AE6 /* CustomProgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomProgView.h; sourceTree = "<group>"; };
-		FCA42DAF1E377CD400619AE6 /* CustomProgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomProgView.m; sourceTree = "<group>"; };
 		FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FCA42DD61E38F0BD00619AE6 /* Chart.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.js; sourceTree = "<group>"; };
 		FCA42DD71E38F0BD00619AE6 /* Chart.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Chart.min.js; sourceTree = "<group>"; };
@@ -301,98 +226,61 @@
 		FCA42E2D1E38F20400619AE6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FCBC23AA19EB96A600C480B6 /* BeFit_DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_DataModel2.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeFit_iOS.xcdatamodel; sourceTree = "<group>"; };
-		FCBC23AF19EB96A600C480B6 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = DataModel/Food.h; sourceTree = "<group>"; };
-		FCBC23B019EB96A600C480B6 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = DataModel/Food.m; sourceTree = "<group>"; };
-		FCBC23B119EB96A600C480B6 /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodList.h; path = DataModel/FoodList.h; sourceTree = "<group>"; };
-		FCBC23B219EB96A600C480B6 /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodList.m; path = DataModel/FoodList.m; sourceTree = "<group>"; };
-		FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFMasterTableViewController.h; path = ViewControllers/BFMasterTableViewController.h; sourceTree = "<group>"; };
-		FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFMasterTableViewController.m; path = ViewControllers/BFMasterTableViewController.m; sourceTree = "<group>"; };
-		FCBC23BA19EB96D900C480B6 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = ViewControllers/FirstViewController.h; sourceTree = "<group>"; };
-		FCBC23BB19EB96D900C480B6 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = ViewControllers/FirstViewController.m; sourceTree = "<group>"; };
-		FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedButton.h; sourceTree = "<group>"; };
-		FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedButton.m; sourceTree = "<group>"; };
-		FCBECD191E4AC60A0034FACF /* AveBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AveBorderedView.h; sourceTree = "<group>"; };
-		FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AveBorderedView.m; sourceTree = "<group>"; };
-		FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseActivityIndicatorView.h; sourceTree = "<group>"; };
-		FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseActivityIndicatorView.m; sourceTree = "<group>"; };
-		FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvePurchaseButton.h; sourceTree = "<group>"; };
-		FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvePurchaseButton.m; sourceTree = "<group>"; };
-		FCC792421E45942F00D19056 /* PickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTableView.h; sourceTree = "<group>"; };
-		FCC792431E45942F00D19056 /* PickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTableView.m; sourceTree = "<group>"; };
-		FCD699A31E89CBAB00D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FCE5B9E21E7264D400324083 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		FCE5B9E31E7264D400324083 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43CA92E8236C59C00090D9A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC419CF560E0044C06B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */,
 				FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */,
-				FC790D221E899D8A00A57DA7 /* Pushwoosh.framework in Frameworks */,
 				FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */,
 				FCA42E2E1E38F20400619AE6 /* WebKit.framework in Frameworks */,
 				FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */,
 				512609061E5D934E009BA829 /* StoreKit.framework in Frameworks */,
 				FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */,
 				FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC290AE319CF560E0044C06B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				906D18D57FE3B691EAA65E5D /* Pods_BeFitTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43CA92EC236C59C00090D9A3 /* BeFitTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				43CA92ED236C59C00090D9A3 /* BeFitTrackerTests.swift */,
+				43CA92EF236C59C00090D9A3 /* Info.plist */,
+			);
+			path = BeFitTrackerTests;
+			sourceTree = "<group>";
+		};
 		5107F8131E541D3E00E1EEBD /* Add Food */ = {
 			isa = PBXGroup;
 			children = (
-				5107F8141E541D7700E1EEBD /* AddFoodViewController.h */,
-				5107F8151E541D7700E1EEBD /* AddFoodViewController.m */,
+				435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */,
 			);
 			name = "Add Food";
 			sourceTree = "<group>";
 		};
-		5107F8171E542F4A00E1EEBD /* IQKeyBoardManager */ = {
+		8C1556D3F11BA15E5DFC6B0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FC3EFA591E71EF7A00D6F979 /* Categories */,
-				FC3EFA661E71EF7A00D6F979 /* Constants */,
-				FC3EFA691E71EF7A00D6F979 /* IQKeyboardManager.h */,
-				FC3EFA6A1E71EF7A00D6F979 /* IQKeyboardManager.m */,
-				FC3EFA6B1E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.h */,
-				FC3EFA6C1E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m */,
-				FC3EFA6D1E71EF7A00D6F979 /* IQTextView */,
-				FC3EFA701E71EF7A00D6F979 /* IQToolbar */,
-				FC3EFA7B1E71EF7A00D6F979 /* Resources */,
+				5F90FCDC6999BB93B0C27536 /* Pods-BeFitTracker.debug.xcconfig */,
+				C093CFF90A16C23A8ED3BFA6 /* Pods-BeFitTracker.release.xcconfig */,
 			);
-			path = IQKeyBoardManager;
-			sourceTree = "<group>";
-		};
-		5107F8371E543D3600E1EEBD /* BarCodeScanner */ = {
-			isa = PBXGroup;
-			children = (
-				5107F8381E543D4600E1EEBD /* Barcode.h */,
-				5107F8391E543D4600E1EEBD /* Barcode.m */,
-			);
-			name = BarCodeScanner;
-			sourceTree = "<group>";
-		};
-		51E44C461E5C452A007E91C1 /* SimpleBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				51E44C471E5C452A007E91C1 /* SimpleBarChart.h */,
-				51E44C481E5C452A007E91C1 /* SimpleBarChart.m */,
-			);
-			path = SimpleBarChart;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		FC290ABE19CF560E0044C06B = {
@@ -400,17 +288,18 @@
 			children = (
 				FC790D271E899EBA00A57DA7 /* BeFit Tracker.entitlements */,
 				FC290AC919CF560E0044C06B /* BeFit iOS */,
-				FC290AE919CF560E0044C06B /* BeFit iOSTests */,
+				43CA92EC236C59C00090D9A3 /* BeFitTrackerTests */,
 				FC290AC819CF560E0044C06B /* Products */,
 				FCA42DD11E38EDAD00619AE6 /* Frameworks */,
+				8C1556D3F11BA15E5DFC6B0D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		FC290AC819CF560E0044C06B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC290AC719CF560E0044C06B /* BeFit Tracker.app */,
-				FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */,
+				FC290AC719CF560E0044C06B /* BeFitTracker.app */,
+				43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -431,30 +320,13 @@
 			isa = PBXGroup;
 			children = (
 				FCA42DD41E38F0BD00619AE6 /* CW */,
-				FCBECD161E4AC60A0034FACF /* BorderedButton */,
-				FCBECD1B1E4AC60A0034FACF /* PurchaseButton */,
 				FC290B0119CF57B30044C06B /* CoreData.framework */,
 				FC290AFF19CF57AC0044C06B /* Foundation.framework */,
 				FC290AFD19CF57A60044C06B /* UIKit.framework */,
 				FC290ACB19CF560E0044C06B /* Info.plist */,
-				FC290ACC19CF560E0044C06B /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FC290AE919CF560E0044C06B /* BeFit iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC290AEC19CF560E0044C06B /* BeFit_iOSTests.m */,
-				FC290AEA19CF560E0044C06B /* Supporting Files */,
-			);
-			path = "BeFit iOSTests";
-			sourceTree = "<group>";
-		};
-		FC290AEA19CF560E0044C06B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FC290AEB19CF560E0044C06B /* Info.plist */,
+				439DE70F23603B4200CC8543 /* BeFit Tracker-Bridging-Header.h */,
+				437ECCAF236436FB00573D52 /* SwiftCommon.swift */,
+				4303F17E2369D59300EBA3B1 /* AppDelegate.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -462,8 +334,7 @@
 		FC29F1521E70F9CD00251B34 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				511DB0E61E56E2FC0061F5CF /* StoreViewController.h */,
-				511DB0E71E56E2FC0061F5CF /* StoreViewController.m */,
+				4303F16A236832FB00EBA3B1 /* StoreViewController.swift */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -471,10 +342,9 @@
 		FC29F1531E70F9E800251B34 /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				FC8F8C9B1FB8DB080015E5E8 /* TrackerINavigationBar.h */,
-				FC8F8C9C1FB8DB080015E5E8 /* TrackerINavigationBar.m */,
-				51E44C421E5C432E007E91C1 /* FoodTrackViewController.h */,
-				51E44C431E5C432E007E91C1 /* FoodTrackViewController.m */,
+				4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */,
+				4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */,
+				4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -482,96 +352,22 @@
 		FC29F1621E70FA5900251B34 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				FC29F1541E70FA5300251B34 /* AppGalleryView.h */,
-				FC29F1551E70FA5300251B34 /* AppGalleryView.m */,
-				FC29F1561E70FA5300251B34 /* ARScrollViewEnhancer.h */,
-				FC29F1571E70FA5300251B34 /* ARScrollViewEnhancer.m */,
-				FC29F1581E70FA5300251B34 /* CustomCell.h */,
-				FC29F1591E70FA5300251B34 /* CustomCell.m */,
 				FC29F15A1E70FA5300251B34 /* CustomCell.xib */,
-				FC29F15B1E70FA5300251B34 /* DetailView.h */,
-				FC29F15C1E70FA5300251B34 /* DetailView.m */,
+				4303F1702368883B00EBA3B1 /* AppGalleryView.swift */,
+				4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */,
+				4303F1742369940400EBA3B1 /* CustomCell.swift */,
+				4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */,
+				4303F1782369B98B00EBA3B1 /* DetailView.swift */,
+				4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */,
+				4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */,
 			);
 			name = More;
-			sourceTree = "<group>";
-		};
-		FC29F1791E7119BF00251B34 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				FC29F1741E7118F500251B34 /* ProgressHUD.bundle */,
-				FC29F1751E7118F500251B34 /* ProgressHUD.h */,
-				FC29F1761E7118F500251B34 /* ProgressHUD.m */,
-			);
-			name = Progress;
-			sourceTree = "<group>";
-		};
-		FC3EFA591E71EF7A00D6F979 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				FC3EFA5A1E71EF7A00D6F979 /* IQNSArray+Sort.h */,
-				FC3EFA5B1E71EF7A00D6F979 /* IQNSArray+Sort.m */,
-				FC3EFA5C1E71EF7A00D6F979 /* IQUIScrollView+Additions.h */,
-				FC3EFA5D1E71EF7A00D6F979 /* IQUIScrollView+Additions.m */,
-				FC3EFA5E1E71EF7A00D6F979 /* IQUITextFieldView+Additions.h */,
-				FC3EFA5F1E71EF7A00D6F979 /* IQUITextFieldView+Additions.m */,
-				FC3EFA601E71EF7A00D6F979 /* IQUIView+Hierarchy.h */,
-				FC3EFA611E71EF7A00D6F979 /* IQUIView+Hierarchy.m */,
-				FC3EFA621E71EF7A00D6F979 /* IQUIViewController+Additions.h */,
-				FC3EFA631E71EF7A00D6F979 /* IQUIViewController+Additions.m */,
-				FC3EFA641E71EF7A00D6F979 /* IQUIWindow+Hierarchy.h */,
-				FC3EFA651E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		FC3EFA661E71EF7A00D6F979 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				FC3EFA671E71EF7A00D6F979 /* IQKeyboardManagerConstants.h */,
-				FC3EFA681E71EF7A00D6F979 /* IQKeyboardManagerConstantsInternal.h */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		FC3EFA6D1E71EF7A00D6F979 /* IQTextView */ = {
-			isa = PBXGroup;
-			children = (
-				FC3EFA6E1E71EF7A00D6F979 /* IQTextView.h */,
-				FC3EFA6F1E71EF7A00D6F979 /* IQTextView.m */,
-			);
-			path = IQTextView;
-			sourceTree = "<group>";
-		};
-		FC3EFA701E71EF7A00D6F979 /* IQToolbar */ = {
-			isa = PBXGroup;
-			children = (
-				FC3EFA711E71EF7A00D6F979 /* IQBarButtonItem.h */,
-				FC3EFA721E71EF7A00D6F979 /* IQBarButtonItem.m */,
-				FC3EFA731E71EF7A00D6F979 /* IQPreviousNextView.h */,
-				FC3EFA741E71EF7A00D6F979 /* IQPreviousNextView.m */,
-				FC3EFA751E71EF7A00D6F979 /* IQTitleBarButtonItem.h */,
-				FC3EFA761E71EF7A00D6F979 /* IQTitleBarButtonItem.m */,
-				FC3EFA771E71EF7A00D6F979 /* IQToolbar.h */,
-				FC3EFA781E71EF7A00D6F979 /* IQToolbar.m */,
-				FC3EFA791E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.h */,
-				FC3EFA7A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m */,
-			);
-			path = IQToolbar;
-			sourceTree = "<group>";
-		};
-		FC3EFA7B1E71EF7A00D6F979 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				FC3EFA7C1E71EF7A00D6F979 /* IQKeyboardManager.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		FC3EFA8C1E71FE7A00D6F979 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
-				5107F83B1E543D5E00E1EEBD /* ScannerViewController.h */,
-				5107F83C1E543D5E00E1EEBD /* ScannerViewController.m */,
+				437ECCAD23631EB000573D52 /* ScannerViewController.swift */,
 			);
 			name = Scanner;
 			sourceTree = "<group>";
@@ -579,14 +375,10 @@
 		FC760C2B1E4918A400336D75 /* Food Library */ = {
 			isa = PBXGroup;
 			children = (
-				FC29F14F1E70BA4800251B34 /* UISnapNav.h */,
-				FC29F1501E70BA4800251B34 /* UISnapNav.m */,
-				FCA42DAE1E377CD400619AE6 /* CustomProgView.h */,
-				FCA42DAF1E377CD400619AE6 /* CustomProgView.m */,
-				FCBC23B819EB96D900C480B6 /* BFMasterTableViewController.h */,
-				FCBC23B919EB96D900C480B6 /* BFMasterTableViewController.m */,
-				FC9EA5411D98C8210013D96A /* DetailViewController.h */,
-				FC9EA5421D98C8210013D96A /* DetailViewController.m */,
+				43F051DA2366D0B3008B4F7F /* UISnapNav.swift */,
+				43F051E12366DE80008B4F7F /* CustomProgView.swift */,
+				43F051E32366E11B008B4F7F /* BFMasterTableViewController.swift */,
+				43F051E52366F459008B4F7F /* DetailViewController.swift */,
 			);
 			name = "Food Library";
 			sourceTree = "<group>";
@@ -594,12 +386,9 @@
 		FC760C2C1E4918B200336D75 /* Food List */ = {
 			isa = PBXGroup;
 			children = (
-				FC760C251E484B2800336D75 /* DeviceViewController.h */,
-				FC760C261E484B2800336D75 /* DeviceViewController.m */,
-				FC760C281E484B7A00336D75 /* DeviceDetailViewController.h */,
-				FC760C291E484B7A00336D75 /* DeviceDetailViewController.m */,
-				511DB0E91E57073A0061F5CF /* FoodObjectsViewController.h */,
-				511DB0EA1E57073A0061F5CF /* FoodObjectsViewController.m */,
+				437ECCA92363115900573D52 /* FoodObjectsViewController.swift */,
+				437ECCA5236304A500573D52 /* DeviceDetailViewController.swift */,
+				437ECCA12362DE8900573D52 /* DeviceViewController.swift */,
 			);
 			name = "Food List";
 			sourceTree = "<group>";
@@ -607,56 +396,24 @@
 		FC760C2D1E4918BE00336D75 /* BMI Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				FC3FF5BF1E47C7120091FDD5 /* GoalTableView.h */,
-				FC3FF5C01E47C7120091FDD5 /* GoalTableView.m */,
-				FC3FF5BC1E47C2280091FDD5 /* LifestyleTableView.h */,
-				FC3FF5BD1E47C2280091FDD5 /* LifestyleTableView.m */,
-				FCC792421E45942F00D19056 /* PickerTableView.h */,
-				FCC792431E45942F00D19056 /* PickerTableView.m */,
-				FCBC23BA19EB96D900C480B6 /* FirstViewController.h */,
-				FCBC23BB19EB96D900C480B6 /* FirstViewController.m */,
+				43F051E72367243B008B4F7F /* FirstViewController.swift */,
+				4303F164236828AD00EBA3B1 /* PickerTableView.swift */,
+				4303F16623682DE800EBA3B1 /* LifestyleTableView.swift */,
+				4303F1682368300100EBA3B1 /* GoalTableView.swift */,
 			);
 			name = "BMI Calculator";
-			sourceTree = "<group>";
-		};
-		FC8F8C9E1FB8E33B0015E5E8 /* SARate */ = {
-			isa = PBXGroup;
-			children = (
-				FC8F8C9F1FB8E33B0015E5E8 /* star-gray@2x.png */,
-				FC8F8CA01FB8E33B0015E5E8 /* SARate.m */,
-				FC8F8CA11FB8E33B0015E5E8 /* SARateViewController.m */,
-				FC8F8CA21FB8E33B0015E5E8 /* iRate */,
-				FC8F8CA61FB8E33B0015E5E8 /* star@2x.png */,
-				FC8F8CA71FB8E33B0015E5E8 /* SARate.h */,
-				FC8F8CA81FB8E33B0015E5E8 /* star-gray.png */,
-				FC8F8CA91FB8E33B0015E5E8 /* SARateViewController.h */,
-				FC8F8CAA1FB8E33B0015E5E8 /* star.png */,
-			);
-			path = SARate;
-			sourceTree = "<group>";
-		};
-		FC8F8CA21FB8E33B0015E5E8 /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				FC8F8CA31FB8E33B0015E5E8 /* iRate.bundle */,
-				FC8F8CB31FB8E3770015E5E8 /* iRate.bundle */,
-				FC8F8CA41FB8E33B0015E5E8 /* iRate.m */,
-				FC8F8CA51FB8E33B0015E5E8 /* iRate.h */,
-			);
-			path = iRate;
 			sourceTree = "<group>";
 		};
 		FCA42DD11E38EDAD00619AE6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FCD699A31E89CBAB00D4ED3C /* iRate.bundle */,
 				FC790D251E899DB600A57DA7 /* libstdc++.tbd */,
 				FC790D231E899DA800A57DA7 /* libz.tbd */,
-				FC790D211E899D8A00A57DA7 /* Pushwoosh.framework */,
 				FC29F1721E71153400251B34 /* QuartzCore.framework */,
 				512609051E5D934E009BA829 /* StoreKit.framework */,
 				FCA42E2D1E38F20400619AE6 /* WebKit.framework */,
 				FCA42DD21E38EDAE00619AE6 /* CoreGraphics.framework */,
+				474E423491E3F9AF753F33FA /* Pods_BeFitTracker.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -736,35 +493,26 @@
 		FCBC23A619EB962400C480B6 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				51FB9A1B1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.h */,
-				51FB9A1C1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m */,
-				51FB9A1D1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.h */,
-				51FB9A1E1E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m */,
-				FC290ACE19CF560E0044C06B /* AppDelegate.h */,
-				FC290ACF19CF560E0044C06B /* AppDelegate.m */,
+				439DE72323603C2200CC8543 /* Food+CoreDataClass.swift */,
+				439DE71E23603C2200CC8543 /* Food+CoreDataProperties.swift */,
+				439DE72123603C2200CC8543 /* FoodList+CoreDataClass.swift */,
+				439DE72223603C2200CC8543 /* FoodList+CoreDataProperties.swift */,
+				439DE71F23603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift */,
+				439DE72023603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift */,
+				439DE72A23603D9B00CC8543 /* Food+UI.swift */,
 				FCBC23A919EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld */,
-				FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */,
 				51FB9A211E63EB3900FF418D /* BeFit_iOS.sqlite */,
 				51FB9A221E63EB3900FF418D /* BeFit_iOS.sqlite-shm */,
 				51FB9A231E63EB3900FF418D /* BeFit_iOS.sqlite-wal */,
-				510ECE761E6A83C40010DB8A /* ZFOODOBJECT.json */,
-				FCBC23AF19EB96A600C480B6 /* Food.h */,
-				FCBC23B019EB96A600C480B6 /* Food.m */,
-				FCBC23B119EB96A600C480B6 /* FoodList.h */,
-				FCBC23B219EB96A600C480B6 /* FoodList.m */,
+				43F051DF2366D93F008B4F7F /* ZFOODOBJECT.json */,
 			);
-			name = DataModel;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		FCBC23A719EB965E00C480B6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC8F8C9E1FB8E33B0015E5E8 /* SARate */,
 				FCE5B9E51E7264D900324083 /* ScrollLabel */,
-				FC29F1791E7119BF00251B34 /* Progress */,
-				51E44C461E5C452A007E91C1 /* SimpleBarChart */,
-				5107F8371E543D3600E1EEBD /* BarCodeScanner */,
-				5107F8171E542F4A00E1EEBD /* IQKeyBoardManager */,
 				FC290ADA19CF560E0044C06B /* Main.storyboard */,
 				FC8F8C991FB8D5940015E5E8 /* LaunchScreen.storyboard */,
 				FC290ADD19CF560E0044C06B /* Images.xcassets */,
@@ -783,30 +531,10 @@
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
 				FC760C2B1E4918A400336D75 /* Food Library */,
 				FC760C2C1E4918B200336D75 /* Food List */,
+				43CA92F7236C930A0090D9A3 /* VCNavigationListener.swift */,
+				43CA92F9236C955F0090D9A3 /* PresentingNavigationController.swift */,
 			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		FCBECD161E4AC60A0034FACF /* BorderedButton */ = {
-			isa = PBXGroup;
-			children = (
-				FCBECD171E4AC60A0034FACF /* AveBorderedButton.h */,
-				FCBECD181E4AC60A0034FACF /* AveBorderedButton.m */,
-				FCBECD191E4AC60A0034FACF /* AveBorderedView.h */,
-				FCBECD1A1E4AC60A0034FACF /* AveBorderedView.m */,
-			);
-			path = BorderedButton;
-			sourceTree = "<group>";
-		};
-		FCBECD1B1E4AC60A0034FACF /* PurchaseButton */ = {
-			isa = PBXGroup;
-			children = (
-				FCBECD1C1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.h */,
-				FCBECD1D1E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m */,
-				FCBECD1E1E4AC60A0034FACF /* AvePurchaseButton.h */,
-				FCBECD1F1E4AC60A0034FACF /* AvePurchaseButton.m */,
-			);
-			path = PurchaseButton;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		FCE5B9E51E7264D900324083 /* ScrollLabel */ = {
@@ -821,40 +549,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC290AC619CF560E0044C06B /* BeFit Tracker */ = {
+		43CA92EA236C59C00090D9A3 /* BeFitTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit Tracker" */;
+			buildConfigurationList = 43CA92F2236C59C00090D9A3 /* Build configuration list for PBXNativeTarget "BeFitTrackerTests" */;
 			buildPhases = (
+				43CA92E7236C59C00090D9A3 /* Sources */,
+				43CA92E8236C59C00090D9A3 /* Frameworks */,
+				43CA92E9236C59C00090D9A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43CA92F1236C59C00090D9A3 /* PBXTargetDependency */,
+			);
+			name = BeFitTrackerTests;
+			productName = BeFitTrackerTests;
+			productReference = 43CA92EB236C59C00090D9A3 /* BeFitTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC290AC619CF560E0044C06B /* BeFitTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFitTracker" */;
+			buildPhases = (
+				CAB56C1316011D500A9DB604 /* [CP] Check Pods Manifest.lock */,
 				FC290AC319CF560E0044C06B /* Sources */,
 				FC290AC419CF560E0044C06B /* Frameworks */,
 				FC290AC519CF560E0044C06B /* Resources */,
+				85923CB55897F53130D04F0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "BeFit Tracker";
+			name = BeFitTracker;
 			productName = "BeFit iOS";
-			productReference = FC290AC719CF560E0044C06B /* BeFit Tracker.app */;
+			productReference = FC290AC719CF560E0044C06B /* BeFitTracker.app */;
 			productType = "com.apple.product-type.application";
-		};
-		FC290AE519CF560E0044C06B /* BeFit iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC290AF319CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit iOSTests" */;
-			buildPhases = (
-				FC290AE219CF560E0044C06B /* Sources */,
-				FC290AE319CF560E0044C06B /* Frameworks */,
-				FC290AE419CF560E0044C06B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC290AE819CF560E0044C06B /* PBXTargetDependency */,
-			);
-			name = "BeFit iOSTests";
-			productName = "BeFit iOSTests";
-			productReference = FC290AE619CF560E0044C06B /* BeFit iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -862,12 +592,19 @@
 		FC290ABF19CF560E0044C06B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jon Brown";
 				TargetAttributes = {
+					43CA92EA236C59C00090D9A3 = {
+						CreatedOnToolsVersion = 11.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = FC290AC619CF560E0044C06B;
+					};
 					FC290AC619CF560E0044C06B = {
 						CreatedOnToolsVersion = 6.0.1;
 						DevelopmentTeam = 2D4Z7WQ7RS;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -881,12 +618,6 @@
 							};
 						};
 					};
-					FC290AE519CF560E0044C06B = {
-						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = 2D4Z7WQ7RS;
-						ProvisioningStyle = Manual;
-						TestTargetID = FC290AC619CF560E0044C06B;
-					};
 				};
 			};
 			buildConfigurationList = FC290AC219CF560E0044C06B /* Build configuration list for PBXProject "BeFit iOS" */;
@@ -894,6 +625,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -902,149 +634,176 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC290AC619CF560E0044C06B /* BeFit Tracker */,
-				FC290AE519CF560E0044C06B /* BeFit iOSTests */,
+				FC290AC619CF560E0044C06B /* BeFitTracker */,
+				43CA92EA236C59C00090D9A3 /* BeFitTrackerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43CA92E9236C59C00090D9A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC519CF560E0044C06B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */,
-				FC8F8CB01FB8E33C0015E5E8 /* star@2x.png in Resources */,
 				FCA42E111E38F0BD00619AE6 /* cw.html in Resources */,
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
-				FC8F8CAB1FB8E33C0015E5E8 /* star-gray@2x.png in Resources */,
 				51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */,
-				FC8F8CAE1FB8E33C0015E5E8 /* iRate.bundle in Resources */,
 				FCA42E121E38F0BD00619AE6 /* cw.js in Resources */,
-				FC3EFA8B1E71EF7A00D6F979 /* IQKeyboardManager.bundle in Resources */,
 				51FB9A261E63EB3900FF418D /* BeFit_iOS.sqlite-wal in Resources */,
-				FC29F1771E7118F500251B34 /* ProgressHUD.bundle in Resources */,
-				FC8F8CB21FB8E33C0015E5E8 /* star.png in Resources */,
 				FC8F8C9A1FB8D5940015E5E8 /* LaunchScreen.storyboard in Resources */,
-				510ECE771E6A83C40010DB8A /* ZFOODOBJECT.json in Resources */,
 				FCA42E131E38F0BD00619AE6 /* datasets.js in Resources */,
 				FCA42E0F1E38F0BD00619AE6 /* Chart.js in Resources */,
 				FC290ADE19CF560E0044C06B /* Images.xcassets in Resources */,
+				43F051E02366D93F008B4F7F /* ZFOODOBJECT.json in Resources */,
 				FCA42E101E38F0BD00619AE6 /* Chart.min.js in Resources */,
-				FC8F8CB11FB8E33C0015E5E8 /* star-gray.png in Resources */,
 				51FB9A241E63EB3900FF418D /* BeFit_iOS.sqlite in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC290AE419CF560E0044C06B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		85923CB55897F53130D04F0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AvePurchaseButton/AvePurchaseButton.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AvePurchaseButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeFitTracker/Pods-BeFitTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAB56C1316011D500A9DB604 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeFitTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		43CA92E7236C59C00090D9A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43CA92EE236C59C00090D9A3 /* BeFitTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC290AC319CF560E0044C06B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FCA42E181E38F0BD00619AE6 /* CWBoolean.m in Sources */,
-				51FB9A201E63E8BD00FF418D /* UserFoodRecords+CoreDataProperties.m in Sources */,
-				FC3EFA821E71EF7A00D6F979 /* IQUIWindow+Hierarchy.m in Sources */,
-				511DB0EB1E57073A0061F5CF /* FoodObjectsViewController.m in Sources */,
+				439DE72823603C2200CC8543 /* FoodList+CoreDataProperties.swift in Sources */,
+				439DE72623603C2200CC8543 /* UserFoodRecords+CoreDataProperties.swift in Sources */,
 				FCA42E271E38F0BD00619AE6 /* CWPolarAreaChart.m in Sources */,
-				FC3EFA851E71EF7A00D6F979 /* IQTextView.m in Sources */,
 				FCA42E281E38F0BD00619AE6 /* CWPolarAreaChartOptions.m in Sources */,
+				43F051E82367243B008B4F7F /* FirstViewController.swift in Sources */,
 				FCA42E231E38F0BD00619AE6 /* CWObject.m in Sources */,
+				4303F1692368300100EBA3B1 /* GoalTableView.swift in Sources */,
 				FCA42E261E38F0BD00619AE6 /* CWPointDataSet.m in Sources */,
 				FCA42E171E38F0BD00619AE6 /* CWBarDataSet.m in Sources */,
-				FCA42DB01E377CD400619AE6 /* CustomProgView.m in Sources */,
 				FCA42E191E38F0BD00619AE6 /* CWChart.m in Sources */,
-				FC29F15D1E70FA5300251B34 /* AppGalleryView.m in Sources */,
 				FCA42E151E38F0BD00619AE6 /* CWBarChartData.m in Sources */,
+				4303F165236828AD00EBA3B1 /* PickerTableView.swift in Sources */,
 				FCA42E2B1E38F0BD00619AE6 /* CWRadarChartOptions.m in Sources */,
-				FC3EFA841E71EF7A00D6F979 /* IQKeyboardReturnKeyHandler.m in Sources */,
-				FCBC23BF19EB96D900C480B6 /* FirstViewController.m in Sources */,
-				FCBECD231E4AC60A0034FACF /* AvePurchaseButton.m in Sources */,
-				FCBECD211E4AC60A0034FACF /* AveBorderedView.m in Sources */,
-				FC8F8CAC1FB8E33C0015E5E8 /* SARate.m in Sources */,
-				FC3EFA7E1E71EF7A00D6F979 /* IQUIScrollView+Additions.m in Sources */,
+				43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */,
+				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
-				511DB0E81E56E2FC0061F5CF /* StoreViewController.m in Sources */,
-				FCBECD201E4AC60A0034FACF /* AveBorderedButton.m in Sources */,
+				4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */,
+				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
+				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
+				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
+				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
+				4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */,
+				4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */,
+				4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
-				FC3FF5C11E47C7120091FDD5 /* GoalTableView.m in Sources */,
-				5107F8161E541D7700E1EEBD /* AddFoodViewController.m in Sources */,
-				FC3EFA861E71EF7A00D6F979 /* IQBarButtonItem.m in Sources */,
+				4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
-				51E44C491E5C452A007E91C1 /* SimpleBarChart.m in Sources */,
-				FC3EFA7D1E71EF7A00D6F979 /* IQNSArray+Sort.m in Sources */,
-				FCBC23B719EB96A600C480B6 /* FoodList.m in Sources */,
+				43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */,
+				4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */,
 				FCA42E1B1E38F0BD00619AE6 /* CWData.m in Sources */,
-				FC3FF5BE1E47C2280091FDD5 /* LifestyleTableView.m in Sources */,
+				435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */,
+				439DE72723603C2200CC8543 /* FoodList+CoreDataClass.swift in Sources */,
 				FCA42E251E38F0BD00619AE6 /* CWPieChartOptions.m in Sources */,
-				FC290AD019CF560E0044C06B /* AppDelegate.m in Sources */,
 				FCA42E211E38F0BD00619AE6 /* CWLineChartData.m in Sources */,
-				FC29F1611E70FA5300251B34 /* DetailView.m in Sources */,
+				43F051E42366E11B008B4F7F /* BFMasterTableViewController.swift in Sources */,
 				FCA42E291E38F0BD00619AE6 /* CWRadarChart.m in Sources */,
-				FC3EFA801E71EF7A00D6F979 /* IQUIView+Hierarchy.m in Sources */,
-				FCBC23B419EB96A600C480B6 /* BeFit_iOS.xcdatamodeld in Sources */,
-				FC760C271E484B2800336D75 /* DeviceViewController.m in Sources */,
-				FCC792441E45942F00D19056 /* PickerTableView.m in Sources */,
-				FC29F15F1E70FA5300251B34 /* CustomCell.m in Sources */,
+				437ECCAA2363115900573D52 /* FoodObjectsViewController.swift in Sources */,
+				437ECCA6236304A500573D52 /* DeviceDetailViewController.swift in Sources */,
+				43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
-				FC29F15E1E70FA5300251B34 /* ARScrollViewEnhancer.m in Sources */,
-				51FB9A1F1E63E8BD00FF418D /* UserFoodRecords+CoreDataClass.m in Sources */,
-				FC8F8C9D1FB8DB080015E5E8 /* TrackerINavigationBar.m in Sources */,
-				FCBECD221E4AC60A0034FACF /* AvePurchaseActivityIndicatorView.m in Sources */,
-				5107F83D1E543D5E00E1EEBD /* ScannerViewController.m in Sources */,
-				FC9EA5431D98C8210013D96A /* DetailViewController.m in Sources */,
-				FC3EFA7F1E71EF7A00D6F979 /* IQUITextFieldView+Additions.m in Sources */,
-				51E44C441E5C432E007E91C1 /* FoodTrackViewController.m in Sources */,
-				FC3EFA831E71EF7A00D6F979 /* IQKeyboardManager.m in Sources */,
+				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
+				4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */,
+				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
-				FC290ACD19CF560E0044C06B /* main.m in Sources */,
-				FC29F1781E7118F500251B34 /* ProgressHUD.m in Sources */,
+				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
+				437ECCB0236436FB00573D52 /* SwiftCommon.swift in Sources */,
 				FCA42E1C1E38F0BD00619AE6 /* CWDataSet.m in Sources */,
-				5107F83A1E543D4600E1EEBD /* Barcode.m in Sources */,
-				FC8F8CAD1FB8E33C0015E5E8 /* SARateViewController.m in Sources */,
-				FC3EFA8A1E71EF7A00D6F979 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				FCA42E161E38F0BD00619AE6 /* CWBarChartOptions.m in Sources */,
 				FCA42E141E38F0BD00619AE6 /* CWBarChart.m in Sources */,
-				FC3EFA891E71EF7A00D6F979 /* IQToolbar.m in Sources */,
+				439DE72B23603D9B00CC8543 /* Food+UI.swift in Sources */,
+				4303F16723682DE800EBA3B1 /* LifestyleTableView.swift in Sources */,
+				43CA92FA236C95600090D9A3 /* PresentingNavigationController.swift in Sources */,
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
-				FCBC23B619EB96A600C480B6 /* Food.m in Sources */,
-				FC3EFA881E71EF7A00D6F979 /* IQTitleBarButtonItem.m in Sources */,
-				FCBC23BE19EB96D900C480B6 /* BFMasterTableViewController.m in Sources */,
-				FC8F8CAF1FB8E33C0015E5E8 /* iRate.m in Sources */,
-				FC760C2A1E484B7A00336D75 /* DeviceDetailViewController.m in Sources */,
-				FC3EFA811E71EF7A00D6F979 /* IQUIViewController+Additions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
-				FC29F1511E70BA4800251B34 /* UISnapNav.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
+				4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */,
+				4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
-				FC3EFA871E71EF7A00D6F979 /* IQPreviousNextView.m in Sources */,
+				4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC290AE219CF560E0044C06B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FC290AE819CF560E0044C06B /* PBXTargetDependency */ = {
+		43CA92F1236C59C00090D9A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FC290AC619CF560E0044C06B /* BeFit Tracker */;
-			targetProxy = FC290AE719CF560E0044C06B /* PBXContainerItemProxy */;
+			target = FC290AC619CF560E0044C06B /* BeFitTracker */;
+			targetProxy = 43CA92F0236C59C00090D9A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1060,6 +819,71 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		43CA92F3236C59C00090D9A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BeFitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFitTracker.app/BeFitTracker";
+			};
+			name = Debug;
+		};
+		43CA92F4236C59C00090D9A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = BeFitTrackerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFitTracker.app/BeFitTracker";
+			};
+			name = Release;
+		};
 		FC290AEE19CF560E0044C06B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1164,8 +988,10 @@
 		};
 		FC290AF119CF560E0044C06B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F90FCDC6999BB93B0C27536 /* Pods-BeFitTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1179,18 +1005,22 @@
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeFit iOS/BeFit Tracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		FC290AF219CF560E0044C06B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C093CFF90A16C23A8ED3BFA6 /* Pods-BeFitTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "BeFit Tracker.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Jonathan Brown (E9WTB27D9J)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1204,57 +1034,27 @@
 				INFOPLIST_FILE = "BeFit iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.BeFit-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
-		FC290AF419CF560E0044C06B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BeFit iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFit Tracker.app/BeFit Tracker";
-			};
-			name = Debug;
-		};
-		FC290AF519CF560E0044C06B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 2D4Z7WQ7RS;
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = "BeFit iOSTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFit Tracker.app/BeFit Tracker";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeFit iOS/BeFit Tracker-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43CA92F2236C59C00090D9A3 /* Build configuration list for PBXNativeTarget "BeFitTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43CA92F3236C59C00090D9A3 /* Debug */,
+				43CA92F4236C59C00090D9A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC290AC219CF560E0044C06B /* Build configuration list for PBXProject "BeFit iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1264,20 +1064,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit Tracker" */ = {
+		FC290AF019CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFitTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC290AF119CF560E0044C06B /* Debug */,
 				FC290AF219CF560E0044C06B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC290AF319CF560E0044C06B /* Build configuration list for PBXNativeTarget "BeFit iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC290AF419CF560E0044C06B /* Debug */,
-				FC290AF519CF560E0044C06B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1292,19 +1083,7 @@
 				FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */,
 			);
 			currentVersion = FCBC23AB19EB96A600C480B6 /* BeFit_DataModel2.xcdatamodel */;
-			name = BeFit_DataModel.xcdatamodeld;
-			path = DataModel/BeFit_DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		FCBC23AC19EB96A600C480B6 /* BeFit_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */,
-			);
-			currentVersion = FCBC23AD19EB96A600C480B6 /* BeFit_iOS.xcdatamodel */;
-			name = BeFit_iOS.xcdatamodeld;
-			path = DataModel/BeFit_iOS.xcdatamodeld;
+			path = BeFit_DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
