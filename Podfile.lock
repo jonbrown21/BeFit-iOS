@@ -3,11 +3,11 @@ PODS:
   - Charts (3.4.0):
     - Charts/Core (= 3.4.0)
   - Charts/Core (3.4.0)
-  - IQKeyboardManager (6.5.0)
+  - IQKeyboardManager (6.5.4)
   - JGProgressHUD (2.1)
-  - Pushwoosh (5.19.2):
-    - Pushwoosh/Core (= 5.19.2)
-  - Pushwoosh/Core (5.19.2)
+  - Pushwoosh (5.19.6):
+    - Pushwoosh/Core (= 5.19.6)
+  - Pushwoosh/Core (5.19.6)
 
 DEPENDENCIES:
   - AvePurchaseButton
@@ -27,9 +27,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AvePurchaseButton: 2f14b225134ce005b77e83fbe0b431ad2d924830
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
-  IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
+  IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
-  Pushwoosh: 2e89d12b1f36bfd4d38fabd7b0fce8cfa6e17573
+  Pushwoosh: e4fed1e428031a63d37092f012676542b4e9fa35
 
 PODFILE CHECKSUM: ad71ec7b66c8c9c2e85acd9a3afc01940ef9b14d
 
