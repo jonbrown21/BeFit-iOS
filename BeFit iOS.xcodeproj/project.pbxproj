@@ -13,13 +13,6 @@
 		4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16A236832FB00EBA3B1 /* StoreViewController.swift */; };
 		4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */; };
 		4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */; };
-		4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1702368883B00EBA3B1 /* AppGalleryView.swift */; };
-		4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */; };
-		4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1742369940400EBA3B1 /* CustomCell.swift */; };
-		4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */; };
-		4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F1782369B98B00EBA3B1 /* DetailView.swift */; };
-		4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */; };
-		4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */; };
 		4303F17F2369D59300EBA3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F17E2369D59300EBA3B1 /* AppDelegate.swift */; };
 		4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */; };
 		435A73302361BF8F005B4BF4 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */; };
@@ -54,7 +47,6 @@
 		FC290AFE19CF57A60044C06B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFD19CF57A60044C06B /* UIKit.framework */; };
 		FC290B0019CF57AC0044C06B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290AFF19CF57AC0044C06B /* Foundation.framework */; };
 		FC290B0219CF57B30044C06B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC290B0119CF57B30044C06B /* CoreData.framework */; };
-		FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC29F15A1E70FA5300251B34 /* CustomCell.xib */; };
 		FC29F1731E71153400251B34 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC29F1721E71153400251B34 /* QuartzCore.framework */; };
 		FC790D241E899DA800A57DA7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D231E899DA800A57DA7 /* libz.tbd */; };
 		FC790D261E899DB600A57DA7 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FC790D251E899DB600A57DA7 /* libstdc++.tbd */; };
@@ -111,13 +103,6 @@
 		4303F16A236832FB00EBA3B1 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		4303F16C236856F700EBA3B1 /* FoodTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackViewController.swift; sourceTree = "<group>"; };
 		4303F16E2368869A00EBA3B1 /* TrackerINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerINavigationBar.swift; sourceTree = "<group>"; };
-		4303F1702368883B00EBA3B1 /* AppGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryView.swift; sourceTree = "<group>"; };
-		4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGalleryResponse.swift; sourceTree = "<group>"; };
-		4303F1742369940400EBA3B1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		4303F1782369B98B00EBA3B1 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
-		4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScrollViewEnhancer.swift; sourceTree = "<group>"; };
 		4303F17E2369D59300EBA3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4303F180236AC30000EBA3B1 /* FoodTrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackCell.swift; sourceTree = "<group>"; };
 		435A732F2361BF8F005B4BF4 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
@@ -159,7 +144,6 @@
 		FC290AFD19CF57A60044C06B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC290AFF19CF57AC0044C06B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC290B0119CF57B30044C06B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FC29F15A1E70FA5300251B34 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		FC29F1721E71153400251B34 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC790D231E899DA800A57DA7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		FC790D251E899DB600A57DA7 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -349,21 +333,6 @@
 			name = Tracker;
 			sourceTree = "<group>";
 		};
-		FC29F1621E70FA5900251B34 /* More */ = {
-			isa = PBXGroup;
-			children = (
-				FC29F15A1E70FA5300251B34 /* CustomCell.xib */,
-				4303F1702368883B00EBA3B1 /* AppGalleryView.swift */,
-				4303F17223696D6D00EBA3B1 /* AppGalleryResponse.swift */,
-				4303F1742369940400EBA3B1 /* CustomCell.swift */,
-				4303F17623699AFE00EBA3B1 /* ImageDownloader.swift */,
-				4303F1782369B98B00EBA3B1 /* DetailView.swift */,
-				4303F17A2369CAA700EBA3B1 /* AsyncImageView.swift */,
-				4303F17C2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift */,
-			);
-			name = More;
-			sourceTree = "<group>";
-		};
 		FC3EFA8C1E71FE7A00D6F979 /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,7 +494,6 @@
 			children = (
 				5107F8131E541D3E00E1EEBD /* Add Food */,
 				FC3EFA8C1E71FE7A00D6F979 /* Scanner */,
-				FC29F1621E70FA5900251B34 /* More */,
 				FC29F1531E70F9E800251B34 /* Tracker */,
 				FC29F1521E70F9CD00251B34 /* Store */,
 				FC760C2D1E4918BE00336D75 /* BMI Calculator */,
@@ -652,7 +620,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC29F1601E70FA5300251B34 /* CustomCell.xib in Resources */,
 				FCA42E111E38F0BD00619AE6 /* cw.html in Resources */,
 				FC290ADC19CF560E0044C06B /* Main.storyboard in Resources */,
 				51FB9A251E63EB3900FF418D /* BeFit_iOS.sqlite-shm in Resources */,
@@ -749,16 +716,12 @@
 				43F051E22366DE80008B4F7F /* CustomProgView.swift in Sources */,
 				439DE72523603C2200CC8543 /* UserFoodRecords+CoreDataClass.swift in Sources */,
 				FCA42E221E38F0BD00619AE6 /* CWLineChartOptions.m in Sources */,
-				4303F1712368883B00EBA3B1 /* AppGalleryView.swift in Sources */,
 				439DE72923603C2200CC8543 /* Food+CoreDataClass.swift in Sources */,
 				437ECCA22362DE8900573D52 /* DeviceViewController.swift in Sources */,
 				439DE72423603C2200CC8543 /* Food+CoreDataProperties.swift in Sources */,
 				437ECCAE23631EB000573D52 /* ScannerViewController.swift in Sources */,
-				4303F1792369B98B00EBA3B1 /* DetailView.swift in Sources */,
-				4303F17D2369D1E900EBA3B1 /* ARScrollViewEnhancer.swift in Sources */,
 				4303F16F2368869A00EBA3B1 /* TrackerINavigationBar.swift in Sources */,
 				FCA42E1A1E38F0BD00619AE6 /* CWColors.m in Sources */,
-				4303F17723699AFE00EBA3B1 /* ImageDownloader.swift in Sources */,
 				FCE5B9E41E7264D400324083 /* CBAutoScrollLabel.m in Sources */,
 				FCA42E2A1E38F0BD00619AE6 /* CWRadarChartData.m in Sources */,
 				43CA92F8236C930A0090D9A3 /* VCNavigationListener.swift in Sources */,
@@ -775,7 +738,6 @@
 				43F051DB2366D0B3008B4F7F /* UISnapNav.swift in Sources */,
 				FCA42E201E38F0BD00619AE6 /* CWLineChart.m in Sources */,
 				4303F16B236832FB00EBA3B1 /* StoreViewController.swift in Sources */,
-				4303F1752369940400EBA3B1 /* CustomCell.swift in Sources */,
 				4303F16D236856F700EBA3B1 /* FoodTrackViewController.swift in Sources */,
 				FCA42E241E38F0BD00619AE6 /* CWPieChart.m in Sources */,
 				43F051E62366F459008B4F7F /* DetailViewController.swift in Sources */,
@@ -789,8 +751,6 @@
 				FCA42E1E1E38F0BD00619AE6 /* CWGlobalOptions.m in Sources */,
 				FCA42E1F1E38F0BD00619AE6 /* CWLabelledData.m in Sources */,
 				FCA42E2C1E38F0BD00619AE6 /* CWSegmentData.m in Sources */,
-				4303F17323696D6D00EBA3B1 /* AppGalleryResponse.swift in Sources */,
-				4303F17B2369CAA700EBA3B1 /* AsyncImageView.swift in Sources */,
 				FCBC23B319EB96A600C480B6 /* BeFit_DataModel.xcdatamodeld in Sources */,
 				4303F181236AC30000EBA3B1 /* FoodTrackCell.swift in Sources */,
 				FCA42E1D1E38F0BD00619AE6 /* CWDoughnutChart.m in Sources */,
