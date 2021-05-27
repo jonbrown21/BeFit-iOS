@@ -157,9 +157,9 @@
 					{
 						[self updateTintColors];
 						[UIView animateWithDuration:0.5 animations:^{
-							_button.alpha = 0;
-							_activityIndicatorView.alpha = 1;
-							[_activityIndicatorView startAnimating];
+                            self->_button.alpha = 0;
+                            self->_activityIndicatorView.alpha = 1;
+                            [self->_activityIndicatorView startAnimating];
 						}];
 					}
 				}];

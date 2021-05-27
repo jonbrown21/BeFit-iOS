@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-protocol DeviceViewControllerDelegate: class {
+protocol DeviceViewControllerDelegate: AnyObject {
     func valueChanged(selectedFoodLists: [FoodList])
 }
 

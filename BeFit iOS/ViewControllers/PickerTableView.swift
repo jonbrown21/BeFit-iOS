@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol GenderPickerControllerDelegate: class {
+protocol GenderPickerControllerDelegate: AnyObject {
     func itemSelectedGender(atRow row: Int)
 }
 

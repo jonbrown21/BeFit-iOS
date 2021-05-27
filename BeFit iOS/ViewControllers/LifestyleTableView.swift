@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol LifePickerControllerDelegate: class {
+protocol LifePickerControllerDelegate: AnyObject {
     func itemSelectedLifestyle(atRow row: Int)
 }
 

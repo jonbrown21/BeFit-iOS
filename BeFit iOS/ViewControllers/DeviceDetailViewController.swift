@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-protocol DeviceDetailViewControllerDelegate: class {
+protocol DeviceDetailViewControllerDelegate: AnyObject {
     func deviceDetailViewControllerDidSave()
 }
 

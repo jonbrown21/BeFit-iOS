@@ -12,7 +12,7 @@ import AVFoundation
 import IQKeyboardManager
 import CoreHaptics
 
-protocol ScannedDataDelegate: class {
+protocol ScannedDataDelegate: AnyObject {
     func setScannedDataInFields(data: [String: Any])
 }
 

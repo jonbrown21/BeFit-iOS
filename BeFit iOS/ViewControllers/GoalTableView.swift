@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol GoalPickerControllerDelegate: class {
+protocol GoalPickerControllerDelegate: AnyObject {
     func itemSelectedGoal(atRow row: Int)
 }
 

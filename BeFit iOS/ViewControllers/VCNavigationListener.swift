@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol VCNavigationListener: class {
+protocol VCNavigationListener: AnyObject {
     func didDisappear(viewController: UIViewController)
 }

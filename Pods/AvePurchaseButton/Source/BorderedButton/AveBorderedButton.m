@@ -263,8 +263,8 @@ CGFloat kAveBorderedButtonDefaultCornerRadius = 4.0;
 	[self updateFillView];
 	
 	[UIView animateWithDuration:0.45 animations:^{
-		_fillView.alpha = [self shouldShowFillView] ? 1 : 0;
-		_accessoryAndLabelView.alpha = [self shouldShowFillView] ? 0 : 1;
+        self->_fillView.alpha = [self shouldShowFillView] ? 1 : 0;
+        self->_accessoryAndLabelView.alpha = [self shouldShowFillView] ? 0 : 1;
 	} completion:nil];
 }
 
